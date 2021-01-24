@@ -18,7 +18,6 @@ void initVulkan() {
 ```cpp
 private:
 VkInstance instance;
-
 ```
 
 现在，为了创建实例，我们首先需要用我们程序的一些信息去填充一个结构体。从技术上来说，这些信息可以不填，但是它们或许能够提供一些信息给驱动，以使驱动针对我们的特定程序进行优化，比如，它使用了一个具有某些特殊行为的著名图形引擎。这个结构体叫做[`VkApplicationInfo`](https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkApplicationInfo.html)：
@@ -31,7 +30,6 @@ appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
 appInfo.pEngineName = "No Engine";
 appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
 appInfo.apiVersion = VK_API_VERSION_1_0;
-
 ```
 
 就像之前提到过的那样，Vulkan中的许多结构体需要你在`sType`成员中显式指定类型。这个结构体也是众多拥有`pNext`成员的结构体当中的一个，这个成员在将来可以指向扩展信息。我们现在执行默认初始化，所以此处置为`nullptr`（空指针）。
@@ -42,7 +40,6 @@ Vulkan中的许多信息都通过结构体来传递，而不是函数参数。�
 VkInstanceCreateInfo createInfo = {};
 createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
 createInfo.pApplicationInfo = &appInfo;
-
 ```
 
 前两个参数的意思非常明显。接下来的两个成员会指定我们想用的全局扩展。就像我们在概述那章里提到过的，Vulkan是一套平台无关的API，这意味着你需要一个与窗口系统（window system）的相接的扩展。GLFW已经集成了一个好用的内置函数，它返回GLFW需要的Vulkan扩展，我们可以直接把它传给Vulkan API：
@@ -55,21 +52,18 @@ glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
 
 createInfo.enabledExtensionCount = glfwExtensionCount;
 createInfo.ppEnabledExtensionNames = glfwExtensions;
-
 ```
 
 最后两个成员指定哪些全局验证层将会被启用。我们会在下一章深入讨论验证层，这里先暂时留空。
 
 ```cpp
 createInfo.enabledLayerCount = 0;
-
 ```
 
 我们已经指定了初始化Vulkan实例需要的所有信息，现在终于可以调用[`vkCreateInstance`](https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateInstance.html)函数了：
 
 ```cpp
 VkResult result = vkCreateInstance(&createInfo, nullptr, &instance);
-
 ```
 
 如你所见，Vulkan中创建对象的函数，其参数通常是这样的：
