@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>03 开发环境</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="01 简介 Introduction.html">01 简介</a></li><li class="chapter-item expanded affix "><a href="02 概述 Overview.html">02 概述</a></li><li class="chapter-item expanded affix "><a href="03 开发环境 Development environment.html" class="active">03 开发环境</a></li><li class="chapter-item expanded affix "><li class="part-title">04 画一个三角形 Drawing a triangle</li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-05 重新创建交换链 Swap chain recreation.html"><strong aria-hidden="true">1.</strong> 04-05 重新创建交换链</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-01 基本代码 Base code.html"><strong aria-hidden="true">2.</strong> 04-01-01 基本代码</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-02 实例 Instance.html"><strong aria-hidden="true">3.</strong> 04-01-02 实例</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-03 验证层 Validation layers.html"><strong aria-hidden="true">4.</strong> 04-01-03 验证层</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-04 物理设备与队列家族 Physical devices and queue families.html"><strong aria-hidden="true">5.</strong> 04-01-04 物理设备与队列家族</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-05 逻辑设备与队列 Logical device and queues.html"><strong aria-hidden="true">6.</strong> 04-01-05 逻辑设备与队列</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-01 表面 Window surface.html"><strong aria-hidden="true">7.</strong> 04-02-01 表面</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-02 交换链 Swap chain.html"><strong aria-hidden="true">8.</strong> 04-02-02 交换链</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-03 图像视图 Image views.html"><strong aria-hidden="true">9.</strong> 04-02-03 图像视图</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-01 简介 Introduction.html"><strong aria-hidden="true">10.</strong> 04-03-01 简介</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-02 着色器模块 Shader modules.html"><strong aria-hidden="true">11.</strong> 04-03-02 着色器模块</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-03 固定功能 Fixed functions.html"><strong aria-hidden="true">12.</strong> 04-03-03 固定功能</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-04 渲染过程 Render passes.html"><strong aria-hidden="true">13.</strong> 04-03-04 渲染过程</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-05 小结 Conclusion.html"><strong aria-hidden="true">14.</strong> 04-03-05 小结</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-01 帧缓冲 Framebuffers.html"><strong aria-hidden="true">15.</strong> 04-04-01 帧缓冲</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-02 命令缓冲 Command buffers.html"><strong aria-hidden="true">16.</strong> 04-04-02 命令缓冲</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-03 渲染与显示 Rendering and presentation.html"><strong aria-hidden="true">17.</strong> 04-04-03 渲染与显示</a></li><li class="chapter-item expanded affix "><li class="part-title">05 顶点缓冲 Vertex buffers</li><li class="chapter-item expanded "><a href="05 顶点缓冲 Vertex buffers/05-01 顶点输入描述 Vertex input description.html"><strong aria-hidden="true">18.</strong> 05-01 顶点输入描述</a></li><li class="chapter-item expanded "><a href="05 顶点缓冲 Vertex buffers/05-02 创建顶点缓冲 Vertex buffer creation.html"><strong aria-hidden="true">19.</strong> 05-02 创建顶点缓冲</a></li><li class="chapter-item expanded "><a href="05 顶点缓冲 Vertex buffers/05-03 暂存缓冲 Staging buffer.html"><strong aria-hidden="true">20.</strong> 05-03 暂存缓冲</a></li><li class="chapter-item expanded "><a href="05 顶点缓冲 Vertex buffers/05-04 索引缓冲 Index buffer.html"><strong aria-hidden="true">21.</strong> 05-04 索引缓冲</a></li><li class="chapter-item expanded affix "><li class="part-title">06 Uniform缓冲 Uniform Buffers</li><li class="chapter-item expanded "><a href="06 Uniform缓冲 Uniform Buffers/06-01 描述符布局与描述符缓冲 Descriptor layout and buffer.html"><strong aria-hidden="true">22.</strong> 06-01 描述符布局与描述符缓冲</a></li><li class="chapter-item expanded "><a href="06 Uniform缓冲 Uniform Buffers/06-02 描述符池与描述符集合 Descriptor pool and sets.html"><strong aria-hidden="true">23.</strong> 06-02 描述符池与描述符集合</a></li><li class="chapter-item expanded affix "><li class="part-title">07 纹理映射 Texture mapping</li><li class="chapter-item expanded "><a href="07 纹理映射 Texture mapping/07-01 图像 Images.html"><strong aria-hidden="true">24.</strong> 07-01 图像</a></li><li class="chapter-item expanded "><a href="07 纹理映射 Texture mapping/07-02 图像视图与采样器 Image view and sample.html"><strong aria-hidden="true">25.</strong> 07-02 图像视图与采样器</a></li><li class="chapter-item expanded "><a href="07 纹理映射 Texture mapping/07-03 组合图像采样器 Combined image sampler.html"><strong aria-hidden="true">26.</strong> 07-03 组合图像采样器</a></li><li class="chapter-item expanded "><a href="08 深度缓冲 Depth buffering.html"><strong aria-hidden="true">27.</strong> 08 深度缓冲</a></li><li class="chapter-item expanded "><a href="09 加载模型 Loading models.html"><strong aria-hidden="true">28.</strong> 09 加载模型</a></li><li class="chapter-item expanded "><a href="10 生成多级渐远纹理 Generating Mipmaps.html"><strong aria-hidden="true">29.</strong> 10 生成多级渐远纹理</a></li><li class="chapter-item expanded "><a href="11 多重采样 Multisampling.html"><strong aria-hidden="true">30.</strong> 11 多重采样</a></li><li class="chapter-item expanded "><a href="12 常见问题 FAQ.html"><strong aria-hidden="true">31.</strong> 12 常见问题</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="开发环境"><a class="header" href="#开发环境">开发环境</a></h1>
+<p>这一章我们会配置一个 Vulkan 应用程序并且安装一些实用的库。我们用到的所有工具，除了编译器之外都是同时兼容 Windows, Linux 和 MacOS 的，不过安装步骤会有一些不同，也正是因此在这一章里我们详细地讲解这些工具。</p>
+<h2 id="windows"><a class="header" href="#windows">Windows</a></h2>
+<p>如果你在 Windows 下开发，那么我假设你用的是 Visual Studio 来编译代码。如果要获得完整的 C++17 支持，你需要使用 Visual Studio 2017 或 2019. 下面的步骤是为 VS 2017 编写的。</p>
+<h3 id="vulkan-sdk"><a class="header" href="#vulkan-sdk">Vulkan SDK</a></h3>
+<p>开发 Vulkan 应用程序时最重要的组件就是 Vulkan SDK. 它包括了头文件、标准验证层、调试工具以及加载 Vulkan 函数用的一个加载器。这个加载器在运行时从显卡驱动中加载一个函数，就像是 GLEW 之于 OpenGL 那样——如果你熟悉它们的话。</p>
+<p>你可以在 <a href="https://vulkan.lunarg.com/">LunarG 网站</a>底部的按钮处下载这个SDK。不需要你创建账号，但是有一个账号可以让访问一些对你来说可能会有用的文档。</p>
+<p><img src="https://vulkan-tutorial.com/images/vulkan_sdk_download_buttons.png" alt="" /></p>
+<p>安装时记下SDK的安装位置。首先我们要确认一下你的显卡和驱动是否正确地支持Vulkan。进入SDK安装目录，打开 <code>Bin</code> 文件夹，运行 <code>cude.exe</code> ，你看到的应该是如下画面：</p>
+<p><img src="https://vulkan-tutorial.com/images/cube_demo.png" alt="" /></p>
+<p>如果你收到了一个错误提示，确保你的驱动是最新的，以及你的显卡的确支持 Vulkan 运行时。参阅简介那一章来获取主要显卡供应商的驱动下载地址。</p>
+<p>这个文件夹里还有一个在开发时会很有用的程序。<code>glslangValidator.exe</code> 程序可以把人类可读的 <a href="https://zh.wikipedia.org/wiki/GLSL">GLSL</a> 编译成字节码。我们会在着色器模块那一章详细讲解这个程序。 <code>Bin </code>文件夹中也有关于 Vulkan 加载器和验证层的二进制程序，然后<code>Lib</code>文件夹中是库。</p>
+<p><code>Doc </code>文件夹里面有很多关于 Vulkan SDK 的实用信息，以及一个 Vulkan 规范的离线版本。最后， <code>Include</code> 文件夹中包含了 Vulkan 头文件。你可以自由探索其它的文件夹里都有什么，不过我们在此教程中用不到它们。</p>
+<h3 id="glfw"><a class="header" href="#glfw">GLFW</a></h3>
+<p>就像之前提过的， Vulkan 本身是一套平台无关的 API ，并且没有任何关于创建窗口并在上面显示渲染结果这类的工具。为了能体现出 Vulkan 跨平台的优点，并且绕开恐怖的 Win32, 我们会用兼容 Windows, Linux 和 MacOS 的 <a href="http://www.glfw.org/">GLFW 库</a>来创建窗口。虽然也有别的库可以用，比如 <a href="https://www.libsdl.org/">SDL</a> ，不过GLFW的优点在于，除了单纯的创建窗口以外，它把另外一些 Vulkan 中与具体平台相关的东西也抽象掉了。</p>
+<p>你可以在 GLFW 的<a href="http://www.glfw.org/download.html">官网</a>找到 GLFW 的最新发行版。在此教程中我们使用 64 位版本，不过你也可以用 32 位版本。如果你要用 32 位版本，那么在链接 Vulkan SDK 的时候就要选择 <code>Lib32</code> 文件夹里的库而不是 <code>Lib</code> 文件夹里的。下载好之后，把它解压到一个方便的位置。我选择在“文档”下的 Visual Studio 文件夹里创建一个 <code>Libraries</code> 文件夹。</p>
+<p><img src="https://vulkan-tutorial.com/images/glfw_directory.png" alt="" /></p>
+<h3 id="glm"><a class="header" href="#glm">GLM</a></h3>
+<p>与 DirectX 12 不同， Vulkan 没有自带的线性代数库，所以我们需要自己下载一个。 <a href="http://glm.g-truc.net/">GLM</a> 是一个不错的库，对图形 API 友好，并且已经在 OpenGL 开发中广泛应用。</p>
+<p>GLM 是一个只有头文件的库，所以只需要下载<a href="https://github.com/g-truc/glm/releases">最新版本</a>然后把它放在一个方便的位置。你的目录结构现在应该类似下图：</p>
+<p><img src="https://vulkan-tutorial.com/images/library_directory.png" alt="" /></p>
+<h3 id="配置-visual-studio"><a class="header" href="#配置-visual-studio">配置 Visual Studio</a></h3>
+<p>现在你已经安装好了所有的依赖，我们可以为 Vulkan 配置一个基础的 Visual Studio 项目然后写一点代码来确定每个部分是否都在正常工作。</p>
+<p>启动 Visual Studio ，新建一个 <code>Windows 桌面向导</code>项目，起一个项目名字，然后点击“确定”。</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_new_cpp_project.png" alt="" /></p>
+<p>确保你的应用类型是<code>控制台应用(.exe)</code>，这样我们就有了一个地方来输出调试信息，然后选中<code>空项目</code>。这样可以防止 Visual Studio 添加样板代码。</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_application_settings.png" alt="" /></p>
+<p>点击“确定”按钮来创建项目，然后添加一个C++源文件。你应该已经知道应该怎么做了，不过为了完整，此处列出相应步骤。</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_new_item.png" alt="" /></p>
+<p><img src="https://vulkan-tutorial.com/images/vs_new_source_file.png" alt="" /></p>
+<p>现在我们在文件中写入下列代码。现在看不懂这些代码也没关系。我们只是确定一下你能否编译并且运行 Vulkan 应用程序。在下一章我们会从头开始的。</p>
+<pre><code class="language-cpp">#define GLFW_INCLUDE_VULKAN
+#include &lt;GLFW/glfw3.h&gt;
+
+#define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+#include &lt;glm/vec4.hpp&gt;
+#include &lt;glm/mat4x4.hpp&gt;
+
+#include &lt;iostream&gt;
+int main() {
+    glfwInit();
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+    GLFWwindow* window = glfwCreateWindow(800, 600, &quot;Vulkan window&quot;, nullptr, nullptr);
+    
+    uint32_t extensionCount = 0;
+    vkEnumerateInstanceExtensionProperties(nullptr, &amp;extensionCount, nullptr);
+    std::cout &lt;&lt; extensionCount &lt;&lt; &quot; extensions supported&quot; &lt;&lt; std::endl;
+    
+    glm::mat4 matrix;
+    glm::vec4 vec;
+    auto test = matrix * vec;
+    
+    while(!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+    }
+    
+    glfwDestroyWindow(window);
+    
+    glfwTerminate();
+    
+    return  0;
+}
+</code></pre>
+<p>现在配置一下项目来避免出错。打开项目属性对话框并且确保选择的是<code>所有配置</code>，因为很多设置都需要同时在 <code>Debug</code> 和 <code>Release</code> 模式下生效。</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_open_project_properties.png" alt="" /></p>
+<p><img src="https://vulkan-tutorial.com/images/vs_all_configs.png" alt="" /></p>
+<p>进入到<code>C/C++ → 常规 → 附加包含目录</code>然后点击下拉列表里的<code>&lt;编辑...&gt;</code>。</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_cpp_general.png" alt="" /></p>
+<p>然后添加 Vulkan, GLFW 和 GLM 的头文件路径：</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_include_dirs.png" alt="" /></p>
+<p>接下来，在<code>链接器 → 常规 → 附加库目录</code>里面设置库目录。</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_link_settings.png" alt="" /></p>
+<p>然后把 Vulkan 和 GLFW 的库路径添加进去：</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_link_dirs.png" alt="" /></p>
+<p>进入到<code>链接器 → 输入 → 附加依赖项</code>然后点击下拉列表里的<code>&lt;编辑...&gt;</code>。</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_link_input.png" alt="" /></p>
+<p>输入 Vulkan 和 GLFW 的对象文件：</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_dependencies.png" alt="" /></p>
+<p>最后启用 C++17 支持：（<code>C/C++ → 语言 → C++语言标准</code>）</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_cpp17.png" alt="" /></p>
+<p>现在你可以关掉项目属性对话框了。如果你的每一步都做对了，代码中所有的高亮错误提示都应该消失了。</p>
+<p>最后，确保你在使用 64 位编译器：</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_build_mode.png" alt="" /></p>
+<p>按下 <code>F5</code> 来编译并运行程序，你应该看到一个命令提示符窗口，和一个在它上方的窗口，就像这样：</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_test_window.png" alt="" /></p>
+<p>插件（extension）的数量应用是一个非0值。恭喜你，你已经准备好去探索Vulkan了！</p>
+<h2 id="linux"><a class="header" href="#linux">Linux</a></h2>
+<p>这个部分是针对 Ubuntu 用户的，不过你也可以跟着这个部分编译 LunarG SDK ，然后把那些<code>apt</code>命令换成你自己的包管理器的。你应该已经安装好了支持 C++17 的编译器（GCC 7+ 或 Clang5+）。你还需要make。</p>
+<h3 id="vulkan-软件包"><a class="header" href="#vulkan-软件包">Vulkan 软件包</a></h3>
+<p>在 Linux 上开发 Vulkan 应用程序所需要的最重要的组件是 Vulkan 加载器、验证层和几个测试你的机器是否支持 Vulkan 的命令行实用程序。</p>
+<ul>
+<li>
+<p><code>sudo apt install vulkan-tools</code>: 命令行实用程序，最重要的是 <code>vulkaninfo</code> 和 <code>vkcube</code>. 运行这些程序开确认你的机器是否支持 Vulkan.</p>
+</li>
+<li>
+<p><code>sudo apt install libvulkan-dev</code>: 安装 Vulkan 加载器。这个加载器在运行时从显卡驱动中加载一个函数，就像是 GLEW 之于 OpenGL 那样——如果你熟悉它们的话。</p>
+</li>
+<li>
+<p><code>sudo apt install vulkan-validationlayers-dev spirv-tools</code>: 安装标准验证层和所需的 SPIR-V 工具。这些东西在调试 Vulkan 应用程序时至关重要，我们会在下一章介绍它们。</p>
+</li>
+</ul>
+<p>如果安装成功，你应该已经完成了 Vulkan 部分的安装。记得运行一下 <code>vkcube</code> , 并确保你在窗口中看到以下弹出的内容：</p>
+<p><img src="https://vulkan-tutorial.com/images/cube_demo_nowindow.png" alt="" /></p>
+<p>如果你收到了一个错误提示，确保你的驱动是最新的，以及你的显卡的确支持Vulkan运行时。阅读简介那一章来获取主要显卡供应商的驱动下载地址。</p>
+<h3 id="glfw-1"><a class="header" href="#glfw-1">GLFW</a></h3>
+<p>就像之前提过的， Vulkan 本身是一套平台无关的 API ，并且没有任何关于创建窗口并在上面显示渲染结果这类的工具。为了能体现出 Vulkan 跨平台的优点，并且绕开恐怖的 X11, 我们会用兼容 Windows, Linux 和 MacOS 的 <a href="http://www.glfw.org/">GLFW 库</a>来创建窗口。虽然也有别的库可以用，比如 <a href="https://www.libsdl.org/">SDL</a> ，不过GLFW的优点在于，除了单纯的创建窗口以外，它把另外一些 Vulkan 中与具体平台相关的东西也抽象掉了。</p>
+<p>我们会用以下命令来安装 GLFW.</p>
+<pre><code class="language-shell">sudo apt install libglfw3-dev
+</code></pre>
+<h3 id="glm-1"><a class="header" href="#glm-1">GLM</a></h3>
+<p>与 DirectX 12 不同， Vulkan 没有自带的线性代数库，所以我们需要自己下载一个。 <a href="http://glm.g-truc.net/">GLM</a> 是一个不错的库，对图形 API 友好，并且已经在 OpenGL 开发中广泛应用。</p>
+<p>这是一个只有头文件的库，可以通过安装 <code>libglm-dev</code> 包来安装。</p>
+<pre><code class="language-bash">sudo apt install libglm-dev
+</code></pre>
+<h3 id="着色器编译器"><a class="header" href="#着色器编译器">着色器编译器</a></h3>
+<p>我们基本上已经安装完了我们需要的所有内容，除了一个可以把人类可读的 <a href="https://zh.wikipedia.org/wiki/GLSL">GLSL</a> 编译成字节码的编译器。</p>
+<p>有两个很流行的编译器，一个是 Khronos Group 开发的 <code>glslangValidator</code>, 另一个是谷歌开发的<code>glslc</code>. 后者的用法比较接近 GCC 和 Clang, 所以我们决定用这个：下载谷歌的<a href="https://github.com/google/shaderc/blob/main/downloads.md">非官方二进制文件</a>并且复制 <code>glslc</code> 文件到你的 <code>/usr/local/bin</code> 目录。注意，取决于你的用户权限，你可能需要用 <code>sudo</code>. 要测试的话，直接运行 <code>glslc</code> 然后它应该理所当然地抱怨没有传入任何着色器以供编译：</p>
+<p><code>glslc: error: no input files</code></p>
+<p>我们会在着色器模块一章中深入介绍 <code>glslc</code>.</p>
+<h3 id="配置-makefile-项目"><a class="header" href="#配置-makefile-项目">配置 makefile 项目</a></h3>
+<p>现在你已经安装好了所有依赖，我们可以为 Vulkan 配置一个基础的 makefile 项目然后写一点代码来确定每个部分都在正常工作。</p>
+<p>在方便的地方创建一个新文件夹，起个名字，比如 <code>VulkanTest</code>. 创建一个名为 <code>main.cpp</code> 的 C++ 源文件并且写入如下代码。现在看不懂这些代码也没关系。我们只是确定一下你能否编译并且运行 Vulkan 应用程序。在下一章我们会从头开始的。</p>
+<pre><code class="language-cpp">#define GLFW_INCLUDE_VULKAN
+#include &lt;GLFW/glfw3.h&gt;
+
+#define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+#include &lt;glm/vec4.hpp&gt;
+#include &lt;glm/mat4x4.hpp&gt;
+
+#include &lt;iostream&gt;
+int main() {
+    glfwInit();
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+    GLFWwindow* window = glfwCreateWindow(800, 600, &quot;Vulkan window&quot;, nullptr, nullptr);
+    
+    uint32_t extensionCount = 0;
+    vkEnumerateInstanceExtensionProperties(nullptr, &amp;extensionCount, nullptr);
+    std::cout &lt;&lt; extensionCount &lt;&lt; &quot; extensions supported&quot; &lt;&lt; std::endl;
+    
+    glm::mat4 matrix;
+    glm::vec4 vec;
+    auto test = matrix * vec;
+    
+    while(!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+    }
+    
+    glfwDestroyWindow(window);
+    
+    glfwTerminate();
+    
+    return  0;
+}
+</code></pre>
+<p>接下来，我们会编写一个用来编译和运行这些代码的 makefile. 创建一个新的空文件并命名为 <code>Makefile</code>. 我默认你已经有了一些编写 makefile 的基本经验，比如变量和规则是怎么工作的。如果你不懂 makefile, 你可以看看<a href="http://mrbook.org/blog/tutorials/make/">这份教程</a>来快速入门。</p>
+<p>我们首先来定义几个变量来简化一下这个文件。定义一个 <code>CFLAGS</code> 变量来指定编译器的基本标记：</p>
+<pre><code class="language-makefile">CFLAGS = -std=c++17 -O2
+</code></pre>
+<p>我们将使用现代 C++ (-std=c++17), 并把优化级别设置为O2. 可以去掉 -O2 以加快编译速度，但是在发行版中要记得加回去。</p>
+<p>同样地，在 <code>LDFLAGS</code> 变量中定义链接器标记：</p>
+<pre><code class="language-makefile">LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
+</code></pre>
+<p><code>-lglfw</code> 标记代表 GLFW, <code>-lvulkan</code> 标记代表与 Vulkan 函数加载器链接，其余标记是一些 GLFW 需要的低级系统库。其余标记是 GLFW 自身的依赖库：线程库和窗口管理器。</p>
+<p>现在来指定编译 <code>VulkanTest</code> 的规则，这个规则就非常一目了然了。确保使用制表符进行缩进而不是空格：</p>
+<pre><code class="language-make">VulkanTest: main.cpp
+    g++ $(CFLAGS) -o VulkanTest main.cpp $(LDFLAGS)
+</code></pre>
+<p>保存makefile并在<code>main.cpp</code>和<code>Makefile</code>的目录下运行<code>make</code>命令来验证一下这个规则是否正常工作。它应该最终生成一个<code>VulkanTest</code>可执行文件。</p>
+<p>现在我们再来添加两条规则：<code>test</code>和<code>clean</code>，前者运行编译出的可执行文件，后者则删除这个可执行文件。</p>
+<pre><code class="language-make">.PHONY: test clean
+
+test: VulkanTest
+    ./VulkanTest
+
+clean:
+    rm -f VulkanTest
+</code></pre>
+<p>运行 <code>make test</code> 命令应该显示程序运行成功，并且显示出Vulkan插件（extension）的数量。这个程序在你关闭空窗口后应该退出并返回成功的返回代码（<code>0</code>）。完整的 makefile 应该类似于这样：</p>
+<pre><code class="language-make">CFLAGS = -std=c++17 -O2
+LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
+
+VulkanTest: main.cpp
+    g++ $(CFLAGS) -o VulkanTest main.cpp $(LDFLAGS)
+
+.PHONY: test clean
+
+test: VulkanTest
+	./VulkanTest
+
+clean:
+    rm -f VulkanTest
+</code></pre>
+<p>你可以把这个文件夹当成一个 Vulkan 项目的模板。复制或重命名成 <code>HelloTriangle</code> 或者别的什么名字，然后删掉<code>main.cpp</code>里的所有代码。</p>
+<p>现在，你已经完全准备好进行真正的探险了。</p>
+<h2 id="macos"><a class="header" href="#macos">MacOS</a></h2>
+<p><em>译者：我没用过MacOS，万一翻译出现了偏差我是要负责的，大体上和上面两个差不多，反正MacOS也是类UNIX系统，我寻思跟Linux应该差不多（逃）</em></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="02 概述 Overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="04 画一个三角形 Drawing a triangle/04-05 重新创建交换链 Swap chain recreation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="02 概述 Overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="04 画一个三角形 Drawing a triangle/04-05 重新创建交换链 Swap chain recreation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

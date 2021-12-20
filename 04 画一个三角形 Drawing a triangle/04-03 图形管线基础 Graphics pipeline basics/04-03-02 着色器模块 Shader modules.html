@@ -1,0 +1,399 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>04-03-02 着色器模块</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../01 简介 Introduction.html">01 简介</a></li><li class="chapter-item expanded affix "><a href="../../02 概述 Overview.html">02 概述</a></li><li class="chapter-item expanded affix "><a href="../../03 开发环境 Development environment.html">03 开发环境</a></li><li class="chapter-item expanded affix "><li class="part-title">04 画一个三角形 Drawing a triangle</li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-05 重新创建交换链 Swap chain recreation.html"><strong aria-hidden="true">1.</strong> 04-05 重新创建交换链</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-01 基本代码 Base code.html"><strong aria-hidden="true">2.</strong> 04-01-01 基本代码</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-02 实例 Instance.html"><strong aria-hidden="true">3.</strong> 04-01-02 实例</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-03 验证层 Validation layers.html"><strong aria-hidden="true">4.</strong> 04-01-03 验证层</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-04 物理设备与队列家族 Physical devices and queue families.html"><strong aria-hidden="true">5.</strong> 04-01-04 物理设备与队列家族</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-05 逻辑设备与队列 Logical device and queues.html"><strong aria-hidden="true">6.</strong> 04-01-05 逻辑设备与队列</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-01 表面 Window surface.html"><strong aria-hidden="true">7.</strong> 04-02-01 表面</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-02 交换链 Swap chain.html"><strong aria-hidden="true">8.</strong> 04-02-02 交换链</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-03 图像视图 Image views.html"><strong aria-hidden="true">9.</strong> 04-02-03 图像视图</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-01 简介 Introduction.html"><strong aria-hidden="true">10.</strong> 04-03-01 简介</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-02 着色器模块 Shader modules.html" class="active"><strong aria-hidden="true">11.</strong> 04-03-02 着色器模块</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-03 固定功能 Fixed functions.html"><strong aria-hidden="true">12.</strong> 04-03-03 固定功能</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-04 渲染过程 Render passes.html"><strong aria-hidden="true">13.</strong> 04-03-04 渲染过程</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-05 小结 Conclusion.html"><strong aria-hidden="true">14.</strong> 04-03-05 小结</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-01 帧缓冲 Framebuffers.html"><strong aria-hidden="true">15.</strong> 04-04-01 帧缓冲</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-02 命令缓冲 Command buffers.html"><strong aria-hidden="true">16.</strong> 04-04-02 命令缓冲</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-03 渲染与显示 Rendering and presentation.html"><strong aria-hidden="true">17.</strong> 04-04-03 渲染与显示</a></li><li class="chapter-item expanded affix "><li class="part-title">05 顶点缓冲 Vertex buffers</li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-01 顶点输入描述 Vertex input description.html"><strong aria-hidden="true">18.</strong> 05-01 顶点输入描述</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-02 创建顶点缓冲 Vertex buffer creation.html"><strong aria-hidden="true">19.</strong> 05-02 创建顶点缓冲</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-03 暂存缓冲 Staging buffer.html"><strong aria-hidden="true">20.</strong> 05-03 暂存缓冲</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-04 索引缓冲 Index buffer.html"><strong aria-hidden="true">21.</strong> 05-04 索引缓冲</a></li><li class="chapter-item expanded affix "><li class="part-title">06 Uniform缓冲 Uniform Buffers</li><li class="chapter-item expanded "><a href="../../06 Uniform缓冲 Uniform Buffers/06-01 描述符布局与描述符缓冲 Descriptor layout and buffer.html"><strong aria-hidden="true">22.</strong> 06-01 描述符布局与描述符缓冲</a></li><li class="chapter-item expanded "><a href="../../06 Uniform缓冲 Uniform Buffers/06-02 描述符池与描述符集合 Descriptor pool and sets.html"><strong aria-hidden="true">23.</strong> 06-02 描述符池与描述符集合</a></li><li class="chapter-item expanded affix "><li class="part-title">07 纹理映射 Texture mapping</li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-01 图像 Images.html"><strong aria-hidden="true">24.</strong> 07-01 图像</a></li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-02 图像视图与采样器 Image view and sample.html"><strong aria-hidden="true">25.</strong> 07-02 图像视图与采样器</a></li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-03 组合图像采样器 Combined image sampler.html"><strong aria-hidden="true">26.</strong> 07-03 组合图像采样器</a></li><li class="chapter-item expanded "><a href="../../08 深度缓冲 Depth buffering.html"><strong aria-hidden="true">27.</strong> 08 深度缓冲</a></li><li class="chapter-item expanded "><a href="../../09 加载模型 Loading models.html"><strong aria-hidden="true">28.</strong> 09 加载模型</a></li><li class="chapter-item expanded "><a href="../../10 生成多级渐远纹理 Generating Mipmaps.html"><strong aria-hidden="true">29.</strong> 10 生成多级渐远纹理</a></li><li class="chapter-item expanded "><a href="../../11 多重采样 Multisampling.html"><strong aria-hidden="true">30.</strong> 11 多重采样</a></li><li class="chapter-item expanded "><a href="../../12 常见问题 FAQ.html"><strong aria-hidden="true">31.</strong> 12 常见问题</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="着色器模块"><a class="header" href="#着色器模块">着色器模块</a></h1>
+<p>与早期API不同，Vulkan中使用的着色器代码是字节码格式的，而不是<a href="https://zh.wikipedia.org/wiki/GLSL">GLSL</a>和<a href="https://zh.wikipedia.org/wiki/%E9%AB%98%E7%BA%A7%E7%9D%80%E8%89%B2%E5%99%A8%E8%AF%AD%E8%A8%80">HLSL</a>那种人类可读的语法。这种字节码格式叫做<a href="https://www.khronos.org/spir">SPIR-V</a>，并且被设计为可同时用于Vulkan与OpenCL上（它们都是Khronos API）。这是一种可被用于编写图形和计算着色器的格式，但是在此教程中我们关注那些用在Vulkan的图形渲染管线中的着色器。</p>
+<p>使用字节码格式的优点是，GPU厂商编写的编译器在把着色器代码编译成本地代码时会简单得多。过去的事实证明，在使用人类可读的语法，比如GLSL时，某些GPU厂商对标准的解释相当灵活。如果你恰好用这么一种GPU写了一个不合标准的着色器，那么，由于语法错误，你就面临着其它厂商的显卡驱动拒绝你的代码的风险，或者更糟糕，由于编译错误，你的着色器的行为完全不同了。使用简单明了的字节码格式，比如SPIR-V，有望避免这种情况。</p>
+<p>然而，这并不意味着我们需要手写字节码。Khronos发布了一个厂商无关的编译器，用来把GLSL编译成SPIR-V。这个编译器可以验证你的代码是否完全符合规范，并且生成一个SPIR-V二进制文件，你就可以把这个文件用在你的程序中了。你也可以把这个编译器作为一个库引入到你的程序中，以便在运行时生成SPIR-V，不过在此教程中我们不需要这么做。这个编译器已经包含在了LunarG SDK中，叫做<code>glslangValidator.exe</code>，因此不必额外下载。</p>
+<p>GLSL是一种C风格语法的着色器语言。写在<code>main</code>函数中的程序会被每个对象调用。GLSL使用全局变量来管理输入与输出，而不是使用参数和返回值。这种语言包含了许多有助于图形编程的功能，比如内建的向量与本原矩阵，以及求叉积、求矩阵向量积和求反射向量等操作的函数。向量坐标被称为<code>vec</code>再加上一个表示其中元素数量的数字，比如一个3D坐标可以保存在<code>vec3</code>中。可以通过其中的一个成员来访问向量中的某一个分量，例如<code>.x</code>，不过也可以通过多个现有分量来创建新向量，比如<code>vec3(1.0, 2.0, 3.0).xy</code>表达式会返回一个<code>vec2</code>。向量的构造函数也可以把向量和标量合并到一起。比如一个<code>vec3</code>可以用<code>vec3(vec2(1.0, 2.0), 3.0)</code>来构造。</p>
+<p>就像上一章提到过的，我们需要编写一个顶点着色器和一个片段着色器来在屏幕上显示一个三角形。下面两节将会包含它们的GLSL代码并且我会演示如何生成两个SPIR-V二进制文件并且把它们加载到程序中。</p>
+<h2 id="顶点着色器"><a class="header" href="#顶点着色器">顶点着色器</a></h2>
+<p>顶点着色器处理每个输入进来的顶点。它需要输入每个顶点的属性，比如世界位置（position）、颜色、法线以及纹理坐标。它的输出是在裁剪坐标中的最终位置，以及需要被传递给片段着色器的属性，比如颜色和纹理坐标。这些值会在光栅化的时候被插入到片段上以获得平滑的渐变。</p>
+<p>裁剪坐标（clip coordinate）是一个顶点着色器生成的四维向量，随后它会用它的最后一个分量除以整个向量来转换成“标准化设备坐标”（normalized device coordinate）。这些标准化设备坐标是把一种帧缓冲映射到[-1, 1]到[-1, 1]坐标系统的齐次坐标，如下图所示：</p>
+<p><img src="https://vulkan-tutorial.com/images/normalized_device_coordinates.svg" alt="" /></p>
+<p><em>Framebuffer coordinates：帧缓冲坐标</em></p>
+<p><em>Normalized device coordinates：标准化设备坐标</em></p>
+<p>如果你接触过计算机图形学，你应该对此很熟悉。如果你使用过OpenGL，你会发现Y坐标的符号被翻转了。Z坐标现在与Direct3D中的范围一样，是从0到1。</p>
+<p>对于我们的第一个三角形而言，我们不需要应用任何变换，我们仅仅会直接以标准化设备坐标指定三个顶点的位置来创建如下所示的形状：</p>
+<p><img src="https://vulkan-tutorial.com/images/triangle_coordinates.svg" alt="" /></p>
+<p>我们可以通过把顶点着色器输出的裁剪坐标的最后一个分量设为<code>1</code>的方式来直接输出标准化设备坐标。这样在执行把裁剪坐标转换为标准化设备坐标的除法时将不会发生任何变化。</p>
+<p>通常来讲，这些坐标应该保存在顶点缓冲里，但是在Vulkan中创建一个顶点缓冲并在其中填充数据很难。因此我决定把顶点缓冲推迟到在屏幕上绘制出三角形之后再讲解。在这里我们做一点不那么标准的动作：直接把坐标硬编码到顶点着色器里。代码看起来像这样：</p>
+<pre><code class="language-glsl">#version 450
+
+vec2 positions[3] = vec2[](
+    vec2(0.0, -0.5),
+    vec2(0.5, 0.5),
+    vec2(-0.5, 0.5)
+);
+
+void main() {
+    gl_Position = vec4(positions[gl_VertexIndex], 0.0, 1.0);
+}
+</code></pre>
+<p><code>main</code>函数会被每个顶点调用。内建的<code>gl_VertexIndex</code>变量包含了当前顶点的索引。这个索引通常是顶点缓冲的索引，但是在这里它是我们硬编码的顶点数据数组的索引。每个顶点的位置从着色器的常量数组中读出，并且与虚拟的<code>z</code>和<code>w</code>分量组成一个裁剪坐标中的位置。内建的<code>gl_Position</code>变量作为输出使用。</p>
+<h2 id="片段着色器"><a class="header" href="#片段着色器">片段着色器</a></h2>
+<p>由顶点着色器中的坐标组成的三角形使用片段在屏幕上填充了一块区域。片段着色器会被这些片段调用来为帧缓冲生成颜色和深度数据。一个简单地给整个三角形输出红色的片段着色器大概是这样的：</p>
+<pre><code class="language-glsl">#version 450
+#extension GL_ARB_separate_shader_objects : enable
+
+layout(location = 0) out vec4 outColor;
+
+void main() {
+    outColor = vec4(1.0, 0.0, 0.0, 1.0);
+}
+</code></pre>
+<p><code>main</code>函数会被每个片段调用，就像顶点着色器的<code>main</code>函数会被每个顶点调用一样。GLSL中的颜色是有四个分量的向量，四个分量分别是R、G、B以及alpha通道，值在[0, 1]之间。与顶点着色器中的<code>gl_Position</code>不同，没有为当前片段输出颜色的内建变量。你必须为每个帧缓冲指定你自己的输出变量，其中<code>layout(location = 0)</code>修饰符指定帧缓冲的索引。红色会被写入到<code>outColor</code>变量中，这个变量会被连接到索引为0的第一个（也是唯一一个）帧缓冲上。</p>
+<h2 id="每个顶点的颜色"><a class="header" href="#每个顶点的颜色">每个顶点的颜色</a></h2>
+<p>把整个三角形都设置为红色不好玩，下面这种是不是更好一点？</p>
+<p><img src="https://vulkan-tutorial.com/images/triangle_coordinates_colors.png" alt="" /></p>
+<p>我们需要对两个着色器做一系列改动才能实现这个。首先，我们需要为每个顶点指定一个不同的颜色。顶点着色器现在应该包含一个颜色数组，就像位置数组那样：</p>
+<pre><code class="language-glsl">vec3 colors[3] = vec3[](
+    vec3(1.0, 0.0, 0.0),
+    vec3(0.0, 1.0, 0.0),
+    vec3(0.0, 0.0, 1.0)
+);
+</code></pre>
+<p>现在我们只需要把每个顶点的颜色传递给片段着色器，这样它就能把这些颜色插值到帧缓冲中去了。在顶点着色器中添加一个输出，然后把它写到<code>main</code>函数里：</p>
+<pre><code class="language-glsl">layout(location = 0) out vec3 fragColor;
+
+void main() {
+    gl_Position = vec4(positions[gl_VertexIndex], 0.0, 1.0);
+    fragColor = colors[gl_VertexIndex];
+}
+</code></pre>
+<p>接下来，我们在片段着色器中添加一个匹配的输入：</p>
+<pre><code class="language-glsl">layout(location = 0) in vec3 fragColor;
+
+void main() {
+    outColor = vec4(fragColor, 1.0);
+}
+</code></pre>
+<p>输入变量不一定必须要用与输出相同的名字，它们之间是通过<code>location</code>指令指定的索引相关联的。<code>main</code>函数被修改成了输出加上一个alpha值的颜色。如上图所示，<code>fragColor</code>的值会被自动插值到三个顶点之间的片段中，以得到一个平滑的渐变。</p>
+<h2 id="编译着色器"><a class="header" href="#编译着色器">编译着色器</a></h2>
+<p>在项目根目录创建一个<code>shaders</code>文件夹，然后把顶点着色器保存为<code>shader.vert</code>，把片段着色器保存为<code>shader.frag</code>，放在这个文件夹里。GLSL着色器没有官方扩展名，不过这两个扩展名比较常用。</p>
+<p><code>shader.vert</code>的内容应该是：</p>
+<pre><code class="language-glsl">#version 450
+#extension GL_ARB_separate_shader_objects : enable
+
+layout(location = 0) out vec3 fragColor;
+
+vec2 positions[3] = vec2[](
+    vec2(0.0, -0.5),
+    vec2(0.5, 0.5),
+    vec2(-0.5, 0.5)
+);
+
+vec3 colors[3] = vec3[](
+    vec3(1.0, 0.0, 0.0),
+    vec3(0.0, 1.0, 0.0),
+    vec3(0.0, 0.0, 1.0)
+);
+
+void main() {
+    gl_Position = vec4(positions[gl_VertexIndex], 0.0, 1.0);
+    fragColor = colors[gl_VertexIndex];
+}
+</code></pre>
+<p>然后<code>shader.frag</code>的内容应该是：</p>
+<pre><code class="language-glsl">#version 450
+#extension GL_ARB_separate_shader_objects : enable
+
+layout(location = 0) in vec3 fragColor;
+
+layout(location = 0) out vec4 outColor;
+
+void main() {
+    outColor = vec4(fragColor, 1.0);
+}
+</code></pre>
+<p>我们现在要使用<code>glslangValidator</code>程序把它们编译成SPIR-V字节码。</p>
+<p>Windows：</p>
+<p>用以下内容创建一个<code>compile.bat</code>文件：</p>
+<pre><code class="language-bash">C:/VulkanSDK/x.x.x.x/Bin32/glslangValidator.exe -V shader.vert
+C:/VulkanSDK/x.x.x.x/Bin32/glslangValidator.exe -V shader.frag
+pause
+</code></pre>
+<p>把其中<code>glslangValidator.exe</code>的路径替换成你自己安装Vulkan SDK的路径，双击文件来运行它。</p>
+<p>Linux：</p>
+<p>用以下内容创建一个<code>compile.sh</code>文件：</p>
+<pre><code class="language-bash">/home/user/VulkanSDK/x.x.x.x/x86_64/bin/glslangValidator -V shader.vert
+/home/user/VulkanSDK/x.x.x.x/x86_64/bin/glslangValidator -V shader.frag
+</code></pre>
+<p>把其中<code>glslangValidator</code>的路径替换成你自己安装Vulkan SDK的路径。使用<code>chmod +x compile.sh</code>把脚本变成可执行的，然后运行它。</p>
+<p>不同平台之间的差异到此结束。</p>
+<p>这两条调用编译器的命令都有<code>-V</code>选项，这告知编译器把GLSL源文件编译成SPIR-V字节码。当你执行了交易脚本，你会看到创建了两个SPIR-V二进制文件：<code>vert.spv</code>和<code>frag.spv</code>。文件名被自动地根据着色器的类型进行了命名，不过你也可以改成任何你喜欢的名字。在编译着色器的时候，你可能会看到一条丢失某些功能（some missing features）的错误，不过你可以安全地无视它们。</p>
+<p>如果你的着色器中有语法错误，那么编译器会告诉你行号和错误，就像你希望的那样。比如，尝试去掉一个分号然后再执行一次编译脚本。或者不带任何选项地运行一次编译器来看看它都支持什么选项。例如，它还能把字节码还原成人类可读的形式，这样你就可以看到你的着色器到底是怎么工作的，以及在这一步进行了哪些优化。</p>
+<p>使用命令行来编译着色器是一个很直观的选项，这也是我们在教程中使用的方法，不过也可以直接用你自己的代码来编译着色器。Vulkan SDK包含了<a href="https://github.com/google/shaderc">libshaderc</a>，这是一个可以在程序中把GLSL编译成SPIR-V的库。</p>
+<h2 id="加载着色器"><a class="header" href="#加载着色器">加载着色器</a></h2>
+<p>我们已经生成了SPIR-V着色器，现在是时候把它们加载到程序里，然后把它们插入到图形渲染管线的某一阶段了。首先我们会写一个简单的帮助函数来把二进制数据从文件中加载出来。</p>
+<pre><code class="language-c++">#include &lt;fstream&gt;
+
+...
+
+static std::vector&lt;char&gt; readFile(const std::string&amp; filename) {
+    std::ifstream file(filename, std::ios::ate | std::ios::binary);
+
+    if (!file.is_open()) {
+        throw std::runtime_error(&quot;failed to open file!&quot;);
+    }
+}
+</code></pre>
+<p><code>readFile</code>函数会把指定文件中所有的字节读出来，然后返回到一个由<code>std::vector</code>管理的字节数组中。我们从带有两个选项的读取文件开始：</p>
+<ul>
+<li><code>ate</code>：从文件末尾开始读取</li>
+<li><code>binary</code>：以二进制形式读取文件（以避免文本转换）</li>
+</ul>
+<p>从文件末尾开始读取的好处是我们可以通过读取文件位置来获取文件的大小，然后分配缓存：</p>
+<pre><code class="language-c++">size_t fileSize = (size_t) file.tellg();
+std::vector&lt;char&gt; buffer(fileSize);
+</code></pre>
+<p>然后，我们就可以把文件指针（seek）移回文件开头来一次性读取所有字节了：</p>
+<pre><code class="language-c++">file.seekg(0);
+file.read(buffer.data(), fileSize);
+</code></pre>
+<p>最后关闭文件然后返回字节：</p>
+<pre><code class="language-c++">file.close();
+
+return buffer;
+</code></pre>
+<p>我们现在可以在<code>createGraphicsPipeline</code>函数中调用这个函数来从两个着色器中读取字节码了：</p>
+<pre><code class="language-c++">void createGraphicsPipeline() {
+    auto vertShaderCode = readFile(&quot;shaders/vert.spv&quot;);
+    auto fragShaderCode = readFile(&quot;shaders/frag.spv&quot;);
+}
+</code></pre>
+<p>通过输出缓存的大小并且检查其是否与文件的实际大小相匹配来确保着色器被正确地加载了。注意，代码不一定必须是C风格字符串（以<code>\0</code>结尾），因为它是二进制代码，并且稍后我们会确定它的大小。</p>
+<h2 id="创建着色器模块"><a class="header" href="#创建着色器模块">创建着色器模块</a></h2>
+<p>在我们能够把代码传递给图形渲染管线之前，我们必须用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkShaderModule.html"><code>VkShaderModule</code></a>对象来包裹它。创建一个<code>createShaderModule</code>帮助函数来实现这一点。</p>
+<pre><code class="language-c++">VkShaderModule createShaderModule(const std::vector&lt;char&gt;&amp; code) {
+
+}
+</code></pre>
+<p>这个函数将会以参数形式接受一个字节码缓存，然后根据缓存创建一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkShaderModule.html"><code>VkShaderModule</code></a>。</p>
+<p>创建着色器模块非常简单，我们只需要指定一个指向字节码缓存的指针，以及缓存的长度就可以了。这些信息由一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkShaderModuleCreateInfo.html"><code>VkShaderModuleCreateInfo</code></a>结构体指定。有一个问题是，字节码代码的单位是字节，但是字节码指针是一个<code>uint32_t</code>指针，而不是<code>char</code>指针。因此我们需要用<code>reinterpret_cast</code>来转换指针，就像下面代码所示一样。执行这样的转换时，还需要保证数据满足<code>uint32_t</code>的对齐要求。幸运的是，数据保存在<code>std::vector</code>中，它的默认分配器已经保证了数据能够满足任何情况的对齐要求。</p>
+<pre><code class="language-c++">VkShaderModuleCreateInfo createInfo = {};
+createInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
+createInfo.codeSize = code.size();
+createInfo.pCode = reinterpret_cast&lt;const uint32_t*&gt;(code.data());
+</code></pre>
+<p>现在<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkShaderModule.html"><code>VkShaderModule</code></a>可以通过调用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateShaderModule.html"><code>vkCreateShaderModule</code></a>来创建了：</p>
+<pre><code class="language-c++">VkShaderModule shaderModule;
+if (vkCreateShaderModule(device, &amp;createInfo, nullptr, &amp;shaderModule) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to create shader module!&quot;);
+}
+</code></pre>
+<p>参数与之前那些对象创建函数相同：逻辑设备、指向创建信息结构体的指针、可选的分配器指针以及指向保存句柄的变量的指针。在创建了着色器模块后，代码缓存可以被立即释放了。别忘了返回着色器模块：</p>
+<pre><code class="language-c++">return shaderModule;
+</code></pre>
+<p>着色器模块只是对我们之前加载的着色器字节码以及其中定义的函数的一个简单包裹。在图形渲染管线创建之前，不会对SPIR-V字节码进行编译和链接以供GPU执行。这就是说，当图形渲染管线创建好之后，我们可以再次销毁着色器模块，这就是为什么我们把这些变量设置为<code>createGraphicsPipeline</code>函数中的局部变量，而不是类的成员变量的原因：</p>
+<pre><code class="language-c++">void createGraphicsPipeline() {
+    auto vertShaderCode = readFile(&quot;shaders/vert.spv&quot;);
+    auto fragShaderCode = readFile(&quot;shaders/frag.spv&quot;);
+
+    VkShaderModule vertShaderModule = createShaderModule(vertShaderCode);
+    VkShaderModule fragShaderModule = createShaderModule(fragShaderCode);
+</code></pre>
+<p>着色器模块的销毁应该在函数结尾处调用两个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkDestroyShaderModule.html"><code>vkDestroyShaderModule</code></a>函数。本章中所有剩下的代码都会在这两行之前插入：</p>
+<pre><code class="language-c++">   ...
+    vkDestroyShaderModule(device, fragShaderModule, nullptr);
+    vkDestroyShaderModule(device, vertShaderModule, nullptr);
+}
+</code></pre>
+<h2 id="创建着色器阶段"><a class="header" href="#创建着色器阶段">创建着色器阶段</a></h2>
+<p>要使用着色器，我们需要通过<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineShaderStageCreateInfo.html"><code>VkPipelineShaderStageCreateInfo</code></a>结构体把它们分配到图形渲染管线上的某一阶段，作为管线创建过程的一部分。</p>
+<p>我们首先来在<code>createGraphicsPipeline</code>函数中填充顶点着色器的结构。</p>
+<pre><code class="language-c++">VkPipelineShaderStageCreateInfo vertShaderStageInfo = {};
+vertShaderStageInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
+vertShaderStageInfo.stage = VK_SHADER_STAGE_VERTEX_BIT;
+</code></pre>
+<p>除了必需的<code>sType</code>成员以外，第一步是要告诉Vulkan这个着色器将在哪一阶段使用。一个枚举值包括了上一章提到的所有可编程阶段。</p>
+<pre><code class="language-c++">vertShaderStageInfo.module = vertShaderModule;
+vertShaderStageInfo.pName = &quot;main&quot;;
+</code></pre>
+<p>接下来两个成员指定包含了代码的着色器模块，以及要调用的、叫做“入口点”的函数。这意味着你可以把多个片段着色器放到一个着色器模块中，然后通过使用不同的入口点来切换它们的行为。不过这里我们用标准的<code>main</code>。</p>
+<p>还有一个可选的成员，<code>pSpecializationInfo</code>，我们在这里不用它，但是它有讲解一下的价值。它允许你为着色器常量指定值。通过它，你可以使用一个在管线创建阶段通过不同常量值改变配置的着色器模块。这比起在渲染时通过变量改变配置的效率更高，因为编译器可以-进行优化，比如删除依赖于这些常量值的<code>if</code>语句。如果你没有设置常量值，你可以把这个成员设为<code>nullptr</code>，我们的结构体会自动进行初始化。</p>
+<p>把结构体修改成适合片段着色器的也很简单：</p>
+<pre><code class="language-c++">VkPipelineShaderStageCreateInfo fragShaderStageInfo = {};
+fragShaderStageInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
+fragShaderStageInfo.stage = VK_SHADER_STAGE_FRAGMENT_BIT;
+fragShaderStageInfo.module = fragShaderModule;
+fragShaderStageInfo.pName = &quot;main&quot;;
+</code></pre>
+<p>最后，定义一个数组来包含这两个皆否提，过一会儿真正来创建管线额时候会用到它们的引用。</p>
+<pre><code class="language-c++">VkPipelineShaderStageCreateInfo shaderStages[] = {vertShaderStageInfo, fragShaderStageInfo};
+</code></pre>
+<p>到此为止，管线中的可编程部分就描述完了。下一章我们会来看看固定功能部分。</p>
+<p><a href="https://vulkan-tutorial.com/code/09_shader_modules.cpp">C++代码</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.vert">顶点着色器</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.frag">片段着色器</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-01 简介 Introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-03 固定功能 Fixed functions.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-01 简介 Introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-03 固定功能 Fixed functions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

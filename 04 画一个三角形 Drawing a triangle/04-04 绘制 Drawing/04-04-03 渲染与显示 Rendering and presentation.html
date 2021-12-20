@@ -1,0 +1,493 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>04-04-03 渲染与显示</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../01 简介 Introduction.html">01 简介</a></li><li class="chapter-item expanded affix "><a href="../../02 概述 Overview.html">02 概述</a></li><li class="chapter-item expanded affix "><a href="../../03 开发环境 Development environment.html">03 开发环境</a></li><li class="chapter-item expanded affix "><li class="part-title">04 画一个三角形 Drawing a triangle</li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-05 重新创建交换链 Swap chain recreation.html"><strong aria-hidden="true">1.</strong> 04-05 重新创建交换链</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-01 基本代码 Base code.html"><strong aria-hidden="true">2.</strong> 04-01-01 基本代码</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-02 实例 Instance.html"><strong aria-hidden="true">3.</strong> 04-01-02 实例</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-03 验证层 Validation layers.html"><strong aria-hidden="true">4.</strong> 04-01-03 验证层</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-04 物理设备与队列家族 Physical devices and queue families.html"><strong aria-hidden="true">5.</strong> 04-01-04 物理设备与队列家族</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-05 逻辑设备与队列 Logical device and queues.html"><strong aria-hidden="true">6.</strong> 04-01-05 逻辑设备与队列</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-01 表面 Window surface.html"><strong aria-hidden="true">7.</strong> 04-02-01 表面</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-02 交换链 Swap chain.html"><strong aria-hidden="true">8.</strong> 04-02-02 交换链</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-03 图像视图 Image views.html"><strong aria-hidden="true">9.</strong> 04-02-03 图像视图</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-01 简介 Introduction.html"><strong aria-hidden="true">10.</strong> 04-03-01 简介</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-02 着色器模块 Shader modules.html"><strong aria-hidden="true">11.</strong> 04-03-02 着色器模块</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-03 固定功能 Fixed functions.html"><strong aria-hidden="true">12.</strong> 04-03-03 固定功能</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-04 渲染过程 Render passes.html"><strong aria-hidden="true">13.</strong> 04-03-04 渲染过程</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-05 小结 Conclusion.html"><strong aria-hidden="true">14.</strong> 04-03-05 小结</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-01 帧缓冲 Framebuffers.html"><strong aria-hidden="true">15.</strong> 04-04-01 帧缓冲</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-02 命令缓冲 Command buffers.html"><strong aria-hidden="true">16.</strong> 04-04-02 命令缓冲</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-03 渲染与显示 Rendering and presentation.html" class="active"><strong aria-hidden="true">17.</strong> 04-04-03 渲染与显示</a></li><li class="chapter-item expanded affix "><li class="part-title">05 顶点缓冲 Vertex buffers</li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-01 顶点输入描述 Vertex input description.html"><strong aria-hidden="true">18.</strong> 05-01 顶点输入描述</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-02 创建顶点缓冲 Vertex buffer creation.html"><strong aria-hidden="true">19.</strong> 05-02 创建顶点缓冲</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-03 暂存缓冲 Staging buffer.html"><strong aria-hidden="true">20.</strong> 05-03 暂存缓冲</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-04 索引缓冲 Index buffer.html"><strong aria-hidden="true">21.</strong> 05-04 索引缓冲</a></li><li class="chapter-item expanded affix "><li class="part-title">06 Uniform缓冲 Uniform Buffers</li><li class="chapter-item expanded "><a href="../../06 Uniform缓冲 Uniform Buffers/06-01 描述符布局与描述符缓冲 Descriptor layout and buffer.html"><strong aria-hidden="true">22.</strong> 06-01 描述符布局与描述符缓冲</a></li><li class="chapter-item expanded "><a href="../../06 Uniform缓冲 Uniform Buffers/06-02 描述符池与描述符集合 Descriptor pool and sets.html"><strong aria-hidden="true">23.</strong> 06-02 描述符池与描述符集合</a></li><li class="chapter-item expanded affix "><li class="part-title">07 纹理映射 Texture mapping</li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-01 图像 Images.html"><strong aria-hidden="true">24.</strong> 07-01 图像</a></li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-02 图像视图与采样器 Image view and sample.html"><strong aria-hidden="true">25.</strong> 07-02 图像视图与采样器</a></li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-03 组合图像采样器 Combined image sampler.html"><strong aria-hidden="true">26.</strong> 07-03 组合图像采样器</a></li><li class="chapter-item expanded "><a href="../../08 深度缓冲 Depth buffering.html"><strong aria-hidden="true">27.</strong> 08 深度缓冲</a></li><li class="chapter-item expanded "><a href="../../09 加载模型 Loading models.html"><strong aria-hidden="true">28.</strong> 09 加载模型</a></li><li class="chapter-item expanded "><a href="../../10 生成多级渐远纹理 Generating Mipmaps.html"><strong aria-hidden="true">29.</strong> 10 生成多级渐远纹理</a></li><li class="chapter-item expanded "><a href="../../11 多重采样 Multisampling.html"><strong aria-hidden="true">30.</strong> 11 多重采样</a></li><li class="chapter-item expanded "><a href="../../12 常见问题 FAQ.html"><strong aria-hidden="true">31.</strong> 12 常见问题</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="渲染与显示"><a class="header" href="#渲染与显示">渲染与显示</a></h1>
+<h2 id="建立"><a class="header" href="#建立">建立</a></h2>
+<p>这是要把所有东西都组合到一起的一章。我们要编写<code>drawFrame</code>函数，并且在主循环中调用它来把三角形显示到屏幕上。创建这个函数并且在<code>mainLoop</code>中调用它：</p>
+<pre><code class="language-c++">oid mainLoop() {
+    while (!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+        drawFrame();
+    }
+}
+
+...
+
+void drawFrame() {
+
+}
+</code></pre>
+<h2 id="同步"><a class="header" href="#同步">同步</a></h2>
+<p><code>drawFrame</code>函数将执行以下操作：</p>
+<ul>
+<li>从交换链中请求一个图像</li>
+<li>执行命令缓冲，并将请求到的图像作为帧缓冲的附件</li>
+<li>把图片返回到交换链中</li>
+</ul>
+<p>这些事件中的每一个都由单个的函数调用来启动，但是它们是异步执行的。函数调用会在操作执行真正完成之前就返回，执行的顺序也是不确定的。很不幸。每一项操作都依赖于前一项操作的完成。</p>
+<p>有两种方法来同步交换链事件：屏障（fence）和信号量。这两种对象都可以用作条件操作：一种操作是改变信号，另一种操作是等待一个屏障或一个信号量来从无信号状态跳转到有信号状态。</p>
+<p><em>（译者注：原文有点别扭，不过搞过多线程编程的人应该都能看懂这一段是什么意思）</em></p>
+<p>这二者之间的不同在于，屏障可以通过在你的程序中调用类似<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkWaitForFences.html"><code>vkWaitForFences</code></a>的函数来访问，而信号量不能。屏障主要设计为用来在渲染操作中同步你自己的应用程序，而信号量则用来同步命令队列内或者跨命令队列的操作。我们想要同步绘制命令与显示的队列操作，这里非常适合使用信号量。</p>
+<h2 id="信号量"><a class="header" href="#信号量">信号量</a></h2>
+<p>我们需要一个信号量来表示一个图像已被取回并准备好渲染，还需要另外一个信号量来表示渲染已经完成、可以绘制。新建两个成员变量来保存这两个信号量对象：</p>
+<pre><code class="language-c++">VkSemaphore imageAvailableSemaphore;
+VkSemaphore renderFinishedSemaphore;
+</code></pre>
+<p>为创建信号量，我们来为这部分教程添加最后一个<code>create</code>（创建）函数：<code>createSemaphores</code>：</p>
+<pre><code class="language-c++">void initVulkan() {
+    createInstance();
+    setupDebugCallback();
+    createSurface();
+    pickPhysicalDevice();
+    createLogicalDevice();
+    createSwapChain();
+    createImageViews();
+    createRenderPass();
+    createGraphicsPipeline();
+    createFramebuffers();
+    createCommandPool();
+    createCommandBuffers();
+    createSemaphores();
+}
+
+...
+
+void createSemaphores() {
+
+}
+</code></pre>
+<p>创建信号量需要填充<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkSemaphoreCreateInfo.html"><code>VkSemaphoreCreateInfo</code></a>，不过在现版本的API中它没有任何需要填充的成员，除了<code>sType</code>：</p>
+<pre><code class="language-c++">void createSemaphores() {
+    VkSemaphoreCreateInfo semaphoreInfo = {};
+    semaphoreInfo.sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO;
+}
+</code></pre>
+<p>在Vulkan API的后续版本或者扩展中有可能为<code>flags</code>和<code>pNext</code>参数添加功能，就像其它的结构体那样。信号量以这种很熟悉的形式调用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateSemaphore.html"><code>vkCreateSemaphore</code></a>函数来创建：</p>
+<pre><code class="language-c++">if (vkCreateSemaphore(device, &amp;semaphoreInfo, nullptr, &amp;imageAvailableSemaphore) != VK_SUCCESS ||
+    vkCreateSemaphore(device, &amp;semaphoreInfo, nullptr, &amp;renderFinishedSemaphore) != VK_SUCCESS) {
+
+    throw std::runtime_error(&quot;failed to create semaphores!&quot;);
+}
+</code></pre>
+<p>信号量需要在程序的最后，当所有命令全部完成、没有需要同步的操作时被清除掉：</p>
+<pre><code class="language-c++">void cleanup() {
+    vkDestroySemaphore(device, renderFinishedSemaphore, nullptr);
+    vkDestroySemaphore(device, imageAvailableSemaphore, nullptr);
+</code></pre>
+<h2 id="从交换链中获取图像"><a class="header" href="#从交换链中获取图像">从交换链中获取图像</a></h2>
+<p>就像之前提过的一样，我们需要在<code>drawFrame</code>函数中做的第一件事是从交换链中获取一个图像。重申一次，交换链是一个扩展功能，因此我们必须使用以<code>vk*KHR</code>格式命名的函数：</p>
+<pre><code class="language-c++">void drawFrame() {
+    uint32_t imageIndex;
+    vkAcquireNextImageKHR(device, swapChain, std::numeric_limits&lt;uint64_t&gt;::max(), imageAvailableSemaphore, VK_NULL_HANDLE, &amp;imageIndex);
+}
+</code></pre>
+<p><code>vkAcquireNextImageKHR</code>的头两个参数是逻辑设备和我们希望从中获取图像的交换链。第三个参数指定了请求图像的超时时间，以纳秒（nanosecond）为单位。使用64位无符号整数的最大值来禁用超时。</p>
+<p>接下来的两个参数指定了当显示引擎使用图像结束后要改变哪个同步对象的信号。信号改变的时间点就是我们可以开始对其进行绘制的时间点。可以给它指定一个信号量、屏障、或者二者都指定。在这里我们用我们的<code>imageAvailableSemaphore</code>来应对这种情况。</p>
+<p><em>（译者注：<code>VK_NULL_HANDLE</code>的位置就是可以指定屏障的位置）</em></p>
+<p>最后一个参数指定了一个变量，用来输出可用的交换链图像的索引（index）。这个索引代表了我们的<code>swapChainImages</code>数组中的一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkImage.html"><code>VkImage</code></a>。我们会用这个索引来选择正确的命令缓冲。</p>
+<h2 id="提交命令缓冲"><a class="header" href="#提交命令缓冲">提交命令缓冲</a></h2>
+<p>队列的提交和同步通过<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkSubmitInfo.html"><code>VkSubmitInfo</code></a>结构体进行配置。</p>
+<pre><code class="language-c++">VkSubmitInfo submitInfo = {};
+submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
+
+VkSemaphore waitSemaphores[] = {imageAvailableSemaphore};
+VkPipelineStageFlags waitStages[] = {VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT};
+submitInfo.waitSemaphoreCount = 1;
+submitInfo.pWaitSemaphores = waitSemaphores;
+submitInfo.pWaitDstStageMask = waitStages;
+</code></pre>
+<p>前三个参数指定了在处理开始之前哪些信号量要保持等待，以及要等待图形渲染管线的哪个或哪些阶段。我们想要等待到图像可用为止以便向其写入颜色，因此我们指定了图形渲染管线中向颜色附件进行写入的阶段。这意味着从理论上讲，这个实现能够在我们的图像尚未可用的时候就开始处理顶点着色器。<code>waitStages</code>数组中的每个入口点都对应着<code>pWaitSemaphores</code>中与其相同索引的信号量。</p>
+<pre><code class="language-c++">submitInfo.commandBufferCount = 1;
+submitInfo.pCommandBuffers = &amp;commandBuffers[imageIndex];
+</code></pre>
+<p>接下来的两个参数指定了哪些命令缓冲将会被实际地提交并执行。就像之前提过的那样，我们应该提交那个绑定了刚刚取回的交换链图像作为颜色附件的命令缓冲。</p>
+<pre><code class="language-c++">VkSemaphore signalSemaphores[] = {renderFinishedSemaphore};
+submitInfo.signalSemaphoreCount = 1;
+submitInfo.pSignalSemaphores = signalSemaphores;
+</code></pre>
+<p><code>signalSemaphoreCount</code>和<code>pSignalSemaphores</code>参数指定了当命令缓冲执行结束之后要改变哪些信号量的信号。在我们这里使用了<code>renderFinishedSemaphore</code>来应对这种情况。</p>
+<pre><code class="language-c++">if (vkQueueSubmit(graphicsQueue, 1, &amp;submitInfo, VK_NULL_HANDLE) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to submit draw command buffer!&quot;);
+}
+</code></pre>
+<p>现在我们可以使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkQueueSubmit.html"><code>vkQueueSubmit</code></a>向图形队列提交命令缓冲了。这个函数接受一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkSubmitInfo.html"><code>VkSubmitInfo</code></a>结构体作为参数，以在工作量很大的时候保持效率。最后一个参数引用了一个可选的屏障，当命令缓冲执行完成后，这个屏障的信号会被改变。我们使用信号量进行同步，因此这里只传递一个<code>VK_NULL_HANDLE</code>。</p>
+<h2 id="子过程依赖"><a class="header" href="#子过程依赖">子过程依赖</a></h2>
+<p>记住，一个渲染过程中的子过程会自动处理图像布局过渡。这些过渡由“子过程依赖”控制，它指定了子通道之间内存和执行的依赖关系。现在我们只有一个子过程，但是在这个子过程之前和之后的操作也会被算作隐式的“子过程”。</p>
+<p>有两个内建的依赖处理渲染过程开始和结束时的过渡，但是前者不会发生在正确的时间。它假设过渡发生在图形渲染管线的开始，但是这个时候我们还没获得图像！有两种方法来解决这个问题。我们可以把<code>imageAvailableSemaphore</code>的<code>waitStages</code>改成<code>VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT</code>来确保图像可用之后才启动渲染过程，或者我们可以让渲染过程在<code>VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT</code>阶段等待。我决定采用第二种方法，因为这样可以很好地观察子过程依赖及其工作方式。</p>
+<p>子过程依赖定义在<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkSubpassDependency.html"><code>VkSubpassDependency</code></a>结构体中。跳转到<code>createRenderPass</code>函数并且添加一个结构体：</p>
+<pre><code class="language-c++">VkSubpassDependency dependency = {};
+dependency.srcSubpass = VK_SUBPASS_EXTERNAL;
+dependency.dstSubpass = 0;
+</code></pre>
+<p>头两个字段指定了依赖和被依赖的子过程的索引。特殊值<code>VK_SUBPASS_EXTERNAL</code>指的是渲染过程开始之前或者结束之后的那个隐式的子过程，到底指哪个取决于它定义在了<code>srcSubpass</code>还是<code>dstSubpass</code>。索引值<code>0</code>代表了我们的子过程，它是第一个，也是唯一一个子过程。<code>dstSubpass</code>必须永远比<code>srcSubpass</code>高，以避免循环依赖。</p>
+<pre><code class="language-c++">dependency.srcStageMask = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT;
+dependency.srcAccessMask = 0;
+</code></pre>
+<p>接下来的两个字段指定了要等待的操作以及这些操作发生的阶段。在我们能够访问图像之前，我们需要等待到交换链完成对图像的读取为止。这可以通过等待颜色附件输出阶段本身来完成。</p>
+<pre><code class="language-c++">dependency.dstStageMask = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT;
+dependency.dstAccessMask = VK_ACCESS_COLOR_ATTACHMENT_READ_BIT | VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT;
+</code></pre>
+<p>应该等待的操作是颜色附件阶段的读取和写入操作。这些设置可以避免过渡在不需要（且不应该）它的时候发生：当我们正在向颜色附件写入颜色的时候。</p>
+<pre><code class="language-c++">renderPassInfo.dependencyCount = 1;
+renderPassInfo.pDependencies = &amp;dependency;
+</code></pre>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkRenderPassCreateInfo.html"><code>VkRenderPassCreateInfo</code></a>结构体有两个数组来指定一个存放依赖的数组。</p>
+<h2 id="显示"><a class="header" href="#显示">显示</a></h2>
+<p>绘制一帧的最后一步就是把结果返回到交换链中，使其最终可以被显示到屏幕上。显示由<code>VkPresentInfoKHR</code>结构体在<code>drawFrame</code>函数的末尾进行配置。</p>
+<pre><code class="language-c++">VkPresentInfoKHR presentInfo = {};
+presentInfo.sType = VK_STRUCTURE_TYPE_PRESENT_INFO_KHR;
+
+presentInfo.waitSemaphoreCount = 1;
+presentInfo.pWaitSemaphores = signalSemaphores;
+</code></pre>
+<p>头两个参数指定了在可以显示之前需要等待哪个（些）信号量，就像<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkSubmitInfo.html"><code>VkSubmitInfo</code></a>一样。</p>
+<pre><code class="language-c++">VkSwapchainKHR swapChains[] = {swapChain};
+presentInfo.swapchainCount = 1;
+presentInfo.pSwapchains = swapChains;
+presentInfo.pImageIndices = &amp;imageIndex;
+</code></pre>
+<p>接下来的两个参数指定了要显示图像的交换链，以及每个交换链中图像的索引。这里应该始终只有一个交换链。</p>
+<pre><code class="language-c++">presentInfo.pResults = nullptr; // Optional
+</code></pre>
+<p>这是一个叫做<code>pResults</code>的可选参数。它允许你指定一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkResult.html"><code>VkResult</code></a>的数组来检查每个交换链的显示是否成功。当你只使用一个交换链的时候没有必要用这个，因为你可以简单地使用显示函数的返回值。</p>
+<pre><code class="language-c++">vkQueuePresentKHR(presentQueue, &amp;presentInfo);
+</code></pre>
+<p><code>vkQueuePresentKHR</code>函数将提交一个把一个图像显示到交换链的请求，我们将在下一章对<code>vkAcquireNextImageKHR</code>和<code>vkQueuePresentKHR</code>函数添加错误处理，因为与我们迄今为止看到的那些函数不同，它们的失败不代表整个程序应该退出。</p>
+<p>如果目前为止你做对了所有事情，那么当运行程序时，你应该看到类似下面的东西：</p>
+<p><img src="https://vulkan-tutorial.com/images/triangle.png" alt="" /></p>
+<p>耶！不幸的是，你会看到当验证层开启的时候，程序会在你关闭它的时候崩溃。<code>debugCallback</code>打印到终端上的信息告诉了我们原因：</p>
+<p><img src="https://vulkan-tutorial.com/images/semaphore_in_use.png" alt="" /></p>
+<p>记住，所有<code>drawFrame</code>中的操作都是异步的。这意味着当我们退出<code>mainLoop</code>中的循环时，渲染和显示操作依然有可能会继续。在这些操作正在进行的时候清除所有资源不是什么好主意。</p>
+<p>为了解决这个问题，我们应该在退出<code>mainLoop</code>和销毁窗口之前等待逻辑设备执行完所有操作：</p>
+<pre><code class="language-c++">void mainLoop() {
+    while (!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+        drawFrame();
+    }
+
+    vkDeviceWaitIdle(device);
+}
+</code></pre>
+<p>你也可以使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkQueueWaitIdle.html"><code>vkQueueWaitIdle</code></a>来等待某一特定的命令队列执行完成。这些函数是执行同步操作的基本方法。现在在关闭窗口的时候你会看到程序会退出而不产生错误了。</p>
+<h2 id="处理中的帧"><a class="header" href="#处理中的帧">处理中的帧</a></h2>
+<p>如果你在启用了验证层的情况下运行你的程序，并且观察程序的内存占用量，你或许会发现它在缓慢增长。原因是程序在<code>drawFrame</code>函数中飞快地进行提交操作，但是没有检查这些操作是否完成了。如果CPU的提交操作太快导致GPU跟不上的话，队列就会缓慢地被这些操作占用。更糟的是，我们在重复使用<code>imageAvailableSemaphore</code>和<code>renderFinishedSemaphore</code>同时处理多个帧。</p>
+<p>解决这个问题的简单方法是在提交之后等待提交操作完成，比如使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkQueueWaitIdle.html"><code>vkQueueWaitIdle</code></a>：</p>
+<pre><code class="language-c++">void drawFrame() {
+    ...
+
+    vkQueuePresentKHR(presentQueue, &amp;presentInfo);
+
+    vkQueueWaitIdle(presentQueue);
+}
+</code></pre>
+<p>然而，这种方式可能使我们无法最佳化利用GPU，因为现在整个图形渲染管线在同一时间只处理一个帧。这些阶段只能在当前帧处理结束、处于空闲状态时才能处理下一个帧。我们现在会扩展我们的程序来允许多个帧进入“正在处理”（in-flight）模式，同时仍然限制累积起来的操作总量。</p>
+<p>首先，在程序的最顶端添加一个常量来定义有多少帧需要被同时处理：</p>
+<pre><code class="language-c++">const int MAX_FRAMES_IN_FLIGHT = 2;
+</code></pre>
+<p>每个帧都应该有自己的一组信号量：</p>
+<pre><code class="language-c++">std::vector&lt;VkSemaphore&gt; imageAvailableSemaphores;
+std::vector&lt;VkSemaphore&gt; renderFinishedSemaphores;
+</code></pre>
+<p><code>createSemaphores</code>函数应该被修改，以创建所有的这些信号量：</p>
+<pre><code class="language-c++">void createSemaphores() {
+    imageAvailableSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
+    renderFinishedSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
+
+    VkSemaphoreCreateInfo semaphoreInfo = {};
+    semaphoreInfo.sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO;
+
+    for (size_t i = 0; i &lt; MAX_FRAMES_IN_FLIGHT; i++) {
+        if (vkCreateSemaphore(device, &amp;semaphoreInfo, nullptr, &amp;imageAvailableSemaphores[i]) != VK_SUCCESS ||
+            vkCreateSemaphore(device, &amp;semaphoreInfo, nullptr, &amp;renderFinishedSemaphores[i]) != VK_SUCCESS) {
+
+            throw std::runtime_error(&quot;failed to create semaphores for a frame!&quot;);
+        }
+}
+</code></pre>
+<p>类似地，它们也应该全部被清除：</p>
+<pre><code class="language-c++">void cleanup() {
+    for (size_t i = 0; i &lt; MAX_FRAMES_IN_FLIGHT; i++) {
+        vkDestroySemaphore(device, renderFinishedSemaphores[i], nullptr);
+        vkDestroySemaphore(device, imageAvailableSemaphores[i], nullptr);
+    }
+
+    ...
+}
+</code></pre>
+<p>为了使用正确的信号量对，我们需要追踪当前帧。我们会使用一个帧索引来应对这种情况：</p>
+<pre><code class="language-c++">size_t currentFrame = 0;
+</code></pre>
+<p><code>drawFrame</code>函数现在也需要被修改来使用正确的对象：</p>
+<pre><code class="language-c++">void drawFrame() {
+    vkAcquireNextImageKHR(device, swapChain, std::numeric_limits&lt;uint64_t&gt;::max(), imageAvailableSemaphores[currentFrame], VK_NULL_HANDLE, &amp;imageIndex);
+
+    ...
+
+    VkSemaphore waitSemaphores[] = {imageAvailableSemaphores[currentFrame]};
+
+    ...
+
+    VkSemaphore signalSemaphores[] = {renderFinishedSemaphores[currentFrame]};
+
+    ...
+}
+</code></pre>
+<p>当然，不要忘了每次都要进入下一帧：</p>
+<pre><code class="language-c++">void drawFrame() {
+    ...
+
+    currentFrame = (currentFrame + 1) % MAX_FRAMES_IN_FLIGHT;
+}
+</code></pre>
+<p>通过使用取余（%）运算符，我们可以确保帧索引的循环处于每<code>MAX_FRAMES_IN_FLIGHT</code>个已排队帧的后面。</p>
+<p>尽管我们已经设置好了同时处理多个帧所必需的对象，现在还是无法避免比<code>MAX_FRAMES_IN_FLIGHT</code>更多的帧被提交。现在这里只有GPU-GPU的同步，而没有CPU-CPU的同步来继续跟踪提交操作的后续情况。有可能出现需要使用#0（第0个）帧，但#0帧仍处于正在处理模式的情况。</p>
+<p>为实现CPU-CPU的同步，Vulkan提供了第二种同步原语（synchronization primitive），称为屏障（fence）。在某种意义上，屏障类似于信号量：它们都可以被改变信号和等待。但是这次我们实际上是在我们自己的代码上面等待屏障。首先先来为每个帧创建一个屏障：</p>
+<pre><code class="language-c++">std::vector&lt;VkSemaphore&gt; imageAvailableSemaphores;
+std::vector&lt;VkSemaphore&gt; renderFinishedSemaphores;
+std::vector&lt;VkFence&gt; inFlightFences;
+size_t currentFrame = 0;
+</code></pre>
+<p>我决定把创建屏障和创建信号量放在一起，然后把<code>createSemaphores</code>重命名为<code>createSyncObjects</code>：</p>
+<pre><code class="language-c++">void createSyncObjects() {
+    imageAvailableSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
+    renderFinishedSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
+    inFlightFences.resize(MAX_FRAMES_IN_FLIGHT);
+
+    VkSemaphoreCreateInfo semaphoreInfo = {};
+    semaphoreInfo.sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO;
+
+    VkFenceCreateInfo fenceInfo = {};
+    fenceInfo.sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO;
+
+    for (size_t i = 0; i &lt; MAX_FRAMES_IN_FLIGHT; i++) {
+        if (vkCreateSemaphore(device, &amp;semaphoreInfo, nullptr, &amp;imageAvailableSemaphores[i]) != VK_SUCCESS ||
+            vkCreateSemaphore(device, &amp;semaphoreInfo, nullptr, &amp;renderFinishedSemaphores[i]) != VK_SUCCESS ||
+            vkCreateFence(device, &amp;fenceInfo, nullptr, &amp;inFlightFences[i]) != VK_SUCCESS) {
+
+            throw std::runtime_error(&quot;failed to create synchronization objects for a frame!&quot;);
+        }
+    }
+}
+</code></pre>
+<p>创建屏障（<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkFence.html"><code>VkFence</code></a>）与创建信号量非常相似。还要确保清除了屏障：</p>
+<pre><code class="language-c++">void cleanup() {
+    for (size_t i = 0; i &lt; MAX_FRAMES_IN_FLIGHT; i++) {
+        vkDestroySemaphore(device, renderFinishedSemaphores[i], nullptr);
+        vkDestroySemaphore(device, imageAvailableSemaphores[i], nullptr);
+        vkDestroyFence(device, inFlightFences[i], nullptr);
+    }
+
+    ...
+}
+</code></pre>
+<p>现在我们来更改<code>drawFrame</code>以使用屏障进行同步。<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkQueueSubmit.html"><code>vkQueueSubmit</code></a>函数调用包含了一个可选的参数来传递一个在命令缓冲完成执行之后应该被改变信号的屏障。我们可以用这个来表示一个帧已经使用完成。</p>
+<pre><code class="language-c++">void drawFrame() {
+    ...
+
+    if (vkQueueSubmit(graphicsQueue, 1, &amp;submitInfo, inFlightFences[currentFrame]) != VK_SUCCESS) {
+        throw std::runtime_error(&quot;failed to submit draw command buffer!&quot;);
+    }
+    ...
+}
+</code></pre>
+<p>现在只剩下更改<code>drawFrame</code>的开头部分来等待帧使用完成了：</p>
+<pre><code class="language-c++">void drawFrame() {
+    vkWaitForFences(device, 1, &amp;inFlightFences[currentFrame], VK_TRUE, std::numeric_limits&lt;uint64_t&gt;::max());
+    vkResetFences(device, 1, &amp;inFlightFences[currentFrame]);
+
+    ...
+}
+</code></pre>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkWaitForFences.html"><code>vkWaitForFences</code></a>函数接受一个屏障数组并且在返回前等待其中的一个或所有屏障改变了信号。我们在这里传递的<code>VK_TRUE</code>代表了我们想要等待所有的屏障，但是在只有一个屏障的情况下这个选项造不成什么影响。就像<code>vkAcquireNextImageKHR</code>一样，这个函数也需要一个超时时间。与信号量不同的是，我们需要通过调用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkResetFences.html"><code>vkResetFences</code></a>函数来手动把屏障复位到无信号（unsignaled）状态。</p>
+<p>如果你现在运行程序，你会发现有些奇怪。这个程序看起来没有绘制任何东西。开启了验证层的话，你会看到如下消息：</p>
+<p><img src="https://vulkan-tutorial.com/images/unsubmitted_fence.png" alt="" /></p>
+<p>这意味着我们正在等待一个没有被提交的屏障。出现这个问题是因为，在默认情况下，新建的屏障是处于无信号状态的。这意味着如果我们之前没有使用过这个屏障的话，<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkWaitForFences.html"><code>vkWaitForFences</code></a>会一直等待下去。为解决这个问题，我们可以更改屏障的创建过程，来把新建的屏障初始化为有信号状态的，就好像我们已经渲染了一个初始帧：</p>
+<pre><code class="language-c++">void createSyncObjects() {
+    ...
+
+    VkFenceCreateInfo fenceInfo = {};
+    fenceInfo.sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO;
+    fenceInfo.flags = VK_FENCE_CREATE_SIGNALED_BIT;
+
+    ...
+}
+</code></pre>
+<p>现在这个程序应该正确运行，而内存泄漏也应该消失了。我们现在已经实现了所有必需的同步操作来保证同一时间内不会有超过2个帧在队列里。注意，对于代码的其他部分，比如最后的清除操作，使用更加粗略的同步操作，比如<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkDeviceWaitIdle.html"><code>vkDeviceWaitIdle</code></a>，是完全可以的。你应该基于性能要求来决定采用哪种同步方法。</p>
+<p>要通过例子来了解更多同步操作的话，请参阅Khronos的<a href="https://github.com/KhronosGroup/Vulkan-Docs/wiki/Synchronization-Examples#swapchain-image-acquire-and-present">这份广泛的概述</a>。</p>
+<h2 id="小结"><a class="header" href="#小结">小结</a></h2>
+<p>在写了900行多一点的程序之后，我们终于看到了有东西显示在了屏幕上！固然，创建一个Vulkan程序需要大量工作，但是这种清晰的创建过程也能带来强大的控制能力。我推荐你花些时间重新阅读这些代码，然后在脑海里构建一个包含程序中所有Vulkan对象的模型，以及这些对象之间是如何关联起来的。从现在开始我们将基于这些知识来扩展程序的功能。</p>
+<p>在下一章我们会处理一个表现良好的Vulkan程序所必需的一点小问题。</p>
+<p><a href="https://vulkan-tutorial.com/code/15_hello_triangle.cpp">C++代码</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.vert">顶点着色器</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.frag">片段着色器</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-02 命令缓冲 Command buffers.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../05 顶点缓冲 Vertex buffers/05-01 顶点输入描述 Vertex input description.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-02 命令缓冲 Command buffers.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../05 顶点缓冲 Vertex buffers/05-01 顶点输入描述 Vertex input description.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

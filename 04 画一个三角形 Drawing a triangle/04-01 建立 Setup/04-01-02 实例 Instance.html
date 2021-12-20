@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>04-01-02 实例</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../01 简介 Introduction.html">01 简介</a></li><li class="chapter-item expanded affix "><a href="../../02 概述 Overview.html">02 概述</a></li><li class="chapter-item expanded affix "><a href="../../03 开发环境 Development environment.html">03 开发环境</a></li><li class="chapter-item expanded affix "><li class="part-title">04 画一个三角形 Drawing a triangle</li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-05 重新创建交换链 Swap chain recreation.html"><strong aria-hidden="true">1.</strong> 04-05 重新创建交换链</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-01 基本代码 Base code.html"><strong aria-hidden="true">2.</strong> 04-01-01 基本代码</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-02 实例 Instance.html" class="active"><strong aria-hidden="true">3.</strong> 04-01-02 实例</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-03 验证层 Validation layers.html"><strong aria-hidden="true">4.</strong> 04-01-03 验证层</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-04 物理设备与队列家族 Physical devices and queue families.html"><strong aria-hidden="true">5.</strong> 04-01-04 物理设备与队列家族</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-05 逻辑设备与队列 Logical device and queues.html"><strong aria-hidden="true">6.</strong> 04-01-05 逻辑设备与队列</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-01 表面 Window surface.html"><strong aria-hidden="true">7.</strong> 04-02-01 表面</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-02 交换链 Swap chain.html"><strong aria-hidden="true">8.</strong> 04-02-02 交换链</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-03 图像视图 Image views.html"><strong aria-hidden="true">9.</strong> 04-02-03 图像视图</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-01 简介 Introduction.html"><strong aria-hidden="true">10.</strong> 04-03-01 简介</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-02 着色器模块 Shader modules.html"><strong aria-hidden="true">11.</strong> 04-03-02 着色器模块</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-03 固定功能 Fixed functions.html"><strong aria-hidden="true">12.</strong> 04-03-03 固定功能</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-04 渲染过程 Render passes.html"><strong aria-hidden="true">13.</strong> 04-03-04 渲染过程</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-05 小结 Conclusion.html"><strong aria-hidden="true">14.</strong> 04-03-05 小结</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-01 帧缓冲 Framebuffers.html"><strong aria-hidden="true">15.</strong> 04-04-01 帧缓冲</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-02 命令缓冲 Command buffers.html"><strong aria-hidden="true">16.</strong> 04-04-02 命令缓冲</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-03 渲染与显示 Rendering and presentation.html"><strong aria-hidden="true">17.</strong> 04-04-03 渲染与显示</a></li><li class="chapter-item expanded affix "><li class="part-title">05 顶点缓冲 Vertex buffers</li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-01 顶点输入描述 Vertex input description.html"><strong aria-hidden="true">18.</strong> 05-01 顶点输入描述</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-02 创建顶点缓冲 Vertex buffer creation.html"><strong aria-hidden="true">19.</strong> 05-02 创建顶点缓冲</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-03 暂存缓冲 Staging buffer.html"><strong aria-hidden="true">20.</strong> 05-03 暂存缓冲</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-04 索引缓冲 Index buffer.html"><strong aria-hidden="true">21.</strong> 05-04 索引缓冲</a></li><li class="chapter-item expanded affix "><li class="part-title">06 Uniform缓冲 Uniform Buffers</li><li class="chapter-item expanded "><a href="../../06 Uniform缓冲 Uniform Buffers/06-01 描述符布局与描述符缓冲 Descriptor layout and buffer.html"><strong aria-hidden="true">22.</strong> 06-01 描述符布局与描述符缓冲</a></li><li class="chapter-item expanded "><a href="../../06 Uniform缓冲 Uniform Buffers/06-02 描述符池与描述符集合 Descriptor pool and sets.html"><strong aria-hidden="true">23.</strong> 06-02 描述符池与描述符集合</a></li><li class="chapter-item expanded affix "><li class="part-title">07 纹理映射 Texture mapping</li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-01 图像 Images.html"><strong aria-hidden="true">24.</strong> 07-01 图像</a></li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-02 图像视图与采样器 Image view and sample.html"><strong aria-hidden="true">25.</strong> 07-02 图像视图与采样器</a></li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-03 组合图像采样器 Combined image sampler.html"><strong aria-hidden="true">26.</strong> 07-03 组合图像采样器</a></li><li class="chapter-item expanded "><a href="../../08 深度缓冲 Depth buffering.html"><strong aria-hidden="true">27.</strong> 08 深度缓冲</a></li><li class="chapter-item expanded "><a href="../../09 加载模型 Loading models.html"><strong aria-hidden="true">28.</strong> 09 加载模型</a></li><li class="chapter-item expanded "><a href="../../10 生成多级渐远纹理 Generating Mipmaps.html"><strong aria-hidden="true">29.</strong> 10 生成多级渐远纹理</a></li><li class="chapter-item expanded "><a href="../../11 多重采样 Multisampling.html"><strong aria-hidden="true">30.</strong> 11 多重采样</a></li><li class="chapter-item expanded "><a href="../../12 常见问题 FAQ.html"><strong aria-hidden="true">31.</strong> 12 常见问题</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="实例"><a class="header" href="#实例">实例</a></h1>
+<h2 id="创建一个实例"><a class="header" href="#创建一个实例">创建一个实例</a></h2>
+<p>一切开始于创建一个“实例”来初始化Vulkan库。实例（instance）是连接Vulkan库和你的程序之间的桥梁，创建实例还涉及到向驱动指定你的应用程序的一些细节。</p>
+<p>添加一个<code>createInstance</code>函数，然后在<code>initVulkan</code>函数中调用它。</p>
+<pre><code class="language-cpp">void initVulkan() {
+    createInstance();
+}
+
+</code></pre>
+<p>再在类中添加一个成员变量，用来保存实例的句柄：</p>
+<pre><code class="language-cpp">private:
+VkInstance instance;
+</code></pre>
+<p>现在，为了创建实例，我们首先需要用我们程序的一些信息去填充一个结构体。从技术上来说，这些信息可以不填，但是它们或许能够提供一些信息给驱动，以使驱动针对我们的特定程序进行优化，比如，它使用了一个具有某些特殊行为的著名图形引擎。这个结构体叫做<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkApplicationInfo.html"><code>VkApplicationInfo</code></a>：</p>
+<pre><code class="language-cpp">VkApplicationInfo appInfo = {};
+appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+appInfo.pApplicationName = &quot;Hello Triangle&quot;;
+appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
+appInfo.pEngineName = &quot;No Engine&quot;;
+appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
+appInfo.apiVersion = VK_API_VERSION_1_0;
+</code></pre>
+<p>就像之前提到过的那样，Vulkan中的许多结构体需要你在<code>sType</code>成员中显式指定类型。这个结构体也是众多拥有<code>pNext</code>成员的结构体当中的一个，这个成员在将来可以指向扩展信息。我们现在执行默认初始化，所以此处置为<code>nullptr</code>（空指针）。</p>
+<p>Vulkan中的许多信息都通过结构体来传递，而不是函数参数。我们还需要填充另一个结构体来为创建实例提供足够多的信息。接下来的这个结构体是必需的，它告知Vulkan驱动我们要使用哪些全局的扩展以及验证层。“全局”意味着它们将在整个程序中生效，而不是某个特定的设备，接下来的几章里我们会说明这个问题。</p>
+<pre><code class="language-cpp">VkInstanceCreateInfo createInfo = {};
+createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+createInfo.pApplicationInfo = &amp;appInfo;
+</code></pre>
+<p>前两个参数的意思非常明显。接下来的两个成员会指定我们想用的全局扩展。就像我们在概述那章里提到过的，Vulkan是一套平台无关的API，这意味着你需要一个与窗口系统（window system）的相接的扩展。GLFW已经集成了一个好用的内置函数，它返回GLFW需要的Vulkan扩展，我们可以直接把它传给Vulkan API：</p>
+<pre><code class="language-cpp">uint32_t glfwExtensionCount = 0;
+const char** glfwExtensions;
+
+glfwExtensions = glfwGetRequiredInstanceExtensions(&amp;glfwExtensionCount);
+
+createInfo.enabledExtensionCount = glfwExtensionCount;
+createInfo.ppEnabledExtensionNames = glfwExtensions;
+</code></pre>
+<p>最后两个成员指定哪些全局验证层将会被启用。我们会在下一章深入讨论验证层，这里先暂时留空。</p>
+<pre><code class="language-cpp">createInfo.enabledLayerCount = 0;
+</code></pre>
+<p>我们已经指定了初始化Vulkan实例需要的所有信息，现在终于可以调用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateInstance.html"><code>vkCreateInstance</code></a>函数了：</p>
+<pre><code class="language-cpp">VkResult result = vkCreateInstance(&amp;createInfo, nullptr, &amp;instance);
+</code></pre>
+<p>如你所见，Vulkan中创建对象的函数，其参数通常是这样的：</p>
+<ul>
+<li>指向创建信息(creation info)的指针</li>
+<li>指向自定义分配器回调函数的指针，此教程中永远被置为<code>nullptr</code></li>
+<li>指向保存了要被创建的对象的句柄变量的指针</li>
+</ul>
+<p>如果一切运行良好，那么创建好的实例的句柄就被保存在 <a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkInstance.html"><code>VkInstance</code></a>类型的成员变量中了。几乎每一个Vulkan函数的返回值都是 <a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkResult.html"><code>VkResult</code></a>类型的，它要么是<code>VK_SUCCESS</code>，要么是一个错误代码。如果要检查实例是否被成功创建，我们不需要保存这个返回结果，只需要检查一下返回值就行了：</p>
+<pre><code class="language-cpp">if (vkCreateInstance(&amp;createInfo, nullptr, &amp;instance) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to create instance!&quot;);
+}
+
+</code></pre>
+<p>现在运行这个程序以确定实例创建成功。</p>
+<h2 id="检查插件是否受支持"><a class="header" href="#检查插件是否受支持">检查插件是否受支持</a></h2>
+<p>如果你看过 <a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateInstance.html"><code>vkCreateInstance</code></a>的文档，你就会看到有一个错误代码是<code>VK_ERROR_EXTENSION_NOT_PRESENT</code>。我们可以简单地指定我们想用的扩展，如果返回了这个值就直接退出。如果要检查那些必要的扩展，例如窗口系统接口（window system interface, WSI），这么做还有点道理，但如果我们要检查那些可选的功能呢？</p>
+<p>为了在创建实例之前得到所有受支持的扩展列表，可以用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkEnumerateInstanceExtensionProperties.html"><code>vkEnumerateInstanceExtensionProperties</code></a>函数。它需要两个指针变量，一个指向受支持的扩展数量，另一个指向一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkExtensionProperties.html"><code>VkExtensionProperties</code></a>类型的、存储着扩展的细节的数组。它的第一个参数是可选的，允许我们使用一个特殊的验证层来选择扩展，我们现在先忽略它。</p>
+<p>为了分配那个存储着扩展的细节的数组，我们需要先知道扩展的数量。你可以通过把最后一个参数留空的方式来只请求扩展的数量：</p>
+<pre><code class="language-cpp">uint32_t extensionCount = 0;
+vkEnumerateInstanceExtensionProperties(nullptr, &amp;extensionCount, nullptr);
+
+</code></pre>
+<p>现在来分配一个数组，保存扩展的细节（引入头文件<code>&lt;vector&gt;</code>）：</p>
+<pre><code class="language-cpp">std::vector&lt;VkExtensionProperties&gt; extensions(extensionCount);
+
+</code></pre>
+<p>最后就可以查询扩展的细节了：</p>
+<pre><code class="language-cpp">vkEnumerateInstanceExtensionProperties(nullptr, &amp;extensionCount, extensions.data());
+
+</code></pre>
+<p>每个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkExtensionProperties.html"><code>VkExtensionProperties</code></a>结构体都包含着扩展的名称和版本。我们可以通过一个简单的循环来输出它们（<code>\t</code>是一个制表符，用来缩进）：</p>
+<pre><code class="language-cpp">std::cout &lt;&lt; &quot;available extensions:&quot; &lt;&lt; std::endl;
+
+for (const auto&amp; extension : extensions) {
+    std::cout &lt;&lt; &quot;\t&quot; &lt;&lt; extension.extensionName &lt;&lt; std::endl;
+}
+
+</code></pre>
+<p>如果你想为Vulkan支持提供一些详细信息，你可以把这段代码加到<code>createInstance</code>函数里。留一个课后练习，尝试创建一个函数，检查<code>glfwGetRequiredInstanceExtensions</code>函数返回的所有扩展是不是都在受支持的扩展列表里。</p>
+<h2 id="清理"><a class="header" href="#清理">清理</a></h2>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkInstance.html"><code>VkInstance</code></a>只应该在程序退出之前被销毁。可以在<code>cleanup</code>函数中用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkDestroyInstance.html"><code>vkDestroyInstance</code></a>函数销毁它：</p>
+<pre><code class="language-cpp">void cleanup() {
+    vkDestroyInstance(instance, nullptr);
+
+    glfwDestroyWindow(window);
+
+    glfwTerminate();
+}
+
+</code></pre>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkDestroyInstance.html"><code>vkDestroyInstance</code></a>函数的参数非常简洁明了，就像在上一章里提过的那样，Vulkan中的分配器和回收器都有一个可选的回调函数，这个回调函数被我们忽略掉并且置为<code>nullptr</code>了。在随后的章节中，我们创建的所有其它Vulkan资源都会在实例被销毁之前回收。</p>
+<p>在创建了实例之后、开始进行更复杂的步骤之前，是时候看看我们的验证层来评估调试选项了。</p>
+<p><a href="https://vulkan-tutorial.com/code/01_instance_creation.cpp">C++代码</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-01 基本代码 Base code.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-03 验证层 Validation layers.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-01 基本代码 Base code.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-03 验证层 Validation layers.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

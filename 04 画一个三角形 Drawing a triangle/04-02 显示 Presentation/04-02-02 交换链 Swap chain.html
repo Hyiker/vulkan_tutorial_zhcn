@@ -1,0 +1,492 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>04-02-02 交换链</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../01 简介 Introduction.html">01 简介</a></li><li class="chapter-item expanded affix "><a href="../../02 概述 Overview.html">02 概述</a></li><li class="chapter-item expanded affix "><a href="../../03 开发环境 Development environment.html">03 开发环境</a></li><li class="chapter-item expanded affix "><li class="part-title">04 画一个三角形 Drawing a triangle</li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-05 重新创建交换链 Swap chain recreation.html"><strong aria-hidden="true">1.</strong> 04-05 重新创建交换链</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-01 基本代码 Base code.html"><strong aria-hidden="true">2.</strong> 04-01-01 基本代码</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-02 实例 Instance.html"><strong aria-hidden="true">3.</strong> 04-01-02 实例</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-03 验证层 Validation layers.html"><strong aria-hidden="true">4.</strong> 04-01-03 验证层</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-04 物理设备与队列家族 Physical devices and queue families.html"><strong aria-hidden="true">5.</strong> 04-01-04 物理设备与队列家族</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-05 逻辑设备与队列 Logical device and queues.html"><strong aria-hidden="true">6.</strong> 04-01-05 逻辑设备与队列</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-01 表面 Window surface.html"><strong aria-hidden="true">7.</strong> 04-02-01 表面</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-02 交换链 Swap chain.html" class="active"><strong aria-hidden="true">8.</strong> 04-02-02 交换链</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-03 图像视图 Image views.html"><strong aria-hidden="true">9.</strong> 04-02-03 图像视图</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-01 简介 Introduction.html"><strong aria-hidden="true">10.</strong> 04-03-01 简介</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-02 着色器模块 Shader modules.html"><strong aria-hidden="true">11.</strong> 04-03-02 着色器模块</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-03 固定功能 Fixed functions.html"><strong aria-hidden="true">12.</strong> 04-03-03 固定功能</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-04 渲染过程 Render passes.html"><strong aria-hidden="true">13.</strong> 04-03-04 渲染过程</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-05 小结 Conclusion.html"><strong aria-hidden="true">14.</strong> 04-03-05 小结</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-01 帧缓冲 Framebuffers.html"><strong aria-hidden="true">15.</strong> 04-04-01 帧缓冲</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-02 命令缓冲 Command buffers.html"><strong aria-hidden="true">16.</strong> 04-04-02 命令缓冲</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-03 渲染与显示 Rendering and presentation.html"><strong aria-hidden="true">17.</strong> 04-04-03 渲染与显示</a></li><li class="chapter-item expanded affix "><li class="part-title">05 顶点缓冲 Vertex buffers</li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-01 顶点输入描述 Vertex input description.html"><strong aria-hidden="true">18.</strong> 05-01 顶点输入描述</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-02 创建顶点缓冲 Vertex buffer creation.html"><strong aria-hidden="true">19.</strong> 05-02 创建顶点缓冲</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-03 暂存缓冲 Staging buffer.html"><strong aria-hidden="true">20.</strong> 05-03 暂存缓冲</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-04 索引缓冲 Index buffer.html"><strong aria-hidden="true">21.</strong> 05-04 索引缓冲</a></li><li class="chapter-item expanded affix "><li class="part-title">06 Uniform缓冲 Uniform Buffers</li><li class="chapter-item expanded "><a href="../../06 Uniform缓冲 Uniform Buffers/06-01 描述符布局与描述符缓冲 Descriptor layout and buffer.html"><strong aria-hidden="true">22.</strong> 06-01 描述符布局与描述符缓冲</a></li><li class="chapter-item expanded "><a href="../../06 Uniform缓冲 Uniform Buffers/06-02 描述符池与描述符集合 Descriptor pool and sets.html"><strong aria-hidden="true">23.</strong> 06-02 描述符池与描述符集合</a></li><li class="chapter-item expanded affix "><li class="part-title">07 纹理映射 Texture mapping</li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-01 图像 Images.html"><strong aria-hidden="true">24.</strong> 07-01 图像</a></li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-02 图像视图与采样器 Image view and sample.html"><strong aria-hidden="true">25.</strong> 07-02 图像视图与采样器</a></li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-03 组合图像采样器 Combined image sampler.html"><strong aria-hidden="true">26.</strong> 07-03 组合图像采样器</a></li><li class="chapter-item expanded "><a href="../../08 深度缓冲 Depth buffering.html"><strong aria-hidden="true">27.</strong> 08 深度缓冲</a></li><li class="chapter-item expanded "><a href="../../09 加载模型 Loading models.html"><strong aria-hidden="true">28.</strong> 09 加载模型</a></li><li class="chapter-item expanded "><a href="../../10 生成多级渐远纹理 Generating Mipmaps.html"><strong aria-hidden="true">29.</strong> 10 生成多级渐远纹理</a></li><li class="chapter-item expanded "><a href="../../11 多重采样 Multisampling.html"><strong aria-hidden="true">30.</strong> 11 多重采样</a></li><li class="chapter-item expanded "><a href="../../12 常见问题 FAQ.html"><strong aria-hidden="true">31.</strong> 12 常见问题</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="交换链"><a class="header" href="#交换链">交换链</a></h1>
+<p>Vulkan中没有“默认帧缓冲”的概念，于是就需要有一个“基础设施”，它拥有这么一个缓冲区，让我们在显示到屏幕上之前把图像渲染在上面。这个“基础设施”就是“交换链”（swap chain），在Vulkan中它必须被显式创建。交换链本质上是一个等待着被显示到屏幕上的图像的队列。我们的程序会获得这么一个图像来进行绘制，然后再把这个图像放回到队列中。这个队列具体如何工作，以及从队列中显示一个图像的条件取决于交换链是如何设置的，但是一般来讲，交换链的作用是让图像的显示与屏幕刷新率同步。</p>
+<h2 id="检查交换链支持性"><a class="header" href="#检查交换链支持性">检查交换链支持性</a></h2>
+<p>出于各种各样的原因，不是所有显卡都能直接把图像显示到屏幕上的。例如它们是为服务器设计的而且没有显示输出。第二，由于显示图像与窗口系统和关联到窗口的表面密切相关，它实际上不是Vulkan核心的一部分。在检查支持性之后，你需要启用<code>VK_KHR_swapchain</code>这个设备扩展。</p>
+<p>为此我们首先来扩展<code>isDeviceSuitable</code>函数来检查这个扩展是否受支持。之前我们已经知道了如何列出一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPhysicalDevice.html"><code>VkPhysicalDevice</code></a>中所有受支持的扩展，所以这个应该非常直观。注意，Vulkan头文件中提供了一个不错的宏：<code>VK_KHR_SWAPCHAIN_EXTENSION_NAME</code>，这个宏被定义为<code>VK_KHR_swapchain</code>。使用宏的优点在于编译器会捕获拼写错误。</p>
+<p>首先声明一个所需的设备扩展的列表，就像是要启用的验证层的列表那样。</p>
+<pre><code class="language-c++">const std::vector&lt;const char*&gt; deviceExtensions = {
+    VK_KHR_SWAPCHAIN_EXTENSION_NAME
+};
+</code></pre>
+<p>接下来，创建一个新函数：<code>checkDeviceExtensionSupport</code>，在<code>isDeviceSuitable</code>中调用这个函数作为一个额外检查：</p>
+<pre><code class="language-c++">bool isDeviceSuitable(VkPhysicalDevice device) {
+    QueueFamilyIndices indices = findQueueFamilies(device);
+
+    bool extensionsSupported = checkDeviceExtensionSupport(device);
+
+    return indices.isComplete() &amp;&amp; extensionsSupported;
+}
+
+bool checkDeviceExtensionSupport(VkPhysicalDevice device) {
+    return true;
+}
+</code></pre>
+<p>修改函数内容，遍历所有扩展，并且检查是不是每一个需要的扩展都在里面。</p>
+<pre><code class="language-c++">bool checkDeviceExtensionSupport(VkPhysicalDevice device) {
+    uint32_t extensionCount;
+    vkEnumerateDeviceExtensionProperties(device, nullptr, &amp;extensionCount, nullptr);
+
+    std::vector&lt;VkExtensionProperties&gt; availableExtensions(extensionCount);
+    vkEnumerateDeviceExtensionProperties(device, nullptr, &amp;extensionCount, availableExtensions.data());
+
+    std::set&lt;std::string&gt; requiredExtensions(deviceExtensions.begin(), deviceExtensions.end());
+
+    for (const auto&amp; extension : availableExtensions) {
+        requiredExtensions.erase(extension.extensionName);
+    }
+
+    return requiredExtensions.empty();
+}
+</code></pre>
+<p>我在此选择了用一个字符串的集合（set）来代表那些未确认的所需扩展。这样我们就可以在遍历可用扩展序列的时候轻松地剔除它们。当然你也可以用一个嵌套循环，就像<code>checkValidationLayerSupport</code>里面那个。性能差异不是大问题。现在运行代码来验证你的显卡的确支持创建交换链。需要注意的是，我们在一章检查过的显示队列的可用性，如果显示队列可用，那就意味着交换链扩展也一定受支持。然而，显式检查一遍也没什么坏处，而且这个插件还需要显式启用。</p>
+<h2 id="启用设备插件"><a class="header" href="#启用设备插件">启用设备插件</a></h2>
+<p>使用交换链首先需要启用<code>VK_KHR_swapchain</code>扩展。启用这个扩展只需要对创建逻辑设备的结构体做一点小修改：</p>
+<pre><code class="language-c++">createInfo.enabledExtensionCount = static_cast&lt;uint32_t&gt;(deviceExtensions.size());
+createInfo.ppEnabledExtensionNames = deviceExtensions.data();
+</code></pre>
+<h2 id="查询交换链支持性的详细信息"><a class="header" href="#查询交换链支持性的详细信息">查询交换链支持性的详细信息</a></h2>
+<p>仅仅是查询交换链是否可用还不够，因为它有可能与我们的表面不兼容。创建交换链同样涉及到许多设置项目，而且比创建实例和设备的设置项目多得多，所以我们在创建之前需要再查询一些详细信息。</p>
+<p>基本有三种属性是需要检查的：</p>
+<ul>
+<li>基本的表面兼容性（交换链支持的最小/最大图像数量、最小/最大图像宽高）</li>
+<li>表面格式（像素格式、色彩空间）</li>
+<li>可用的显示模式</li>
+</ul>
+<p>与<code>findQueueFamilies</code>类似，我们需要创建一个结构体来保存查询到的详细信息。上述三类属性会用下列结构体与结构体列表保存：</p>
+<pre><code class="language-c++">struct SwapChainSupportDetails {
+    VkSurfaceCapabilitiesKHR capabilities;
+    std::vector&lt;VkSurfaceFormatKHR&gt; formats;
+    std::vector&lt;VkPresentModeKHR&gt; presentModes;
+};
+</code></pre>
+<p>我们现在来创建一个新函数：<code>querySwapChainSupport</code>来填充这个结构体。</p>
+<pre><code class="language-c++">SwapChainSupportDetails querySwapChainSupport(VkPhysicalDevice device) {
+    SwapChainSupportDetails details;
+
+    return details;
+}
+</code></pre>
+<p>这一节只包括如何查询结构体中包含的信息。这些结构体的含义以及它们所包含的每一个数据留到下一节讨论。</p>
+<p>让我们从基本的表面兼容性开始。这些属性非常容易查询并且只返回一个<code>VkSurfaceCapabilitiesKHR</code>结构体。</p>
+<pre><code class="language-c++">vkGetPhysicalDeviceSurfaceCapabilitiesKHR(device, surface, &amp;details.capabilities);
+</code></pre>
+<p>这个函数会根据给定的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPhysicalDevice.html"><code>VkPhysicalDevice</code></a>和<code>VkSurfaceKHR</code>来判断兼容性。所有的查询兼容性的函数都会以这两个作为头两个参数，因为它们是交换链的核心部分。</p>
+<p>下一步是查询支持的表面格式。因为这是一个结构体的列表，它与下面两个函数调用方式类似：</p>
+<pre><code class="language-c++">uint32_t formatCount;
+vkGetPhysicalDeviceSurfaceFormatsKHR(device, surface, &amp;formatCount, nullptr);
+
+if (formatCount != 0) {
+    details.formats.resize(formatCount);
+    vkGetPhysicalDeviceSurfaceFormatsKHR(device, surface, &amp;formatCount, details.formats.data());
+}
+</code></pre>
+<p>确保vector被resize过，以保存所有可用的格式。然后，最后再用<code>vkGetPhysicalDeviceSurfacePresentModesKHR</code>查询可用的显示模式，这与之前的步骤相同：</p>
+<pre><code class="language-c++">bool swapChainAdequate = false;
+if (extensionsSupported) {
+    SwapChainSupportDetails swapChainSupport = querySwapChainSupport(device);
+    swapChainAdequate = !swapChainSupport.formats.empty() &amp;&amp; !swapChainSupport.presentModes.empty();
+}
+</code></pre>
+<p>现在，所有详细信息都保存在了结构体里。然后再来扩展一次<code>isDeviceSuitable</code>函数，用这个函数来检查交换链是否被完整地支持。对于本教程来说，有至少一种图像格式以及一种显示模式支持给定的表面就足够了。</p>
+<pre><code class="language-c++">bool swapChainAdequate = false;
+if (extensionsSupported) {
+    SwapChainSupportDetails swapChainSupport = querySwapChainSupport(device);
+    swapChainAdequate = !swapChainSupport.formats.empty() &amp;&amp; !swapChainSupport.presentModes.empty();
+}
+</code></pre>
+<p>在验证插件是否可用之后再尝试查询交换链支持性的详细信息是非常重要的。把函数的最后一行改成：</p>
+<pre><code class="language-c++">return indices.isComplete() &amp;&amp; extensionsSupported &amp;&amp; swapChainAdequate;
+</code></pre>
+<h2 id="为交换链选择正确的设置"><a class="header" href="#为交换链选择正确的设置">为交换链选择正确的设置</a></h2>
+<p>如果<code>swapChainAdequate</code>为真，那么交换链无疑是被完整支持的，然而仍然可能有许多不同的最优设置模式。我们现在来写几个函数，找出最佳的可用交换链的正确设置。有三种设置需要确定：</p>
+<ul>
+<li>表面格式（色彩深度）</li>
+<li>显示模式（在屏幕上“交换”图像的条件）</li>
+<li>交换范围（交换链中图像的分辨率）</li>
+</ul>
+<p>对于每个设置我们都有一个理想值，如果这个理想值可用则设为理想值，否则我们会写一些逻辑来寻找次佳值。</p>
+<h3 id="表面格式"><a class="header" href="#表面格式">表面格式</a></h3>
+<p>设置这一项的函数刚开始类似于这样。我们会在稍后传递<code>SwapChainSupportDetails</code>结构体中的<code>formats</code>成员作为参数。</p>
+<pre><code class="language-c++">VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector&lt;VkSurfaceFormatKHR&gt;&amp; availableFormats) {
+
+}
+</code></pre>
+<p>每个<code>VkSurfaceFormatKHR</code>结构体都包含一个<code>format</code>和一个<code>colorSpace</code>成员。<code>format</code>成员指定颜色的通道数和类型。例如，<code>VK_FORMAT_B8G8R8A8_UNORM</code>代表我们按照B、G、R以及alpha通道的顺序存储，美个通道是8位的无符号整型，每个像素一共32位。<code>colorSpace</code>成员使用<code>VK_COLOR_SPACE_SRGB_NONLINEAR_KHR</code>标志来指示SRGB色彩空间是否可用。注意，根据标准，旧版API中这个标志曾经叫做<code>VK_COLORSPACE_SRGB_NONLINEAR_KHR</code>。</p>
+<p>如果SRGB色彩空间可用，我们就会使用它，因为它<a href="http://stackoverflow.com/questions/12524623/">产生的颜色更加真实</a>。直接使用SRGB颜色会有一点挑战，因此我们使用标准RGB作为颜色格式，就用常见颜色格式中的<code>VK_FORMAT_B8G8R8A8_UNORM</code>。</p>
+<p>最好的情况是，表面没有推荐格式，这时Vulkan会只返回一个<code>format</code>成员为<code>VK_FORMAT_UNDEFINED</code>的<code>VkSurfaceFormatKHR</code>结构体。</p>
+<pre><code class="language-c++">if (availableFormats.size() == 1 &amp;&amp; availableFormats[0].format == VK_FORMAT_UNDEFINED) {
+    return {VK_FORMAT_B8G8R8A8_UNORM, VK_COLOR_SPACE_SRGB_NONLINEAR_KHR};
+}
+</code></pre>
+<p>如果我们不能自由选择格式，那么我们就遍历可用格式列表来检查最佳组合是否在可用：</p>
+<pre><code class="language-c++">for (const auto&amp; availableFormat : availableFormats) {
+    if (availableFormat.format == VK_FORMAT_B8G8R8A8_UNORM &amp;&amp; availableFormat.colorSpace == VK_COLOR_SPACE_SRGB_NONLINEAR_KHR) {
+        return availableFormat;
+    }
+}
+</code></pre>
+<p>如果不可用，那我们会开始给所有可用格式排序来看看它们有多“好”，不过一般来说设置为列表中的第一个格式就行了。</p>
+<pre><code class="language-c++">VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector&lt;VkSurfaceFormatKHR&gt;&amp; availableFormats) {
+    if (availableFormats.size() == 1 &amp;&amp; availableFormats[0].format == VK_FORMAT_UNDEFINED) {
+        return {VK_FORMAT_B8G8R8A8_UNORM, VK_COLOR_SPACE_SRGB_NONLINEAR_KHR};
+    }
+
+    for (const auto&amp; availableFormat : availableFormats) {
+        if (availableFormat.format == VK_FORMAT_B8G8R8A8_UNORM &amp;&amp; availableFormat.colorSpace == VK_COLOR_SPACE_SRGB_NONLINEAR_KHR) {
+            return availableFormat;
+        }
+    }
+
+    return availableFormats[0];
+}
+</code></pre>
+<h3 id="显示模式"><a class="header" href="#显示模式">显示模式</a></h3>
+<p>理论上来说，显示模式是交换链最重要的设置项，因为它决定了如何把图像显示到屏幕上。Vulkan中有四种可用的显示模式：</p>
+<ul>
+<li><code>VK_PRESENT_MODE_IMMEDIATE_KHR</code>：图像绘制完成后会被立即显示到屏幕上，这有可能导致画面撕裂。</li>
+<li><code>VK_PRESENT_MODE_FIFO_KHR</code>：此时交换链是一个队列。画面刷新时，队列中的前一张图像会被显示到屏幕上，而绘制好的图像会被放到队列的末尾。如果队列已满，程序就只能等待。这种模式与现代游戏中常用的“垂直同步”很相似。画面刷新的那一瞬间叫做“垂直空白间隙”。（双缓冲）</li>
+<li><code>VK_PRESENT_MODE_FIFO_RELAXED_KHR</code>：这种模式只在上一个垂直空白间隙中绘制超时且队列为空的时候才与上一种模式有区别。当图像终于渲染好的时候，它会被直接显示到屏幕上，而不是等待下一个垂直空白间隙。这有可能导致画面撕裂。</li>
+<li><code>VK_PRESENT_MODE_MAILBOX_KHR</code>：这是第二种模式的另一个变种。队列已满时，它不会阻塞程序，而是直接用新绘制的图像替代队列中的图像。这种模式可以用三缓冲来实现，比起使用双缓冲的标准垂直同步，三缓冲可以避免可能导致严重延迟问题的画面撕裂。</li>
+</ul>
+<p>只有<code>VK_PRESENT_MODE_FIFO_KHR</code>模式是始终可用的，所以我们需要再写一个函数来检查最佳模式是否可用：</p>
+<pre><code class="language-c++">VkPresentModeKHR chooseSwapPresentMode(const std::vector&lt;VkPresentModeKHR&gt; availablePresentModes) {
+    return VK_PRESENT_MODE_FIFO_KHR;
+}
+</code></pre>
+<p>我个人认为认为三缓冲是最佳选择。它通过在垂直空白间隙到来之前渲染尽可能新的图像，从而避免画面撕裂，同时还能保持相当低的延迟。所以，让我们遍历一下列表来检查三缓冲是否可用：</p>
+<pre><code class="language-c++">VkPresentModeKHR chooseSwapPresentMode(const std::vector&lt;VkPresentModeKHR&gt; availablePresentModes) {
+    for (const auto&amp; availablePresentMode : availablePresentModes) {
+        if (availablePresentMode == VK_PRESENT_MODE_MAILBOX_KHR) {
+            return availablePresentMode;
+        }
+    }
+
+    return VK_PRESENT_MODE_FIFO_KHR;
+}
+</code></pre>
+<p>不幸的是，一些驱动至今仍不支持<code>VK_PRESENT_MODE_FIFO_KHR</code>，所以在<code>VK_PRESENT_MODE_FIFO_KHR</code>不可用时，我们应该尝试<code>VK_PRESENT_MODE_IMMEDIATE_KHR</code>：</p>
+<pre><code class="language-c++">VkPresentModeKHR chooseSwapPresentMode(const std::vector&lt;VkPresentModeKHR&gt; availablePresentModes) {
+    VkPresentModeKHR bestMode = VK_PRESENT_MODE_FIFO_KHR;
+
+    for (const auto&amp; availablePresentMode : availablePresentModes) {
+        if (availablePresentMode == VK_PRESENT_MODE_MAILBOX_KHR) {
+            return availablePresentMode;
+        } else if (availablePresentMode == VK_PRESENT_MODE_IMMEDIATE_KHR) {
+            bestMode = availablePresentMode;
+        }
+    }
+
+    return bestMode;
+}
+</code></pre>
+<h3 id="交换范围"><a class="header" href="#交换范围">交换范围</a></h3>
+<p>这是最后一个主要设置项目了，我们来添加最后一个函数：</p>
+<pre><code class="language-c++">VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR&amp; capabilities) {
+
+}
+</code></pre>
+<p>交换范围是指交换链中图像的分辨率，而且它几乎永远等同于要绘制的窗口大小。可用分辨率的范围由<code>VkSurfaceCapabilitiesKHR</code>结构体定义。Vulkan要求我们在<code>currentExtent</code>成员中设置宽度和高度来匹配窗口分辨率。不过有一些窗口管理器允许我们把<code>currentExtent</code>成员的宽度和高度设置为一个特殊值：<code>uint32_t</code>的最大值。在这种情况下，我们会选择在<code>minImageExtent</code>与<code>maxImageExtent</code>之间最符合窗口分辨率的分辨率。</p>
+<pre><code class="language-c++">VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR&amp; capabilities) {
+    if (capabilities.currentExtent.width != std::numeric_limits&lt;uint32_t&gt;::max()) {
+        return capabilities.currentExtent;
+    } else {
+        VkExtent2D actualExtent = {WIDTH, HEIGHT};
+
+        actualExtent.width = std::max(capabilities.minImageExtent.width, std::min(capabilities.maxImageExtent.width, actualExtent.width));
+        actualExtent.height = std::max(capabilities.minImageExtent.height, std::min(capabilities.maxImageExtent.height, actualExtent.height));
+
+        return actualExtent;
+    }
+}
+</code></pre>
+<p><code>max</code>和<code>min</code>函数用来把<code>WIDTH</code>和<code>HEIGHT</code>的值限制在Vulkan实现所支持的最大与最小分辨率之间。确保你已经引入了<code>&lt;algorithm&gt;</code>头文件来使用这两个函数。</p>
+<h2 id="创建交换链"><a class="header" href="#创建交换链">创建交换链</a></h2>
+<p>现在我们已经创建好了所有帮助函数，来帮助我们在运行时进行那些必须要做的选择，我们已经拥有了创建一个可工作的交换链的所有信息。</p>
+<p>创建一个<code>createSwapChain</code>函数，在这个函数中调用之前那些帮助函数来获取结果。确保这个函数在<code>initVulkan</code>中是在创建了逻辑设备之后调用的。</p>
+<pre><code class="language-c++">void initVulkan() {
+    createInstance();
+    setupDebugCallback();
+    createSurface();
+    pickPhysicalDevice();
+    createLogicalDevice();
+    createSwapChain();
+}
+
+void createSwapChain() {
+    SwapChainSupportDetails swapChainSupport = querySwapChainSupport(physicalDevice);
+
+    VkSurfaceFormatKHR surfaceFormat = chooseSwapSurfaceFormat(swapChainSupport.formats);
+    VkPresentModeKHR presentMode = chooseSwapPresentMode(swapChainSupport.presentModes);
+    VkExtent2D extent = chooseSwapExtent(swapChainSupport.capabilities);
+}
+</code></pre>
+<p>现在还有一个小问题需要确定，不过这个问题非常简单，不必为它专门创建一个函数。这个问题就是决定交换链中的图像数量，实际上也就是队列的长度。Vulkan实现指定了正常工作所需的最小图像数量，我们会尝试给这个数量+1来正确实现三缓冲。</p>
+<pre><code class="language-c++">uint32_t imageCount = swapChainSupport.capabilities.minImageCount + 1;
+if (swapChainSupport.capabilities.maxImageCount &gt; 0 &amp;&amp; imageCount &gt; swapChainSupport.capabilities.maxImageCount) {
+    imageCount = swapChainSupport.capabilities.maxImageCount;
+}
+</code></pre>
+<p>把<code>maxImageCount</code>的值设为0意味着对内存占用没有限制，因此我们需要检查它的值。</p>
+<p>就像其它Vulkan对象那样，创建交换链对象需要填充一个庞大的结构体，它们的开头都很相似：</p>
+<pre><code class="language-c++">VkSwapchainCreateInfoKHR createInfo = {};
+createInfo.sType = VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR;
+createInfo.surface = surface;
+</code></pre>
+<p>在指定了交换链要关联的表面之后，交换链图像的信息也需要指定：</p>
+<pre><code class="language-c++">createInfo.minImageCount = imageCount;
+createInfo.imageFormat = surfaceFormat.format;
+createInfo.imageColorSpace = surfaceFormat.colorSpace;
+createInfo.imageExtent = extent;
+createInfo.imageArrayLayers = 1;
+createInfo.imageUsage = VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT;
+</code></pre>
+<p><code>imageArrayLayers</code>指定了每个图像所包含的图层的数量。除非你在开发一个立体的3D程序，它的值始终应该被设为<code>1</code>。<code>imageUsage</code>指定了我们如何使用交换链中的图像。在这个教程中我们会直接显示它们，这意味着它们应该被用作“颜色附件”（color attachment）。你也可以把交换链中的图像全都渲染到一张单独的图像上来进行其他操作，比如后续处理。在这种情况下，<code>imageUsage</code>的值应该是<code>VK_IMAGE_USAGE_TRANSFER_DST_BIT</code>，然后使用内存操作来把渲染好的图像传送给交换链。</p>
+<pre><code class="language-c++">QueueFamilyIndices indices = findQueueFamilies(physicalDevice);
+uint32_t queueFamilyIndices[] = {indices.graphicsFamily.value(), indices.presentFamily.value()};
+
+if (indices.graphicsFamily != indices.presentFamily) {
+    createInfo.imageSharingMode = VK_SHARING_MODE_CONCURRENT;
+    createInfo.queueFamilyIndexCount = 2;
+    createInfo.pQueueFamilyIndices = queueFamilyIndices;
+} else {
+    createInfo.imageSharingMode = VK_SHARING_MODE_EXCLUSIVE;
+    createInfo.queueFamilyIndexCount = 0; // Optional
+    createInfo.pQueueFamilyIndices = nullptr; // Optional
+}
+</code></pre>
+<p>接下来，如果图形队列家族与显示队列不是同一个队列家族的话，我们需要指定如何处理将要在多个队列家族中使用的交换链中的图像，这也正是我们程序中的情况。我们会在图形队列中绘制交换链中的图片，然后把它们提交到显示队列中去。有两种方法来处理会在多个队列中使用的图像：</p>
+<ul>
+<li><code>VK_SHARING_MODE_EXCLUSIVE</code>：一个图像在在同一时间只能被一个队列家族占有，并且在另一个队列家族使用图像之前必须显式转移所有权。这种方法的性能最高。</li>
+<li><code>VK_SHARING_MODE_CONCURRENT</code>：图像可以被多个队列使用而不需要显式转移所有权。</li>
+</ul>
+<p>如果队列家族不同，我们就会在使用concurrent（同时）模式。在此教程中使用同时模式是因为这样可以避免写有关于处理所有权的章节，因为处理所有权包含了一些需要以后再解释的概念。同时模式需要你通过<code>queueFamilyIndexCount</code>和<code>pQueueFamilyIndices</code>参数提前指定所有权将会在哪些队列家族之间共享。如果图形队列家族与显示队列家族是同一个，也就是绝大多数硬件上的情况，那么我们就使用exclusive（独占）模式，因为同时模式需要你至少指定两个不同的队列家族。</p>
+<pre><code class="language-c++">createInfo.preTransform = swapChainSupport.capabilities.currentTransform;
+</code></pre>
+<p>我们可以为交换链中的图像指定一个变换（<code>supportedTransforms</code>中的<code>capabilities</code>），比如顺时针旋转90度，或者水平翻转。如果你不想做任何变换，那就简单地把它指定为当前使用的变换。</p>
+<pre><code class="language-c++">createInfo.compositeAlpha = VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR;
+</code></pre>
+<p><code>compositeAlpha</code>参数指定了alpha通道是否应该与窗口系统中的其它窗口进行混合。你基本上都会忽略掉alpha通道，那就设成<code>VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR</code>。</p>
+<pre><code class="language-c++">createInfo.presentMode = presentMode;
+createInfo.clipped = VK_TRUE;
+</code></pre>
+<p><code>presentMode</code>成员的含义很明确（显示模式）。如果<code>clipped</code>成员被设为了<code>VK_TRUE</code>，那就说明我们不关心被遮挡的像素的颜色，例如有另一个窗口挡住了这个窗口。除非你的确需要读回这些像素以获得一个可预测的结果，你最好开启裁剪来获得最佳性能。</p>
+<pre><code class="language-c++">createInfo.oldSwapchain = VK_NULL_HANDLE;
+</code></pre>
+<p><code>oldSwapChain</code>是最后一个设置项。在Vulkan中，程序运行时，你的交换链有可能失效或者未优化，比如窗口大小被改变了。在这种情况下，交换链必须被重新创建，并且需要在这里指定旧交换链的引用。这是一个很复杂的话题，因此我们会在以后的章节（《重新创建交换链》）里再了解它。现在我们假设我们只需要创建一个交换链。</p>
+<p>现在添加一个新的成员变量来保存<code>VkSwapchainKHR</code>对象：</p>
+<pre><code class="language-c++">VkSwapchainKHR swapChain;
+</code></pre>
+<p>现在，创建交换链只需要简单地调用<code>vkCreateSwapchainKHR</code>：</p>
+<pre><code class="language-c++">if (vkCreateSwapchainKHR(device, &amp;createInfo, nullptr, &amp;swapChain) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to create swap chain!&quot;);
+}
+</code></pre>
+<p>这个函数的参数分别是逻辑设备、交换链的创建信息，可选的自定义分配器以及一个指向要存储交换链句柄的变量的指针。一如既往地，我们需要使用<code>vkDestroySwapchainKHR</code>来在销毁逻辑设备之前销毁交换链：</p>
+<pre><code class="language-c++">void cleanup() {
+    vkDestroySwapchainKHR(device, swapChain, nullptr);
+    ...
+}
+</code></pre>
+<p>现在运行程序来检查交换链是否创建成功。如果你发现<code>vkCreateSwapchainKHR</code>函数中有一个访问冲突错误，或者是看见了一个类似<code>Failed to find 'vkGetInstanceProcAddress' in layer SteamOverlayVulkanLayer.dll</code>的错误信息，可以看看《常见问题》中有关Steam overlay layer的问题。</p>
+<p>尝试在开启验证层的同时删除<code>createInfo.imageExtent = extent;</code>这行。你会看到有一个验证层立刻捕获了错误并且给出了有用的提示信息：</p>
+<p><img src="https://vulkan-tutorial.com/images/swap_chain_validation_layer.png" alt="" /></p>
+<h2 id="取出交换链中的图像"><a class="header" href="#取出交换链中的图像">取出交换链中的图像</a></h2>
+<p>交换链现在已经创建好了，最后一个问题就是如何取出交换链中的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkImage.html"><code>VkImage</code></a>句柄。在后续章节中涉及到渲染操作时我们需要图像的引用。添加一个成员变量来保存句柄：</p>
+<pre><code class="language-c++">std::vector&lt;VkImage&gt; swapChainImages;
+</code></pre>
+<p>图像由Vulkan实例为交换链创建，且会在交换链销毁时被自动销毁，因此不需要我们来写销毁代码。</p>
+<p>我在<code>createSwapChain</code>函数的末尾添加了这些代码，就在调用了<code>vkCreateSwapchainKHR</code>函数之后。取出这些图像的句柄就像取出其它Vulkan对象的数组一样。首先使用<code>vkGetSwapchainImagesKHR</code>函数来查询交换链中图片的数量，然后resize容器，最后再调用这个函数一次来取回句柄。</p>
+<pre><code class="language-c++">vkGetSwapchainImagesKHR(device, swapChain, &amp;imageCount, nullptr);
+swapChainImages.resize(imageCount);
+vkGetSwapchainImagesKHR(device, swapChain, &amp;imageCount, swapChainImages.data());
+</code></pre>
+<p>注意，我们在创建交换链时通过<code>minImageCount</code>传递了我们希望创建的图像的数量。Vulkan实现有可能创建更多的图像，因此我们需要再显式查询一次。</p>
+<p>最后，把我们为交换链中的图像所选择的格式与范围保存到成员变量中去。我们会在后续章节用到这些信息。</p>
+<pre><code class="language-c++">VkSwapchainKHR swapChain;
+std::vector&lt;VkImage&gt; swapChainImages;
+VkFormat swapChainImageFormat;
+VkExtent2D swapChainExtent;
+
+...
+
+swapChainImageFormat = surfaceFormat.format;
+swapChainExtent = extent;
+</code></pre>
+<p>我们现在有了一些可供绘制的图像，并且还可以显示到窗口上。下一章我们会涉及到如何把图像设为渲染目标，然后我们会开始接触真正的图形渲染管线以及绘制命令！</p>
+<p><a href="https://vulkan-tutorial.com/code/06_swap_chain_creation.cpp">C++代码</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-01 表面 Window surface.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-03 图像视图 Image views.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-01 表面 Window surface.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-03 图像视图 Image views.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

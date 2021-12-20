@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>04-03-03 固定功能</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../01 简介 Introduction.html">01 简介</a></li><li class="chapter-item expanded affix "><a href="../../02 概述 Overview.html">02 概述</a></li><li class="chapter-item expanded affix "><a href="../../03 开发环境 Development environment.html">03 开发环境</a></li><li class="chapter-item expanded affix "><li class="part-title">04 画一个三角形 Drawing a triangle</li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-05 重新创建交换链 Swap chain recreation.html"><strong aria-hidden="true">1.</strong> 04-05 重新创建交换链</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-01 基本代码 Base code.html"><strong aria-hidden="true">2.</strong> 04-01-01 基本代码</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-02 实例 Instance.html"><strong aria-hidden="true">3.</strong> 04-01-02 实例</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-03 验证层 Validation layers.html"><strong aria-hidden="true">4.</strong> 04-01-03 验证层</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-04 物理设备与队列家族 Physical devices and queue families.html"><strong aria-hidden="true">5.</strong> 04-01-04 物理设备与队列家族</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-05 逻辑设备与队列 Logical device and queues.html"><strong aria-hidden="true">6.</strong> 04-01-05 逻辑设备与队列</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-01 表面 Window surface.html"><strong aria-hidden="true">7.</strong> 04-02-01 表面</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-02 交换链 Swap chain.html"><strong aria-hidden="true">8.</strong> 04-02-02 交换链</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-03 图像视图 Image views.html"><strong aria-hidden="true">9.</strong> 04-02-03 图像视图</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-01 简介 Introduction.html"><strong aria-hidden="true">10.</strong> 04-03-01 简介</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-02 着色器模块 Shader modules.html"><strong aria-hidden="true">11.</strong> 04-03-02 着色器模块</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-03 固定功能 Fixed functions.html" class="active"><strong aria-hidden="true">12.</strong> 04-03-03 固定功能</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-04 渲染过程 Render passes.html"><strong aria-hidden="true">13.</strong> 04-03-04 渲染过程</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-05 小结 Conclusion.html"><strong aria-hidden="true">14.</strong> 04-03-05 小结</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-01 帧缓冲 Framebuffers.html"><strong aria-hidden="true">15.</strong> 04-04-01 帧缓冲</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-02 命令缓冲 Command buffers.html"><strong aria-hidden="true">16.</strong> 04-04-02 命令缓冲</a></li><li class="chapter-item expanded "><a href="../../04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-03 渲染与显示 Rendering and presentation.html"><strong aria-hidden="true">17.</strong> 04-04-03 渲染与显示</a></li><li class="chapter-item expanded affix "><li class="part-title">05 顶点缓冲 Vertex buffers</li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-01 顶点输入描述 Vertex input description.html"><strong aria-hidden="true">18.</strong> 05-01 顶点输入描述</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-02 创建顶点缓冲 Vertex buffer creation.html"><strong aria-hidden="true">19.</strong> 05-02 创建顶点缓冲</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-03 暂存缓冲 Staging buffer.html"><strong aria-hidden="true">20.</strong> 05-03 暂存缓冲</a></li><li class="chapter-item expanded "><a href="../../05 顶点缓冲 Vertex buffers/05-04 索引缓冲 Index buffer.html"><strong aria-hidden="true">21.</strong> 05-04 索引缓冲</a></li><li class="chapter-item expanded affix "><li class="part-title">06 Uniform缓冲 Uniform Buffers</li><li class="chapter-item expanded "><a href="../../06 Uniform缓冲 Uniform Buffers/06-01 描述符布局与描述符缓冲 Descriptor layout and buffer.html"><strong aria-hidden="true">22.</strong> 06-01 描述符布局与描述符缓冲</a></li><li class="chapter-item expanded "><a href="../../06 Uniform缓冲 Uniform Buffers/06-02 描述符池与描述符集合 Descriptor pool and sets.html"><strong aria-hidden="true">23.</strong> 06-02 描述符池与描述符集合</a></li><li class="chapter-item expanded affix "><li class="part-title">07 纹理映射 Texture mapping</li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-01 图像 Images.html"><strong aria-hidden="true">24.</strong> 07-01 图像</a></li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-02 图像视图与采样器 Image view and sample.html"><strong aria-hidden="true">25.</strong> 07-02 图像视图与采样器</a></li><li class="chapter-item expanded "><a href="../../07 纹理映射 Texture mapping/07-03 组合图像采样器 Combined image sampler.html"><strong aria-hidden="true">26.</strong> 07-03 组合图像采样器</a></li><li class="chapter-item expanded "><a href="../../08 深度缓冲 Depth buffering.html"><strong aria-hidden="true">27.</strong> 08 深度缓冲</a></li><li class="chapter-item expanded "><a href="../../09 加载模型 Loading models.html"><strong aria-hidden="true">28.</strong> 09 加载模型</a></li><li class="chapter-item expanded "><a href="../../10 生成多级渐远纹理 Generating Mipmaps.html"><strong aria-hidden="true">29.</strong> 10 生成多级渐远纹理</a></li><li class="chapter-item expanded "><a href="../../11 多重采样 Multisampling.html"><strong aria-hidden="true">30.</strong> 11 多重采样</a></li><li class="chapter-item expanded "><a href="../../12 常见问题 FAQ.html"><strong aria-hidden="true">31.</strong> 12 常见问题</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="固定功能"><a class="header" href="#固定功能">固定功能</a></h1>
+<p>在那些老式图形API中，几乎为图形渲染管线中的每一步都提供了默认值。在Vulkan中则需要你显式指定所有东西，从视口大小到颜色混合函数。在这一章我们会填充所有必需的结构体来配置这些固定功能操作。</p>
+<h2 id="顶点输入"><a class="header" href="#顶点输入">顶点输入</a></h2>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineVertexInputStateCreateInfo.html"><code>VkPipelineVertexInputStateCreateInfo</code></a>结构体描述了将要传递给顶点着色器的顶点数据的格式。它大致以两种方式描述这个格式：</p>
+<ul>
+<li>绑定（Bindings）：数据之间的间距（spacing），以及数据是按顶点的还是按实例的（请参阅 <a href="https://en.wikipedia.org/wiki/Geometry_instancing">instancing</a>（几何体实例化））。</li>
+<li>描述属性（Attribute descriptions）：传递给顶点着色器的属性的类型，用来加载这些属性，并指明在何处（offset）加载。</li>
+</ul>
+<p>因为我们把顶点数据硬编码到了顶点着色器中，因此我们在这里暂时按照没有顶点数据的格式来填充这个结构体，在顶点缓冲一章我们会回来研究它。</p>
+<pre><code class="language-c++">VkPipelineVertexInputStateCreateInfo vertexInputInfo = {};
+vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
+vertexInputInfo.vertexBindingDescriptionCount = 0;
+vertexInputInfo.pVertexBindingDescriptions = nullptr; // Optional
+vertexInputInfo.vertexAttributeDescriptionCount = 0;
+vertexInputInfo.pVertexAttributeDescriptions = nullptr; // Optional
+</code></pre>
+<p><code>pVertexBindingDescriptions</code>和<code>pVertexAttributeDescriptions</code>成员指向一个描述之前说过的用来加载顶点数据的详细信息的结构体的数组。把这个结构体加到<code>createGraphicsPipeline</code>函数中的<code>shaderStages</code>数组后面。</p>
+<h2 id="顶点装配"><a class="header" href="#顶点装配">顶点装配</a></h2>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineInputAssemblyStateCreateInfo.html"><code>VkPipelineInputAssemblyStateCreateInfo</code></a>结构体描述了两个东西：从顶点绘制什么样的几何体，以及是否启用图元重启（primitive restart）。前一项由<code>topology</code>（拓扑）成员指定，并且可以拥有下列值：</p>
+<ul>
+<li><code>VK_PRIMITIVE_TOPOLOGY_POINT_LIST</code>：把每个顶点绘制成点</li>
+<li><code>VK_PRIMITIVE_TOPOLOGY_LINE_LIST</code>：每两个顶点绘制成一条线，不重用顶点</li>
+<li><code>VK_PRIMITIVE_TOPOLOGY_LINE_STRIP</code>每条线的末端顶点用作下一条线的起始顶点</li>
+<li><code>VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST</code>：每三个顶点绘制成一个三角形，不重用顶点</li>
+<li><code>VK_PRIMITIVE_TOPOLOGY_TRIANGLE_STRIP</code>：每个三角形的第二个和第三个顶点作为下一个三角形的前两个顶点</li>
+</ul>
+<p>通常来说，从顶点缓冲中按索引加载的顶点都是按顺序排列的，不过使用“索引缓冲”（element buffer）可以让你自己指定想要使用的索引。这允许你进行优化，比如重用顶点。如果你把<code>primitiveRestartEnable</code>成员设为了<code>VK_TRUE</code>，那么就可以通过使用一个特殊顶点<code>0xFFFF</code>或<code>0xFFFFFFFF</code>分解<code>_STRIP</code>拓扑模式中的线和三角形。</p>
+<p>在此教程中我们打算画一个三角形，所以我们用以下数据填充结构体：</p>
+<pre><code class="language-c++">VkPipelineInputAssemblyStateCreateInfo inputAssembly = {};
+inputAssembly.sType = VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
+inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
+inputAssembly.primitiveRestartEnable = VK_FALSE;
+</code></pre>
+<h2 id="视口与裁剪"><a class="header" href="#视口与裁剪">视口与裁剪</a></h2>
+<p>视口基本上描述了将会被输出所渲染的帧缓冲的范围。这个范围绝大多数情况下都是<code>(0, 0)</code>到<code>(width, height)</code>，并且在我们的教程中也是如此。</p>
+<pre><code class="language-c++">VkViewport viewport = {};
+viewport.x = 0.0f;
+viewport.y = 0.0f;
+viewport.width = (float) swapChainExtent.width;
+viewport.height = (float) swapChainExtent.height;
+viewport.minDepth = 0.0f;
+viewport.maxDepth = 1.0f;
+</code></pre>
+<p>记住，交换链及其中的图像的大小可能与窗口的大小不同。交换链中的图像稍后会被用作帧缓冲，因此我们使用它们的大小。</p>
+<p><code>minDepth</code>和<code>maxDepth</code>指定了帧缓冲中深度的范围。这些值必须在<code>[0.0f, 1.0f]</code>范围中，但是<code>minDepth</code>有可能大于<code>maxDepth</code>。如果你不打算做什么特别的操作，你应该把它们设为标准值<code>0.0f</code>和<code>1.0f</code>。</p>
+<p>视口定义了从图像到帧缓冲的转换方式，而裁剪矩形定义了什么范围里的像素会被储存。所有在裁剪矩形外面的像素都会在光栅化时被丢弃。裁剪矩形的功能更像是过滤器，而不是转换方式。裁剪矩形与视口之间的差异如下图所示。注意，左边的裁剪矩形只是导致这个输出结果的一种可能，只要裁剪矩形大于视口就会产生类似效果。</p>
+<p><img src="https://vulkan-tutorial.com/images/viewports_scissors.png" alt="" /></p>
+<p>在此教程中我们只想简单地绘制整个帧缓冲，因此我们定义一个覆盖了整个帧缓冲的裁剪矩形：</p>
+<pre><code class="language-c++">VkRect2D scissor = {};
+scissor.offset = {0, 0};
+scissor.extent = swapChainExtent;
+</code></pre>
+<p>现在视口和裁剪矩形需要通过<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineViewportStateCreateInfo.html"><code>VkPipelineViewportStateCreateInfo</code></a>结构体链接到一个视口状态（viewport state ）中。在某些显卡上，你可以使用多个视口与裁剪矩形，所以它的成员是视口与裁剪矩形的数组。使用多个视口与裁剪矩形需要打开一个GPU功能（参阅创建逻辑设备一节）。</p>
+<pre><code class="language-c++">VkPipelineViewportStateCreateInfo viewportState = {};
+viewportState.sType = VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;
+viewportState.viewportCount = 1;
+viewportState.pViewports = &amp;viewport;
+viewportState.scissorCount = 1;
+viewportState.pScissors = &amp;scissor;
+</code></pre>
+<h2 id="光栅化"><a class="header" href="#光栅化">光栅化</a></h2>
+<p>光栅化阶段接受由顶点着色器产生的顶点组成的图元，并把它们转换成片段以供片段着色器上色。这一步还会进行<a href="https://zh.wikipedia.org/wiki/%E6%B7%B1%E5%BA%A6%E7%BC%93%E5%86%B2">深度测试</a>、<a href="https://en.wikipedia.org/wiki/Back-face_culling">面剔除</a>（英文链接）和裁剪测试，它还可以进行配置，以渲染整个多边形，或者只渲染多边形的边缘（线框渲染）。所有的这些配置都可以通过<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineRasterizationStateCreateInfo.html"><code>VkPipelineRasterizationStateCreateInfo</code></a>结构体进行。</p>
+<pre><code class="language-c++">VkPipelineRasterizationStateCreateInfo rasterizer = {};
+rasterizer.sType = VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO;
+rasterizer.depthClampEnable = VK_FALSE;
+</code></pre>
+<p>如果<code>depthClampEnable</code>被设为了<code>VK_TRUE</code>，那么过近或过远的片段会被放到远近平面中间，而不是丢弃这些片段。（此句存疑，原文：If <code>depthClampEnable</code> is set to <code>VK_TRUE</code>, then fragments that are beyond the near and far planes are clamped to them as opposed to discarding them.）这在某些情况下很有用，比如阴影映射。使用它需要打开一项GPU功能。</p>
+<pre><code class="language-c++">rasterizer.rasterizerDiscardEnable = VK_FALSE;
+</code></pre>
+<p>如果<code>rasterizerDiscardEnable</code>被设为了<code>VK_TRUE</code>，那么图元将永远不会被传送到光栅化这一步。这基本上禁用了向帧缓冲的输出。</p>
+<pre><code class="language-c++">rasterizer.polygonMode = VK_POLYGON_MODE_FILL;
+</code></pre>
+<p><code>polygonMode</code>指定了如何从图元生成片段。有下列模式可用：</p>
+<ul>
+<li><code>VK_POLYGON_MODE_FILL</code>：用片段填充整个图元的范围</li>
+<li><code>VK_POLYGON_MODE_LINE</code>：将图元的边绘制为线段</li>
+<li><code>VK_POLYGON_MODE_POINT</code>：将图元的顶点绘制为点</li>
+</ul>
+<p>使用除填充模式以外的模式需要启用一项GPU功能。</p>
+<pre><code class="language-c++">rasterizer.lineWidth = 1.0f;
+</code></pre>
+<p><code>lineWidth</code>成员的含义很直观，它描述了线的宽度。最大线宽取决于硬件，并且要使用大于<code>1.0f</code>的线宽需要你启用<code>wideLines</code>GPU功能。</p>
+<pre><code class="language-c++">rasterizer.cullMode = VK_CULL_MODE_BACK_BIT;
+rasterizer.frontFace = VK_FRONT_FACE_CLOCKWISE;
+</code></pre>
+<p><code>cullMode</code>成员指定你要使用的面剔除类型。你可以关闭面剔除、剔除正面朝向（front face）的面、剔除背面朝向（back face）的面，或者都剔除。<code>frontFace</code>成员指定了正面的顶点连接顺序，可以是顺时针或者逆时针。</p>
+<pre><code class="language-c++">rasterizer.depthBiasEnable = VK_FALSE;
+rasterizer.depthBiasConstantFactor = 0.0f; // Optional
+rasterizer.depthBiasClamp = 0.0f; // Optional
+rasterizer.depthBiasSlopeFactor = 0.0f; // Optional
+</code></pre>
+<p>在进行光栅化时，可以通过添加常量值或者基于片段的斜率（slope）进行偏移（bias）来更改深度值。阴影映射中有时会用到这一点，不过我们不会用到。把<code>depthBiasEnable</code>设为<code>VK_FALSE</code>就好。</p>
+<h2 id="多重采样"><a class="header" href="#多重采样">多重采样</a></h2>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineMultisampleStateCreateInfo.html"><code>VkPipelineMultisampleStateCreateInfo</code></a>结构体设置多重采样，这是实现<a href="https://zh.wikipedia.org/wiki/%E5%8F%8D%E9%8B%B8%E9%BD%92#%E5%A4%9A%E9%87%8D%E9%87%87%E6%A0%B7%E6%8A%97%E9%94%AF%E9%BD%BF">反锯齿</a>的一种方式。它的工作方式是，把多个多边形执行片段着色器后的结果叠加到相同的像素上去。这主要影响边缘，而边缘也是产生锯齿最明显的地方。多重采样比单纯渲染一个高分辨率图像再缩小的方式开销要小得多，因为如果一个多边形只映射到一个像素时，只需运行一次片段着色器。启用多重采样需要开启一项GPU功能。</p>
+<pre><code class="language-c++">VkPipelineMultisampleStateCreateInfo multisampling = {};
+multisampling.sType = VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO;
+multisampling.sampleShadingEnable = VK_FALSE;
+multisampling.rasterizationSamples = VK_SAMPLE_COUNT_1_BIT;
+multisampling.minSampleShading = 1.0f; // Optional
+multisampling.pSampleMask = nullptr; // Optional
+multisampling.alphaToCoverageEnable = VK_FALSE; // Optional
+multisampling.alphaToOneEnable = VK_FALSE; // Optional
+</code></pre>
+<p>在稍后的章节中我们会再次探讨多重采样，现在暂时把它关闭。</p>
+<h2 id="深度测试和模板测试"><a class="header" href="#深度测试和模板测试">深度测试和模板测试</a></h2>
+<p>如果你使用了深度缓冲和/或模板缓冲，那么你需要通过<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineDepthStencilStateCreateInfo.html"><code>VkPipelineDepthStencilStateCreateInfo</code></a>来配置深度测试和模板测试。不过我们现在还没有用到深度缓冲和模板缓冲，因此我们就只传递一个<code>nullptr</code>来取代这个结构体的指针。我们会在深度缓冲一章再回来讨论它。</p>
+<h2 id="颜色混合"><a class="header" href="#颜色混合">颜色混合</a></h2>
+<p>在片段着色器返回一个颜色之后，它需要与已经存在于帧缓冲中的颜色进行混合。这种变换叫做“颜色混合”，并且颜色混合有两种方式：</p>
+<ul>
+<li>把旧的颜色和新的颜色混合之后产生最终的颜色</li>
+<li>通过位运算来混合旧颜色和新颜色</li>
+</ul>
+<p>有两种结构体可以设置颜色混合。第一种结构体，<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineColorBlendAttachmentState.html"><code>VkPipelineColorBlendAttachmentState</code></a>包含了针对每个帧缓冲进行的设置；第二种结构体，<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineColorBlendStateCreateInfo.html"><code>VkPipelineColorBlendStateCreateInfo</code></a>包含了全局的颜色混合选项。对于我们来说，我们只有一个帧缓冲：</p>
+<pre><code class="language-c++">VkPipelineColorBlendAttachmentState colorBlendAttachment = {};
+colorBlendAttachment.colorWriteMask = VK_COLOR_COMPONENT_R_BIT | VK_COLOR_COMPONENT_G_BIT | VK_COLOR_COMPONENT_B_BIT | VK_COLOR_COMPONENT_A_BIT;
+colorBlendAttachment.blendEnable = VK_FALSE;
+colorBlendAttachment.srcColorBlendFactor = VK_BLEND_FACTOR_ONE; // Optional
+colorBlendAttachment.dstColorBlendFactor = VK_BLEND_FACTOR_ZERO; // Optional
+colorBlendAttachment.colorBlendOp = VK_BLEND_OP_ADD; // Optional
+colorBlendAttachment.srcAlphaBlendFactor = VK_BLEND_FACTOR_ONE; // Optional
+colorBlendAttachment.dstAlphaBlendFactor = VK_BLEND_FACTOR_ZERO; // Optional
+colorBlendAttachment.alphaBlendOp = VK_BLEND_OP_ADD; // Optional
+</code></pre>
+<p>这个针对每个帧缓冲的结构体允许你配置颜色混合的第一种方式。下面的伪代码很好地演示了将要执行的操作：</p>
+<pre><code class="language-c++">if (blendEnable) {
+    finalColor.rgb = (srcColorBlendFactor * newColor.rgb) &lt;colorBlendOp&gt; (dstColorBlendFactor * oldColor.rgb);
+    finalColor.a = (srcAlphaBlendFactor * newColor.a) &lt;alphaBlendOp&gt; (dstAlphaBlendFactor * oldColor.a);
+} else {
+    finalColor = newColor;
+}
+
+finalColor = finalColor &amp; colorWriteMask;
+</code></pre>
+<p>如果<code>blendEnable</code>被设为了<code>VK_FALSE</code>，那么片段着色器产生的新颜色不会经过任何修改就会被传递出去。否则，这两步混合操作就会计算出新的颜色。产生的颜色与<code>colorWriteMask</code>进行按位与运算，来决定最终会被传递出去的通道。</p>
+<p>最常用的颜色混合是实现alpha混合，新颜色会基于它的不透明度与旧颜色进行混合。这样，<code>finalColor</code>就应该使用如下方式计算：</p>
+<pre><code class="language-c++">finalColor.rgb = newAlpha * newColor + (1 - newAlpha) * oldColor;
+finalColor.a = newAlpha.a;
+</code></pre>
+<p>可以通过以下参数来实现：</p>
+<pre><code class="language-c++">colorBlendAttachment.blendEnable = VK_TRUE;
+colorBlendAttachment.srcColorBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+colorBlendAttachment.dstColorBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
+colorBlendAttachment.colorBlendOp = VK_BLEND_OP_ADD;
+colorBlendAttachment.srcAlphaBlendFactor = VK_BLEND_FACTOR_ONE;
+colorBlendAttachment.dstAlphaBlendFactor = VK_BLEND_FACTOR_ZERO;
+colorBlendAttachment.alphaBlendOp = VK_BLEND_OP_ADD;
+</code></pre>
+<p>你可以在规范中的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkBlendFactor.html"><code>VkBlendFactor</code></a>和<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkBlendOp.html"><code>VkBlendOp</code></a>枚举值中找到所有可以进行的操作。</p>
+<p>第二个结构体引用了一个包含了所有针对单个帧缓冲进行设置的结构体的数组，并且允许你设置混合常量，你可以在上述计算中把这些常量作为混合因子。</p>
+<pre><code class="language-c++">VkPipelineColorBlendStateCreateInfo colorBlending = {};
+colorBlending.sType = VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_STATE_CREATE_INFO;
+colorBlending.logicOpEnable = VK_FALSE;
+colorBlending.logicOp = VK_LOGIC_OP_COPY; // Optional
+colorBlending.attachmentCount = 1;
+colorBlending.pAttachments = &amp;colorBlendAttachment;
+colorBlending.blendConstants[0] = 0.0f; // Optional
+colorBlending.blendConstants[1] = 0.0f; // Optional
+colorBlending.blendConstants[2] = 0.0f; // Optional
+colorBlending.blendConstants[3] = 0.0f; // Optional
+</code></pre>
+<p>如果你想使用颜色混合的第二种方式（位运算混合），那么你应该把<code>logicOpEnable</code>设为<code>VK_TRUE</code>。位运算可以通过<code>logicOp</code>成员来指定。注意，这将会自动禁用第一种方式，就像是你把每个帧缓冲的设置中的<code>blendEnable</code>设为了<code>VK_FALSE</code>一样！<code>colorWriteMask</code>在第二种模式中同样可用，用来指定帧缓冲中的哪些通道最终会起作用。也可以把这两种模式都关闭，就像我们现在做的这样，这种情况下片段的颜色会被直接写入帧缓冲而不加修改。</p>
+<h2 id="动态设置"><a class="header" href="#动态设置">动态设置</a></h2>
+<p>我们已经设置好的那些设置项里，有很少一部分可以不重建管线而直接修改，比如视口的大小、线宽和混合常量等。如果你想进行动态设置，那么你需要像这样来填充一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineDynamicStateCreateInfo.html"><code>VkPipelineDynamicStateCreateInfo</code></a>结构体：</p>
+<pre><code class="language-c++">VkDynamicState dynamicStates[] = {
+    VK_DYNAMIC_STATE_VIEWPORT,
+    VK_DYNAMIC_STATE_LINE_WIDTH
+};
+
+VkPipelineDynamicStateCreateInfo dynamicState = {};
+dynamicState.sType = VK_STRUCTURE_TYPE_PIPELINE_DYNAMIC_STATE_CREATE_INFO;
+dynamicState.dynamicStateCount = 2;
+dynamicState.pDynamicStates = dynamicStates;
+</code></pre>
+<p>这会使我们之前的设置全部被忽略，然后你必须在绘制时指定这些设置项的值。在之后的章节里我们会来讨论这个问题。如果你不想执行任何动态设置，你可以一会直接传递一个<code>nullptr</code>来替代这个结构体。</p>
+<h2 id="管线布局"><a class="header" href="#管线布局">管线布局</a></h2>
+<p>你可以在着色器中使用<code>uniform</code>值，这是一种类似于动态状态变量（dynamic state variable）的全局变量，你可以在绘制时更改这些变量的值来更改着色器的行为，而不需要重新创建着色器。它们通常用来向顶点着色器传递变换矩阵，或者在片段着色器中创建纹理采样器（texture sampler）。</p>
+<p>这些uniform值需要在创建管线时通过<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineLayout.html"><code>VkPipelineLayout</code></a>对象指定。尽管目前几章不会用到uniform值，我们还是必须创建一个空的管线布局（pipeline layout）。</p>
+<p>新建一个成员变量来保存这个对象，因为之后有其它函数会用到它：</p>
+<pre><code class="language-c++">VkPipelineLayout pipelineLayout;
+</code></pre>
+<p>然后在<code>createGraphicsPipeline</code>函数中创建对象：</p>
+<pre><code class="language-c++">VkPipelineLayoutCreateInfo pipelineLayoutInfo = {};
+pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
+pipelineLayoutInfo.setLayoutCount = 0; // Optional
+pipelineLayoutInfo.pSetLayouts = nullptr; // Optional
+pipelineLayoutInfo.pushConstantRangeCount = 0; // Optional
+pipelineLayoutInfo.pPushConstantRanges = nullptr; // Optional
+
+if (vkCreatePipelineLayout(device, &amp;pipelineLayoutInfo, nullptr, &amp;pipelineLayout) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to create pipeline layout!&quot;);
+}
+</code></pre>
+<p>这个结构体同时指定了“推送常量”（push constant），推送常量是向着色器传递动态值的另一种方式，我们会在以后的章节中深入探讨。管线布局在程序的整个生命周期中都会被引用，因此它应该在程序末尾被销毁：</p>
+<pre><code class="language-c++">void cleanup() {
+    vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
+    ...
+}
+</code></pre>
+<h2 id="小结"><a class="header" href="#小结">小结</a></h2>
+<p>到此，就完成了所有固定功能的设置！从头设置好这一切是个大工程，不过好处在于我们现在几乎完全了解了图形渲染管线中将会发生的一切！这减少了由于某个组件的默认值与期望值不符而产生意外行为的可能。</p>
+<p>不过在最终创建图形渲染管线之前，还有一个对象需要创建，它就是渲染过程。</p>
+<p><a href="https://vulkan-tutorial.com/code/10_fixed_functions.cpp">C++代码</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.vert">顶点着色器</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.frag">片段着色器</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-02 着色器模块 Shader modules.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-04 渲染过程 Render passes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-02 着色器模块 Shader modules.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-04 渲染过程 Render passes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

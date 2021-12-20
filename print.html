@@ -1,0 +1,3071 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="01 简介 Introduction.html">01 简介</a></li><li class="chapter-item expanded affix "><a href="02 概述 Overview.html">02 概述</a></li><li class="chapter-item expanded affix "><a href="03 开发环境 Development environment.html">03 开发环境</a></li><li class="chapter-item expanded affix "><li class="part-title">04 画一个三角形 Drawing a triangle</li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-05 重新创建交换链 Swap chain recreation.html"><strong aria-hidden="true">1.</strong> 04-05 重新创建交换链</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-01 基本代码 Base code.html"><strong aria-hidden="true">2.</strong> 04-01-01 基本代码</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-02 实例 Instance.html"><strong aria-hidden="true">3.</strong> 04-01-02 实例</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-03 验证层 Validation layers.html"><strong aria-hidden="true">4.</strong> 04-01-03 验证层</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-04 物理设备与队列家族 Physical devices and queue families.html"><strong aria-hidden="true">5.</strong> 04-01-04 物理设备与队列家族</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-01 建立 Setup/04-01-05 逻辑设备与队列 Logical device and queues.html"><strong aria-hidden="true">6.</strong> 04-01-05 逻辑设备与队列</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-01 表面 Window surface.html"><strong aria-hidden="true">7.</strong> 04-02-01 表面</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-02 交换链 Swap chain.html"><strong aria-hidden="true">8.</strong> 04-02-02 交换链</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-02 显示 Presentation/04-02-03 图像视图 Image views.html"><strong aria-hidden="true">9.</strong> 04-02-03 图像视图</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-01 简介 Introduction.html"><strong aria-hidden="true">10.</strong> 04-03-01 简介</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-02 着色器模块 Shader modules.html"><strong aria-hidden="true">11.</strong> 04-03-02 着色器模块</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-03 固定功能 Fixed functions.html"><strong aria-hidden="true">12.</strong> 04-03-03 固定功能</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-04 渲染过程 Render passes.html"><strong aria-hidden="true">13.</strong> 04-03-04 渲染过程</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-03 图形管线基础 Graphics pipeline basics/04-03-05 小结 Conclusion.html"><strong aria-hidden="true">14.</strong> 04-03-05 小结</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-01 帧缓冲 Framebuffers.html"><strong aria-hidden="true">15.</strong> 04-04-01 帧缓冲</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-02 命令缓冲 Command buffers.html"><strong aria-hidden="true">16.</strong> 04-04-02 命令缓冲</a></li><li class="chapter-item expanded "><a href="04 画一个三角形 Drawing a triangle/04-04 绘制 Drawing/04-04-03 渲染与显示 Rendering and presentation.html"><strong aria-hidden="true">17.</strong> 04-04-03 渲染与显示</a></li><li class="chapter-item expanded affix "><li class="part-title">05 顶点缓冲 Vertex buffers</li><li class="chapter-item expanded "><a href="05 顶点缓冲 Vertex buffers/05-01 顶点输入描述 Vertex input description.html"><strong aria-hidden="true">18.</strong> 05-01 顶点输入描述</a></li><li class="chapter-item expanded "><a href="05 顶点缓冲 Vertex buffers/05-02 创建顶点缓冲 Vertex buffer creation.html"><strong aria-hidden="true">19.</strong> 05-02 创建顶点缓冲</a></li><li class="chapter-item expanded "><a href="05 顶点缓冲 Vertex buffers/05-03 暂存缓冲 Staging buffer.html"><strong aria-hidden="true">20.</strong> 05-03 暂存缓冲</a></li><li class="chapter-item expanded "><a href="05 顶点缓冲 Vertex buffers/05-04 索引缓冲 Index buffer.html"><strong aria-hidden="true">21.</strong> 05-04 索引缓冲</a></li><li class="chapter-item expanded affix "><li class="part-title">06 Uniform缓冲 Uniform Buffers</li><li class="chapter-item expanded "><a href="06 Uniform缓冲 Uniform Buffers/06-01 描述符布局与描述符缓冲 Descriptor layout and buffer.html"><strong aria-hidden="true">22.</strong> 06-01 描述符布局与描述符缓冲</a></li><li class="chapter-item expanded "><a href="06 Uniform缓冲 Uniform Buffers/06-02 描述符池与描述符集合 Descriptor pool and sets.html"><strong aria-hidden="true">23.</strong> 06-02 描述符池与描述符集合</a></li><li class="chapter-item expanded affix "><li class="part-title">07 纹理映射 Texture mapping</li><li class="chapter-item expanded "><a href="07 纹理映射 Texture mapping/07-01 图像 Images.html"><strong aria-hidden="true">24.</strong> 07-01 图像</a></li><li class="chapter-item expanded "><a href="07 纹理映射 Texture mapping/07-02 图像视图与采样器 Image view and sample.html"><strong aria-hidden="true">25.</strong> 07-02 图像视图与采样器</a></li><li class="chapter-item expanded "><a href="07 纹理映射 Texture mapping/07-03 组合图像采样器 Combined image sampler.html"><strong aria-hidden="true">26.</strong> 07-03 组合图像采样器</a></li><li class="chapter-item expanded "><a href="08 深度缓冲 Depth buffering.html"><strong aria-hidden="true">27.</strong> 08 深度缓冲</a></li><li class="chapter-item expanded "><a href="09 加载模型 Loading models.html"><strong aria-hidden="true">28.</strong> 09 加载模型</a></li><li class="chapter-item expanded "><a href="10 生成多级渐远纹理 Generating Mipmaps.html"><strong aria-hidden="true">29.</strong> 10 生成多级渐远纹理</a></li><li class="chapter-item expanded "><a href="11 多重采样 Multisampling.html"><strong aria-hidden="true">30.</strong> 11 多重采样</a></li><li class="chapter-item expanded "><a href="12 常见问题 FAQ.html"><strong aria-hidden="true">31.</strong> 12 常见问题</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="简介"><a class="header" href="#简介">简介</a></h1>
+<h2 id="关于此教程"><a class="header" href="#关于此教程">关于此教程</a></h2>
+<p>此教程将会教你使用基础的 <a href="https://www.khronos.org/vulkan/">Vulkan</a> 图像及计算API。由 <a href="https://www.khronos.org/">Khronos group</a> （因 OpenGL 而闻名）开发的Vulkan是一套全新的API，它提供了对现代显卡更好的抽象。这套新接口允许你更好地描述你的应用程序想做的事情，因此它拥有比现有的图形API，比如 <a href="https://zh.wikipedia.org/wiki/OpenGL">OpenGL</a> 和 <a href="https://zh.wikipedia.org/wiki/Direct3D">Direct3D</a> ，更好的性能以及更少的意外行为。Vulkan背后的思想比较接近 <a href="https://zh.wikipedia.org/wiki/Direct3D#Direct3D_12">Direct3D 12</a> 和 <a href="https://zh.wikipedia.org/wiki/Metal_(API)">Metal</a> ，但是 Vulkan 拥有完全跨平台的优点，也就是说，你可以同时为 Windows, Linux 和 Android 平台开发应用程序。</p>
+<p>然而，为这些优点付出的代价是，你必须使用这些非常啰嗦的 API 。图形 API 中的每一个细节都需要你在使用前从零开始设置好，包括帧缓冲创建前的初始化，或者像是缓冲或者贴图这类对象的内存管理。显卡驱动程序少了很多初始化工作，这意味着你需要在你的应用程序中做更多工作来保证行为正确。</p>
+<p>丑话先说在前头， Vulkan 并不适合每一个人。它针对的是那些钟情于高性能的计算机图形，并且愿意为其做贡献的程序员们。如果你对游戏开发更感兴趣而不是计算机图形学的话，你可能会愿意继续使用 OpenGL 或者 Direct3D 而不是抛弃它们换用 Vulkan 。另一个可供选择的选项是使用<a href="https://zh.wikipedia.org/wiki/%E8%99%9A%E5%B9%BB%E5%BC%95%E6%93%8E#%E8%99%9A%E5%B9%BB%E5%BC%95%E6%93%8E4">虚幻4</a>或者<a href="https://zh.wikipedia.org/wiki/Unity_(%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E)">Unity</a>之类的游戏引擎，它们可以在使用 Vulkan 的同时暴露更高级的API给你。</p>
+<p>说完了这些，来看看在接下来的教程中有什么事前准备需要做：</p>
+<ul>
+<li>支持Vulkan的显卡及驱动(<a href="https://developer.nvidia.com/vulkan-driver">NVIDIA</a>, <a href="http://www.amd.com/en-us/innovations/software-technologies/technologies-gaming/vulkan">AMD</a>, <a href="https://software.intel.com/en-us/blogs/2016/03/14/new-intel-vulkan-beta-1540204404-graphics-driver-for-windows-78110-1540">Intel</a>)</li>
+<li>C++使用经验（熟悉RAII和初始化列表）</li>
+<li>支持C++11的编译器（Visual Studio 2017及以上版本，GCC 7及以上版本，或 Clang 5及以上版本）</li>
+<li>对 3D 计算机图形学已有一些经验</li>
+</ul>
+<p>此教程假设你不懂 OpenGL 或 Direct3D ，不过你的确需要知道一点 3D 计算机图形学的基本概念，比如此教程不会解释透视投影背后的数学原理。你可以读读<a href="https://paroj.github.io/gltut/">这本电子书</a>，它很好地介绍了计算机图形学的概念。这是一些其它的关于计算机图形学的很棒的资源：</p>
+<ul>
+<li><a href="https://github.com/petershirley/raytracinginoneweekend">Ray tracing in one weekend</a>（《一个周末就能看懂的光线追踪》）</li>
+<li><a href="http://www.pbr-book.org/">Physically Based Rendering book</a>（《基于物理的渲染》）</li>
+<li>Vulkan在真正的游戏引擎中的实践，以开源版本的<a href="https://github.com/Novum/vkQuake">Quake</a>和<a href="https://github.com/DustinHLand/vkDOOM3">DOOM 3</a>为例</li>
+</ul>
+<p>如果你想的话，你可以用 C 代替 C++ 。不过你得用一个其它的线性代数库，并且代码结构也得用你自己的。我们将会使用一些C++的特性，比如类和RAII，来组织代码逻辑并管理资源的生命周期。本教程还有针对 Rust 开发者的<a href="https://github.com/bwasty/vulkan-tutorial-rs">另外一个版本</a>。</p>
+<p>为了让那些使用其他语言的开发者们能够跟上我们的教程，也为了能够积攒一点使用基础API的经验，我们将会使用Vulkan的原生 C API 。不过如果你在使用C++，或许你会更喜欢这个比较新的 <a href="https://github.com/KhronosGroup/Vulkan-Hpp">Vulkan-Hpp</a> 绑定，它对一些脏活累活做了抽象，并且有助于防止某些错误的发生。</p>
+<h2 id="电子书"><a class="header" href="#电子书">电子书</a></h2>
+<p>如果你更喜欢以电子书的形式阅读此教程，你可以在此下载EPUB或者PDF格式的版本（英文原文）：</p>
+<ul>
+<li><a href="https://raw.githubusercontent.com/Overv/VulkanTutorial/master/ebook/Vulkan%20Tutorial.epub">EPUB</a></li>
+<li><a href="https://raw.githubusercontent.com/Overv/VulkanTutorial/master/ebook/Vulkan%20Tutorial.pdf">PDF</a></li>
+</ul>
+<h2 id="此教程的结构"><a class="header" href="#此教程的结构">此教程的结构</a></h2>
+<p>我们首先概述 Vulkan 的工作原理，然后介绍在屏幕上画出第一个三角形需要做的所有工作。其目的在于，当你理解了每一个小步骤在整个流程中的基本作用之后，你会更好地理解它们。下一步，我们会用 <a href="https://lunarg.com/vulkan-sdk/">Vulkan SDK</a> 、进行线性代数运算的 <a href="http://glm.g-truc.net/">GLM</a> 库和创建窗口的 <a href="http://www.glfw.org/">GLFW</a> 库建立开发环境。此教程将会展示如何在 Windows &amp; Visual Studio 和 Ubuntu Linux &amp; GCC 上设置这些库。</p>
+<p>然后，我们将会实现所有必要的 Vulkan 程序组件，用来渲染你的第一个三角形。每一章都会大致遵循以下结构：</p>
+<ul>
+<li>介绍一个新概念以及它的作用</li>
+<li>调用所有相关的 API 来把它整合进你的程序里</li>
+<li>将它的一部分抽象为辅助函数</li>
+</ul>
+<p>虽然此教程的每一章都与上一章相连，但是你也可以把这些章节作为独立的文章来阅读，每篇文章讲解某个 Vulkan 的特性。这意味着，这个网站也可以作为参考资料使用。所有 Vulkan 函数和类型都被链接到了它们的规范上，你可以点击它们来获取更多内容。 Vulkan 是一套非常新的API，所以规范本身也有可能出现某些不足，我们鼓励你向<a href="https://github.com/KhronosGroup/Vulkan-Docs">这个 Khronos 仓库</a>提交反馈。</p>
+<p>正如之前所说过的， Vulkan API 是一个有许多参数的、相当啰嗦的 API ，旨在能让你最大限度地控制显卡。这就导致了哪怕是基础操作，例如创建一个纹理，都要经过很多步骤，并且每次都要重复这些步骤。因此我们会在教程的每一步创建我们自己的辅助函数合集。</p>
+<p>每一章的最后都会有一个链接，指向到目前为止的完整代码。如果你对代码的结构有疑问，或者你在 debug 时需要一个参考对象，你都可以来参考这个源代码。所有代码都经过了多家厂商的不同显卡来验证其正确性。在每一章的底部都有一个评论区，你可以在这问关于本章的具体问题。提问时请说明你的平台、驱动版本、源代码、预期行为和实际行为来让我们帮助你。</p>
+<p>这个教程旨在结成一个社区。Vulkan现在仍然是一套非常新的API，它的最佳实践现在还没有形成。如果你对此教程或此网站有任何反馈，不要迟疑，提交一个 issue 或者一个 pull request 到<a href="https://github.com/Overv/VulkanTutorial">这个 GitHub 仓库</a>。你可以watch这个仓库以获取此教程的更新提示。</p>
+<p>当你在屏幕上渲染出来了第一个三角形之后，我们会扩展这个程序，将线性变换、纹理和 3D 模型加入进去。</p>
+<p>如果你在这之前玩过图形 API ，你就会知道在屏幕上渲染出几何图形之前可能有许多要做的步骤。这种初始化步骤在 Vulkan 中有很多，不过你会发现每个具体步骤都很容易理解，并且也不会感到多余。还有一件很重要的事情，那就是要记住，当你渲染出了那个看起来很无聊的三角形之后，绘制有纹理的 3D 模型并不需要做太多的额外工作，并且向前迈进的每一步都会有许多收获。</p>
+<p>如果你在跟着教程操作的时候遇到了问题，首先请查看“常见问题”部分是否已经列出并解决了你的问题。如果没有，请放轻松并且在最相关的那一章的评论区提问。</p>
+<p>准备好深入了解高性能图形API的未来了吗？让我们开始吧！</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="概述"><a class="header" href="#概述">概述</a></h1>
+<p>本章首先介绍 Vulkan 以及它所解决的问题。然后我们会看一下为了画出第一个三角形所需要的步骤。这可以让你纵观全局并且理清后续每一章在整个过程中的位置。我们将会以展示 Vulkan API 的结构以及它们的一般使用模式作结。</p>
+<h2 id="vulkan-的起源"><a class="header" href="#vulkan-的起源">Vulkan 的起源</a></h2>
+<p>和以前的那些图形 API 一样， Vulkan 也被设计成了跨 GPU 平台抽象的。那些 API 大多存在的问题是，在设计它们的时代，图形硬件大多被限制在可配置的固定功能上。程序员必须以标准格式提供顶点数据，并在光照和阴影选项方面受制于 GPU 制造商。</p>
+<p>随着显卡架构的日益成熟，他们开始提供越来越多的可编程功能。但是这些新功能都是以某种方式利用已有的API被集成进去的。这导致了不理想的抽象，以及在显卡将程序员的意图映射到现代图形架构时产生的许多猜测行为。这就是驱动要经常更新来为游戏提供更好的显示性能的原因，有时甚至能大幅提高性能。出于这种复杂性，应用开发者们也得处理各种供应商的显卡之间的不一致，比如<a href="https://zh.wikipedia.org/wiki/%E7%9D%80%E8%89%B2%E5%99%A8">着色器</a>的语法。除了这些新功能之外，在过去的十年中涌现出许多拥有强劲显卡的移动设备。这些移动设备的 GPU 根据功耗和空间需求的不同有着不同的架构。一个有代表性的例子就是<a href="https://zh.wikipedia.org/wiki/%E5%9F%BA%E4%BA%8E%E5%9B%BE%E5%9D%97%E6%B8%B2%E6%9F%93">基于图块渲染</a>，通过赋予程序员更大的控制权来获得更好的性能。另一个来自于旧时代 API 的限制在于有限的多线程支持，这往往是造成 CPU 端性能瓶颈的原因。</p>
+<p>Vulkan 通过为现代图形架构从头重新设计 API 的方式解决了这个问题。它通过让程序员使用更多的 API 来明确地声明自己意图的方式降低了驱动的开销，并且允许多个线程并行地创建和提交命令。它通过将着色器程序通过编译器编译成标准化的字节码的方式减少了编译着色器时的不一致性。最后，它承认现代显卡的通用处理能力，并且将计算和图形功能统一到了同一个API中。</p>
+<h2 id="画一个三角形需要分几步"><a class="header" href="#画一个三角形需要分几步">画一个三角形需要分几步</a></h2>
+<p>我们现在来看看在一个行为良好的 Vulkan 程序中渲染一个三角形所需要的所有步骤的概述。此处介绍的所有概念在接下来的章节中会详细说明。此处只是为了让你一览整个流程，让你把每个单独组件之间联系起来。</p>
+<h3 id="第一步-实例和选择物理设备"><a class="header" href="#第一步-实例和选择物理设备">第一步 实例和选择物理设备</a></h3>
+<p>Vulkan 应用程序从一个 <a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkInstance.html"><code>VkInstance</code></a> （实例）来设置 Vulkan API 开始。创建一个实例则需要你描述你的应用程序和你想使用的 API 扩展。创建实例之后，你可以查询支持 Vulkan 的硬件设备并且选择一个或多个 <a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPhysicalDevice.html"><code>VkPhysicalDevice</code></a> （物理设备）来使用。你可以查询设备的属性（比如显存大小）和能力来选择所需设备，比如独立显卡。</p>
+<h3 id="第二步-逻辑设备和队列家族"><a class="header" href="#第二步-逻辑设备和队列家族">第二步 逻辑设备和队列家族</a></h3>
+<p>在选择了合适的硬件设备之后，你需要创建一个 <a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkDevice.html"><code>VkDevice</code></a> （逻辑设备），你可以在其中更具体地描述你想使用哪些 <a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPhysicalDeviceFeatures.html"><code>VkPhysicalDeviceFeatures</code></a> （物理设备特性），比如多视口渲染以及 64 位浮点数。同时，你也需要指明你想使用的队列家族（queue families）。绝大多数 Vulkan 操作，比如绘图命令和内存操作，都是通过提交到<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkQueue.html"><code>VkQueue</code></a>（队列）来异步执行的。队列从队列家族中分配，每个队列家族支持一组特定的操作。例如，可能存在不同的队列家族进行图形、计算和内存传输操作。队列家族的可用性也可以成为在选择物理显卡时的一个影响因素。可能存在一些支持 Vulkan 却不提供任何图形功能的设备，不过目前所有支持Vulkan操作的显卡都可以完成我们感兴趣的所有队列操作。</p>
+<h3 id="第三步-表面和交换链"><a class="header" href="#第三步-表面和交换链">第三步 表面和交换链</a></h3>
+<p>除非你只想离屏渲染，你会需要一个窗口来显示渲染的图像。窗口可以使用原生平台 API 或者像是 <a href="http://www.glfw.org/">GLFW</a> 以及 <a href="https://www.libsdl.org/">SDL</a> 之类的图形库来创建。在此教程中，我们选用 GLFW ，这个问题在下一章会详细讲解。</p>
+<p>我们还需要另外两个组件来把图像渲染到窗口上：一个表面（<code>VkSurfaceKHR</code>, surface）和一个交换链（<code>VkSwapchainKHR</code>, swap chain）。注意一下，这个<code>KHR</code>后缀说明这些对象是 Vulkan 扩展（extension）的一部分。Vulkan API 本身是完全平台无关的，因此我们必须使用标准化的 WSI （Window System Interface，窗口系统接口）扩展来与窗口管理器进行交互。表面（surface）是一个跨平台的、对要渲染的窗口的抽象，它通常需要传入一个原生窗口的句柄来实例化，比如Windows上的<code>HWND</code>。幸运的是，GLFW库内置了一个函数来帮我们处理不同平台上的细节。</p>
+<p>交换链是渲染目标的集合。它最基本的作用就是确保现在正在渲染的图像与现在显示在屏幕上的图像不是同一个。这对确保只有渲染完成的图像才会被显示十分重要。每当我们想要绘制一个帧的时候，我们必须向交换链请求一个图像来进行渲染。当我们完成绘制之后，再把这个图像返回到交换链中以便在某个时间点显示。渲染对象的数量以及将渲染好的图像显示到屏幕上的条件由显示模式（present mode）决定。常见的渲染模式有双缓冲（垂直同步）和三缓冲。在交换链那一章我们再详细讨论这些问题。</p>
+<p>在一些平台上可以使用 <code>VK_KHR_display</code> 和 <code>VK_KHR_display_swapchain</code> 扩展直接渲染到显示器上，而无需与任何窗口管理器交互。举个例子，你可以通过这些扩展创建一个代表整个屏幕的表面，来实现你自己的窗口管理器。</p>
+<h3 id="第四步-图像视图和帧缓冲"><a class="header" href="#第四步-图像视图和帧缓冲">第四步 图像视图和帧缓冲</a></h3>
+<p>为了在从交换链中请求到的图像上进行绘制，我们需要用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkImageView.html"><code>VkImageView</code></a>（图像视图）和<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkFramebuffer.html"><code>VkFramebuffer</code></a>（帧缓冲）把它包装起来。图像视图引用了一个图像中要被使用的特定部分，而帧缓冲则引用一些图像视图并把它们当作颜色、深度和模板目标使用。因为在一个交换链中可能有多个不同的图像，所以我们提前为每一个图像创建一个图像视图和一个帧缓冲，并且在绘制时选择合适的那个。</p>
+<h3 id="第五步-渲染路径"><a class="header" href="#第五步-渲染路径">第五步 渲染路径</a></h3>
+<p>Vulkan 中的渲染路径（render passes）描述了在渲染操作时要使用的图像类型、图像的使用方式以及处理图像的内容的方式。在我们最初的这个绘制三角形的应用中，我们将告诉 Vulkan ，我们将会使用一个图像作为颜色目标，并且我们想要在绘制之前把它清除为纯色（<em>译者注：想一想 <code>glClearColor</code></em> ）。然而一个渲染路径只描述图像的类型，<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkFramebuffer.html"><code>VkFramebuffer</code></a>（帧缓冲）才会把这些选项匹配到具体的图像上。</p>
+<h3 id="第六步-图形管线"><a class="header" href="#第六步-图形管线">第六步 图形管线</a></h3>
+<p>Vulkan 中的图形管线由<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipeline.html"><code>VkPipeline</code></a>（管线）来建立。它描述了显卡的一些可配置部分（不可编程部分），比如视口大小以及深度缓冲操作等，而可编程部分则使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkShaderModule.html"><code>VkShaderModule</code></a>（着色器模块）对象来描述。<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkShaderModule.html"><code>VkShaderModule</code></a>（着色器模块）对象使用着色器的字节码来创建。驱动还需要知道管线中的哪些渲染目标会被使用，这些渲染目标由我们通过引用渲染路径来指定。</p>
+<p>Vulkan 与现有的其它API之间最明显的区别就是，图形管线的几乎所有配置项都需要在创建管线之前设置好。这意味着如果你想切换到另一个着色器或者稍微改变一下顶点数据的布局，你都需要重新创建整个图形管线。这意味着，你需要针对你在渲染操作时的具体情况提前创建许多<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipeline.html"><code>VkPipeline</code></a>（管线）对象，以满足渲染操作所需的所有不同组合。只有很少的一些基本配置可以动态更改，比如视口大小和清屏颜色等。你还必须明确地描述管线中的所有配置项，比如说没有默认的颜色混合选项。</p>
+<p>好消息是，就像提前编译（AOT）与即时编译（JIT）的区别那样，驱动有更多的优化机会，并且运行时性能将会更加具有可预测性，因为大量的状态更改是非常明确的，比如切换不同的图形管线。</p>
+<h3 id="第七步-命令池和命令缓冲"><a class="header" href="#第七步-命令池和命令缓冲">第七步 命令池和命令缓冲</a></h3>
+<p>正如之前所说，在 Vulkan 中，许多我们想要执行的操作，比如绘制操作，都需要被提交到一个队列中去。这些操作在提交之前需要先被记录到一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkCommandBuffer.html"><code>VkCommandBuffer</code></a>（命令缓冲）中。命令缓冲由<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkCommandPool.html"><code>VkCommandPool</code></a>（命令池）分配，每个命令池与一个特定的队列家族相关联。为了画出一个三角形，我们需要在命令缓冲里记录下列操作：</p>
+<ul>
+<li>开始渲染过程</li>
+<li>绑定图形渲染管线</li>
+<li>画三个顶点</li>
+<li>结束渲染过程</li>
+</ul>
+<p>因为帧缓冲中的图像取决于交换链具体会给我们哪一个，我们需要为每一个可能使用的图像记录一个命令缓冲，然后在绘制的时候选择合适的那个。另外一种可行的方法是每一帧都重新记录一次命令缓冲，但是这种方法效率不高。</p>
+<h3 id="第八步-主循环"><a class="header" href="#第八步-主循环">第八步 主循环</a></h3>
+<p>现在绘制命令已经被包装到了命令缓冲里，那主循环就十分简单明了了。首先我们通过<code>vkAcquireNextImageKHR</code>来从交换链中获得一个图像，之后为这个图像选择合适的命令缓冲并且用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkQueueSubmit.html"><code>vkQueueSubmit</code></a>来执行。最后，我们用<code>vkQueuePresentKHR</code>把这个图像返回到交换链中以供显示。</p>
+<p>提交到队列中的操作是异步执行的。因此我们必须使用一个信号量等这样的同步对象来保证执行顺序正确。绘图命令缓存必须被设置为等到获取图像之后再执行，否则可能导致我们开始渲染一个正在读取以在屏幕上显示的图像。<code>vkQueuePresentKHR</code>函数反过来又需要等待渲染完成，为此我们需要第二个信号量，并且在渲染完成后发出信号。</p>
+<h3 id="小结"><a class="header" href="#小结">小结</a></h3>
+<p>以上这些简单的讲解应该让你对绘制一个三角形所需要做的工作有了一个基本的认识。然而我们真正要做的程序包含了更多的步骤，比如分配顶点缓存，创建 uniform 缓存以及上传纹理图像等，这些将会在后面的章节讲解。我们先从一个简单的例子开始，因为Vulkan的学习曲线非常陡峭。我们作了一点小弊，把顶点坐标硬编码到了顶点着色器里而不是使用顶点缓存，因为管理顶点缓存需要先对命令缓存有一定的了解。</p>
+<p>所以长话短说，画出第一个三角形需要：</p>
+<ul>
+<li>创建一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkInstance.html"><code>VkInstance</code></a>（实例）</li>
+<li>选择一个受支持的显卡（<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPhysicalDevice.html"><code>VkPhysicalDevice</code></a>（物理设备））</li>
+<li>为绘制和显示创建一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkDevice.html"><code>VkDevice</code></a>（逻辑设备）和<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkQueue.html"><code>VkQueue</code></a>（队列）</li>
+<li>创建一个表面和交换链</li>
+<li>把交换链里的图像包裹到<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkImageView.html"><code>VkImageView</code></a>（图像视图）里面</li>
+<li>创建一个渲染过程来指定渲染目标和渲染目标的使用方法</li>
+<li>为渲染过程创建帧缓冲</li>
+<li>设置图形渲染管线</li>
+<li>为交换链中每个可用的图像分配并用绘制命令记录命令缓冲</li>
+<li>通过获取图像绘制帧，提交正确的那个渲染命令缓存并把图像返回到交换链中</li>
+</ul>
+<p>步骤有很多，但是在接下来的章节中，每一步的目标都会变得非常简单而清晰。如果你对某一步在整个程序中的作用有疑惑，你应该回来参考本章。</p>
+<h2 id="api概念"><a class="header" href="#api概念">API概念</a></h2>
+<p>本章将简要概述Vulkan API在更低的级别上的结构。</p>
+<h3 id="代码约定"><a class="header" href="#代码约定">代码约定</a></h3>
+<p>Vulkan中所有的函数、枚举类型和结构体都定义在了<code>vulkan.h</code>头文件中，这个文件在 LunarG 开发的 <a href="https://lunarg.com/vulkan-sdk/">Vulkan SDK</a> 里。下一章我们将会介绍如何安装这个SDK。</p>
+<p>函数以小写的<code>vk</code>开头，枚举类型和结构体以<code>Vk</code>开头，枚举值则以<code>VK_</code>开头。这套API非常依赖结构体作为函数参数。举个例子，对象通常以这种形式创建：</p>
+<pre><code class="language-c++">VkXXXCreateInfo createInfo = {};
+createInfo.sType = VK_STRUCTURE_TYPE_XXX_CREATE_INFO;
+createInfo.pNext = nullptr;
+createInfo.foo = ...;
+createInfo.bar = ...;
+
+VkXXX object;
+if (vkCreateXXX(&amp;createInfo, nullptr, &amp;object) != VK_SUCCESS) {
+    std::cerr &lt;&lt; &quot;failed to create object&quot; &lt;&lt; std::endl;
+    return false;
+}
+</code></pre>
+<p>Vulkan中的许多结构体要求你在<code>sType</code>成员中明确指定结构体类型。<code>pNext</code>成员可以是一个指向扩展结构的指针，在此教程中它将被永远置为<code>nullptr</code>。创建或销毁一个对象的函数会有一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkAllocationCallbacks.html"><code>VkAllocationCallbacks</code></a>参数，允许你为启动内存使用一个自定义的分配器，它在此教程中也将永远被置为<code>nullptr</code>。</p>
+<p>几乎所有函数的返回值都是一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkResult.html"><code>VkResult</code></a>的枚举类型，它要么是<code>VK_SUCCESS</code>（成功），要么是一个错误代码。 Vulkan 规范说明了每个函数会返回什么错误代码以及它们的含义。</p>
+<h3 id="验证层"><a class="header" href="#验证层">验证层</a></h3>
+<p>就像之前说过的， Vulkan 被设计为一个高性能低负载的 API 。因此它默认的错误检查和调试能力非常有限。当你做错了什么的时候，驱动程序常常是直接崩溃而不是返回一个错误代码——或者更糟糕的是，在你的显卡上跑得起来，在别的显卡上就完全不行了。</p>
+<p>你可以通过“验证层”（validation layers）来给 Vulkan 启用一个扩展的错误检查功能。验证层是一些可以被插入到 API 与显卡驱动之间的代码片段，可以用来运行额外的函数参数检查或者追踪内存管理问题。它的优点是你可以在开发的时候启用验证层，然后在发行版本中完全禁用它以避免性能开销。每个人都可以编写自己的验证层，不过 LunarG 开发的 Vulkan SDK 提供了一些标准的验证层，我们在教程中用到的就是它们。为了从验证层接收调试信息，你需要注册一个回调函数。</p>
+<p>Vulkan中每个操作都非常明确，并且还有如此灵活的验证层可用，因此事实上 Vulkan 比 OpenGL 和 Direct3D 更容易找到错误原因。</p>
+<p>在我们开始写代码之前只有一步要做了，那就是配置开发环境。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="开发环境"><a class="header" href="#开发环境">开发环境</a></h1>
+<p>这一章我们会配置一个 Vulkan 应用程序并且安装一些实用的库。我们用到的所有工具，除了编译器之外都是同时兼容 Windows, Linux 和 MacOS 的，不过安装步骤会有一些不同，也正是因此在这一章里我们详细地讲解这些工具。</p>
+<h2 id="windows"><a class="header" href="#windows">Windows</a></h2>
+<p>如果你在 Windows 下开发，那么我假设你用的是 Visual Studio 来编译代码。如果要获得完整的 C++17 支持，你需要使用 Visual Studio 2017 或 2019. 下面的步骤是为 VS 2017 编写的。</p>
+<h3 id="vulkan-sdk"><a class="header" href="#vulkan-sdk">Vulkan SDK</a></h3>
+<p>开发 Vulkan 应用程序时最重要的组件就是 Vulkan SDK. 它包括了头文件、标准验证层、调试工具以及加载 Vulkan 函数用的一个加载器。这个加载器在运行时从显卡驱动中加载一个函数，就像是 GLEW 之于 OpenGL 那样——如果你熟悉它们的话。</p>
+<p>你可以在 <a href="https://vulkan.lunarg.com/">LunarG 网站</a>底部的按钮处下载这个SDK。不需要你创建账号，但是有一个账号可以让访问一些对你来说可能会有用的文档。</p>
+<p><img src="https://vulkan-tutorial.com/images/vulkan_sdk_download_buttons.png" alt="" /></p>
+<p>安装时记下SDK的安装位置。首先我们要确认一下你的显卡和驱动是否正确地支持Vulkan。进入SDK安装目录，打开 <code>Bin</code> 文件夹，运行 <code>cude.exe</code> ，你看到的应该是如下画面：</p>
+<p><img src="https://vulkan-tutorial.com/images/cube_demo.png" alt="" /></p>
+<p>如果你收到了一个错误提示，确保你的驱动是最新的，以及你的显卡的确支持 Vulkan 运行时。参阅简介那一章来获取主要显卡供应商的驱动下载地址。</p>
+<p>这个文件夹里还有一个在开发时会很有用的程序。<code>glslangValidator.exe</code> 程序可以把人类可读的 <a href="https://zh.wikipedia.org/wiki/GLSL">GLSL</a> 编译成字节码。我们会在着色器模块那一章详细讲解这个程序。 <code>Bin </code>文件夹中也有关于 Vulkan 加载器和验证层的二进制程序，然后<code>Lib</code>文件夹中是库。</p>
+<p><code>Doc </code>文件夹里面有很多关于 Vulkan SDK 的实用信息，以及一个 Vulkan 规范的离线版本。最后， <code>Include</code> 文件夹中包含了 Vulkan 头文件。你可以自由探索其它的文件夹里都有什么，不过我们在此教程中用不到它们。</p>
+<h3 id="glfw"><a class="header" href="#glfw">GLFW</a></h3>
+<p>就像之前提过的， Vulkan 本身是一套平台无关的 API ，并且没有任何关于创建窗口并在上面显示渲染结果这类的工具。为了能体现出 Vulkan 跨平台的优点，并且绕开恐怖的 Win32, 我们会用兼容 Windows, Linux 和 MacOS 的 <a href="http://www.glfw.org/">GLFW 库</a>来创建窗口。虽然也有别的库可以用，比如 <a href="https://www.libsdl.org/">SDL</a> ，不过GLFW的优点在于，除了单纯的创建窗口以外，它把另外一些 Vulkan 中与具体平台相关的东西也抽象掉了。</p>
+<p>你可以在 GLFW 的<a href="http://www.glfw.org/download.html">官网</a>找到 GLFW 的最新发行版。在此教程中我们使用 64 位版本，不过你也可以用 32 位版本。如果你要用 32 位版本，那么在链接 Vulkan SDK 的时候就要选择 <code>Lib32</code> 文件夹里的库而不是 <code>Lib</code> 文件夹里的。下载好之后，把它解压到一个方便的位置。我选择在“文档”下的 Visual Studio 文件夹里创建一个 <code>Libraries</code> 文件夹。</p>
+<p><img src="https://vulkan-tutorial.com/images/glfw_directory.png" alt="" /></p>
+<h3 id="glm"><a class="header" href="#glm">GLM</a></h3>
+<p>与 DirectX 12 不同， Vulkan 没有自带的线性代数库，所以我们需要自己下载一个。 <a href="http://glm.g-truc.net/">GLM</a> 是一个不错的库，对图形 API 友好，并且已经在 OpenGL 开发中广泛应用。</p>
+<p>GLM 是一个只有头文件的库，所以只需要下载<a href="https://github.com/g-truc/glm/releases">最新版本</a>然后把它放在一个方便的位置。你的目录结构现在应该类似下图：</p>
+<p><img src="https://vulkan-tutorial.com/images/library_directory.png" alt="" /></p>
+<h3 id="配置-visual-studio"><a class="header" href="#配置-visual-studio">配置 Visual Studio</a></h3>
+<p>现在你已经安装好了所有的依赖，我们可以为 Vulkan 配置一个基础的 Visual Studio 项目然后写一点代码来确定每个部分是否都在正常工作。</p>
+<p>启动 Visual Studio ，新建一个 <code>Windows 桌面向导</code>项目，起一个项目名字，然后点击“确定”。</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_new_cpp_project.png" alt="" /></p>
+<p>确保你的应用类型是<code>控制台应用(.exe)</code>，这样我们就有了一个地方来输出调试信息，然后选中<code>空项目</code>。这样可以防止 Visual Studio 添加样板代码。</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_application_settings.png" alt="" /></p>
+<p>点击“确定”按钮来创建项目，然后添加一个C++源文件。你应该已经知道应该怎么做了，不过为了完整，此处列出相应步骤。</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_new_item.png" alt="" /></p>
+<p><img src="https://vulkan-tutorial.com/images/vs_new_source_file.png" alt="" /></p>
+<p>现在我们在文件中写入下列代码。现在看不懂这些代码也没关系。我们只是确定一下你能否编译并且运行 Vulkan 应用程序。在下一章我们会从头开始的。</p>
+<pre><code class="language-cpp">#define GLFW_INCLUDE_VULKAN
+#include &lt;GLFW/glfw3.h&gt;
+
+#define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+#include &lt;glm/vec4.hpp&gt;
+#include &lt;glm/mat4x4.hpp&gt;
+
+#include &lt;iostream&gt;
+int main() {
+    glfwInit();
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+    GLFWwindow* window = glfwCreateWindow(800, 600, &quot;Vulkan window&quot;, nullptr, nullptr);
+    
+    uint32_t extensionCount = 0;
+    vkEnumerateInstanceExtensionProperties(nullptr, &amp;extensionCount, nullptr);
+    std::cout &lt;&lt; extensionCount &lt;&lt; &quot; extensions supported&quot; &lt;&lt; std::endl;
+    
+    glm::mat4 matrix;
+    glm::vec4 vec;
+    auto test = matrix * vec;
+    
+    while(!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+    }
+    
+    glfwDestroyWindow(window);
+    
+    glfwTerminate();
+    
+    return  0;
+}
+</code></pre>
+<p>现在配置一下项目来避免出错。打开项目属性对话框并且确保选择的是<code>所有配置</code>，因为很多设置都需要同时在 <code>Debug</code> 和 <code>Release</code> 模式下生效。</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_open_project_properties.png" alt="" /></p>
+<p><img src="https://vulkan-tutorial.com/images/vs_all_configs.png" alt="" /></p>
+<p>进入到<code>C/C++ → 常规 → 附加包含目录</code>然后点击下拉列表里的<code>&lt;编辑...&gt;</code>。</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_cpp_general.png" alt="" /></p>
+<p>然后添加 Vulkan, GLFW 和 GLM 的头文件路径：</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_include_dirs.png" alt="" /></p>
+<p>接下来，在<code>链接器 → 常规 → 附加库目录</code>里面设置库目录。</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_link_settings.png" alt="" /></p>
+<p>然后把 Vulkan 和 GLFW 的库路径添加进去：</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_link_dirs.png" alt="" /></p>
+<p>进入到<code>链接器 → 输入 → 附加依赖项</code>然后点击下拉列表里的<code>&lt;编辑...&gt;</code>。</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_link_input.png" alt="" /></p>
+<p>输入 Vulkan 和 GLFW 的对象文件：</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_dependencies.png" alt="" /></p>
+<p>最后启用 C++17 支持：（<code>C/C++ → 语言 → C++语言标准</code>）</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_cpp17.png" alt="" /></p>
+<p>现在你可以关掉项目属性对话框了。如果你的每一步都做对了，代码中所有的高亮错误提示都应该消失了。</p>
+<p>最后，确保你在使用 64 位编译器：</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_build_mode.png" alt="" /></p>
+<p>按下 <code>F5</code> 来编译并运行程序，你应该看到一个命令提示符窗口，和一个在它上方的窗口，就像这样：</p>
+<p><img src="https://vulkan-tutorial.com/images/vs_test_window.png" alt="" /></p>
+<p>插件（extension）的数量应用是一个非0值。恭喜你，你已经准备好去探索Vulkan了！</p>
+<h2 id="linux"><a class="header" href="#linux">Linux</a></h2>
+<p>这个部分是针对 Ubuntu 用户的，不过你也可以跟着这个部分编译 LunarG SDK ，然后把那些<code>apt</code>命令换成你自己的包管理器的。你应该已经安装好了支持 C++17 的编译器（GCC 7+ 或 Clang5+）。你还需要make。</p>
+<h3 id="vulkan-软件包"><a class="header" href="#vulkan-软件包">Vulkan 软件包</a></h3>
+<p>在 Linux 上开发 Vulkan 应用程序所需要的最重要的组件是 Vulkan 加载器、验证层和几个测试你的机器是否支持 Vulkan 的命令行实用程序。</p>
+<ul>
+<li>
+<p><code>sudo apt install vulkan-tools</code>: 命令行实用程序，最重要的是 <code>vulkaninfo</code> 和 <code>vkcube</code>. 运行这些程序开确认你的机器是否支持 Vulkan.</p>
+</li>
+<li>
+<p><code>sudo apt install libvulkan-dev</code>: 安装 Vulkan 加载器。这个加载器在运行时从显卡驱动中加载一个函数，就像是 GLEW 之于 OpenGL 那样——如果你熟悉它们的话。</p>
+</li>
+<li>
+<p><code>sudo apt install vulkan-validationlayers-dev spirv-tools</code>: 安装标准验证层和所需的 SPIR-V 工具。这些东西在调试 Vulkan 应用程序时至关重要，我们会在下一章介绍它们。</p>
+</li>
+</ul>
+<p>如果安装成功，你应该已经完成了 Vulkan 部分的安装。记得运行一下 <code>vkcube</code> , 并确保你在窗口中看到以下弹出的内容：</p>
+<p><img src="https://vulkan-tutorial.com/images/cube_demo_nowindow.png" alt="" /></p>
+<p>如果你收到了一个错误提示，确保你的驱动是最新的，以及你的显卡的确支持Vulkan运行时。阅读简介那一章来获取主要显卡供应商的驱动下载地址。</p>
+<h3 id="glfw-1"><a class="header" href="#glfw-1">GLFW</a></h3>
+<p>就像之前提过的， Vulkan 本身是一套平台无关的 API ，并且没有任何关于创建窗口并在上面显示渲染结果这类的工具。为了能体现出 Vulkan 跨平台的优点，并且绕开恐怖的 X11, 我们会用兼容 Windows, Linux 和 MacOS 的 <a href="http://www.glfw.org/">GLFW 库</a>来创建窗口。虽然也有别的库可以用，比如 <a href="https://www.libsdl.org/">SDL</a> ，不过GLFW的优点在于，除了单纯的创建窗口以外，它把另外一些 Vulkan 中与具体平台相关的东西也抽象掉了。</p>
+<p>我们会用以下命令来安装 GLFW.</p>
+<pre><code class="language-shell">sudo apt install libglfw3-dev
+</code></pre>
+<h3 id="glm-1"><a class="header" href="#glm-1">GLM</a></h3>
+<p>与 DirectX 12 不同， Vulkan 没有自带的线性代数库，所以我们需要自己下载一个。 <a href="http://glm.g-truc.net/">GLM</a> 是一个不错的库，对图形 API 友好，并且已经在 OpenGL 开发中广泛应用。</p>
+<p>这是一个只有头文件的库，可以通过安装 <code>libglm-dev</code> 包来安装。</p>
+<pre><code class="language-bash">sudo apt install libglm-dev
+</code></pre>
+<h3 id="着色器编译器"><a class="header" href="#着色器编译器">着色器编译器</a></h3>
+<p>我们基本上已经安装完了我们需要的所有内容，除了一个可以把人类可读的 <a href="https://zh.wikipedia.org/wiki/GLSL">GLSL</a> 编译成字节码的编译器。</p>
+<p>有两个很流行的编译器，一个是 Khronos Group 开发的 <code>glslangValidator</code>, 另一个是谷歌开发的<code>glslc</code>. 后者的用法比较接近 GCC 和 Clang, 所以我们决定用这个：下载谷歌的<a href="https://github.com/google/shaderc/blob/main/downloads.md">非官方二进制文件</a>并且复制 <code>glslc</code> 文件到你的 <code>/usr/local/bin</code> 目录。注意，取决于你的用户权限，你可能需要用 <code>sudo</code>. 要测试的话，直接运行 <code>glslc</code> 然后它应该理所当然地抱怨没有传入任何着色器以供编译：</p>
+<p><code>glslc: error: no input files</code></p>
+<p>我们会在着色器模块一章中深入介绍 <code>glslc</code>.</p>
+<h3 id="配置-makefile-项目"><a class="header" href="#配置-makefile-项目">配置 makefile 项目</a></h3>
+<p>现在你已经安装好了所有依赖，我们可以为 Vulkan 配置一个基础的 makefile 项目然后写一点代码来确定每个部分都在正常工作。</p>
+<p>在方便的地方创建一个新文件夹，起个名字，比如 <code>VulkanTest</code>. 创建一个名为 <code>main.cpp</code> 的 C++ 源文件并且写入如下代码。现在看不懂这些代码也没关系。我们只是确定一下你能否编译并且运行 Vulkan 应用程序。在下一章我们会从头开始的。</p>
+<pre><code class="language-cpp">#define GLFW_INCLUDE_VULKAN
+#include &lt;GLFW/glfw3.h&gt;
+
+#define GLM_FORCE_RADIANS
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+#include &lt;glm/vec4.hpp&gt;
+#include &lt;glm/mat4x4.hpp&gt;
+
+#include &lt;iostream&gt;
+int main() {
+    glfwInit();
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+    GLFWwindow* window = glfwCreateWindow(800, 600, &quot;Vulkan window&quot;, nullptr, nullptr);
+    
+    uint32_t extensionCount = 0;
+    vkEnumerateInstanceExtensionProperties(nullptr, &amp;extensionCount, nullptr);
+    std::cout &lt;&lt; extensionCount &lt;&lt; &quot; extensions supported&quot; &lt;&lt; std::endl;
+    
+    glm::mat4 matrix;
+    glm::vec4 vec;
+    auto test = matrix * vec;
+    
+    while(!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+    }
+    
+    glfwDestroyWindow(window);
+    
+    glfwTerminate();
+    
+    return  0;
+}
+</code></pre>
+<p>接下来，我们会编写一个用来编译和运行这些代码的 makefile. 创建一个新的空文件并命名为 <code>Makefile</code>. 我默认你已经有了一些编写 makefile 的基本经验，比如变量和规则是怎么工作的。如果你不懂 makefile, 你可以看看<a href="http://mrbook.org/blog/tutorials/make/">这份教程</a>来快速入门。</p>
+<p>我们首先来定义几个变量来简化一下这个文件。定义一个 <code>CFLAGS</code> 变量来指定编译器的基本标记：</p>
+<pre><code class="language-makefile">CFLAGS = -std=c++17 -O2
+</code></pre>
+<p>我们将使用现代 C++ (-std=c++17), 并把优化级别设置为O2. 可以去掉 -O2 以加快编译速度，但是在发行版中要记得加回去。</p>
+<p>同样地，在 <code>LDFLAGS</code> 变量中定义链接器标记：</p>
+<pre><code class="language-makefile">LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
+</code></pre>
+<p><code>-lglfw</code> 标记代表 GLFW, <code>-lvulkan</code> 标记代表与 Vulkan 函数加载器链接，其余标记是一些 GLFW 需要的低级系统库。其余标记是 GLFW 自身的依赖库：线程库和窗口管理器。</p>
+<p>现在来指定编译 <code>VulkanTest</code> 的规则，这个规则就非常一目了然了。确保使用制表符进行缩进而不是空格：</p>
+<pre><code class="language-make">VulkanTest: main.cpp
+    g++ $(CFLAGS) -o VulkanTest main.cpp $(LDFLAGS)
+</code></pre>
+<p>保存makefile并在<code>main.cpp</code>和<code>Makefile</code>的目录下运行<code>make</code>命令来验证一下这个规则是否正常工作。它应该最终生成一个<code>VulkanTest</code>可执行文件。</p>
+<p>现在我们再来添加两条规则：<code>test</code>和<code>clean</code>，前者运行编译出的可执行文件，后者则删除这个可执行文件。</p>
+<pre><code class="language-make">.PHONY: test clean
+
+test: VulkanTest
+    ./VulkanTest
+
+clean:
+    rm -f VulkanTest
+</code></pre>
+<p>运行 <code>make test</code> 命令应该显示程序运行成功，并且显示出Vulkan插件（extension）的数量。这个程序在你关闭空窗口后应该退出并返回成功的返回代码（<code>0</code>）。完整的 makefile 应该类似于这样：</p>
+<pre><code class="language-make">CFLAGS = -std=c++17 -O2
+LDFLAGS = -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
+
+VulkanTest: main.cpp
+    g++ $(CFLAGS) -o VulkanTest main.cpp $(LDFLAGS)
+
+.PHONY: test clean
+
+test: VulkanTest
+	./VulkanTest
+
+clean:
+    rm -f VulkanTest
+</code></pre>
+<p>你可以把这个文件夹当成一个 Vulkan 项目的模板。复制或重命名成 <code>HelloTriangle</code> 或者别的什么名字，然后删掉<code>main.cpp</code>里的所有代码。</p>
+<p>现在，你已经完全准备好进行真正的探险了。</p>
+<h2 id="macos"><a class="header" href="#macos">MacOS</a></h2>
+<p><em>译者：我没用过MacOS，万一翻译出现了偏差我是要负责的，大体上和上面两个差不多，反正MacOS也是类UNIX系统，我寻思跟Linux应该差不多（逃）</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="重新创建交换链"><a class="header" href="#重新创建交换链">重新创建交换链</a></h1>
+<h2 id="简介-1"><a class="header" href="#简介-1">简介</a></h2>
+<p>我们的程序现在成功地画出了一个三角形，但是还有一些没有正确处理的东西。表面有可能发生了改变而交换链没有一同改变导致二者不兼容。导致这一情况的原因之一是窗口大小发生了改变。我们需要捕获这些事件然后重新创建交换链。</p>
+<h2 id="重新创建交换链-1"><a class="header" href="#重新创建交换链-1">重新创建交换链</a></h2>
+<p>新建一个<code>recreateSwapChain</code>函数，在其中调用<code>createSwapChain</code>及其他所有依赖于交换链或者窗口大小的对象的创建函数。</p>
+<pre><code class="language-c++">void recreateSwapChain() {
+    vkDeviceWaitIdle(device);
+
+    createSwapChain();
+    createImageViews();
+    createRenderPass();
+    createGraphicsPipeline();
+    createFramebuffers();
+    createCommandBuffers();
+}
+</code></pre>
+<p>首先，我们调用了<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkDeviceWaitIdle.html"><code>vkDeviceWaitIdle</code></a>，因为与上一章类似，我们不应该修改那些可能正在被使用的资源。显然，我们需要做的第一件事情是重新创建交换链本身。图像视图（image view）需要被重新创建，因为它们是直接基于交换链图像的。渲染过程（render pass）需要被重新创建，因为它们依赖于叫交换链图像的格式。尽管类似于改变窗口大小这种操作很少会导致交换链图像的格式发生变化，但是还是应该处理一下。视口和裁剪矩形的大小是在图形渲染管线创建时指定的，因此图形渲染管线也需要重新建立。如果为视口和裁剪矩形启用动态设置（dynamic state）的话可以避免重建整个图形渲染管线。最后，帧缓冲和命令缓冲也是直接基于交换链图像的。</p>
+<p>为保证在重新创建这些对象之前其旧版本已经被清除，我们需要把一部分清除（cleanup）代码挪出来，写成一个单独的函数，这样我们就可以在<code>recreateSwapChain</code>函数里面调用了。给新函数起个名字叫<code>cleanupSwapChain</code>：</p>
+<pre><code class="language-c++">void cleanupSwapChain() {
+
+}
+
+void recreateSwapChain() {
+    vkDeviceWaitIdle(device);
+
+    cleanupSwapChain();
+
+    createSwapChain();
+    createImageViews();
+    createRenderPass();
+    createGraphicsPipeline();
+    createFramebuffers();
+    createCommandBuffers();
+}
+</code></pre>
+<p>我们会把重新创建交换链时涉及的所有需要重新创建的对象的清除代码从<code>cleanup</code>挪到<code>cleanupSwapChain</code>里：</p>
+<pre><code class="language-c++">void cleanupSwapChain() {
+    for (size_t i = 0; i &lt; swapChainFramebuffers.size(); i++) {
+        vkDestroyFramebuffer(device, swapChainFramebuffers[i], nullptr);
+    }
+
+    vkFreeCommandBuffers(device, commandPool, static_cast&lt;uint32_t&gt;(commandBuffers.size()), commandBuffers.data());
+
+    vkDestroyPipeline(device, graphicsPipeline, nullptr);
+    vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
+    vkDestroyRenderPass(device, renderPass, nullptr);
+
+    for (size_t i = 0; i &lt; swapChainImageViews.size(); i++) {
+        vkDestroyImageView(device, swapChainImageViews[i], nullptr);
+    }
+
+    vkDestroySwapchainKHR(device, swapChain, nullptr);
+}
+
+void cleanup() {
+    cleanupSwapChain();
+
+    for (size_t i = 0; i &lt; MAX_FRAMES_IN_FLIGHT; i++) {
+        vkDestroySemaphore(device, renderFinishedSemaphores[i], nullptr);
+        vkDestroySemaphore(device, imageAvailableSemaphores[i], nullptr);
+        vkDestroyFence(device, inFlightFences[i], nullptr);
+    }
+
+    vkDestroyCommandPool(device, commandPool, nullptr);
+
+    vkDestroyDevice(device, nullptr);
+
+    if (enableValidationLayers) {
+        DestroyDebugReportCallbackEXT(instance, callback, nullptr);
+    }
+
+    vkDestroySurfaceKHR(instance, surface, nullptr);
+    vkDestroyInstance(instance, nullptr);
+
+    glfwDestroyWindow(window);
+
+    glfwTerminate();
+}
+</code></pre>
+<p>我们可以从头开始重新创建命令池，但是这样相当浪费（资源）。作为替代，我选择了使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkFreeCommandBuffers.html"><code>vkFreeCommandBuffers</code></a>函数清除现有的命令缓冲。这样我们就可以利用已经创建的命令池来分配新的命令缓冲。</p>
+<p>为了正确处理窗口大小的改变，我们还需要来查询帧缓冲现在的大小来保证交换链图像的大小是正确的（新的）。为此我们修改<code>chooseSwapExtent</code>函数来考虑实际大小：</p>
+<pre><code class="language-c++">VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR&amp; capabilities) {
+    if (capabilities.currentExtent.width != std::numeric_limits&lt;uint32_t&gt;::max()) {
+        return capabilities.currentExtent;
+    } else {
+        int width, height;
+        glfwGetFramebufferSize(window, &amp;width, &amp;height);
+
+        VkExtent2D actualExtent = {
+            static_cast&lt;uint32_t&gt;(width),
+            static_cast&lt;uint32_t&gt;(height)
+        };
+
+        ...
+    }
+}
+</code></pre>
+<p>这就是重新创建交换链所需要的全部步骤！然而这种方式的缺点在于我们需要停止所有渲染操作直到新交换链创建完成。在创建新交换链的同时，可以让旧交换链上的绘制命令继续进行。你需要通过<code>VkSwapchainCreateInfoKHR</code>结构体的<code>oldSwapChain</code>字段来传递之前的交换链，然后在你用完旧交换链的时候销毁它。</p>
+<h2 id="未经优化的或过期的交换链"><a class="header" href="#未经优化的或过期的交换链">未经优化的或过期的交换链</a></h2>
+<p>现在我们只需要找出什么时候需要重新创建交换链，然后调用我们新的<code>recreateSwapChain</code>函数就行了。幸运的是，Vulkan通常会在显示过程中告知我们交换链已经不再适用。<code>vkAcquireNextImageKHR</code>和<code>vkQueuePresentKHR</code>函数可以返回如下的特殊值来表明这一点：</p>
+<ul>
+<li><code>VK_ERROR_OUT_OF_DATE_KHR</code>：交换链已经与表面不兼容且无法再用于渲染。通常会在窗口大小改变后发生。</li>
+<li><code>VK_SUBOPTIMAL_KHR</code>：交换链可以继续用于渲染，但是其与表面属性不再完全匹配。</li>
+</ul>
+<pre><code class="language-c++">VkResult result = vkAcquireNextImageKHR(device, swapChain, std::numeric_limits&lt;uint64_t&gt;::max(), imageAvailableSemaphores[currentFrame], VK_NULL_HANDLE, &amp;imageIndex);
+
+if (result == VK_ERROR_OUT_OF_DATE_KHR) {
+    recreateSwapChain();
+    return;
+} else if (result != VK_SUCCESS &amp;&amp; result != VK_SUBOPTIMAL_KHR) {
+    throw std::runtime_error(&quot;failed to acquire swap chain image!&quot;);
+}
+</code></pre>
+<p>如果交换链在试图获取一个新图像的时候过期，那么它将无法再用于显示。因此我们应该立即重建交换链并且在下一次调用<code>drawFrame</code>函数时重试。</p>
+<p>然而，如果我们在这时放弃了绘制，那么屏障（fence）就不会通过<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkQueueSubmit.html"><code>vkQueueSubmit</code></a>函数进行提交，在稍后我们尝试等待它的时候其可能处于一个意外的状态。我们可以把重新创建屏障作为重新创建交换链的一个部分，不过移动<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkResetFences.html"><code>vkResetFences</code></a>的调用更简单：</p>
+<pre><code class="language-c++">vkResetFences(device, 1, &amp;inFlightFences[currentFrame]);
+
+if (vkQueueSubmit(graphicsQueue, 1, &amp;submitInfo, inFlightFences[currentFrame]) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to submit draw command buffer!&quot;);
+}
+</code></pre>
+<p>你也可以在交换链不再适用的时候这么做，但是我选择在这时继续渲染，因为我们已经请求到了一个图像。<code>VK_SUCCESS</code>和<code>VK_SUBOPTIMAL_KHR</code>都可以认为是“成功”的返回值。</p>
+<pre><code class="language-c++">result = vkQueuePresentKHR(presentQueue, &amp;presentInfo);
+
+if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR) {
+    recreateSwapChain();
+} else if (result != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to present swap chain image!&quot;);
+}
+
+currentFrame = (currentFrame + 1) % MAX_FRAMES_IN_FLIGHT;
+</code></pre>
+<p><code>vkQueuePresentKHR</code>函数返回同样的值，意思也是一样的。在这种情况下如果交换链变得不再适用我们也会重新创建交换链，因为我们想尽可能获得好的结果。</p>
+<h2 id="显式处理大小的改变"><a class="header" href="#显式处理大小的改变">显式处理大小的改变</a></h2>
+<p>尽管在窗口大小改变之后，大多数驱动和平台都会自动触发<code>VK_ERROR_OUT_OF_DATE_KHR</code>，但这种行为是不受保证的。这也就是我们要添加一些额外的代码来显式处理大小的改变的理由。首先添加一个新的成员变量来表示大小是否被改变：</p>
+<pre><code class="language-c++">std::vector&lt;VkFence&gt; inFlightFences;
+size_t currentFrame = 0;
+
+bool framebufferResized = false;
+</code></pre>
+<p><code>drawFrame</code>函数需要被修改以检查此标志：</p>
+<pre><code class="language-c++">if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR || framebufferResized) {
+    framebufferResized = false;
+    recreateSwapChain();
+} else if (result != VK_SUCCESS) {
+    ...
+}
+</code></pre>
+<p>在<code>vkQueuePresentKHR</code>之后再执行这一操作非常重要，这样可以确保信号量处于一致的状态，否则可能永远无法正确等待一个改变了信号的信号量。现在为了检测大小的改变，我们可以使用GLFW框架中的<code>glfwSetFramebufferSizeCallback</code>函数来设置一个回调函数：</p>
+<pre><code class="language-c++">void initWindow() {
+    glfwInit();
+
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+
+    window = glfwCreateWindow(WIDTH, HEIGHT, &quot;Vulkan&quot;, nullptr, nullptr);
+    glfwSetFramebufferSizeCallback(window, framebufferResizeCallback);
+}
+
+static void framebufferResizeCallback(GLFWwindow* window, int width, int height) {
+
+}
+</code></pre>
+<p>之所以创建了一个<code>static</code>函数是因为GLFW不知道该如何使用正确的、指向我们的<code>HelloTriangleApplication</code>实例的<code>this</code>指针来正确地调用成员函数。</p>
+<p>不过，我们在回调函数得到了一个<code>GLFWwindow</code>的引用，并且有另一个函数允许你向它里面保存一个任意类型的指针：<code>glfwSetWindowUserPointer</code>：</p>
+<pre><code class="language-c++">window = glfwCreateWindow(WIDTH, HEIGHT, &quot;Vulkan&quot;, nullptr, nullptr);
+glfwSetWindowUserPointer(window, this);
+glfwSetFramebufferSizeCallback(window, framebufferResizeCallback);
+</code></pre>
+<p>这个值现在可以在回调函数里通过<code>glfwGetWindowUserPointer</code>取回，然后正确地设置标志：</p>
+<pre><code class="language-c++">static void framebufferResizeCallback(GLFWwindow* window, int width, int height) {
+    auto app = reinterpret_cast&lt;HelloTriangleApplication*&gt;(glfwGetWindowUserPointer(window));
+    app-&gt;framebufferResized = true;
+}
+</code></pre>
+<p>现在尝试运行程序并且调整窗口大小来看看帧缓冲的大小是否的确随着窗口大小改变了。</p>
+<h2 id="处理最小化"><a class="header" href="#处理最小化">处理最小化</a></h2>
+<p>还有一种情况会导致交换链过期，并且这也是一种特殊的窗口大小改变：窗口最小化。这种情况特殊在它会导致帧缓冲的大小变为<code>0</code>。在这篇教程中我们会以暂停渲染直到窗口回到前台的方式处理最小化，这需要扩展<code>recreateSwapChain</code>函数：</p>
+<pre><code class="language-c++">void recreateSwapChain() {
+    int width = 0, height = 0;
+    while (width == 0 || height == 0) {
+        glfwGetFramebufferSize(window, &amp;width, &amp;height);
+        glfwWaitEvents();
+    }
+
+    vkDeviceWaitIdle(device);
+
+    ...
+}
+</code></pre>
+<p>恭喜，你现在完成了你的第一个表现良好的Vulkan程序！在下一章里我们会摆脱硬编码在顶点着色器里的顶点，然后开始使用顶点缓冲。</p>
+<p><a href="https://vulkan-tutorial.com/code/16_swap_chain_recreation.cpp">C++代码</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.vert">顶点着色器</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.frag">片段着色器</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="基本代码"><a class="header" href="#基本代码">基本代码</a></h1>
+<h2 id="通用结构"><a class="header" href="#通用结构">通用结构</a></h2>
+<p>在上一章你已经使用正确的设置创建了一个Vulkan项目，并且已经用一些简单的代码测试过了。在这一章我们会用下面的代码重新开始：</p>
+<pre><code class="language-cpp">#include &lt;vulkan/vulkan.h&gt;
+
+#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+#include &lt;functional&gt;
+#include &lt;cstdlib&gt;
+
+class HelloTriangleApplication {
+public:
+    void run() { 
+        initVulkan();
+        mainLoop(); 
+        cleanup();
+    } 
+private: 
+    void initVulkan() {
+    
+    }
+    
+    void mainLoop() {
+    
+    }
+    
+    void cleanup() {
+    
+    }
+}; 
+
+int main() {
+    HelloTriangleApplication app;
+    
+    try {
+        app.run();
+    } catch (const  std::exception&amp; e) {
+        std::cerr &lt;&lt; e.what() &lt;&lt; std::endl;
+        return EXIT_FAILURE;
+    } 
+    
+    return EXIT_SUCCESS;
+}
+</code></pre>
+<p>首先我们从LunarG SDK中引入Vulkan的头文件，这个头文件提供了函数、结构体和枚举类型。<code>stdexcept</code>和<code>iostream</code>头文件用来报告和输出错误。<code>functional</code>头文件为资源管理部分提供lambda函数支持，<code>cstdlib</code>头文件提供<code>EXIT_SUCCESS</code>和<code>EXIT_FAILURE</code>宏定义。</p>
+<p>这个程序本身被包装在了一个类里，我们把Vulkan对象存储成这个类的私有成员，并且添加成员函数来初始化它们，这些成员函数会被<code>initVulkan</code>函数调用。当准备工作都做好了之后，我们进入主循环开始渲染每一帧。我们会用一个一直循环到窗口被关闭为止的的循环来填充<code>mainLoop</code>函数。一旦窗口被关闭，<code>mainLoop</code>返回，我们要确定我们用过的每一个资源都会被<code>cleanup</code>函数释放。</p>
+<p>如果在运行过程中有发生了任何致命错误，我们会抛出一个<code>std::runtime_error</code>异常并给出一个异常描述信息，这个异常描述信息会被传递到<code>main</code>函数，然后被输出到命令提示符上。虽然我们要处理各种各样的标准异常，但是我们捕获更为一般的<code>std::exception</code>。很快就会有一个关于错误处理的例子，我们会检查我们需要的扩展是否受支持。</p>
+<p>大概此后的每一章我们都会添加一个会被<code>initVulkan</code>函数调用的新函数，而且每个成为私有成员的新Vulkan对象都必须在程序末尾通过<code>cleanup</code>函数释放。</p>
+<h2 id="资源管理"><a class="header" href="#资源管理">资源管理</a></h2>
+<p>就像通过<code>malloc</code>申请到的每一块内存都必须通过<code>free</code>函数释放一样，每个Vulkan对象在当我们不需要它的时候都需要被显式销毁。在现代C++中，<code>&lt;memory&gt;</code>头文件提供了自动管理资源的功能，但是在此教程中，我选择显式地分配和回收Vulkan对象。毕竟Vulkan的卖点就在于显式地进行每一个操作从而避免出错，所以最好明确对象的生命周期来学习API如何工作。</p>
+<p>在你跟着此教程做了一遍之后，你可以通过例如重载<code>std::shared_ptr</code>的方式进行自动资源管理。在大型Vulkan程序中，使用RAII是推荐方法，但是为了学习目的，知道这些东西背后的具体操作总是好的。</p>
+<p>Vulkan对象要么是直接用形如<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateXXX.html"><code>vkCreateXXX</code></a>的函数直接创建的，要么是通过形如<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkAllocateXXX.html"><code>vkAllocateXXX</code></a>的函数从另一个对象分配的。当你确定一个对象不再被任何地方所使用的时候。你需要使用相应的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkDestroyXXX.html"><code>vkDestroyXXX</code></a>和<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkFreeXXX.html"><code>vkFreeXXX</code></a>来销毁它。这些函数的参数通常因对象的类型不同而不同，不过有一个参数是它们公有的：<code>pAllocator</code>。这是一个可选的参数，允许你为自定义的内存分配器指定回调函数。在此教程中我们将忽略这个参数并一直传一个<code>nullptr</code>作为参数。</p>
+<h2 id="整合glfw"><a class="header" href="#整合glfw">整合GLFW</a></h2>
+<p>如果你只想离屏渲染的话，Vulkan在不创建窗口的情况下也能工作良好，但是事实上显示出点什么东西会更让人兴奋！首先删掉<code>#include &lt;vulkan/vulkan.h&gt;</code>这一行，换成：</p>
+<pre><code class="language-cpp">#define GLFW_INCLUDE_VULKAN
+#include &lt;GLFW/glfw3.h&gt;
+</code></pre>
+<p><em>译者注：如果你在使用SDL2，则不能移除Vulkan本身的头文件。</em></p>
+<p>这样，GLFW会使用它自己的定义并且自动加载Vulkan头文件。添加一个<code>initWindow</code>函数并且在<code>run</code>函数中第一个调用它。我们会用这个函数初始化GLFW并创建一个窗口。</p>
+<pre><code class="language-cpp">void run() {
+    initWindow();
+    initVulkan(); 
+    mainLoop(); 
+    cleanup(); 
+} 
+
+private: 
+    void initWindow() { 
+    
+    }
+</code></pre>
+<p>在<code>initWindow</code>函数中第一个调用的应该是<code>glfwInit()</code>，这个函数初始化GLFW库。因为GLFW原本是为创建OpenGL上下文（context）设计的，所以我们接下来需要调用函数告诉GLFW不要创建OpenGL上下文：</p>
+<pre><code class="language-cpp">glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+</code></pre>
+<p>允许窗口调整大小会产生许多额外的问题，这一点日后再谈，现在先通过调用另一个window hint函数禁用掉：</p>
+<pre><code class="language-cpp">glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+</code></pre>
+<p>现在可以创建真正的窗口了。添加一个<code>GLFWwindow* window;</code>私有成员变量来保存一个GLFW窗口的引用，然后用以下函数初始化它：</p>
+<pre><code class="language-cpp">window = glfwCreateWindow(800, 600, &quot;Vulkan&quot;, nullptr, nullptr);
+</code></pre>
+<p>前三个参数知名了窗口的长度、宽度和标题。第四个参数是可选的，允许你指定一个显示器来显示这个窗口。最后一个参数只与OpenGL有关。</p>
+<p>比起硬编码，使用常量来表示长度和宽度显然更好，因为一会儿我们还要用到这些值好几次。我在<code>HelloTriangleApplication</code>类的定义里加入了如下几行：</p>
+<pre><code class="language-cpp">const  int WIDTH = 800;
+const  int HEIGHT = 600;
+</code></pre>
+<p>然后把创建窗口的函数改成这样</p>
+<pre><code class="language-cpp">window = glfwCreateWindow(WIDTH, HEIGHT, &quot;Vulkan&quot;, nullptr, nullptr);
+</code></pre>
+<p>现在<code>initWindow</code>函数看起来应该长这样：</p>
+<pre><code class="language-cpp">void initWindow() {
+    glfwInit();
+    
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+    glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+    
+    window = glfwCreateWindow(WIDTH, HEIGHT, &quot;Vulkan&quot;, nullptr, nullptr);
+}
+</code></pre>
+<p>为了能让这个程序在不发生错误或者关闭窗口的情况下一直运行下去，我们需要在<code>mainLoop</code>函数中添加一个如下所示的事件循环：</p>
+<pre><code class="language-cpp">void mainLoop() {
+    while (!glfwWindowShouldClose(window)) {
+      glfwPollEvents();
+    }
+}
+</code></pre>
+<p>这段代码简直不用做任何解释。它是一个循环，每次循环都会检查事件，比如X按钮有没有被按下，一直循环到窗口被用户关闭为止。我们过一会儿还要在这个循环里调用绘制单个帧的函数。</p>
+<p>一旦窗口被关闭，我们需要通过销毁资源并退出GLFW的方式把资源清理干净。这就是我们的第一个<code>cleanup</code>代码：</p>
+<pre><code class="language-cpp">void cleanup() {
+    glfwDestroyWindow(window);
+    glfwTerminate();
+}
+</code></pre>
+<p>现在运行这个程序，你应该会看到一个标题为<code>Vulkan</code>的窗口，除非你把它关掉，否则它会一直显示着。现在我们有了一个Vulkan程序的骨架，让我们创建第一个Vulkan对象吧！</p>
+<p><a href="https://vulkan-tutorial.com/code/00_base_code.cpp">C++代码</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="实例"><a class="header" href="#实例">实例</a></h1>
+<h2 id="创建一个实例"><a class="header" href="#创建一个实例">创建一个实例</a></h2>
+<p>一切开始于创建一个“实例”来初始化Vulkan库。实例（instance）是连接Vulkan库和你的程序之间的桥梁，创建实例还涉及到向驱动指定你的应用程序的一些细节。</p>
+<p>添加一个<code>createInstance</code>函数，然后在<code>initVulkan</code>函数中调用它。</p>
+<pre><code class="language-cpp">void initVulkan() {
+    createInstance();
+}
+
+</code></pre>
+<p>再在类中添加一个成员变量，用来保存实例的句柄：</p>
+<pre><code class="language-cpp">private:
+VkInstance instance;
+</code></pre>
+<p>现在，为了创建实例，我们首先需要用我们程序的一些信息去填充一个结构体。从技术上来说，这些信息可以不填，但是它们或许能够提供一些信息给驱动，以使驱动针对我们的特定程序进行优化，比如，它使用了一个具有某些特殊行为的著名图形引擎。这个结构体叫做<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkApplicationInfo.html"><code>VkApplicationInfo</code></a>：</p>
+<pre><code class="language-cpp">VkApplicationInfo appInfo = {};
+appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+appInfo.pApplicationName = &quot;Hello Triangle&quot;;
+appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
+appInfo.pEngineName = &quot;No Engine&quot;;
+appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
+appInfo.apiVersion = VK_API_VERSION_1_0;
+</code></pre>
+<p>就像之前提到过的那样，Vulkan中的许多结构体需要你在<code>sType</code>成员中显式指定类型。这个结构体也是众多拥有<code>pNext</code>成员的结构体当中的一个，这个成员在将来可以指向扩展信息。我们现在执行默认初始化，所以此处置为<code>nullptr</code>（空指针）。</p>
+<p>Vulkan中的许多信息都通过结构体来传递，而不是函数参数。我们还需要填充另一个结构体来为创建实例提供足够多的信息。接下来的这个结构体是必需的，它告知Vulkan驱动我们要使用哪些全局的扩展以及验证层。“全局”意味着它们将在整个程序中生效，而不是某个特定的设备，接下来的几章里我们会说明这个问题。</p>
+<pre><code class="language-cpp">VkInstanceCreateInfo createInfo = {};
+createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+createInfo.pApplicationInfo = &amp;appInfo;
+</code></pre>
+<p>前两个参数的意思非常明显。接下来的两个成员会指定我们想用的全局扩展。就像我们在概述那章里提到过的，Vulkan是一套平台无关的API，这意味着你需要一个与窗口系统（window system）的相接的扩展。GLFW已经集成了一个好用的内置函数，它返回GLFW需要的Vulkan扩展，我们可以直接把它传给Vulkan API：</p>
+<pre><code class="language-cpp">uint32_t glfwExtensionCount = 0;
+const char** glfwExtensions;
+
+glfwExtensions = glfwGetRequiredInstanceExtensions(&amp;glfwExtensionCount);
+
+createInfo.enabledExtensionCount = glfwExtensionCount;
+createInfo.ppEnabledExtensionNames = glfwExtensions;
+</code></pre>
+<p>最后两个成员指定哪些全局验证层将会被启用。我们会在下一章深入讨论验证层，这里先暂时留空。</p>
+<pre><code class="language-cpp">createInfo.enabledLayerCount = 0;
+</code></pre>
+<p>我们已经指定了初始化Vulkan实例需要的所有信息，现在终于可以调用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateInstance.html"><code>vkCreateInstance</code></a>函数了：</p>
+<pre><code class="language-cpp">VkResult result = vkCreateInstance(&amp;createInfo, nullptr, &amp;instance);
+</code></pre>
+<p>如你所见，Vulkan中创建对象的函数，其参数通常是这样的：</p>
+<ul>
+<li>指向创建信息(creation info)的指针</li>
+<li>指向自定义分配器回调函数的指针，此教程中永远被置为<code>nullptr</code></li>
+<li>指向保存了要被创建的对象的句柄变量的指针</li>
+</ul>
+<p>如果一切运行良好，那么创建好的实例的句柄就被保存在 <a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkInstance.html"><code>VkInstance</code></a>类型的成员变量中了。几乎每一个Vulkan函数的返回值都是 <a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkResult.html"><code>VkResult</code></a>类型的，它要么是<code>VK_SUCCESS</code>，要么是一个错误代码。如果要检查实例是否被成功创建，我们不需要保存这个返回结果，只需要检查一下返回值就行了：</p>
+<pre><code class="language-cpp">if (vkCreateInstance(&amp;createInfo, nullptr, &amp;instance) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to create instance!&quot;);
+}
+
+</code></pre>
+<p>现在运行这个程序以确定实例创建成功。</p>
+<h2 id="检查插件是否受支持"><a class="header" href="#检查插件是否受支持">检查插件是否受支持</a></h2>
+<p>如果你看过 <a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateInstance.html"><code>vkCreateInstance</code></a>的文档，你就会看到有一个错误代码是<code>VK_ERROR_EXTENSION_NOT_PRESENT</code>。我们可以简单地指定我们想用的扩展，如果返回了这个值就直接退出。如果要检查那些必要的扩展，例如窗口系统接口（window system interface, WSI），这么做还有点道理，但如果我们要检查那些可选的功能呢？</p>
+<p>为了在创建实例之前得到所有受支持的扩展列表，可以用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkEnumerateInstanceExtensionProperties.html"><code>vkEnumerateInstanceExtensionProperties</code></a>函数。它需要两个指针变量，一个指向受支持的扩展数量，另一个指向一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkExtensionProperties.html"><code>VkExtensionProperties</code></a>类型的、存储着扩展的细节的数组。它的第一个参数是可选的，允许我们使用一个特殊的验证层来选择扩展，我们现在先忽略它。</p>
+<p>为了分配那个存储着扩展的细节的数组，我们需要先知道扩展的数量。你可以通过把最后一个参数留空的方式来只请求扩展的数量：</p>
+<pre><code class="language-cpp">uint32_t extensionCount = 0;
+vkEnumerateInstanceExtensionProperties(nullptr, &amp;extensionCount, nullptr);
+
+</code></pre>
+<p>现在来分配一个数组，保存扩展的细节（引入头文件<code>&lt;vector&gt;</code>）：</p>
+<pre><code class="language-cpp">std::vector&lt;VkExtensionProperties&gt; extensions(extensionCount);
+
+</code></pre>
+<p>最后就可以查询扩展的细节了：</p>
+<pre><code class="language-cpp">vkEnumerateInstanceExtensionProperties(nullptr, &amp;extensionCount, extensions.data());
+
+</code></pre>
+<p>每个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkExtensionProperties.html"><code>VkExtensionProperties</code></a>结构体都包含着扩展的名称和版本。我们可以通过一个简单的循环来输出它们（<code>\t</code>是一个制表符，用来缩进）：</p>
+<pre><code class="language-cpp">std::cout &lt;&lt; &quot;available extensions:&quot; &lt;&lt; std::endl;
+
+for (const auto&amp; extension : extensions) {
+    std::cout &lt;&lt; &quot;\t&quot; &lt;&lt; extension.extensionName &lt;&lt; std::endl;
+}
+
+</code></pre>
+<p>如果你想为Vulkan支持提供一些详细信息，你可以把这段代码加到<code>createInstance</code>函数里。留一个课后练习，尝试创建一个函数，检查<code>glfwGetRequiredInstanceExtensions</code>函数返回的所有扩展是不是都在受支持的扩展列表里。</p>
+<h2 id="清理"><a class="header" href="#清理">清理</a></h2>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkInstance.html"><code>VkInstance</code></a>只应该在程序退出之前被销毁。可以在<code>cleanup</code>函数中用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkDestroyInstance.html"><code>vkDestroyInstance</code></a>函数销毁它：</p>
+<pre><code class="language-cpp">void cleanup() {
+    vkDestroyInstance(instance, nullptr);
+
+    glfwDestroyWindow(window);
+
+    glfwTerminate();
+}
+
+</code></pre>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkDestroyInstance.html"><code>vkDestroyInstance</code></a>函数的参数非常简洁明了，就像在上一章里提过的那样，Vulkan中的分配器和回收器都有一个可选的回调函数，这个回调函数被我们忽略掉并且置为<code>nullptr</code>了。在随后的章节中，我们创建的所有其它Vulkan资源都会在实例被销毁之前回收。</p>
+<p>在创建了实例之后、开始进行更复杂的步骤之前，是时候看看我们的验证层来评估调试选项了。</p>
+<p><a href="https://vulkan-tutorial.com/code/01_instance_creation.cpp">C++代码</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="验证层-1"><a class="header" href="#验证层-1">验证层</a></h1>
+<h2 id="验证层是什么"><a class="header" href="#验证层是什么">验证层是什么？</a></h2>
+<p>Vulkan API是基于最小化驱动负担的思想设计的，这个目标的一个体现形式就是，在默认情况下，这套API中的错误检查十分受限。哪怕是一点小问题，比如枚举值传错了，或者在必需参数上传了一个空指针，通常都没办法被显式处理，并且很容易导致崩溃或者未定义行为。由于Vulkan要求你在使用时显式设置每样东西，就会很容易导致许多小毛病的发生：比如使用了新的GPU特性却没有在创建逻辑设备的时候请求它。</p>
+<p>然而，这并不意味着不能给这套API加上错误检查。Vulkan使用了一个非常优雅的系统来进行错误检查，这就是“验证层”（validation layers）。验证层是一些连接在Vulkan函数上的可选组件，用来进行一些额外的操作。一般来说，验证层有以下用途：</p>
+<ul>
+<li>根据规范检测参数值，以避免误用</li>
+<li>追踪对象的创建和析构过程，以发现资源泄露</li>
+<li>从一个线程被调用的源头追踪线程，以检查线程安全性</li>
+<li>把每个调用及其参数都记录在标准输出上</li>
+<li>追踪Vulkan函数的调用，以进行性能分析和重放</li>
+</ul>
+<p>以下是诊断验证层（diagnostics validation layer）的一个函数实例：</p>
+<pre><code class="language-cpp">VkResult vkCreateInstance(
+    const VkInstanceCreateInfo* pCreateInfo,
+    const VkAllocationCallbacks* pAllocator,
+    VkInstance* instance) {
+
+    if (pCreateInfo == nullptr || instance == nullptr) {
+        log(&quot;Null pointer passed to required parameter!&quot;);
+        return VK_ERROR_INITIALIZATION_FAILED;
+    }
+
+    return real_vkCreateInstance(pCreateInfo, pAllocator, instance);
+}
+
+</code></pre>
+<p>这些验证层可以自由地组合起来，以实现你感兴趣的所有调试功能。你可以简单地在调试时开启验证层，然后在发布时彻底关掉验证层，这样两全其美。</p>
+<p>Vulkan没有任何内置的验证层，但是LunarG Vulkan SDK提供了一套验证层来检查普通的错误。这些验证层是完全<a href="https://github.com/KhronosGroup/Vulkan-ValidationLayers">开源</a>的，所以你可以看到它们都检查和贡献的错误类型。使用验证层是避免你的应用程序因不小心依赖未定义行为而在不同的驱动上崩溃的最佳方式。</p>
+<p>验证层只有在安装在系统上之后才能使用。举个例子，LunarG验证层只能在装了Vulkan SDK的电脑上使用。</p>
+<p>Vulkan中曾经有两种不同类型的验证层：实例验证层和基于特定设备的验证层。这种想法是实例层只检查与全局Vulkan对象有关的调用，比如实例；而基于特定设备的验证层则只检查与某种特定GPU有关的调用。基于特定设备的验证层现在已经被弃用，这意味着实例验证层可以作用于所有Vulkan调用。规范文档仍然推荐你同时在设备层面启用验证层以提高兼容性，这是某些实现所需要的。我们将简单地在逻辑设备层面启用一些和实例层面相同的验证层，我们一会儿会讨论这个。</p>
+<h2 id="使用验证层"><a class="header" href="#使用验证层">使用验证层</a></h2>
+<p>在这一节我们会看看如何启用一个Vulkan SDK提供的标准诊断层。和扩展一样，验证层也需要通过指定名字的方式启用。不需要显式指定所有可用的层，SDK允许你请求<code>VK_LAYER_LUNARG_standard_validation</code>层来隐式启用大部分可用的诊断层。</p>
+<p>首先在程序里加两个配置变量来指定要启用的层，以及是否启用它们。我选择了让这个值基于调试模式是否开启。<code>NDEBUG</code>宏是C++标准的一部分，代表着“没有进行调试”。</p>
+<pre><code class="language-c++">const int WIDTH = 800;
+const int HEIGHT = 600;
+
+const std::vector&lt;const char*&gt; validationLayers = {
+    &quot;VK_LAYER_LUNARG_standard_validation&quot;
+};
+
+#ifdef NDEBUG
+    const bool enableValidationLayers = false;
+#else
+    const bool enableValidationLayers = true;
+#endif
+</code></pre>
+<p>我们添加了一个新函数<code>checkValidationLayerSupport</code>来检查是否所有被请求的层都可用。首先使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkEnumerateInstanceLayerProperties.html"><code>vkEnumerateInstanceLayerProperties</code></a>函数列出所有可用的层。这个函数的使用方式与之前讲解创建实例的时候使用的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkEnumerateInstanceExtensionProperties.html"><code>vkEnumerateInstanceExtensionProperties</code></a>函数相同。</p>
+<pre><code class="language-c++">bool checkValidationLayerSupport() {
+    uint32_t layerCount;
+    vkEnumerateInstanceLayerProperties(&amp;layerCount, nullptr);
+
+    std::vector&lt;VkLayerProperties&gt; availableLayers(layerCount);
+    vkEnumerateInstanceLayerProperties(&amp;layerCount, availableLayers.data());
+
+    return false;
+}
+</code></pre>
+<p>接下来，检查<code>validationLayers</code>中的层是否都存在于<code>availableLayers</code>列表里。你可能需要引入<code>&lt;cstring&gt;</code>头文件来使用<code>strcmp</code>。</p>
+<pre><code class="language-c++">for (const char* layerName : validationLayers) {
+    bool layerFound = false;
+
+    for (const auto&amp; layerProperties : availableLayers) {
+        if (strcmp(layerName, layerProperties.layerName) == 0) {
+            layerFound = true;
+            break;
+        }
+    }
+
+    if (!layerFound) {
+        return false;
+    }
+}
+
+return true;
+</code></pre>
+<p>我们现在可以在<code>createInstance</code>中使用这个函数了：</p>
+<pre><code class="language-c++">void createInstance() {
+    if (enableValidationLayers &amp;&amp; !checkValidationLayerSupport()) {
+        throw std::runtime_error(&quot;validation layers requested, but not available!&quot;);
+    }
+
+    ...
+}
+</code></pre>
+<p>现在在调试模式下运行这个程序并且确保没有任何错误。如果出错了，确认一下你是否正确安装了Vulkan SDK。如果只报告了几个或者根本没有可用的层，那么你可能需要处理一下<a href="https://vulkan.lunarg.com/app/issues/578e8c8d5698c020d71580fc">这个问题</a>（需要一个LunarG 账号来查看）。查看这个页面来获得解决错误的帮助。</p>
+<p>最后，修改<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkInstanceCreateInfo.html"><code>VkInstanceCreateInfo</code></a>结构体实例来引入可用的验证层名字：</p>
+<pre><code class="language-c++">if (enableValidationLayers) {
+    createInfo.enabledLayerCount = static_cast&lt;uint32_t&gt;(validationLayers.size());
+    createInfo.ppEnabledLayerNames = validationLayers.data();
+} else {
+    createInfo.enabledLayerCount = 0;
+}
+</code></pre>
+<p>如果检查成功了，那么<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateInstance.html"><code>vkCreateInstance</code></a>不应该返回<code>VK_ERROR_LAYER_NOT_PRESENT</code>错误，不过你应该运行一下程序来保证。</p>
+<h2 id="信息回调函数"><a class="header" href="#信息回调函数">信息回调函数</a></h2>
+<p>不幸的是，仅仅启用验证层的话没什么帮助，因为它们现在没有办法把错误信息发送回我们的程序。为了接收这些信息，我们需要设置一个回调函数，这需要<code>VK_EXT_debug_utils</code>插件。</p>
+<p>首先我们创建一个<code>getRequiredExtensions</code>函数，这个函数将根据启用的验证层返回我们需要的插件列表：</p>
+<pre><code class="language-c++">std::vector&lt;const char*&gt; getRequiredExtensions() {
+    uint32_t glfwExtensionCount = 0;
+    const char** glfwExtensions;
+    glfwExtensions = glfwGetRequiredInstanceExtensions(&amp;glfwExtensionCount);
+
+    std::vector&lt;const char*&gt; extensions(glfwExtensions, glfwExtensions + glfwExtensionCount);
+
+    if (enableValidationLayers) {
+        extensions.push_back(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
+    }
+
+    return extensions;
+}
+</code></pre>
+<p>由GLFW指定的插件通常来说都是必需的，不过调试报告插件是有条件地加入的。注意一下此处我使用了<code>VK_EXT_DEBUG_UTILS_EXTENSION_NAME</code>宏，它等同于字面字符串&quot;VK_EXT_debug_utils&quot;。使用这个宏可以让你避免打错字。</p>
+<p>现在我们可以在<code>createInstance</code>里面使用这个函数了：</p>
+<pre><code class="language-c++">auto extensions = getRequiredExtensions();
+createInfo.enabledExtensionCount = static_cast&lt;uint32_t&gt;(extensions.size());
+createInfo.ppEnabledExtensionNames = extensions.data();
+</code></pre>
+<p>运行程序并且确保没有收到<code>VK_ERROR_EXTENSION_NOT_PRESENT</code>错误。我们实际上不用检查这个插件是否存在，因为验证层可用的话，它就是存在的。</p>
+<p>现在我们来看看回调函数应该长什么样。加入一个名为<code>debugCallback</code>的新的静态成员函数并且使用<code>PFN_vkDebugUtilsMessengerCallbackEXT</code>函数原型。<code>VKAPI_ATTR</code>和<code>VKAPI_CALL</code> 确保了这个函数拥有正确的修饰符，以使Vulkan能够调用它。</p>
+<pre><code class="language-c++">static VKAPI_ATTR VkBool32 VKAPI_CALL debugCallback(
+    VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity,
+    VkDebugUtilsMessageTypeFlagsEXT messageType,
+    const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData,
+    void* pUserData) {
+
+    std::cerr &lt;&lt; &quot;validation layer: &quot; &lt;&lt; pCallbackData-&gt;pMessage &lt;&lt; std::endl;
+
+    return VK_FALSE;
+}
+</code></pre>
+<p>第一个参数指明了消息的严重性，其值是下列值之一：</p>
+<ul>
+<li><code>VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT</code>：诊断消息</li>
+<li><code>VK_DEBUG_UTILS_MESSAGE_SEVERITY_INFO_BIT_EXT</code>：信息性消息，例如一个资源被创建</li>
+<li><code>VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT</code>：有关此消息的行为不一定是一个错误，但很有可能是应用程序中的一个bug（警告）</li>
+<li><code>VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT</code>：有关此消息的行为是非法的，并且可能导致程序崩溃（错误）</li>
+</ul>
+<p>这个枚举类型中的值是按照如上方式设置的，所以可以使用一个比较操作来检查一条消息是否与某个严重性相等或更加严重，例如：</p>
+<pre><code class="language-c++">if (messageSeverity &gt;= VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT) {
+    // Message is important enough to show
+}
+</code></pre>
+<p><code>messageType</code>参数可以是以下值：</p>
+<ul>
+<li><code>VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT</code>：发生了一个与规范或性能无关的事件</li>
+<li><code>VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT</code>：发生了违反规范的行为或者有可能发生的错误</li>
+<li><code>VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT</code>：潜在的Vulkan非最佳使用方式</li>
+</ul>
+<p><code>pCallbackData</code>参数是一个<code>VkDebugUtilsMessengerCallbackDataEXT</code>类型的结构体，其中包含了这个信息的细节，其中最重要的成员有：</p>
+<ul>
+<li><code>pMessage</code>：调试信息，是一个没有终止符的字符串</li>
+<li><code>pObjects</code>：有关此消息的Vulkan对象句柄数组</li>
+<li><code>objectCount</code>：数组中的对象数量</li>
+</ul>
+<p>最后，<code>pUserData</code>参数包含了一个在设置回调函数时指定的指针，允许你传入自己的数据。</p>
+<p>回调函数返回一个布尔值指示当验证层消息被Vulkan函数调用触发时是否应该退出程序。如果回调函数返回了真值，这个调用就会以<code>VK_ERROR_VALIDATION_FAILED_EXT</code>错误退出。这通常只用于测试验证层本身，因此你应该始终返回<code>VK_FALSE</code>。</p>
+<p>现在只剩下告知Vulkan有关这个回调函数的信息。说起来或许会有些令人惊讶，就连Vulkan中的调试回调函数也由一个需要显式创建和销毁的句柄来管理。这种回调函数被称为“messenger”，并且你可以根据需要想设置多少个就设置多少个。在<code>instance</code>下方添加一个类成员来保存这个句柄：</p>
+<pre><code class="language-c++">VkDebugUtilsMessengerEXT callback;
+</code></pre>
+<p>现在添加一个<code>setupDebugCallback</code>函数，然后在<code>initVulkan</code>中的<code>createInstance</code>之后调用：</p>
+<pre><code class="language-c++">void initVulkan() {
+    createInstance();
+    setupDebugCallback();
+}
+
+void setupDebugCallback() {
+    if (!enableValidationLayers) return;
+
+}
+</code></pre>
+<p>我们现在需要用这个回调函数的细节来填充一个结构体：</p>
+<pre><code class="language-c++">VkDebugUtilsMessengerCreateInfoEXT createInfo = {};
+createInfo.sType = VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT;
+createInfo.messageSeverity = VK_DEBUG_UTILS_MESSAGE_SEVERITY_VERBOSE_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT;
+createInfo.messageType = VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT | VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT;
+createInfo.pfnUserCallback = debugCallback;
+createInfo.pUserData = nullptr; // Optional
+</code></pre>
+<p><code>messageSeverity</code>字段允许你指定你的回调函数在何种严重等级下被触发。我在此指定了除<code>VK_DEBUG_UTILS_MESSAGE_SEVERITY_INFO_BIT_EXT</code>以外的所有等级来接收所有可能的错误信息并忽略一般的调试信息。</p>
+<p>类似地，<code>messageType</code>字段允许你过滤回调函数的消息类型。我在这里简单地开启了所有类型，你可以关闭那些对你来说没什么用的。</p>
+<p>最后，<code>pfnUserCallback</code>指定了回调函数的指针。你可以给<code>pUserData</code>传递一个指针，这个指针会通过<code>pUserData</code>参数传递到回调函数中。比如你可以用这个来传递<code>HelloTriangleApplication</code>类的指针。</p>
+<p>注意，配置验证层消息和调试回调函数还有很多不同的方法，不过这里给出的是一个很适合入门的方法。关于其它方法，参阅<a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/vkspec.html#VK_EXT_debug_utils">extension specification</a>（扩展规范）以获取更多信息。</p>
+<p>这个结构体应该被传递到<code>vkCreateDebugUtilsMessengerEXT</code>函数中来创建<code>VkDebugUtilsMessengerEXT</code>对象。不幸的是，因为这个函数是一个扩展函数，所以它不会被自动加载。我们必须自己用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkGetInstanceProcAddr.html"><code>vkGetInstanceProcAddr</code></a>函数来查找它的地址。我们要创建一个我们自己的代理函数，帮助我们在后天完成这一切。我在<code>HelloTriangleApplication</code>类定义的上面添加了这个函数：</p>
+<pre><code class="language-c++">VkResult CreateDebugUtilsMessengerEXT(VkInstance instance, const VkDebugUtilsMessengerCreateInfoEXT* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkDebugUtilsMessengerEXT* pCallback) {
+    auto func = (PFN_vkCreateDebugUtilsMessengerEXT) vkGetInstanceProcAddr(instance, &quot;vkCreateDebugUtilsMessengerEXT&quot;);
+    if (func != nullptr) {
+        return func(instance, pCreateInfo, pAllocator, pCallback);
+    } else {
+        return VK_ERROR_EXTENSION_NOT_PRESENT;
+    }
+}
+</code></pre>
+<p>如果这个函数没有被加载，<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkGetInstanceProcAddr.html"><code>vkGetInstanceProcAddr</code></a>函数则返回<code>nullptr</code>。现在，如果该函数可用，我们就可以调用这个函数来创建这个扩展对象了：</p>
+<pre><code class="language-c++">if (CreateDebugUtilsMessengerEXT(instance, &amp;createInfo, nullptr, &amp;callback) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to set up debug callback!&quot;);
+}
+</code></pre>
+<p>倒数第二个参数依然是那个被我们设置成<code>nullptr</code>的可选的分配器回调函数，其余的参数含义都很明了。由于调试回调函数特定于我们的Vulkan实例和它的验证层，它们需要被显式设置为第一个参数。一会你还会看到这种模式用在其它“子”对象上。让我们看看它是否正常工作……运行程序，然后在你看腻了那个空白窗口之后关掉它。你应该看到如下消息被打印在命令提示符上：</p>
+<p><img src="https://vulkan-tutorial.com/images/validation_layer_test.png" alt="" /></p>
+<p>哎呀，在我们的程序中已经发现了一个bug！<code>VkDebugUtilsMessengerEXT</code>对象需要被<code>vkDestroyDebugUtilsMessengerEXT</code>函数清除。与<code>vkCreateDebugUtilsMessengerEXT</code> 类似，这个函数需要被显式加载。注意一下，消息被打印很多是正常的，因为有复数个验证层在检查调试messenger是否被删除。</p>
+<p>在<code>CreateDebugUtilsMessengerEXT</code>下面添加另外一个代理函数：</p>
+<pre><code class="language-c++">void DestroyDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerEXT callback, const VkAllocationCallbacks* pAllocator) {
+    auto func = (PFN_vkDestroyDebugUtilsMessengerEXT) vkGetInstanceProcAddr(instance, &quot;vkDestroyDebugUtilsMessengerEXT&quot;);
+    if (func != nullptr) {
+        func(instance, callback, pAllocator);
+    }
+}
+</code></pre>
+<p>确保这个函数是一个静态成员函数，或者是一个类外面的函数。这样我们可以在<code>cleanup</code>函数中调用它：</p>
+<pre><code class="language-c++">void cleanup() {
+    if (enableValidationLayers) {
+        DestroyDebugUtilsMessengerEXT(instance, callback, nullptr);
+    }
+
+    vkDestroyInstance(instance, nullptr);
+
+    glfwDestroyWindow(window);
+
+    glfwTerminate();
+}
+</code></pre>
+<p>当你运行程序的时候，你将不会看到任何错误消息。如果你想看到哪个调用触发了消息，你可以在消息回调函数里打一个断点，然后看看堆栈跟踪。</p>
+<h2 id="配置"><a class="header" href="#配置">配置</a></h2>
+<p>除了在<code>VkDebugUtilsMessengerCreateInfoEXT</code>结构体中指定标志之外，还有很多设置验证层行为的方法，浏览Vulkan SDK中的<code>Config</code>目录，<code>vk_layer_settings.txt</code> 文件解释了如何设置这些验证层。</p>
+<p>要为你的应用程序设置验证层，把这个文件复制到你工程的<code>Debug</code>和<code>Release</code>文件夹里然后照着上面的说明来设置你想要的行为。然而，在此教程的余下部分，我假设你用的是默认设置。</p>
+<p>在此教程中，我会故意犯几个错误来让你看看验证层对于捕获这些错误有多大的帮助，并且告诉你清楚地知道你在用Vulkan做什么有多重要。现在是时候看看系统中的Vulkan设备了。</p>
+<p><a href="https://vulkan-tutorial.com/code/02_validation_layers.cpp">C++代码</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="物理设备与队列家族"><a class="header" href="#物理设备与队列家族">物理设备与队列家族</a></h1>
+<h2 id="选择一个物理设备"><a class="header" href="#选择一个物理设备">选择一个物理设备</a></h2>
+<p>在通过一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkInstance.html"><code>VkInstance</code></a>来实例化Vulkan库之后，我们在系统中需要寻找并选择一个支持我们所需功能的显卡。实际上，我们可以选择多个显卡并且同时使用它们，不过在此教程中我们将选择支持我们所需功能的所有显卡中的第一个。</p>
+<p>我们添加一个<code>pickPhysicalDevice</code>函数，并且在<code>initVulkan</code>函数中调用它。</p>
+<pre><code class="language-c++">void initVulkan() {
+    createInstance();
+    setupDebugCallback();
+    pickPhysicalDevice();
+}
+
+void pickPhysicalDevice() {
+
+}
+</code></pre>
+<p>我们最终选择的显卡会被存储到一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPhysicalDevice.html"><code>VkPhysicalDevice</code></a>句柄中，这个句柄将成为类中的一个新成员。这个对象会随着<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkInstance.html"><code>VkInstance</code></a>的销毁而被隐式销毁，因此我们不需要在<code>cleanup</code>函数中写新代码。</p>
+<pre><code class="language-c++">VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
+</code></pre>
+<p>列出显卡与列出扩展很相似，从查询显卡的数量开始：</p>
+<pre><code class="language-c++">uint32_t deviceCount = 0;
+vkEnumeratePhysicalDevices(instance, &amp;deviceCount, nullptr);
+</code></pre>
+<p>如果有0个设备支持Vulkan，那就没法进行下一步了。</p>
+<pre><code class="language-c++">if (deviceCount == 0) {
+    throw std::runtime_error(&quot;failed to find GPUs with Vulkan support!&quot;);
+}
+</code></pre>
+<p>我们现在可以分配一个数组来保存所有的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPhysicalDevice.html"><code>VkPhysicalDevice</code></a>句柄。</p>
+<pre><code class="language-c++">std::vector&lt;VkPhysicalDevice&gt; devices(deviceCount);
+vkEnumeratePhysicalDevices(instance, &amp;deviceCount, devices.data());
+</code></pre>
+<p>现在我们需要检测每个显卡的功能来检查它们是否支持我们想要的操作，因为不是所有显卡都是相同的。为此，我们来介绍一个新函数：</p>
+<pre><code class="language-c++">bool isDeviceSuitable(VkPhysicalDevice device) {
+    return true;
+}
+</code></pre>
+<p>我们会检查每个设备是否都支持加入到此函数中的必需特性。</p>
+<pre><code class="language-c++">for (const auto&amp; device : devices) {
+    if (isDeviceSuitable(device)) {
+        physicalDevice = device;
+        break;
+    }
+}
+
+if (physicalDevice == VK_NULL_HANDLE) {
+    throw std::runtime_error(&quot;failed to find a suitable GPU!&quot;);
+}
+</code></pre>
+<p>下一节将会介绍我们要在<code>isDeviceSuitable</code>函数中检查的第一个必需特性。当我们在后面的章节里用到越来越多的Vulkan功能时，我们会扩展这个函数以包括更多的检查。</p>
+<h2 id="基本设备可用性检查"><a class="header" href="#基本设备可用性检查">基本设备可用性检查</a></h2>
+<p>为了检测一个设备的可用性，我们可以从查询一些细节开始。我们可以用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkGetPhysicalDeviceProperties.html"><code>vkGetPhysicalDeviceProperties</code></a>函数来查询基本的设备属性，比如名称，类型以及支持的Vulkan版本等。</p>
+<pre><code class="language-c++">VkPhysicalDeviceProperties deviceProperties;
+vkGetPhysicalDeviceProperties(device, &amp;deviceProperties);
+</code></pre>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkGetPhysicalDeviceFeatures.html"><code>vkGetPhysicalDeviceFeatures</code></a>函数可以用来检查可选的特性，例如纹理压缩。64位浮点数支持以及多视口渲染（对于VR很有用）等：</p>
+<pre><code class="language-c++">VkPhysicalDeviceFeatures deviceFeatures;
+vkGetPhysicalDeviceFeatures(device, &amp;deviceFeatures);
+</code></pre>
+<p>稍后我们讨论有关设备内存以及队列家族时会查询设备的更多详细信息（请参阅下一节）。</p>
+<p>作为一个例子，我们假设我们的应用只在支持几何着色器的独立显卡上可用。这样的话，<code>isDeviceSuitable</code>函数应该类似于这样：</p>
+<pre><code class="language-c++">bool isDeviceSuitable(VkPhysicalDevice device) {
+    VkPhysicalDeviceProperties deviceProperties;
+    VkPhysicalDeviceFeatures deviceFeatures;
+    vkGetPhysicalDeviceProperties(device, &amp;deviceProperties);
+    vkGetPhysicalDeviceFeatures(device, &amp;deviceFeatures);
+
+    return deviceProperties.deviceType == VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU &amp;&amp;
+           deviceFeatures.geometryShader;
+}
+</code></pre>
+<p>你可以采用给每个设备评分，然后选择得分最高的那个的方式来取代简单地检查设备是否支持某个特性然后选择排名第一的那个。在这种方式下，你可能偏爱一个独立显卡然后给它打一个高分，但是最终回归到了集成显卡上，因为只有它最合适。你可以用如下所示的代码来实现它：</p>
+<pre><code class="language-c++">#include &lt;map&gt;
+
+...
+
+void pickPhysicalDevice() {
+    ...
+
+    // Use an ordered map to automatically sort candidates by increasing score
+    std::multimap&lt;int, VkPhysicalDevice&gt; candidates;
+
+    for (const auto&amp; device : devices) {
+        int score = rateDeviceSuitability(device);
+        candidates.insert(std::make_pair(score, device));
+    }
+
+    // Check if the best candidate is suitable at all
+    if (candidates.rbegin()-&gt;first &gt; 0) {
+        physicalDevice = candidates.rbegin()-&gt;second;
+    } else {
+        throw std::runtime_error(&quot;failed to find a suitable GPU!&quot;);
+    }
+}
+
+int rateDeviceSuitability(VkPhysicalDevice device) {
+    ...
+
+    int score = 0;
+
+    // Discrete GPUs have a significant performance advantage
+    if (deviceProperties.deviceType == VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU) {
+        score += 1000;
+    }
+
+    // Maximum possible size of textures affects graphics quality
+    score += deviceProperties.limits.maxImageDimension2D;
+
+    // Application can't function without geometry shaders
+    if (!deviceFeatures.geometryShader) {
+        return 0;
+    }
+
+    return score;
+}
+</code></pre>
+<p>你不需要在此教程中实现这个函数，不过这可以启发你如何设计自己你自己的设备选择流程。当然，你也可以把所有可选设备的名字显示出来，让用户去选择。</p>
+<p>因为我们刚刚开始，因此只要是支持Vulkan的显卡都可以，所以我们可以选择任何一个GPU：</p>
+<pre><code class="language-c++">bool isDeviceSuitable(VkPhysicalDevice device) {
+    return true;
+}
+</code></pre>
+<p>在下一节我们会讨论我们需要检查的第一个真正的必需特性。</p>
+<h2 id="队列家族"><a class="header" href="#队列家族">队列家族</a></h2>
+<p>之前已经简要介绍过，Vulkan中几乎所有的操作，从绘图上传纹理，都需要将命令提交到队列。从不同的队列家族中派生出不同类型的队列，每种队列家族只接受某些命令。例如，可能有只接受处理计算命令的队列家族，也可能有只接受有关内存传递命令的命令家族。</p>
+<p>我们需要检查设备都支持哪些队列家族，以及它们中的哪一个支持我们想要用的命令。为此，我们需要添加一个新的<code>findQueueFamilies</code>函数来寻找我们需要的所有队列家族。现在我们只寻找一个支持图形命令的队列，不过以后我们可能会扩展这个函数来寻找更多的队列。</p>
+<p>这个函数会返回那些支持所需特性的队列家族的索引。实现它的最佳方式是使用一个用<code>std::optional</code>来追踪索引是否存在的结构体：</p>
+<pre><code class="language-c++">struct QueueFamilyIndices {
+    std::optional&lt;uint32_t&gt; graphicsFamily;
+
+    bool isComplete() {
+        return graphicsFamily.has_value();
+    }
+};
+</code></pre>
+<p>注意，这需要引入<code>&lt;optional&gt;</code>头文件。现在我们可以着手实现<code>findQueueFamilies</code>函数了：</p>
+<pre><code class="language-c++">QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device) {
+    QueueFamilyIndices indices;
+
+    ...
+
+    return indices;
+}
+</code></pre>
+<p>检索队列家族列表的过程正如你所愿，然后使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkGetPhysicalDeviceQueueFamilyProperties.html"><code>vkGetPhysicalDeviceQueueFamilyProperties</code></a>函数：</p>
+<pre><code class="language-c++">uint32_t queueFamilyCount = 0;
+vkGetPhysicalDeviceQueueFamilyProperties(device, &amp;queueFamilyCount, nullptr);
+
+std::vector&lt;VkQueueFamilyProperties&gt; queueFamilies(queueFamilyCount);
+vkGetPhysicalDeviceQueueFamilyProperties(device, &amp;queueFamilyCount, queueFamilies.data());
+</code></pre>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkQueueFamilyProperties.html"><code>VkQueueFamilyProperties</code></a>结构体包含了一个队列家族的详细信息，包括支持的操作类型，以及该队列家族可以创建的队列数量。我们至少需要找到一个支持<code>VK_QUEUE_GRAPHICS_BIT</code>的队列家族。</p>
+<pre><code class="language-c++">int i = 0;
+for (const auto&amp; queueFamily : queueFamilies) {
+    if (queueFamily.queueCount &gt; 0 &amp;&amp; queueFamily.queueFlags &amp; VK_QUEUE_GRAPHICS_BIT) {
+        indices.graphicsFamily = i;
+    }
+
+    if (indices.isComplete()) {
+        break;
+    }
+
+    i++;
+}
+</code></pre>
+<p>现在我们完成了这个很棒的队列家族查找函数，我们可以在<code>isDeviceSuitable</code>函数中用它进行检查，以确保设备可以处理我们想要使用的命令：</p>
+<pre><code class="language-c++">bool isDeviceSuitable(VkPhysicalDevice device) {
+    QueueFamilyIndices indices = findQueueFamilies(device);
+
+    return indices.isComplete();
+}
+</code></pre>
+<p>棒，这样我们就可以找到正确的物理设备了！下一步是创建一个逻辑设备来做为物理设备的接口。</p>
+<p><a href="https://vulkan-tutorial.com/code/03_physical_device_selection.cpp">C++代码</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="逻辑设备与队列"><a class="header" href="#逻辑设备与队列">逻辑设备与队列</a></h1>
+<h2 id="简介-2"><a class="header" href="#简介-2">简介</a></h2>
+<p>在选用了一个物理设备之后，我们需要创建一个“逻辑设备”（logical device）作为它的接口。创建逻辑设备的过程与创建实例的过程很相似，并且需要描述我们想要使用的功能。同样，在查询了有哪些队列家族可用之后，我们需要在创建逻辑设备时指定创建哪些队列。如果你需要的话，甚至可以根据同一个物理设备创建多个逻辑设备。</p>
+<p>首先，在类中添加一个新的成员变量来保存逻辑设备的句柄。</p>
+<pre><code class="language-c++">VkDevice device;
+</code></pre>
+<p>接下来，添加一个<code>createLogicalDevice</code>成员函数，然后在<code>initVulkan</code>函数中调用它。</p>
+<pre><code class="language-c++">void initVulkan() {
+    createInstance();
+    setupDebugCallback();
+    pickPhysicalDevice();
+    createLogicalDevice();
+}
+
+void createLogicalDevice() {
+
+}
+</code></pre>
+<h2 id="指定要创建的队列"><a class="header" href="#指定要创建的队列">指定要创建的队列</a></h2>
+<p>创建逻辑设备又会涉及到许多结构体中的许多详细信息，其中的第一个是<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkDeviceQueueCreateInfo.html"><code>VkDeviceQueueCreateInfo</code></a>。则个结构体描述了对于单个的队列家族，我们想要创建的队列的数量。现在我们只对支持绘图功能的队列感兴趣。</p>
+<pre><code class="language-c++">QueueFamilyIndices indices = findQueueFamilies(physicalDevice);
+
+VkDeviceQueueCreateInfo queueCreateInfo = {};
+queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
+queueCreateInfo.queueFamilyIndex = indices.graphicsFamily.value();
+queueCreateInfo.queueCount = 1;
+</code></pre>
+<p>当前可用的驱动只允许你为每个队列家族创建很少的几个队列，不过事实上你也的确只需要一个队列。这是因为，你可以使用多线程创建所有命令缓冲（command buffer）然后在主线程上低开销地一次性提交它们。</p>
+<p>Vulkan允许你使用一个介于<code>0.0</code>和<code>1.0</code>之间的浮点数来为队列分配优先级以影响命令缓冲执行的调度。就算只有一个队列，这个优先级也是必需的：</p>
+<pre><code class="language-c++">float queuePriority = 1.0f;
+queueCreateInfo.pQueuePriorities = &amp;queuePriority;
+</code></pre>
+<h2 id="指定要使用的设备功能"><a class="header" href="#指定要使用的设备功能">指定要使用的设备功能</a></h2>
+<p>下一个要指定的信息是我们要使用的设备功能。这些功能是我们在上一章用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkGetPhysicalDeviceFeatures.html"><code>vkGetPhysicalDeviceFeatures</code></a>查询过支持性的功能，比如几何着色器。现在我们不需要做什么特别的事情，所以我们可以简单地定义它然后让所有内容都是默认的<code>VK_FALSE</code>。当我们准备用Vulkan做一些有趣的事情的时候，我们会回到这个结构体上的。</p>
+<pre><code class="language-c++">VkPhysicalDeviceFeatures deviceFeatures = {};
+</code></pre>
+<h2 id="创建逻辑设备"><a class="header" href="#创建逻辑设备">创建逻辑设备</a></h2>
+<p>上面两个结构体设置好了之后，我们就可以开始填充主要的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkDeviceCreateInfo.html"><code>VkDeviceCreateInfo</code></a>结构体了。</p>
+<pre><code class="language-c++">VkDeviceCreateInfo createInfo = {};
+createInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
+</code></pre>
+<p>首先添加指向队列创建信息结构体和设备功能结构体的指针：</p>
+<pre><code class="language-c++">createInfo.pQueueCreateInfos = &amp;queueCreateInfo;
+createInfo.queueCreateInfoCount = 1;
+
+createInfo.pEnabledFeatures = &amp;deviceFeatures;
+</code></pre>
+<p>剩下的信息与<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkInstanceCreateInfo.html"><code>VkInstanceCreateInfo</code></a>结构体有相似之处，并且需要你指定扩展和验证层。不同之处在于，这次是设备特定的。</p>
+<p>设备特定扩展的一个例子是<code>VK_KHR_swapchain</code>，它允许你通过设备把渲染好的图像显示到窗口上。有可能系统中有一些Vulkan设备不支持这个功能，例如它们只支持计算功能操作。我们将会在交换链一章讲解这个扩展。</p>
+<p>就像验证层一章讲过的，我们会启用与实例相同的验证层。现在我们不需要任何设备特定扩展。</p>
+<pre><code class="language-c++">createInfo.enabledExtensionCount = 0;
+
+if (enableValidationLayers) {
+    createInfo.enabledLayerCount = static_cast&lt;uint32_t&gt;(validationLayers.size());
+    createInfo.ppEnabledLayerNames = validationLayers.data();
+} else {
+    createInfo.enabledLayerCount = 0;
+}
+</code></pre>
+<p>就这样，我们现在已经准备好调用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateDevice.html"><code>vkCreateDevice</code></a>函数来创建逻辑设备了。</p>
+<pre><code class="language-c++">if (vkCreateDevice(physicalDevice, &amp;createInfo, nullptr, &amp;device) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to create logical device!&quot;);
+}
+</code></pre>
+<p>函数参数分别是，要连接的物理设备、我们刚指定过的队列和使用信息、可选的分配器回调函数指针以及指向存储着逻辑设备句柄的变量的指针。与创建实例的函数相似，这个函数在启用了不存在的扩展或指定了不支持的功能时会返回错误。</p>
+<p>逻辑设备应该在<code>cleanup</code>函数中用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkDestroyDevice.html"><code>vkDestroyDevice</code></a>函数销毁：</p>
+<pre><code class="language-c++">void cleanup() {
+    vkDestroyDevice(device, nullptr);
+    ...
+}
+</code></pre>
+<p>逻辑设备与实例没有直接关系，因此参数中没有包含实例。</p>
+<h2 id="检索队列句柄"><a class="header" href="#检索队列句柄">检索队列句柄</a></h2>
+<p>队列会随着逻辑设备的创建而自动创建，但是我们还没有与它们相连的句柄。首先在类中添加一个新成员变量来保存图形队列的句柄：</p>
+<pre><code class="language-c++">VkQueue graphicsQueue;
+</code></pre>
+<p>设备队列会随着逻辑设备的销毁而被隐式销毁，所以我们不必在<code>cleanup</code>中做额外工作。</p>
+<p>我们可以使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkGetDeviceQueue.html"><code>vkGetDeviceQueue</code></a>函数来在每个队列家族中检索队列句柄。这个函数的参数是逻辑设备、队列家族、队列索引以及一个指向要存储队列句柄的变量的指针。因为我们在这个队列家族中只创建了一个队列，索引就简单地设为<code>0</code>。</p>
+<pre><code class="language-c++">vkGetDeviceQueue(device, indices.graphicsFamily.value(), 0, &amp;graphicsQueue);
+</code></pre>
+<p>逻辑设备和队列句柄可以让我们真正地开始用显卡做些什么东西了！在接下来的几章里，我们会创建一些资源，使得结果可以被显示在窗口上。</p>
+<p><a href="https://vulkan-tutorial.com/code/04_logical_device.cpp">C++代码</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="表面"><a class="header" href="#表面">表面</a></h1>
+<p>尽管Vulkan是平台无关的API，它也不能直接与窗口系统进行交互。为了在Vulkan与窗口系统之间建立连接，以让我们把渲染结果显示到屏幕上，我们需要WSI（Window System Interface，窗口系统接口）扩展。在这一章我们会先讨论第一个扩展，<code>VK_KHR_surface</code>。它暴露一个<code>VkSurfaceKHR</code>对象，这个对象作为表面的一个抽象类型，来显示渲染好的图像（image）。在我们程序中的表面会受到我们已经用GLFW创建的窗口的支持。</p>
+<p><code>VK_KHR_surface</code>扩展是一个实例层面的扩展，并且我们已经启用它了，因为它被包含在了<code>glfwGetRequiredInstanceExtensions</code>返回的列表里。这个列表也包含了一些其它的WSI扩展，这些扩展会在后续章节用到。</p>
+<p>表面需要在实例创建之后再创建，因为它可以影响物理设备的选择。之所以我们把表面的创建拖到现在才讲，是因为它属于另外一个更大的话题——渲染目标和显示，如果在基础的配置部分就讨论这个话题会打乱节奏。另一个需要注意的问题是，当你只需要离屏渲染的时候，表面就是Vulkan中一个完全可选的组件。Vulkan允许你离屏渲染而不需要hack，比如创建一个不可见的窗口（OpenGL则不行）。</p>
+<h2 id="创建表面"><a class="header" href="#创建表面">创建表面</a></h2>
+<p>首先在类中的调试回调函数下面添加一个<code>surface</code>成员变量。</p>
+<pre><code class="language-c++">VkSurfaceKHR surface;
+</code></pre>
+<p>虽然说<code>VkSurfaceKHR</code>对象是平台无关的，但是这并不意味着创建它就不需要窗口系统的详细信息了。举个例子，在Windows平台上，它需要<code>HWND</code>和<code>HMODULE</code>句柄。因此这个扩展有一个附加的平台特定插件，Windows下叫做<code>VK_KHR_win32_surface</code>，这个插件也包含在了<code>glfwGetRequiredInstanceExtensions</code>返回的列表里。</p>
+<p>我会演示一下如何用这个平台特定的插件在Windows上创建表面，但是教程里我们不会用这个。使用GLFW这样的库却还要用平台特定的代码实在是没什么意义。GLFW库中有一个<code>glfwCreateWindowSurface</code>函数，这个函数为我们处理了不同平台之间的差异。不过，在我们开始依赖这个函数之前，看一看这个函数里面到底是怎么工作的也是有好处的。</p>
+<p>因为表面是一个Vulkan对象，它也自带了一个需要填充的<code>VkWin32SurfaceCreateInfoKHR</code>结构体。这个结构体中有两个重要的参数：<code>hwnd</code>和<code>hinstance</code>。它们是窗口和进程的句柄。</p>
+<pre><code class="language-c++">VkWin32SurfaceCreateInfoKHR createInfo = {};
+createInfo.sType = VK_STRUCTURE_TYPE_WIN32_SURFACE_CREATE_INFO_KHR;
+createInfo.hwnd = glfwGetWin32Window(window);
+createInfo.hinstance = GetModuleHandle(nullptr);
+</code></pre>
+<p><code>glfwGetWin32Window</code>函数返回GLFW窗口的原生<code>HWND</code>句柄。<code>GetModuleHandle</code>函数返回当前进程的<code>HINSTANCE</code>句柄。</p>
+<p>现在可以用<code>vkCreateWin32SurfaceKHR</code>来创建表面了。这个函数的参数分别是实例、表面创建信息、自定义分配器和指向要存储表面句柄的变量的指针。按理说，这是一个WSI扩展函数，不过它运用得非常广泛以至于标准Vulkan加载器都包含了它，所以不需要像其它扩展函数那样显式加载它。</p>
+<pre><code class="language-c++">if (vkCreateWin32SurfaceKHR(instance, &amp;createInfo, nullptr, &amp;surface) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to create window surface!&quot;);
+}
+</code></pre>
+<p>在Linxu等其他平台上创建表面的过程大同小异，<code>vkCreateXcbSurfaceKHR</code>接受一个XCB连接和窗口作为X11上的创建信息。</p>
+<p><code>glfwCreateWindowSurface</code>函数通过在不同的平台上使用不同的实现解决了这个问题。我们现在把它整合进我们的程序中。在<code>initVulkan</code>函数中，在创建实例和<code>setupDebugCallback</code>之后调用<code>createSurface</code>函数。</p>
+<pre><code class="language-c++">void initVulkan() {
+    createInstance();
+    setupDebugCallback();
+    createSurface();
+    pickPhysicalDevice();
+    createLogicalDevice();
+}
+
+void createSurface() {
+
+}
+</code></pre>
+<p>GLFW库中的函数只需要几个简单的参数，而不需要结构体，这使得函数看起来非常直观：</p>
+<pre><code class="language-c++">void createSurface() {
+    if (glfwCreateWindowSurface(instance, window, nullptr, &amp;surface) != VK_SUCCESS) {
+        throw std::runtime_error(&quot;failed to create window surface!&quot;);
+    }
+}
+</code></pre>
+<p>参数有<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkInstance.html"><code>VkInstance</code></a>、GLFW窗口指针、自定义分配器以及指向<code>VkSurfaceKHR</code>变量的指针。它直接将相关平台的原生函数的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkResult.html"><code>VkResult</code></a>返回值传递出来。GLFW不提供销毁表面的函数，不过这个可以用原生API轻松搞定：</p>
+<pre><code class="language-c++">void cleanup() {
+        ...
+        vkDestroySurfaceKHR(instance, surface, nullptr);
+        vkDestroyInstance(instance, nullptr);
+        ...
+    }
+</code></pre>
+<p>确保表面在实例之前被销毁。</p>
+<h2 id="查询显示支持"><a class="header" href="#查询显示支持">查询显示支持</a></h2>
+<p>尽管Vulkan实现支持WSI，也不意味着系统中的每个设备都支持它。因此我们需要扩展<code>isDeviceSuitable</code>来确保设备能把图像显示到我们创建的表面上。由于显示是一个队列特定的功能，这个问题实际上是寻找一个支持把图像显示到我们创建的表面上的队列家族。</p>
+<p>有可能支持绘制命令的队列家族与支持显示命令的队列家族不是同一个。因此，考虑到可能存在一个不同的显示队列，我们需要修改<code>QueueFamilyIndices</code>结构体：</p>
+<pre><code class="language-c++">struct QueueFamilyIndices {
+    std::optional&lt;uint32_t&gt; graphicsFamily;
+    std::optional&lt;uint32_t&gt; presentFamily;
+
+    bool isComplete() {
+        return graphicsFamily.has_value() &amp;&amp; presentFamily.has_value();
+    }
+};
+</code></pre>
+<p>接下来。我们来修改<code>findQueueFamilies</code>函数来查找支持把图像显示到我们创建的表面上的队列家族。用来查找的函数是<code>vkGetPhysicalDeviceSurfaceSupportKHR</code>，它的参数是物理设备、队列家族索引和表面。在与<code>VK_QUEUE_GRAPHICS_BIT</code>相同的循环中调用它：</p>
+<pre><code class="language-c++">VkBool32 presentSupport = false;
+vkGetPhysicalDeviceSurfaceSupportKHR(device, i, surface, &amp;presentSupport);
+</code></pre>
+<p>然后简单检查一下布尔值的值，接着保存显示队列家族的索引：</p>
+<pre><code class="language-c++">if (queueFamily.queueCount &gt; 0 &amp;&amp; presentSupport) {
+    indices.presentFamily = i;
+}
+</code></pre>
+<p>注意，很有可能最后得到了同一个队列家族，但是在整个程序中，我们将它们视为两个不同的独立队列。虽然你可以添加一些逻辑来显式提供一个支持在同一个队列中进行绘制和显示的物理设备来提高性能。</p>
+<h2 id="创建显示队列"><a class="header" href="#创建显示队列">创建显示队列</a></h2>
+<p>剩余的工作就是修改创建逻辑设备的部分来创建显示队列并且取回<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkQueue.html"><code>VkQueue</code></a>句柄。添加一个成员变量来保存句柄：</p>
+<pre><code class="language-c++">VkQueue presentQueue;
+</code></pre>
+<p>接下来，我们需要多个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkDeviceQueueCreateInfo.html"><code>VkDeviceQueueCreateInfo</code></a>结构体来从两个队列家族创建队列。一个优雅的解决方式是创建一个集合，将所有需要要创建队列的、独立的队列家族都包含进去：</p>
+<pre><code class="language-c++">#include &lt;set&gt;
+
+...
+
+QueueFamilyIndices indices = findQueueFamilies(physicalDevice);
+
+std::vector&lt;VkDeviceQueueCreateInfo&gt; queueCreateInfos;
+std::set&lt;uint32_t&gt; uniqueQueueFamilies = {indices.graphicsFamily.value(), indices.presentFamily.value()};
+
+float queuePriority = 1.0f;
+for (uint32_t queueFamily : uniqueQueueFamilies) {
+    VkDeviceQueueCreateInfo queueCreateInfo = {};
+    queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
+    queueCreateInfo.queueFamilyIndex = queueFamily;
+    queueCreateInfo.queueCount = 1;
+    queueCreateInfo.pQueuePriorities = &amp;queuePriority;
+    queueCreateInfos.push_back(queueCreateInfo);
+}
+</code></pre>
+<p>然后修改<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkDeviceCreateInfo.html"><code>VkDeviceCreateInfo</code></a>来指向这个vector：</p>
+<pre><code class="language-c++">createInfo.queueCreateInfoCount = static_cast&lt;uint32_t&gt;(queueCreateInfos.size());
+createInfo.pQueueCreateInfos = queueCreateInfos.data();
+</code></pre>
+<p>如果两个队列家族是相同的，那我们就只需要传递一次队列家族索引。最后，调用函数来取回队列句柄：</p>
+<pre><code class="language-c++">vkGetDeviceQueue(device, indices.presentFamily.value(), 0, &amp;presentQueue);
+</code></pre>
+<p>如果两个队列是相同的，那么两个句柄的值很有可能也是相同的。在下一章我们会看看交换链，以及它如何让我们能够在表面上显示图像。</p>
+<p><a href="https://vulkan-tutorial.com/code/05_window_surface.cpp">C++代码</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="交换链"><a class="header" href="#交换链">交换链</a></h1>
+<p>Vulkan中没有“默认帧缓冲”的概念，于是就需要有一个“基础设施”，它拥有这么一个缓冲区，让我们在显示到屏幕上之前把图像渲染在上面。这个“基础设施”就是“交换链”（swap chain），在Vulkan中它必须被显式创建。交换链本质上是一个等待着被显示到屏幕上的图像的队列。我们的程序会获得这么一个图像来进行绘制，然后再把这个图像放回到队列中。这个队列具体如何工作，以及从队列中显示一个图像的条件取决于交换链是如何设置的，但是一般来讲，交换链的作用是让图像的显示与屏幕刷新率同步。</p>
+<h2 id="检查交换链支持性"><a class="header" href="#检查交换链支持性">检查交换链支持性</a></h2>
+<p>出于各种各样的原因，不是所有显卡都能直接把图像显示到屏幕上的。例如它们是为服务器设计的而且没有显示输出。第二，由于显示图像与窗口系统和关联到窗口的表面密切相关，它实际上不是Vulkan核心的一部分。在检查支持性之后，你需要启用<code>VK_KHR_swapchain</code>这个设备扩展。</p>
+<p>为此我们首先来扩展<code>isDeviceSuitable</code>函数来检查这个扩展是否受支持。之前我们已经知道了如何列出一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPhysicalDevice.html"><code>VkPhysicalDevice</code></a>中所有受支持的扩展，所以这个应该非常直观。注意，Vulkan头文件中提供了一个不错的宏：<code>VK_KHR_SWAPCHAIN_EXTENSION_NAME</code>，这个宏被定义为<code>VK_KHR_swapchain</code>。使用宏的优点在于编译器会捕获拼写错误。</p>
+<p>首先声明一个所需的设备扩展的列表，就像是要启用的验证层的列表那样。</p>
+<pre><code class="language-c++">const std::vector&lt;const char*&gt; deviceExtensions = {
+    VK_KHR_SWAPCHAIN_EXTENSION_NAME
+};
+</code></pre>
+<p>接下来，创建一个新函数：<code>checkDeviceExtensionSupport</code>，在<code>isDeviceSuitable</code>中调用这个函数作为一个额外检查：</p>
+<pre><code class="language-c++">bool isDeviceSuitable(VkPhysicalDevice device) {
+    QueueFamilyIndices indices = findQueueFamilies(device);
+
+    bool extensionsSupported = checkDeviceExtensionSupport(device);
+
+    return indices.isComplete() &amp;&amp; extensionsSupported;
+}
+
+bool checkDeviceExtensionSupport(VkPhysicalDevice device) {
+    return true;
+}
+</code></pre>
+<p>修改函数内容，遍历所有扩展，并且检查是不是每一个需要的扩展都在里面。</p>
+<pre><code class="language-c++">bool checkDeviceExtensionSupport(VkPhysicalDevice device) {
+    uint32_t extensionCount;
+    vkEnumerateDeviceExtensionProperties(device, nullptr, &amp;extensionCount, nullptr);
+
+    std::vector&lt;VkExtensionProperties&gt; availableExtensions(extensionCount);
+    vkEnumerateDeviceExtensionProperties(device, nullptr, &amp;extensionCount, availableExtensions.data());
+
+    std::set&lt;std::string&gt; requiredExtensions(deviceExtensions.begin(), deviceExtensions.end());
+
+    for (const auto&amp; extension : availableExtensions) {
+        requiredExtensions.erase(extension.extensionName);
+    }
+
+    return requiredExtensions.empty();
+}
+</code></pre>
+<p>我在此选择了用一个字符串的集合（set）来代表那些未确认的所需扩展。这样我们就可以在遍历可用扩展序列的时候轻松地剔除它们。当然你也可以用一个嵌套循环，就像<code>checkValidationLayerSupport</code>里面那个。性能差异不是大问题。现在运行代码来验证你的显卡的确支持创建交换链。需要注意的是，我们在一章检查过的显示队列的可用性，如果显示队列可用，那就意味着交换链扩展也一定受支持。然而，显式检查一遍也没什么坏处，而且这个插件还需要显式启用。</p>
+<h2 id="启用设备插件"><a class="header" href="#启用设备插件">启用设备插件</a></h2>
+<p>使用交换链首先需要启用<code>VK_KHR_swapchain</code>扩展。启用这个扩展只需要对创建逻辑设备的结构体做一点小修改：</p>
+<pre><code class="language-c++">createInfo.enabledExtensionCount = static_cast&lt;uint32_t&gt;(deviceExtensions.size());
+createInfo.ppEnabledExtensionNames = deviceExtensions.data();
+</code></pre>
+<h2 id="查询交换链支持性的详细信息"><a class="header" href="#查询交换链支持性的详细信息">查询交换链支持性的详细信息</a></h2>
+<p>仅仅是查询交换链是否可用还不够，因为它有可能与我们的表面不兼容。创建交换链同样涉及到许多设置项目，而且比创建实例和设备的设置项目多得多，所以我们在创建之前需要再查询一些详细信息。</p>
+<p>基本有三种属性是需要检查的：</p>
+<ul>
+<li>基本的表面兼容性（交换链支持的最小/最大图像数量、最小/最大图像宽高）</li>
+<li>表面格式（像素格式、色彩空间）</li>
+<li>可用的显示模式</li>
+</ul>
+<p>与<code>findQueueFamilies</code>类似，我们需要创建一个结构体来保存查询到的详细信息。上述三类属性会用下列结构体与结构体列表保存：</p>
+<pre><code class="language-c++">struct SwapChainSupportDetails {
+    VkSurfaceCapabilitiesKHR capabilities;
+    std::vector&lt;VkSurfaceFormatKHR&gt; formats;
+    std::vector&lt;VkPresentModeKHR&gt; presentModes;
+};
+</code></pre>
+<p>我们现在来创建一个新函数：<code>querySwapChainSupport</code>来填充这个结构体。</p>
+<pre><code class="language-c++">SwapChainSupportDetails querySwapChainSupport(VkPhysicalDevice device) {
+    SwapChainSupportDetails details;
+
+    return details;
+}
+</code></pre>
+<p>这一节只包括如何查询结构体中包含的信息。这些结构体的含义以及它们所包含的每一个数据留到下一节讨论。</p>
+<p>让我们从基本的表面兼容性开始。这些属性非常容易查询并且只返回一个<code>VkSurfaceCapabilitiesKHR</code>结构体。</p>
+<pre><code class="language-c++">vkGetPhysicalDeviceSurfaceCapabilitiesKHR(device, surface, &amp;details.capabilities);
+</code></pre>
+<p>这个函数会根据给定的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPhysicalDevice.html"><code>VkPhysicalDevice</code></a>和<code>VkSurfaceKHR</code>来判断兼容性。所有的查询兼容性的函数都会以这两个作为头两个参数，因为它们是交换链的核心部分。</p>
+<p>下一步是查询支持的表面格式。因为这是一个结构体的列表，它与下面两个函数调用方式类似：</p>
+<pre><code class="language-c++">uint32_t formatCount;
+vkGetPhysicalDeviceSurfaceFormatsKHR(device, surface, &amp;formatCount, nullptr);
+
+if (formatCount != 0) {
+    details.formats.resize(formatCount);
+    vkGetPhysicalDeviceSurfaceFormatsKHR(device, surface, &amp;formatCount, details.formats.data());
+}
+</code></pre>
+<p>确保vector被resize过，以保存所有可用的格式。然后，最后再用<code>vkGetPhysicalDeviceSurfacePresentModesKHR</code>查询可用的显示模式，这与之前的步骤相同：</p>
+<pre><code class="language-c++">bool swapChainAdequate = false;
+if (extensionsSupported) {
+    SwapChainSupportDetails swapChainSupport = querySwapChainSupport(device);
+    swapChainAdequate = !swapChainSupport.formats.empty() &amp;&amp; !swapChainSupport.presentModes.empty();
+}
+</code></pre>
+<p>现在，所有详细信息都保存在了结构体里。然后再来扩展一次<code>isDeviceSuitable</code>函数，用这个函数来检查交换链是否被完整地支持。对于本教程来说，有至少一种图像格式以及一种显示模式支持给定的表面就足够了。</p>
+<pre><code class="language-c++">bool swapChainAdequate = false;
+if (extensionsSupported) {
+    SwapChainSupportDetails swapChainSupport = querySwapChainSupport(device);
+    swapChainAdequate = !swapChainSupport.formats.empty() &amp;&amp; !swapChainSupport.presentModes.empty();
+}
+</code></pre>
+<p>在验证插件是否可用之后再尝试查询交换链支持性的详细信息是非常重要的。把函数的最后一行改成：</p>
+<pre><code class="language-c++">return indices.isComplete() &amp;&amp; extensionsSupported &amp;&amp; swapChainAdequate;
+</code></pre>
+<h2 id="为交换链选择正确的设置"><a class="header" href="#为交换链选择正确的设置">为交换链选择正确的设置</a></h2>
+<p>如果<code>swapChainAdequate</code>为真，那么交换链无疑是被完整支持的，然而仍然可能有许多不同的最优设置模式。我们现在来写几个函数，找出最佳的可用交换链的正确设置。有三种设置需要确定：</p>
+<ul>
+<li>表面格式（色彩深度）</li>
+<li>显示模式（在屏幕上“交换”图像的条件）</li>
+<li>交换范围（交换链中图像的分辨率）</li>
+</ul>
+<p>对于每个设置我们都有一个理想值，如果这个理想值可用则设为理想值，否则我们会写一些逻辑来寻找次佳值。</p>
+<h3 id="表面格式"><a class="header" href="#表面格式">表面格式</a></h3>
+<p>设置这一项的函数刚开始类似于这样。我们会在稍后传递<code>SwapChainSupportDetails</code>结构体中的<code>formats</code>成员作为参数。</p>
+<pre><code class="language-c++">VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector&lt;VkSurfaceFormatKHR&gt;&amp; availableFormats) {
+
+}
+</code></pre>
+<p>每个<code>VkSurfaceFormatKHR</code>结构体都包含一个<code>format</code>和一个<code>colorSpace</code>成员。<code>format</code>成员指定颜色的通道数和类型。例如，<code>VK_FORMAT_B8G8R8A8_UNORM</code>代表我们按照B、G、R以及alpha通道的顺序存储，美个通道是8位的无符号整型，每个像素一共32位。<code>colorSpace</code>成员使用<code>VK_COLOR_SPACE_SRGB_NONLINEAR_KHR</code>标志来指示SRGB色彩空间是否可用。注意，根据标准，旧版API中这个标志曾经叫做<code>VK_COLORSPACE_SRGB_NONLINEAR_KHR</code>。</p>
+<p>如果SRGB色彩空间可用，我们就会使用它，因为它<a href="http://stackoverflow.com/questions/12524623/">产生的颜色更加真实</a>。直接使用SRGB颜色会有一点挑战，因此我们使用标准RGB作为颜色格式，就用常见颜色格式中的<code>VK_FORMAT_B8G8R8A8_UNORM</code>。</p>
+<p>最好的情况是，表面没有推荐格式，这时Vulkan会只返回一个<code>format</code>成员为<code>VK_FORMAT_UNDEFINED</code>的<code>VkSurfaceFormatKHR</code>结构体。</p>
+<pre><code class="language-c++">if (availableFormats.size() == 1 &amp;&amp; availableFormats[0].format == VK_FORMAT_UNDEFINED) {
+    return {VK_FORMAT_B8G8R8A8_UNORM, VK_COLOR_SPACE_SRGB_NONLINEAR_KHR};
+}
+</code></pre>
+<p>如果我们不能自由选择格式，那么我们就遍历可用格式列表来检查最佳组合是否在可用：</p>
+<pre><code class="language-c++">for (const auto&amp; availableFormat : availableFormats) {
+    if (availableFormat.format == VK_FORMAT_B8G8R8A8_UNORM &amp;&amp; availableFormat.colorSpace == VK_COLOR_SPACE_SRGB_NONLINEAR_KHR) {
+        return availableFormat;
+    }
+}
+</code></pre>
+<p>如果不可用，那我们会开始给所有可用格式排序来看看它们有多“好”，不过一般来说设置为列表中的第一个格式就行了。</p>
+<pre><code class="language-c++">VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector&lt;VkSurfaceFormatKHR&gt;&amp; availableFormats) {
+    if (availableFormats.size() == 1 &amp;&amp; availableFormats[0].format == VK_FORMAT_UNDEFINED) {
+        return {VK_FORMAT_B8G8R8A8_UNORM, VK_COLOR_SPACE_SRGB_NONLINEAR_KHR};
+    }
+
+    for (const auto&amp; availableFormat : availableFormats) {
+        if (availableFormat.format == VK_FORMAT_B8G8R8A8_UNORM &amp;&amp; availableFormat.colorSpace == VK_COLOR_SPACE_SRGB_NONLINEAR_KHR) {
+            return availableFormat;
+        }
+    }
+
+    return availableFormats[0];
+}
+</code></pre>
+<h3 id="显示模式"><a class="header" href="#显示模式">显示模式</a></h3>
+<p>理论上来说，显示模式是交换链最重要的设置项，因为它决定了如何把图像显示到屏幕上。Vulkan中有四种可用的显示模式：</p>
+<ul>
+<li><code>VK_PRESENT_MODE_IMMEDIATE_KHR</code>：图像绘制完成后会被立即显示到屏幕上，这有可能导致画面撕裂。</li>
+<li><code>VK_PRESENT_MODE_FIFO_KHR</code>：此时交换链是一个队列。画面刷新时，队列中的前一张图像会被显示到屏幕上，而绘制好的图像会被放到队列的末尾。如果队列已满，程序就只能等待。这种模式与现代游戏中常用的“垂直同步”很相似。画面刷新的那一瞬间叫做“垂直空白间隙”。（双缓冲）</li>
+<li><code>VK_PRESENT_MODE_FIFO_RELAXED_KHR</code>：这种模式只在上一个垂直空白间隙中绘制超时且队列为空的时候才与上一种模式有区别。当图像终于渲染好的时候，它会被直接显示到屏幕上，而不是等待下一个垂直空白间隙。这有可能导致画面撕裂。</li>
+<li><code>VK_PRESENT_MODE_MAILBOX_KHR</code>：这是第二种模式的另一个变种。队列已满时，它不会阻塞程序，而是直接用新绘制的图像替代队列中的图像。这种模式可以用三缓冲来实现，比起使用双缓冲的标准垂直同步，三缓冲可以避免可能导致严重延迟问题的画面撕裂。</li>
+</ul>
+<p>只有<code>VK_PRESENT_MODE_FIFO_KHR</code>模式是始终可用的，所以我们需要再写一个函数来检查最佳模式是否可用：</p>
+<pre><code class="language-c++">VkPresentModeKHR chooseSwapPresentMode(const std::vector&lt;VkPresentModeKHR&gt; availablePresentModes) {
+    return VK_PRESENT_MODE_FIFO_KHR;
+}
+</code></pre>
+<p>我个人认为认为三缓冲是最佳选择。它通过在垂直空白间隙到来之前渲染尽可能新的图像，从而避免画面撕裂，同时还能保持相当低的延迟。所以，让我们遍历一下列表来检查三缓冲是否可用：</p>
+<pre><code class="language-c++">VkPresentModeKHR chooseSwapPresentMode(const std::vector&lt;VkPresentModeKHR&gt; availablePresentModes) {
+    for (const auto&amp; availablePresentMode : availablePresentModes) {
+        if (availablePresentMode == VK_PRESENT_MODE_MAILBOX_KHR) {
+            return availablePresentMode;
+        }
+    }
+
+    return VK_PRESENT_MODE_FIFO_KHR;
+}
+</code></pre>
+<p>不幸的是，一些驱动至今仍不支持<code>VK_PRESENT_MODE_FIFO_KHR</code>，所以在<code>VK_PRESENT_MODE_FIFO_KHR</code>不可用时，我们应该尝试<code>VK_PRESENT_MODE_IMMEDIATE_KHR</code>：</p>
+<pre><code class="language-c++">VkPresentModeKHR chooseSwapPresentMode(const std::vector&lt;VkPresentModeKHR&gt; availablePresentModes) {
+    VkPresentModeKHR bestMode = VK_PRESENT_MODE_FIFO_KHR;
+
+    for (const auto&amp; availablePresentMode : availablePresentModes) {
+        if (availablePresentMode == VK_PRESENT_MODE_MAILBOX_KHR) {
+            return availablePresentMode;
+        } else if (availablePresentMode == VK_PRESENT_MODE_IMMEDIATE_KHR) {
+            bestMode = availablePresentMode;
+        }
+    }
+
+    return bestMode;
+}
+</code></pre>
+<h3 id="交换范围"><a class="header" href="#交换范围">交换范围</a></h3>
+<p>这是最后一个主要设置项目了，我们来添加最后一个函数：</p>
+<pre><code class="language-c++">VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR&amp; capabilities) {
+
+}
+</code></pre>
+<p>交换范围是指交换链中图像的分辨率，而且它几乎永远等同于要绘制的窗口大小。可用分辨率的范围由<code>VkSurfaceCapabilitiesKHR</code>结构体定义。Vulkan要求我们在<code>currentExtent</code>成员中设置宽度和高度来匹配窗口分辨率。不过有一些窗口管理器允许我们把<code>currentExtent</code>成员的宽度和高度设置为一个特殊值：<code>uint32_t</code>的最大值。在这种情况下，我们会选择在<code>minImageExtent</code>与<code>maxImageExtent</code>之间最符合窗口分辨率的分辨率。</p>
+<pre><code class="language-c++">VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR&amp; capabilities) {
+    if (capabilities.currentExtent.width != std::numeric_limits&lt;uint32_t&gt;::max()) {
+        return capabilities.currentExtent;
+    } else {
+        VkExtent2D actualExtent = {WIDTH, HEIGHT};
+
+        actualExtent.width = std::max(capabilities.minImageExtent.width, std::min(capabilities.maxImageExtent.width, actualExtent.width));
+        actualExtent.height = std::max(capabilities.minImageExtent.height, std::min(capabilities.maxImageExtent.height, actualExtent.height));
+
+        return actualExtent;
+    }
+}
+</code></pre>
+<p><code>max</code>和<code>min</code>函数用来把<code>WIDTH</code>和<code>HEIGHT</code>的值限制在Vulkan实现所支持的最大与最小分辨率之间。确保你已经引入了<code>&lt;algorithm&gt;</code>头文件来使用这两个函数。</p>
+<h2 id="创建交换链"><a class="header" href="#创建交换链">创建交换链</a></h2>
+<p>现在我们已经创建好了所有帮助函数，来帮助我们在运行时进行那些必须要做的选择，我们已经拥有了创建一个可工作的交换链的所有信息。</p>
+<p>创建一个<code>createSwapChain</code>函数，在这个函数中调用之前那些帮助函数来获取结果。确保这个函数在<code>initVulkan</code>中是在创建了逻辑设备之后调用的。</p>
+<pre><code class="language-c++">void initVulkan() {
+    createInstance();
+    setupDebugCallback();
+    createSurface();
+    pickPhysicalDevice();
+    createLogicalDevice();
+    createSwapChain();
+}
+
+void createSwapChain() {
+    SwapChainSupportDetails swapChainSupport = querySwapChainSupport(physicalDevice);
+
+    VkSurfaceFormatKHR surfaceFormat = chooseSwapSurfaceFormat(swapChainSupport.formats);
+    VkPresentModeKHR presentMode = chooseSwapPresentMode(swapChainSupport.presentModes);
+    VkExtent2D extent = chooseSwapExtent(swapChainSupport.capabilities);
+}
+</code></pre>
+<p>现在还有一个小问题需要确定，不过这个问题非常简单，不必为它专门创建一个函数。这个问题就是决定交换链中的图像数量，实际上也就是队列的长度。Vulkan实现指定了正常工作所需的最小图像数量，我们会尝试给这个数量+1来正确实现三缓冲。</p>
+<pre><code class="language-c++">uint32_t imageCount = swapChainSupport.capabilities.minImageCount + 1;
+if (swapChainSupport.capabilities.maxImageCount &gt; 0 &amp;&amp; imageCount &gt; swapChainSupport.capabilities.maxImageCount) {
+    imageCount = swapChainSupport.capabilities.maxImageCount;
+}
+</code></pre>
+<p>把<code>maxImageCount</code>的值设为0意味着对内存占用没有限制，因此我们需要检查它的值。</p>
+<p>就像其它Vulkan对象那样，创建交换链对象需要填充一个庞大的结构体，它们的开头都很相似：</p>
+<pre><code class="language-c++">VkSwapchainCreateInfoKHR createInfo = {};
+createInfo.sType = VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR;
+createInfo.surface = surface;
+</code></pre>
+<p>在指定了交换链要关联的表面之后，交换链图像的信息也需要指定：</p>
+<pre><code class="language-c++">createInfo.minImageCount = imageCount;
+createInfo.imageFormat = surfaceFormat.format;
+createInfo.imageColorSpace = surfaceFormat.colorSpace;
+createInfo.imageExtent = extent;
+createInfo.imageArrayLayers = 1;
+createInfo.imageUsage = VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT;
+</code></pre>
+<p><code>imageArrayLayers</code>指定了每个图像所包含的图层的数量。除非你在开发一个立体的3D程序，它的值始终应该被设为<code>1</code>。<code>imageUsage</code>指定了我们如何使用交换链中的图像。在这个教程中我们会直接显示它们，这意味着它们应该被用作“颜色附件”（color attachment）。你也可以把交换链中的图像全都渲染到一张单独的图像上来进行其他操作，比如后续处理。在这种情况下，<code>imageUsage</code>的值应该是<code>VK_IMAGE_USAGE_TRANSFER_DST_BIT</code>，然后使用内存操作来把渲染好的图像传送给交换链。</p>
+<pre><code class="language-c++">QueueFamilyIndices indices = findQueueFamilies(physicalDevice);
+uint32_t queueFamilyIndices[] = {indices.graphicsFamily.value(), indices.presentFamily.value()};
+
+if (indices.graphicsFamily != indices.presentFamily) {
+    createInfo.imageSharingMode = VK_SHARING_MODE_CONCURRENT;
+    createInfo.queueFamilyIndexCount = 2;
+    createInfo.pQueueFamilyIndices = queueFamilyIndices;
+} else {
+    createInfo.imageSharingMode = VK_SHARING_MODE_EXCLUSIVE;
+    createInfo.queueFamilyIndexCount = 0; // Optional
+    createInfo.pQueueFamilyIndices = nullptr; // Optional
+}
+</code></pre>
+<p>接下来，如果图形队列家族与显示队列不是同一个队列家族的话，我们需要指定如何处理将要在多个队列家族中使用的交换链中的图像，这也正是我们程序中的情况。我们会在图形队列中绘制交换链中的图片，然后把它们提交到显示队列中去。有两种方法来处理会在多个队列中使用的图像：</p>
+<ul>
+<li><code>VK_SHARING_MODE_EXCLUSIVE</code>：一个图像在在同一时间只能被一个队列家族占有，并且在另一个队列家族使用图像之前必须显式转移所有权。这种方法的性能最高。</li>
+<li><code>VK_SHARING_MODE_CONCURRENT</code>：图像可以被多个队列使用而不需要显式转移所有权。</li>
+</ul>
+<p>如果队列家族不同，我们就会在使用concurrent（同时）模式。在此教程中使用同时模式是因为这样可以避免写有关于处理所有权的章节，因为处理所有权包含了一些需要以后再解释的概念。同时模式需要你通过<code>queueFamilyIndexCount</code>和<code>pQueueFamilyIndices</code>参数提前指定所有权将会在哪些队列家族之间共享。如果图形队列家族与显示队列家族是同一个，也就是绝大多数硬件上的情况，那么我们就使用exclusive（独占）模式，因为同时模式需要你至少指定两个不同的队列家族。</p>
+<pre><code class="language-c++">createInfo.preTransform = swapChainSupport.capabilities.currentTransform;
+</code></pre>
+<p>我们可以为交换链中的图像指定一个变换（<code>supportedTransforms</code>中的<code>capabilities</code>），比如顺时针旋转90度，或者水平翻转。如果你不想做任何变换，那就简单地把它指定为当前使用的变换。</p>
+<pre><code class="language-c++">createInfo.compositeAlpha = VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR;
+</code></pre>
+<p><code>compositeAlpha</code>参数指定了alpha通道是否应该与窗口系统中的其它窗口进行混合。你基本上都会忽略掉alpha通道，那就设成<code>VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR</code>。</p>
+<pre><code class="language-c++">createInfo.presentMode = presentMode;
+createInfo.clipped = VK_TRUE;
+</code></pre>
+<p><code>presentMode</code>成员的含义很明确（显示模式）。如果<code>clipped</code>成员被设为了<code>VK_TRUE</code>，那就说明我们不关心被遮挡的像素的颜色，例如有另一个窗口挡住了这个窗口。除非你的确需要读回这些像素以获得一个可预测的结果，你最好开启裁剪来获得最佳性能。</p>
+<pre><code class="language-c++">createInfo.oldSwapchain = VK_NULL_HANDLE;
+</code></pre>
+<p><code>oldSwapChain</code>是最后一个设置项。在Vulkan中，程序运行时，你的交换链有可能失效或者未优化，比如窗口大小被改变了。在这种情况下，交换链必须被重新创建，并且需要在这里指定旧交换链的引用。这是一个很复杂的话题，因此我们会在以后的章节（《重新创建交换链》）里再了解它。现在我们假设我们只需要创建一个交换链。</p>
+<p>现在添加一个新的成员变量来保存<code>VkSwapchainKHR</code>对象：</p>
+<pre><code class="language-c++">VkSwapchainKHR swapChain;
+</code></pre>
+<p>现在，创建交换链只需要简单地调用<code>vkCreateSwapchainKHR</code>：</p>
+<pre><code class="language-c++">if (vkCreateSwapchainKHR(device, &amp;createInfo, nullptr, &amp;swapChain) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to create swap chain!&quot;);
+}
+</code></pre>
+<p>这个函数的参数分别是逻辑设备、交换链的创建信息，可选的自定义分配器以及一个指向要存储交换链句柄的变量的指针。一如既往地，我们需要使用<code>vkDestroySwapchainKHR</code>来在销毁逻辑设备之前销毁交换链：</p>
+<pre><code class="language-c++">void cleanup() {
+    vkDestroySwapchainKHR(device, swapChain, nullptr);
+    ...
+}
+</code></pre>
+<p>现在运行程序来检查交换链是否创建成功。如果你发现<code>vkCreateSwapchainKHR</code>函数中有一个访问冲突错误，或者是看见了一个类似<code>Failed to find 'vkGetInstanceProcAddress' in layer SteamOverlayVulkanLayer.dll</code>的错误信息，可以看看《常见问题》中有关Steam overlay layer的问题。</p>
+<p>尝试在开启验证层的同时删除<code>createInfo.imageExtent = extent;</code>这行。你会看到有一个验证层立刻捕获了错误并且给出了有用的提示信息：</p>
+<p><img src="https://vulkan-tutorial.com/images/swap_chain_validation_layer.png" alt="" /></p>
+<h2 id="取出交换链中的图像"><a class="header" href="#取出交换链中的图像">取出交换链中的图像</a></h2>
+<p>交换链现在已经创建好了，最后一个问题就是如何取出交换链中的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkImage.html"><code>VkImage</code></a>句柄。在后续章节中涉及到渲染操作时我们需要图像的引用。添加一个成员变量来保存句柄：</p>
+<pre><code class="language-c++">std::vector&lt;VkImage&gt; swapChainImages;
+</code></pre>
+<p>图像由Vulkan实例为交换链创建，且会在交换链销毁时被自动销毁，因此不需要我们来写销毁代码。</p>
+<p>我在<code>createSwapChain</code>函数的末尾添加了这些代码，就在调用了<code>vkCreateSwapchainKHR</code>函数之后。取出这些图像的句柄就像取出其它Vulkan对象的数组一样。首先使用<code>vkGetSwapchainImagesKHR</code>函数来查询交换链中图片的数量，然后resize容器，最后再调用这个函数一次来取回句柄。</p>
+<pre><code class="language-c++">vkGetSwapchainImagesKHR(device, swapChain, &amp;imageCount, nullptr);
+swapChainImages.resize(imageCount);
+vkGetSwapchainImagesKHR(device, swapChain, &amp;imageCount, swapChainImages.data());
+</code></pre>
+<p>注意，我们在创建交换链时通过<code>minImageCount</code>传递了我们希望创建的图像的数量。Vulkan实现有可能创建更多的图像，因此我们需要再显式查询一次。</p>
+<p>最后，把我们为交换链中的图像所选择的格式与范围保存到成员变量中去。我们会在后续章节用到这些信息。</p>
+<pre><code class="language-c++">VkSwapchainKHR swapChain;
+std::vector&lt;VkImage&gt; swapChainImages;
+VkFormat swapChainImageFormat;
+VkExtent2D swapChainExtent;
+
+...
+
+swapChainImageFormat = surfaceFormat.format;
+swapChainExtent = extent;
+</code></pre>
+<p>我们现在有了一些可供绘制的图像，并且还可以显示到窗口上。下一章我们会涉及到如何把图像设为渲染目标，然后我们会开始接触真正的图形渲染管线以及绘制命令！</p>
+<p><a href="https://vulkan-tutorial.com/code/06_swap_chain_creation.cpp">C++代码</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="图像视图"><a class="header" href="#图像视图">图像视图</a></h1>
+<p>要在渲染管线中使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkImage.html"><code>VkImage</code></a>，包括交换链中的，我们就需要创建一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkImageView.html"><code>VkImageView</code></a>对象。一个图像视图（image view）实际上就是一个图像的一个视图。它描述了如何访问图像，以及访问图像的哪一部分，例如这个图像应该被视为一个2D深度纹理，并且不创建多级渐远纹理。</p>
+<p>在这一章我们会写一个<code>createImageViews</code>函数来为交换链中的每个图像创建一个基本的图像视图，这样一会儿我们就能把它们用作颜色目标了。</p>
+<p>首先添加一个成员函数来保存图像视图：</p>
+<pre><code class="language-c++">std::vector&lt;VkImageView&gt; swapChainImageViews;
+</code></pre>
+<p>创建<code>createImageViews</code>函数，并且在创建交换链之后调用。</p>
+<pre><code class="language-c++">void initVulkan() {
+    createInstance();
+    setupDebugCallback();
+    createSurface();
+    pickPhysicalDevice();
+    createLogicalDevice();
+    createSwapChain();
+    createImageViews();
+}
+
+void createImageViews() {
+
+}
+</code></pre>
+<p>首先我们需要resize这个列表，使其与我们要创建的图像视图的数量相吻合：</p>
+<pre><code class="language-c++">void createImageViews() {
+    swapChainImageViews.resize(swapChainImages.size());
+
+}
+</code></pre>
+<p>接下来，写一个循环来遍历交换链中的图像。</p>
+<pre><code class="language-c++">for (size_t i = 0; i &lt; swapChainImages.size(); i++) {
+
+}
+</code></pre>
+<p>创建图像视图的参数由<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkImageViewCreateInfo.html"><code>VkImageViewCreateInfo</code></a>结构体指定。头几个参数非常简单明了。</p>
+<pre><code class="language-c++">VkImageViewCreateInfo createInfo = {};
+createInfo.sType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO;
+createInfo.image = swapChainImages[i];
+</code></pre>
+<p><code>viewType</code>和<code>format</code>参数指定了应该如何解释图像数据。<code>viewType</code>参数允许你将图像看作1D纹理、2D纹理、3D纹理或立方体贴图。</p>
+<pre><code class="language-c++">createInfo.viewType = VK_IMAGE_VIEW_TYPE_2D;
+createInfo.format = swapChainImageFormat;
+</code></pre>
+<p><code>components</code>参数允许你映射颜色通道。例如，你可以把所有通道映射到红色通道上以获得一个单色纹理。你也可以给一个通道映射为<code>0</code>或<code>1</code>的常量值。在这里我们使用默认映射。</p>
+<pre><code class="language-c++">createInfo.components.r = VK_COMPONENT_SWIZZLE_IDENTITY;
+createInfo.components.g = VK_COMPONENT_SWIZZLE_IDENTITY;
+createInfo.components.b = VK_COMPONENT_SWIZZLE_IDENTITY;
+createInfo.components.a = VK_COMPONENT_SWIZZLE_IDENTITY;
+</code></pre>
+<p><code>subresourceRange</code>参数描述了图像的目标以及应该访问图像的哪一部分。我们的图像会被用作颜色目标，并且没有任何多级渐远纹理或是多个图层。</p>
+<pre><code class="language-c++">createInfo.subresourceRange.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+createInfo.subresourceRange.baseMipLevel = 0;
+createInfo.subresourceRange.levelCount = 1;
+createInfo.subresourceRange.baseArrayLayer = 0;
+createInfo.subresourceRange.layerCount = 1;
+</code></pre>
+<p>如果你写的是一个3D程序，你应该创建一个支持多图层的交换链。这样你可以为每个图像创建多个图像视图，通过访问不同的图层来分别代表左眼和右眼。</p>
+<p>现在，调用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateImageView.html"><code>vkCreateImageView</code></a>来创建图像视图：</p>
+<pre><code class="language-c++">if (vkCreateImageView(device, &amp;createInfo, nullptr, &amp;swapChainImageViews[i]) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to create image views!&quot;);
+}
+</code></pre>
+<p>不同于图像，图像视图是我们现实创建的，因此我们需要一个循环来在程序末尾销毁它们：</p>
+<pre><code class="language-c++">void cleanup() {
+    for (auto imageView : swapChainImageViews) {
+        vkDestroyImageView(device, imageView, nullptr);
+    }
+
+    ...
+}
+</code></pre>
+<p>图像视图已经足够把一个图像用作纹理了，但是现在还不能用作渲染目标。它还需要一个间接的步骤，这个步骤叫做帧缓冲（framebuffer）。不过首先我们需要建立图形渲染管线。</p>
+<p><a href="https://vulkan-tutorial.com/code/07_image_views.cpp">C++代码</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="简介-3"><a class="header" href="#简介-3">简介</a></h1>
+<p>通过接下来几章的课程，我们会建立一个图形渲染管线来绘制我们的第一个三角形。图形渲染管线就是一步一步地把你的顶点和纹理变成渲染目标上的像素的一系列操作。下面是它的简要图示：</p>
+<p><img src="https://vulkan-tutorial.com/images/vulkan_simplified_pipeline.svg" alt="" /></p>
+<p>“输入装配器”（input assembler）从指定的缓存中收集原生的顶点数据，并可能使用一个顶点缓冲来重复某些元素，而不是重复顶点本身。</p>
+<p>“顶点着色器”（vertex shader）针对的是每个顶点，并且通常使用变换来把顶点坐标从模型空间转换到屏幕空间。它也会把每个顶点的数据传送给管线的下一阶段。</p>
+<p>“曲面细分着色器”（tessellation shaders）允许你根据特定规则对图形进行细分以提高网格品质。它经常用在生成类似砖墙或者楼梯那种离得越近看起来就越粗糙的表面。</p>
+<p>“几何着色器”（geometry shader）针对的是每个图元（三角形、线、点），它可以丢弃一些图元，或者输出更多的图元。它与曲面细分着色器有些相似，但是更加灵活。不过，在现在的程序中已经不太用这个着色器了，因为在大多数显卡上它的性能不怎么好，尤其是英特尔的集成显卡。</p>
+<p>“光栅化”（rasterization）阶段把图元离散成“片段”。片段是填充在帧缓冲上的像素元素。任何处于屏幕外的片段都将被丢弃，并且由顶点着色器输出的数据会被插值到片段中，就像图中那样。通常，在这一步，那些位于其它片段后面的片段也会被深度测试丢弃。</p>
+<p>“片段着色器”（fragment shader）针对的是每一个被保留的片段，并且确定片段要写入到哪些帧缓冲中，以及片段要使用哪些颜色和深度值。它可以使用由顶点着色器插值过的数据，比如顶点坐标和光照法线，来完成这些工作。</p>
+<p>“颜色混合”（color blending）阶段把不同的片段混合之后映射到帧缓冲的同一个像素上。片段可以简单地彼此覆盖、相加或者基于透明度进行混合。</p>
+<p>图中绿色的阶段被称为“固定功能”（fixed-function）阶段。这些阶段允许你通过参数调整它们的行为，但是它们工作的方式是被预定义好了的。</p>
+<p>另一部分，图中橙色的阶段是<code>programmable</code>（可编程）的，这意味着你可以上传你自己的代码给显卡来显式执行你想执行的操作。例如，这允许你使用片段着色器执行从贴图与光照到光线追踪的任何操作。这些程序同时运行在GPU的许多核心上来处理许多对象，例如并行处理顶点与片段。</p>
+<p>如果你之前使用过OpenGL或者Direct3D那种老式API，那么你大概习惯于通过<code>glBlendFunc</code>或<code>OMSetBlendState</code>来改变管线设置。Vulkan中的图形渲染管线基本上都是完全不可变的，因此如果你想更改着色器、绑定不同的帧缓冲或者是更改混合方式，你就必须得重新创建渲染管线。缺点是你必须创建很多管线来表示你想在渲染操作中执行的不同的阶段组合。不过，因为管线中所有的操作都是渲染前就已经明确的，驱动程序就能更好地对它们进行优化。</p>
+<p>可编程阶段中的某些阶段是可选的，这取决于你想怎么做。比如，如果你只是在画一个简单的图形的话，曲面细分阶段和几何阶段是可以禁用的。如果你只关心深度值，那么你可以禁用片段着色器阶段，这对<a href="https://zh.wikipedia.org/wiki/%E9%98%B4%E5%BD%B1%E8%B4%B4%E5%9B%BE">阴影贴图</a>的生成很有帮助。</p>
+<p>在下一章我们会首先创建两个显示三角形所必需的可编程阶段：顶点着色器和片段着色器。固定功能，比如混合模式、视口和光栅化，的配置，将会在大下章讲解。Vulkan中配置图形渲染管线的最后一个部分涉及到指定帧缓冲的输入与输出。</p>
+<p>创建一个<code>createGraphicsPipeline</code>函数，然后在<code>initVulkan</code>函数里的<code>createImageViews</code>之后调用它。在接下来的几章里我们会编写这个函数。</p>
+<pre><code class="language-c++">void initVulkan() {
+    createInstance();
+    setupDebugCallback();
+    createSurface();
+    pickPhysicalDevice();
+    createLogicalDevice();
+    createSwapChain();
+    createImageViews();
+    createGraphicsPipeline();
+}
+
+...
+
+void createGraphicsPipeline() {
+
+}
+</code></pre>
+<p><a href="https://vulkan-tutorial.com/code/08_graphics_pipeline.cpp">C++代码</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="着色器模块"><a class="header" href="#着色器模块">着色器模块</a></h1>
+<p>与早期API不同，Vulkan中使用的着色器代码是字节码格式的，而不是<a href="https://zh.wikipedia.org/wiki/GLSL">GLSL</a>和<a href="https://zh.wikipedia.org/wiki/%E9%AB%98%E7%BA%A7%E7%9D%80%E8%89%B2%E5%99%A8%E8%AF%AD%E8%A8%80">HLSL</a>那种人类可读的语法。这种字节码格式叫做<a href="https://www.khronos.org/spir">SPIR-V</a>，并且被设计为可同时用于Vulkan与OpenCL上（它们都是Khronos API）。这是一种可被用于编写图形和计算着色器的格式，但是在此教程中我们关注那些用在Vulkan的图形渲染管线中的着色器。</p>
+<p>使用字节码格式的优点是，GPU厂商编写的编译器在把着色器代码编译成本地代码时会简单得多。过去的事实证明，在使用人类可读的语法，比如GLSL时，某些GPU厂商对标准的解释相当灵活。如果你恰好用这么一种GPU写了一个不合标准的着色器，那么，由于语法错误，你就面临着其它厂商的显卡驱动拒绝你的代码的风险，或者更糟糕，由于编译错误，你的着色器的行为完全不同了。使用简单明了的字节码格式，比如SPIR-V，有望避免这种情况。</p>
+<p>然而，这并不意味着我们需要手写字节码。Khronos发布了一个厂商无关的编译器，用来把GLSL编译成SPIR-V。这个编译器可以验证你的代码是否完全符合规范，并且生成一个SPIR-V二进制文件，你就可以把这个文件用在你的程序中了。你也可以把这个编译器作为一个库引入到你的程序中，以便在运行时生成SPIR-V，不过在此教程中我们不需要这么做。这个编译器已经包含在了LunarG SDK中，叫做<code>glslangValidator.exe</code>，因此不必额外下载。</p>
+<p>GLSL是一种C风格语法的着色器语言。写在<code>main</code>函数中的程序会被每个对象调用。GLSL使用全局变量来管理输入与输出，而不是使用参数和返回值。这种语言包含了许多有助于图形编程的功能，比如内建的向量与本原矩阵，以及求叉积、求矩阵向量积和求反射向量等操作的函数。向量坐标被称为<code>vec</code>再加上一个表示其中元素数量的数字，比如一个3D坐标可以保存在<code>vec3</code>中。可以通过其中的一个成员来访问向量中的某一个分量，例如<code>.x</code>，不过也可以通过多个现有分量来创建新向量，比如<code>vec3(1.0, 2.0, 3.0).xy</code>表达式会返回一个<code>vec2</code>。向量的构造函数也可以把向量和标量合并到一起。比如一个<code>vec3</code>可以用<code>vec3(vec2(1.0, 2.0), 3.0)</code>来构造。</p>
+<p>就像上一章提到过的，我们需要编写一个顶点着色器和一个片段着色器来在屏幕上显示一个三角形。下面两节将会包含它们的GLSL代码并且我会演示如何生成两个SPIR-V二进制文件并且把它们加载到程序中。</p>
+<h2 id="顶点着色器"><a class="header" href="#顶点着色器">顶点着色器</a></h2>
+<p>顶点着色器处理每个输入进来的顶点。它需要输入每个顶点的属性，比如世界位置（position）、颜色、法线以及纹理坐标。它的输出是在裁剪坐标中的最终位置，以及需要被传递给片段着色器的属性，比如颜色和纹理坐标。这些值会在光栅化的时候被插入到片段上以获得平滑的渐变。</p>
+<p>裁剪坐标（clip coordinate）是一个顶点着色器生成的四维向量，随后它会用它的最后一个分量除以整个向量来转换成“标准化设备坐标”（normalized device coordinate）。这些标准化设备坐标是把一种帧缓冲映射到[-1, 1]到[-1, 1]坐标系统的齐次坐标，如下图所示：</p>
+<p><img src="https://vulkan-tutorial.com/images/normalized_device_coordinates.svg" alt="" /></p>
+<p><em>Framebuffer coordinates：帧缓冲坐标</em></p>
+<p><em>Normalized device coordinates：标准化设备坐标</em></p>
+<p>如果你接触过计算机图形学，你应该对此很熟悉。如果你使用过OpenGL，你会发现Y坐标的符号被翻转了。Z坐标现在与Direct3D中的范围一样，是从0到1。</p>
+<p>对于我们的第一个三角形而言，我们不需要应用任何变换，我们仅仅会直接以标准化设备坐标指定三个顶点的位置来创建如下所示的形状：</p>
+<p><img src="https://vulkan-tutorial.com/images/triangle_coordinates.svg" alt="" /></p>
+<p>我们可以通过把顶点着色器输出的裁剪坐标的最后一个分量设为<code>1</code>的方式来直接输出标准化设备坐标。这样在执行把裁剪坐标转换为标准化设备坐标的除法时将不会发生任何变化。</p>
+<p>通常来讲，这些坐标应该保存在顶点缓冲里，但是在Vulkan中创建一个顶点缓冲并在其中填充数据很难。因此我决定把顶点缓冲推迟到在屏幕上绘制出三角形之后再讲解。在这里我们做一点不那么标准的动作：直接把坐标硬编码到顶点着色器里。代码看起来像这样：</p>
+<pre><code class="language-glsl">#version 450
+
+vec2 positions[3] = vec2[](
+    vec2(0.0, -0.5),
+    vec2(0.5, 0.5),
+    vec2(-0.5, 0.5)
+);
+
+void main() {
+    gl_Position = vec4(positions[gl_VertexIndex], 0.0, 1.0);
+}
+</code></pre>
+<p><code>main</code>函数会被每个顶点调用。内建的<code>gl_VertexIndex</code>变量包含了当前顶点的索引。这个索引通常是顶点缓冲的索引，但是在这里它是我们硬编码的顶点数据数组的索引。每个顶点的位置从着色器的常量数组中读出，并且与虚拟的<code>z</code>和<code>w</code>分量组成一个裁剪坐标中的位置。内建的<code>gl_Position</code>变量作为输出使用。</p>
+<h2 id="片段着色器"><a class="header" href="#片段着色器">片段着色器</a></h2>
+<p>由顶点着色器中的坐标组成的三角形使用片段在屏幕上填充了一块区域。片段着色器会被这些片段调用来为帧缓冲生成颜色和深度数据。一个简单地给整个三角形输出红色的片段着色器大概是这样的：</p>
+<pre><code class="language-glsl">#version 450
+#extension GL_ARB_separate_shader_objects : enable
+
+layout(location = 0) out vec4 outColor;
+
+void main() {
+    outColor = vec4(1.0, 0.0, 0.0, 1.0);
+}
+</code></pre>
+<p><code>main</code>函数会被每个片段调用，就像顶点着色器的<code>main</code>函数会被每个顶点调用一样。GLSL中的颜色是有四个分量的向量，四个分量分别是R、G、B以及alpha通道，值在[0, 1]之间。与顶点着色器中的<code>gl_Position</code>不同，没有为当前片段输出颜色的内建变量。你必须为每个帧缓冲指定你自己的输出变量，其中<code>layout(location = 0)</code>修饰符指定帧缓冲的索引。红色会被写入到<code>outColor</code>变量中，这个变量会被连接到索引为0的第一个（也是唯一一个）帧缓冲上。</p>
+<h2 id="每个顶点的颜色"><a class="header" href="#每个顶点的颜色">每个顶点的颜色</a></h2>
+<p>把整个三角形都设置为红色不好玩，下面这种是不是更好一点？</p>
+<p><img src="https://vulkan-tutorial.com/images/triangle_coordinates_colors.png" alt="" /></p>
+<p>我们需要对两个着色器做一系列改动才能实现这个。首先，我们需要为每个顶点指定一个不同的颜色。顶点着色器现在应该包含一个颜色数组，就像位置数组那样：</p>
+<pre><code class="language-glsl">vec3 colors[3] = vec3[](
+    vec3(1.0, 0.0, 0.0),
+    vec3(0.0, 1.0, 0.0),
+    vec3(0.0, 0.0, 1.0)
+);
+</code></pre>
+<p>现在我们只需要把每个顶点的颜色传递给片段着色器，这样它就能把这些颜色插值到帧缓冲中去了。在顶点着色器中添加一个输出，然后把它写到<code>main</code>函数里：</p>
+<pre><code class="language-glsl">layout(location = 0) out vec3 fragColor;
+
+void main() {
+    gl_Position = vec4(positions[gl_VertexIndex], 0.0, 1.0);
+    fragColor = colors[gl_VertexIndex];
+}
+</code></pre>
+<p>接下来，我们在片段着色器中添加一个匹配的输入：</p>
+<pre><code class="language-glsl">layout(location = 0) in vec3 fragColor;
+
+void main() {
+    outColor = vec4(fragColor, 1.0);
+}
+</code></pre>
+<p>输入变量不一定必须要用与输出相同的名字，它们之间是通过<code>location</code>指令指定的索引相关联的。<code>main</code>函数被修改成了输出加上一个alpha值的颜色。如上图所示，<code>fragColor</code>的值会被自动插值到三个顶点之间的片段中，以得到一个平滑的渐变。</p>
+<h2 id="编译着色器"><a class="header" href="#编译着色器">编译着色器</a></h2>
+<p>在项目根目录创建一个<code>shaders</code>文件夹，然后把顶点着色器保存为<code>shader.vert</code>，把片段着色器保存为<code>shader.frag</code>，放在这个文件夹里。GLSL着色器没有官方扩展名，不过这两个扩展名比较常用。</p>
+<p><code>shader.vert</code>的内容应该是：</p>
+<pre><code class="language-glsl">#version 450
+#extension GL_ARB_separate_shader_objects : enable
+
+layout(location = 0) out vec3 fragColor;
+
+vec2 positions[3] = vec2[](
+    vec2(0.0, -0.5),
+    vec2(0.5, 0.5),
+    vec2(-0.5, 0.5)
+);
+
+vec3 colors[3] = vec3[](
+    vec3(1.0, 0.0, 0.0),
+    vec3(0.0, 1.0, 0.0),
+    vec3(0.0, 0.0, 1.0)
+);
+
+void main() {
+    gl_Position = vec4(positions[gl_VertexIndex], 0.0, 1.0);
+    fragColor = colors[gl_VertexIndex];
+}
+</code></pre>
+<p>然后<code>shader.frag</code>的内容应该是：</p>
+<pre><code class="language-glsl">#version 450
+#extension GL_ARB_separate_shader_objects : enable
+
+layout(location = 0) in vec3 fragColor;
+
+layout(location = 0) out vec4 outColor;
+
+void main() {
+    outColor = vec4(fragColor, 1.0);
+}
+</code></pre>
+<p>我们现在要使用<code>glslangValidator</code>程序把它们编译成SPIR-V字节码。</p>
+<p>Windows：</p>
+<p>用以下内容创建一个<code>compile.bat</code>文件：</p>
+<pre><code class="language-bash">C:/VulkanSDK/x.x.x.x/Bin32/glslangValidator.exe -V shader.vert
+C:/VulkanSDK/x.x.x.x/Bin32/glslangValidator.exe -V shader.frag
+pause
+</code></pre>
+<p>把其中<code>glslangValidator.exe</code>的路径替换成你自己安装Vulkan SDK的路径，双击文件来运行它。</p>
+<p>Linux：</p>
+<p>用以下内容创建一个<code>compile.sh</code>文件：</p>
+<pre><code class="language-bash">/home/user/VulkanSDK/x.x.x.x/x86_64/bin/glslangValidator -V shader.vert
+/home/user/VulkanSDK/x.x.x.x/x86_64/bin/glslangValidator -V shader.frag
+</code></pre>
+<p>把其中<code>glslangValidator</code>的路径替换成你自己安装Vulkan SDK的路径。使用<code>chmod +x compile.sh</code>把脚本变成可执行的，然后运行它。</p>
+<p>不同平台之间的差异到此结束。</p>
+<p>这两条调用编译器的命令都有<code>-V</code>选项，这告知编译器把GLSL源文件编译成SPIR-V字节码。当你执行了交易脚本，你会看到创建了两个SPIR-V二进制文件：<code>vert.spv</code>和<code>frag.spv</code>。文件名被自动地根据着色器的类型进行了命名，不过你也可以改成任何你喜欢的名字。在编译着色器的时候，你可能会看到一条丢失某些功能（some missing features）的错误，不过你可以安全地无视它们。</p>
+<p>如果你的着色器中有语法错误，那么编译器会告诉你行号和错误，就像你希望的那样。比如，尝试去掉一个分号然后再执行一次编译脚本。或者不带任何选项地运行一次编译器来看看它都支持什么选项。例如，它还能把字节码还原成人类可读的形式，这样你就可以看到你的着色器到底是怎么工作的，以及在这一步进行了哪些优化。</p>
+<p>使用命令行来编译着色器是一个很直观的选项，这也是我们在教程中使用的方法，不过也可以直接用你自己的代码来编译着色器。Vulkan SDK包含了<a href="https://github.com/google/shaderc">libshaderc</a>，这是一个可以在程序中把GLSL编译成SPIR-V的库。</p>
+<h2 id="加载着色器"><a class="header" href="#加载着色器">加载着色器</a></h2>
+<p>我们已经生成了SPIR-V着色器，现在是时候把它们加载到程序里，然后把它们插入到图形渲染管线的某一阶段了。首先我们会写一个简单的帮助函数来把二进制数据从文件中加载出来。</p>
+<pre><code class="language-c++">#include &lt;fstream&gt;
+
+...
+
+static std::vector&lt;char&gt; readFile(const std::string&amp; filename) {
+    std::ifstream file(filename, std::ios::ate | std::ios::binary);
+
+    if (!file.is_open()) {
+        throw std::runtime_error(&quot;failed to open file!&quot;);
+    }
+}
+</code></pre>
+<p><code>readFile</code>函数会把指定文件中所有的字节读出来，然后返回到一个由<code>std::vector</code>管理的字节数组中。我们从带有两个选项的读取文件开始：</p>
+<ul>
+<li><code>ate</code>：从文件末尾开始读取</li>
+<li><code>binary</code>：以二进制形式读取文件（以避免文本转换）</li>
+</ul>
+<p>从文件末尾开始读取的好处是我们可以通过读取文件位置来获取文件的大小，然后分配缓存：</p>
+<pre><code class="language-c++">size_t fileSize = (size_t) file.tellg();
+std::vector&lt;char&gt; buffer(fileSize);
+</code></pre>
+<p>然后，我们就可以把文件指针（seek）移回文件开头来一次性读取所有字节了：</p>
+<pre><code class="language-c++">file.seekg(0);
+file.read(buffer.data(), fileSize);
+</code></pre>
+<p>最后关闭文件然后返回字节：</p>
+<pre><code class="language-c++">file.close();
+
+return buffer;
+</code></pre>
+<p>我们现在可以在<code>createGraphicsPipeline</code>函数中调用这个函数来从两个着色器中读取字节码了：</p>
+<pre><code class="language-c++">void createGraphicsPipeline() {
+    auto vertShaderCode = readFile(&quot;shaders/vert.spv&quot;);
+    auto fragShaderCode = readFile(&quot;shaders/frag.spv&quot;);
+}
+</code></pre>
+<p>通过输出缓存的大小并且检查其是否与文件的实际大小相匹配来确保着色器被正确地加载了。注意，代码不一定必须是C风格字符串（以<code>\0</code>结尾），因为它是二进制代码，并且稍后我们会确定它的大小。</p>
+<h2 id="创建着色器模块"><a class="header" href="#创建着色器模块">创建着色器模块</a></h2>
+<p>在我们能够把代码传递给图形渲染管线之前，我们必须用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkShaderModule.html"><code>VkShaderModule</code></a>对象来包裹它。创建一个<code>createShaderModule</code>帮助函数来实现这一点。</p>
+<pre><code class="language-c++">VkShaderModule createShaderModule(const std::vector&lt;char&gt;&amp; code) {
+
+}
+</code></pre>
+<p>这个函数将会以参数形式接受一个字节码缓存，然后根据缓存创建一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkShaderModule.html"><code>VkShaderModule</code></a>。</p>
+<p>创建着色器模块非常简单，我们只需要指定一个指向字节码缓存的指针，以及缓存的长度就可以了。这些信息由一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkShaderModuleCreateInfo.html"><code>VkShaderModuleCreateInfo</code></a>结构体指定。有一个问题是，字节码代码的单位是字节，但是字节码指针是一个<code>uint32_t</code>指针，而不是<code>char</code>指针。因此我们需要用<code>reinterpret_cast</code>来转换指针，就像下面代码所示一样。执行这样的转换时，还需要保证数据满足<code>uint32_t</code>的对齐要求。幸运的是，数据保存在<code>std::vector</code>中，它的默认分配器已经保证了数据能够满足任何情况的对齐要求。</p>
+<pre><code class="language-c++">VkShaderModuleCreateInfo createInfo = {};
+createInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
+createInfo.codeSize = code.size();
+createInfo.pCode = reinterpret_cast&lt;const uint32_t*&gt;(code.data());
+</code></pre>
+<p>现在<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkShaderModule.html"><code>VkShaderModule</code></a>可以通过调用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateShaderModule.html"><code>vkCreateShaderModule</code></a>来创建了：</p>
+<pre><code class="language-c++">VkShaderModule shaderModule;
+if (vkCreateShaderModule(device, &amp;createInfo, nullptr, &amp;shaderModule) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to create shader module!&quot;);
+}
+</code></pre>
+<p>参数与之前那些对象创建函数相同：逻辑设备、指向创建信息结构体的指针、可选的分配器指针以及指向保存句柄的变量的指针。在创建了着色器模块后，代码缓存可以被立即释放了。别忘了返回着色器模块：</p>
+<pre><code class="language-c++">return shaderModule;
+</code></pre>
+<p>着色器模块只是对我们之前加载的着色器字节码以及其中定义的函数的一个简单包裹。在图形渲染管线创建之前，不会对SPIR-V字节码进行编译和链接以供GPU执行。这就是说，当图形渲染管线创建好之后，我们可以再次销毁着色器模块，这就是为什么我们把这些变量设置为<code>createGraphicsPipeline</code>函数中的局部变量，而不是类的成员变量的原因：</p>
+<pre><code class="language-c++">void createGraphicsPipeline() {
+    auto vertShaderCode = readFile(&quot;shaders/vert.spv&quot;);
+    auto fragShaderCode = readFile(&quot;shaders/frag.spv&quot;);
+
+    VkShaderModule vertShaderModule = createShaderModule(vertShaderCode);
+    VkShaderModule fragShaderModule = createShaderModule(fragShaderCode);
+</code></pre>
+<p>着色器模块的销毁应该在函数结尾处调用两个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkDestroyShaderModule.html"><code>vkDestroyShaderModule</code></a>函数。本章中所有剩下的代码都会在这两行之前插入：</p>
+<pre><code class="language-c++">   ...
+    vkDestroyShaderModule(device, fragShaderModule, nullptr);
+    vkDestroyShaderModule(device, vertShaderModule, nullptr);
+}
+</code></pre>
+<h2 id="创建着色器阶段"><a class="header" href="#创建着色器阶段">创建着色器阶段</a></h2>
+<p>要使用着色器，我们需要通过<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineShaderStageCreateInfo.html"><code>VkPipelineShaderStageCreateInfo</code></a>结构体把它们分配到图形渲染管线上的某一阶段，作为管线创建过程的一部分。</p>
+<p>我们首先来在<code>createGraphicsPipeline</code>函数中填充顶点着色器的结构。</p>
+<pre><code class="language-c++">VkPipelineShaderStageCreateInfo vertShaderStageInfo = {};
+vertShaderStageInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
+vertShaderStageInfo.stage = VK_SHADER_STAGE_VERTEX_BIT;
+</code></pre>
+<p>除了必需的<code>sType</code>成员以外，第一步是要告诉Vulkan这个着色器将在哪一阶段使用。一个枚举值包括了上一章提到的所有可编程阶段。</p>
+<pre><code class="language-c++">vertShaderStageInfo.module = vertShaderModule;
+vertShaderStageInfo.pName = &quot;main&quot;;
+</code></pre>
+<p>接下来两个成员指定包含了代码的着色器模块，以及要调用的、叫做“入口点”的函数。这意味着你可以把多个片段着色器放到一个着色器模块中，然后通过使用不同的入口点来切换它们的行为。不过这里我们用标准的<code>main</code>。</p>
+<p>还有一个可选的成员，<code>pSpecializationInfo</code>，我们在这里不用它，但是它有讲解一下的价值。它允许你为着色器常量指定值。通过它，你可以使用一个在管线创建阶段通过不同常量值改变配置的着色器模块。这比起在渲染时通过变量改变配置的效率更高，因为编译器可以-进行优化，比如删除依赖于这些常量值的<code>if</code>语句。如果你没有设置常量值，你可以把这个成员设为<code>nullptr</code>，我们的结构体会自动进行初始化。</p>
+<p>把结构体修改成适合片段着色器的也很简单：</p>
+<pre><code class="language-c++">VkPipelineShaderStageCreateInfo fragShaderStageInfo = {};
+fragShaderStageInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
+fragShaderStageInfo.stage = VK_SHADER_STAGE_FRAGMENT_BIT;
+fragShaderStageInfo.module = fragShaderModule;
+fragShaderStageInfo.pName = &quot;main&quot;;
+</code></pre>
+<p>最后，定义一个数组来包含这两个皆否提，过一会儿真正来创建管线额时候会用到它们的引用。</p>
+<pre><code class="language-c++">VkPipelineShaderStageCreateInfo shaderStages[] = {vertShaderStageInfo, fragShaderStageInfo};
+</code></pre>
+<p>到此为止，管线中的可编程部分就描述完了。下一章我们会来看看固定功能部分。</p>
+<p><a href="https://vulkan-tutorial.com/code/09_shader_modules.cpp">C++代码</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.vert">顶点着色器</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.frag">片段着色器</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="固定功能"><a class="header" href="#固定功能">固定功能</a></h1>
+<p>在那些老式图形API中，几乎为图形渲染管线中的每一步都提供了默认值。在Vulkan中则需要你显式指定所有东西，从视口大小到颜色混合函数。在这一章我们会填充所有必需的结构体来配置这些固定功能操作。</p>
+<h2 id="顶点输入"><a class="header" href="#顶点输入">顶点输入</a></h2>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineVertexInputStateCreateInfo.html"><code>VkPipelineVertexInputStateCreateInfo</code></a>结构体描述了将要传递给顶点着色器的顶点数据的格式。它大致以两种方式描述这个格式：</p>
+<ul>
+<li>绑定（Bindings）：数据之间的间距（spacing），以及数据是按顶点的还是按实例的（请参阅 <a href="https://en.wikipedia.org/wiki/Geometry_instancing">instancing</a>（几何体实例化））。</li>
+<li>描述属性（Attribute descriptions）：传递给顶点着色器的属性的类型，用来加载这些属性，并指明在何处（offset）加载。</li>
+</ul>
+<p>因为我们把顶点数据硬编码到了顶点着色器中，因此我们在这里暂时按照没有顶点数据的格式来填充这个结构体，在顶点缓冲一章我们会回来研究它。</p>
+<pre><code class="language-c++">VkPipelineVertexInputStateCreateInfo vertexInputInfo = {};
+vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
+vertexInputInfo.vertexBindingDescriptionCount = 0;
+vertexInputInfo.pVertexBindingDescriptions = nullptr; // Optional
+vertexInputInfo.vertexAttributeDescriptionCount = 0;
+vertexInputInfo.pVertexAttributeDescriptions = nullptr; // Optional
+</code></pre>
+<p><code>pVertexBindingDescriptions</code>和<code>pVertexAttributeDescriptions</code>成员指向一个描述之前说过的用来加载顶点数据的详细信息的结构体的数组。把这个结构体加到<code>createGraphicsPipeline</code>函数中的<code>shaderStages</code>数组后面。</p>
+<h2 id="顶点装配"><a class="header" href="#顶点装配">顶点装配</a></h2>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineInputAssemblyStateCreateInfo.html"><code>VkPipelineInputAssemblyStateCreateInfo</code></a>结构体描述了两个东西：从顶点绘制什么样的几何体，以及是否启用图元重启（primitive restart）。前一项由<code>topology</code>（拓扑）成员指定，并且可以拥有下列值：</p>
+<ul>
+<li><code>VK_PRIMITIVE_TOPOLOGY_POINT_LIST</code>：把每个顶点绘制成点</li>
+<li><code>VK_PRIMITIVE_TOPOLOGY_LINE_LIST</code>：每两个顶点绘制成一条线，不重用顶点</li>
+<li><code>VK_PRIMITIVE_TOPOLOGY_LINE_STRIP</code>每条线的末端顶点用作下一条线的起始顶点</li>
+<li><code>VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST</code>：每三个顶点绘制成一个三角形，不重用顶点</li>
+<li><code>VK_PRIMITIVE_TOPOLOGY_TRIANGLE_STRIP</code>：每个三角形的第二个和第三个顶点作为下一个三角形的前两个顶点</li>
+</ul>
+<p>通常来说，从顶点缓冲中按索引加载的顶点都是按顺序排列的，不过使用“索引缓冲”（element buffer）可以让你自己指定想要使用的索引。这允许你进行优化，比如重用顶点。如果你把<code>primitiveRestartEnable</code>成员设为了<code>VK_TRUE</code>，那么就可以通过使用一个特殊顶点<code>0xFFFF</code>或<code>0xFFFFFFFF</code>分解<code>_STRIP</code>拓扑模式中的线和三角形。</p>
+<p>在此教程中我们打算画一个三角形，所以我们用以下数据填充结构体：</p>
+<pre><code class="language-c++">VkPipelineInputAssemblyStateCreateInfo inputAssembly = {};
+inputAssembly.sType = VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
+inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
+inputAssembly.primitiveRestartEnable = VK_FALSE;
+</code></pre>
+<h2 id="视口与裁剪"><a class="header" href="#视口与裁剪">视口与裁剪</a></h2>
+<p>视口基本上描述了将会被输出所渲染的帧缓冲的范围。这个范围绝大多数情况下都是<code>(0, 0)</code>到<code>(width, height)</code>，并且在我们的教程中也是如此。</p>
+<pre><code class="language-c++">VkViewport viewport = {};
+viewport.x = 0.0f;
+viewport.y = 0.0f;
+viewport.width = (float) swapChainExtent.width;
+viewport.height = (float) swapChainExtent.height;
+viewport.minDepth = 0.0f;
+viewport.maxDepth = 1.0f;
+</code></pre>
+<p>记住，交换链及其中的图像的大小可能与窗口的大小不同。交换链中的图像稍后会被用作帧缓冲，因此我们使用它们的大小。</p>
+<p><code>minDepth</code>和<code>maxDepth</code>指定了帧缓冲中深度的范围。这些值必须在<code>[0.0f, 1.0f]</code>范围中，但是<code>minDepth</code>有可能大于<code>maxDepth</code>。如果你不打算做什么特别的操作，你应该把它们设为标准值<code>0.0f</code>和<code>1.0f</code>。</p>
+<p>视口定义了从图像到帧缓冲的转换方式，而裁剪矩形定义了什么范围里的像素会被储存。所有在裁剪矩形外面的像素都会在光栅化时被丢弃。裁剪矩形的功能更像是过滤器，而不是转换方式。裁剪矩形与视口之间的差异如下图所示。注意，左边的裁剪矩形只是导致这个输出结果的一种可能，只要裁剪矩形大于视口就会产生类似效果。</p>
+<p><img src="https://vulkan-tutorial.com/images/viewports_scissors.png" alt="" /></p>
+<p>在此教程中我们只想简单地绘制整个帧缓冲，因此我们定义一个覆盖了整个帧缓冲的裁剪矩形：</p>
+<pre><code class="language-c++">VkRect2D scissor = {};
+scissor.offset = {0, 0};
+scissor.extent = swapChainExtent;
+</code></pre>
+<p>现在视口和裁剪矩形需要通过<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineViewportStateCreateInfo.html"><code>VkPipelineViewportStateCreateInfo</code></a>结构体链接到一个视口状态（viewport state ）中。在某些显卡上，你可以使用多个视口与裁剪矩形，所以它的成员是视口与裁剪矩形的数组。使用多个视口与裁剪矩形需要打开一个GPU功能（参阅创建逻辑设备一节）。</p>
+<pre><code class="language-c++">VkPipelineViewportStateCreateInfo viewportState = {};
+viewportState.sType = VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;
+viewportState.viewportCount = 1;
+viewportState.pViewports = &amp;viewport;
+viewportState.scissorCount = 1;
+viewportState.pScissors = &amp;scissor;
+</code></pre>
+<h2 id="光栅化"><a class="header" href="#光栅化">光栅化</a></h2>
+<p>光栅化阶段接受由顶点着色器产生的顶点组成的图元，并把它们转换成片段以供片段着色器上色。这一步还会进行<a href="https://zh.wikipedia.org/wiki/%E6%B7%B1%E5%BA%A6%E7%BC%93%E5%86%B2">深度测试</a>、<a href="https://en.wikipedia.org/wiki/Back-face_culling">面剔除</a>（英文链接）和裁剪测试，它还可以进行配置，以渲染整个多边形，或者只渲染多边形的边缘（线框渲染）。所有的这些配置都可以通过<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineRasterizationStateCreateInfo.html"><code>VkPipelineRasterizationStateCreateInfo</code></a>结构体进行。</p>
+<pre><code class="language-c++">VkPipelineRasterizationStateCreateInfo rasterizer = {};
+rasterizer.sType = VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO;
+rasterizer.depthClampEnable = VK_FALSE;
+</code></pre>
+<p>如果<code>depthClampEnable</code>被设为了<code>VK_TRUE</code>，那么过近或过远的片段会被放到远近平面中间，而不是丢弃这些片段。（此句存疑，原文：If <code>depthClampEnable</code> is set to <code>VK_TRUE</code>, then fragments that are beyond the near and far planes are clamped to them as opposed to discarding them.）这在某些情况下很有用，比如阴影映射。使用它需要打开一项GPU功能。</p>
+<pre><code class="language-c++">rasterizer.rasterizerDiscardEnable = VK_FALSE;
+</code></pre>
+<p>如果<code>rasterizerDiscardEnable</code>被设为了<code>VK_TRUE</code>，那么图元将永远不会被传送到光栅化这一步。这基本上禁用了向帧缓冲的输出。</p>
+<pre><code class="language-c++">rasterizer.polygonMode = VK_POLYGON_MODE_FILL;
+</code></pre>
+<p><code>polygonMode</code>指定了如何从图元生成片段。有下列模式可用：</p>
+<ul>
+<li><code>VK_POLYGON_MODE_FILL</code>：用片段填充整个图元的范围</li>
+<li><code>VK_POLYGON_MODE_LINE</code>：将图元的边绘制为线段</li>
+<li><code>VK_POLYGON_MODE_POINT</code>：将图元的顶点绘制为点</li>
+</ul>
+<p>使用除填充模式以外的模式需要启用一项GPU功能。</p>
+<pre><code class="language-c++">rasterizer.lineWidth = 1.0f;
+</code></pre>
+<p><code>lineWidth</code>成员的含义很直观，它描述了线的宽度。最大线宽取决于硬件，并且要使用大于<code>1.0f</code>的线宽需要你启用<code>wideLines</code>GPU功能。</p>
+<pre><code class="language-c++">rasterizer.cullMode = VK_CULL_MODE_BACK_BIT;
+rasterizer.frontFace = VK_FRONT_FACE_CLOCKWISE;
+</code></pre>
+<p><code>cullMode</code>成员指定你要使用的面剔除类型。你可以关闭面剔除、剔除正面朝向（front face）的面、剔除背面朝向（back face）的面，或者都剔除。<code>frontFace</code>成员指定了正面的顶点连接顺序，可以是顺时针或者逆时针。</p>
+<pre><code class="language-c++">rasterizer.depthBiasEnable = VK_FALSE;
+rasterizer.depthBiasConstantFactor = 0.0f; // Optional
+rasterizer.depthBiasClamp = 0.0f; // Optional
+rasterizer.depthBiasSlopeFactor = 0.0f; // Optional
+</code></pre>
+<p>在进行光栅化时，可以通过添加常量值或者基于片段的斜率（slope）进行偏移（bias）来更改深度值。阴影映射中有时会用到这一点，不过我们不会用到。把<code>depthBiasEnable</code>设为<code>VK_FALSE</code>就好。</p>
+<h2 id="多重采样"><a class="header" href="#多重采样">多重采样</a></h2>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineMultisampleStateCreateInfo.html"><code>VkPipelineMultisampleStateCreateInfo</code></a>结构体设置多重采样，这是实现<a href="https://zh.wikipedia.org/wiki/%E5%8F%8D%E9%8B%B8%E9%BD%92#%E5%A4%9A%E9%87%8D%E9%87%87%E6%A0%B7%E6%8A%97%E9%94%AF%E9%BD%BF">反锯齿</a>的一种方式。它的工作方式是，把多个多边形执行片段着色器后的结果叠加到相同的像素上去。这主要影响边缘，而边缘也是产生锯齿最明显的地方。多重采样比单纯渲染一个高分辨率图像再缩小的方式开销要小得多，因为如果一个多边形只映射到一个像素时，只需运行一次片段着色器。启用多重采样需要开启一项GPU功能。</p>
+<pre><code class="language-c++">VkPipelineMultisampleStateCreateInfo multisampling = {};
+multisampling.sType = VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO;
+multisampling.sampleShadingEnable = VK_FALSE;
+multisampling.rasterizationSamples = VK_SAMPLE_COUNT_1_BIT;
+multisampling.minSampleShading = 1.0f; // Optional
+multisampling.pSampleMask = nullptr; // Optional
+multisampling.alphaToCoverageEnable = VK_FALSE; // Optional
+multisampling.alphaToOneEnable = VK_FALSE; // Optional
+</code></pre>
+<p>在稍后的章节中我们会再次探讨多重采样，现在暂时把它关闭。</p>
+<h2 id="深度测试和模板测试"><a class="header" href="#深度测试和模板测试">深度测试和模板测试</a></h2>
+<p>如果你使用了深度缓冲和/或模板缓冲，那么你需要通过<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineDepthStencilStateCreateInfo.html"><code>VkPipelineDepthStencilStateCreateInfo</code></a>来配置深度测试和模板测试。不过我们现在还没有用到深度缓冲和模板缓冲，因此我们就只传递一个<code>nullptr</code>来取代这个结构体的指针。我们会在深度缓冲一章再回来讨论它。</p>
+<h2 id="颜色混合"><a class="header" href="#颜色混合">颜色混合</a></h2>
+<p>在片段着色器返回一个颜色之后，它需要与已经存在于帧缓冲中的颜色进行混合。这种变换叫做“颜色混合”，并且颜色混合有两种方式：</p>
+<ul>
+<li>把旧的颜色和新的颜色混合之后产生最终的颜色</li>
+<li>通过位运算来混合旧颜色和新颜色</li>
+</ul>
+<p>有两种结构体可以设置颜色混合。第一种结构体，<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineColorBlendAttachmentState.html"><code>VkPipelineColorBlendAttachmentState</code></a>包含了针对每个帧缓冲进行的设置；第二种结构体，<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineColorBlendStateCreateInfo.html"><code>VkPipelineColorBlendStateCreateInfo</code></a>包含了全局的颜色混合选项。对于我们来说，我们只有一个帧缓冲：</p>
+<pre><code class="language-c++">VkPipelineColorBlendAttachmentState colorBlendAttachment = {};
+colorBlendAttachment.colorWriteMask = VK_COLOR_COMPONENT_R_BIT | VK_COLOR_COMPONENT_G_BIT | VK_COLOR_COMPONENT_B_BIT | VK_COLOR_COMPONENT_A_BIT;
+colorBlendAttachment.blendEnable = VK_FALSE;
+colorBlendAttachment.srcColorBlendFactor = VK_BLEND_FACTOR_ONE; // Optional
+colorBlendAttachment.dstColorBlendFactor = VK_BLEND_FACTOR_ZERO; // Optional
+colorBlendAttachment.colorBlendOp = VK_BLEND_OP_ADD; // Optional
+colorBlendAttachment.srcAlphaBlendFactor = VK_BLEND_FACTOR_ONE; // Optional
+colorBlendAttachment.dstAlphaBlendFactor = VK_BLEND_FACTOR_ZERO; // Optional
+colorBlendAttachment.alphaBlendOp = VK_BLEND_OP_ADD; // Optional
+</code></pre>
+<p>这个针对每个帧缓冲的结构体允许你配置颜色混合的第一种方式。下面的伪代码很好地演示了将要执行的操作：</p>
+<pre><code class="language-c++">if (blendEnable) {
+    finalColor.rgb = (srcColorBlendFactor * newColor.rgb) &lt;colorBlendOp&gt; (dstColorBlendFactor * oldColor.rgb);
+    finalColor.a = (srcAlphaBlendFactor * newColor.a) &lt;alphaBlendOp&gt; (dstAlphaBlendFactor * oldColor.a);
+} else {
+    finalColor = newColor;
+}
+
+finalColor = finalColor &amp; colorWriteMask;
+</code></pre>
+<p>如果<code>blendEnable</code>被设为了<code>VK_FALSE</code>，那么片段着色器产生的新颜色不会经过任何修改就会被传递出去。否则，这两步混合操作就会计算出新的颜色。产生的颜色与<code>colorWriteMask</code>进行按位与运算，来决定最终会被传递出去的通道。</p>
+<p>最常用的颜色混合是实现alpha混合，新颜色会基于它的不透明度与旧颜色进行混合。这样，<code>finalColor</code>就应该使用如下方式计算：</p>
+<pre><code class="language-c++">finalColor.rgb = newAlpha * newColor + (1 - newAlpha) * oldColor;
+finalColor.a = newAlpha.a;
+</code></pre>
+<p>可以通过以下参数来实现：</p>
+<pre><code class="language-c++">colorBlendAttachment.blendEnable = VK_TRUE;
+colorBlendAttachment.srcColorBlendFactor = VK_BLEND_FACTOR_SRC_ALPHA;
+colorBlendAttachment.dstColorBlendFactor = VK_BLEND_FACTOR_ONE_MINUS_SRC_ALPHA;
+colorBlendAttachment.colorBlendOp = VK_BLEND_OP_ADD;
+colorBlendAttachment.srcAlphaBlendFactor = VK_BLEND_FACTOR_ONE;
+colorBlendAttachment.dstAlphaBlendFactor = VK_BLEND_FACTOR_ZERO;
+colorBlendAttachment.alphaBlendOp = VK_BLEND_OP_ADD;
+</code></pre>
+<p>你可以在规范中的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkBlendFactor.html"><code>VkBlendFactor</code></a>和<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkBlendOp.html"><code>VkBlendOp</code></a>枚举值中找到所有可以进行的操作。</p>
+<p>第二个结构体引用了一个包含了所有针对单个帧缓冲进行设置的结构体的数组，并且允许你设置混合常量，你可以在上述计算中把这些常量作为混合因子。</p>
+<pre><code class="language-c++">VkPipelineColorBlendStateCreateInfo colorBlending = {};
+colorBlending.sType = VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_STATE_CREATE_INFO;
+colorBlending.logicOpEnable = VK_FALSE;
+colorBlending.logicOp = VK_LOGIC_OP_COPY; // Optional
+colorBlending.attachmentCount = 1;
+colorBlending.pAttachments = &amp;colorBlendAttachment;
+colorBlending.blendConstants[0] = 0.0f; // Optional
+colorBlending.blendConstants[1] = 0.0f; // Optional
+colorBlending.blendConstants[2] = 0.0f; // Optional
+colorBlending.blendConstants[3] = 0.0f; // Optional
+</code></pre>
+<p>如果你想使用颜色混合的第二种方式（位运算混合），那么你应该把<code>logicOpEnable</code>设为<code>VK_TRUE</code>。位运算可以通过<code>logicOp</code>成员来指定。注意，这将会自动禁用第一种方式，就像是你把每个帧缓冲的设置中的<code>blendEnable</code>设为了<code>VK_FALSE</code>一样！<code>colorWriteMask</code>在第二种模式中同样可用，用来指定帧缓冲中的哪些通道最终会起作用。也可以把这两种模式都关闭，就像我们现在做的这样，这种情况下片段的颜色会被直接写入帧缓冲而不加修改。</p>
+<h2 id="动态设置"><a class="header" href="#动态设置">动态设置</a></h2>
+<p>我们已经设置好的那些设置项里，有很少一部分可以不重建管线而直接修改，比如视口的大小、线宽和混合常量等。如果你想进行动态设置，那么你需要像这样来填充一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineDynamicStateCreateInfo.html"><code>VkPipelineDynamicStateCreateInfo</code></a>结构体：</p>
+<pre><code class="language-c++">VkDynamicState dynamicStates[] = {
+    VK_DYNAMIC_STATE_VIEWPORT,
+    VK_DYNAMIC_STATE_LINE_WIDTH
+};
+
+VkPipelineDynamicStateCreateInfo dynamicState = {};
+dynamicState.sType = VK_STRUCTURE_TYPE_PIPELINE_DYNAMIC_STATE_CREATE_INFO;
+dynamicState.dynamicStateCount = 2;
+dynamicState.pDynamicStates = dynamicStates;
+</code></pre>
+<p>这会使我们之前的设置全部被忽略，然后你必须在绘制时指定这些设置项的值。在之后的章节里我们会来讨论这个问题。如果你不想执行任何动态设置，你可以一会直接传递一个<code>nullptr</code>来替代这个结构体。</p>
+<h2 id="管线布局"><a class="header" href="#管线布局">管线布局</a></h2>
+<p>你可以在着色器中使用<code>uniform</code>值，这是一种类似于动态状态变量（dynamic state variable）的全局变量，你可以在绘制时更改这些变量的值来更改着色器的行为，而不需要重新创建着色器。它们通常用来向顶点着色器传递变换矩阵，或者在片段着色器中创建纹理采样器（texture sampler）。</p>
+<p>这些uniform值需要在创建管线时通过<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineLayout.html"><code>VkPipelineLayout</code></a>对象指定。尽管目前几章不会用到uniform值，我们还是必须创建一个空的管线布局（pipeline layout）。</p>
+<p>新建一个成员变量来保存这个对象，因为之后有其它函数会用到它：</p>
+<pre><code class="language-c++">VkPipelineLayout pipelineLayout;
+</code></pre>
+<p>然后在<code>createGraphicsPipeline</code>函数中创建对象：</p>
+<pre><code class="language-c++">VkPipelineLayoutCreateInfo pipelineLayoutInfo = {};
+pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
+pipelineLayoutInfo.setLayoutCount = 0; // Optional
+pipelineLayoutInfo.pSetLayouts = nullptr; // Optional
+pipelineLayoutInfo.pushConstantRangeCount = 0; // Optional
+pipelineLayoutInfo.pPushConstantRanges = nullptr; // Optional
+
+if (vkCreatePipelineLayout(device, &amp;pipelineLayoutInfo, nullptr, &amp;pipelineLayout) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to create pipeline layout!&quot;);
+}
+</code></pre>
+<p>这个结构体同时指定了“推送常量”（push constant），推送常量是向着色器传递动态值的另一种方式，我们会在以后的章节中深入探讨。管线布局在程序的整个生命周期中都会被引用，因此它应该在程序末尾被销毁：</p>
+<pre><code class="language-c++">void cleanup() {
+    vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
+    ...
+}
+</code></pre>
+<h2 id="小结-1"><a class="header" href="#小结-1">小结</a></h2>
+<p>到此，就完成了所有固定功能的设置！从头设置好这一切是个大工程，不过好处在于我们现在几乎完全了解了图形渲染管线中将会发生的一切！这减少了由于某个组件的默认值与期望值不符而产生意外行为的可能。</p>
+<p>不过在最终创建图形渲染管线之前，还有一个对象需要创建，它就是渲染过程。</p>
+<p><a href="https://vulkan-tutorial.com/code/10_fixed_functions.cpp">C++代码</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.vert">顶点着色器</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.frag">片段着色器</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="渲染过程"><a class="header" href="#渲染过程">渲染过程</a></h1>
+<h2 id="建立"><a class="header" href="#建立">建立</a></h2>
+<p>在我们完成图形渲染管线的创建之前，我们需要告知Vulkan在渲染时要使用的帧缓冲的附件（attachment）。我们需要指定颜色缓冲和深度缓冲的数量、每个缓冲中有多少个样本（sample）以及样本中的内容在整个渲染操作中会被怎样处理。所有这些信息都会被“渲染过程”（render pass）对象所包裹，为此我们会新建一个<code>createRenderPass</code>函数。在<code>initVulkan</code>函数中的<code>createGraphicsPipeline</code>后面调用这个函数。</p>
+<pre><code class="language-c++">void initVulkan() {
+    createInstance();
+    setupDebugCallback();
+    createSurface();
+    pickPhysicalDevice();
+    createLogicalDevice();
+    createSwapChain();
+    createImageViews();
+    createRenderPass();
+    createGraphicsPipeline();
+}
+
+...
+
+void createRenderPass() {
+
+}
+</code></pre>
+<h2 id="附件描述"><a class="header" href="#附件描述">附件描述</a></h2>
+<p>在我们的程序中，我们只有一个简单的颜色缓冲附件，它由交换链中的一个图像表示。</p>
+<pre><code class="language-c++">void createRenderPass() {
+    VkAttachmentDescription colorAttachment = {};
+    colorAttachment.format = swapChainImageFormat;
+    colorAttachment.samples = VK_SAMPLE_COUNT_1_BIT;
+}
+</code></pre>
+<p>颜色附件的<code>format</code>（格式）应该与交换链图像的格式一致，并且由于我们目前不想进行多重采样，我们就设置为1个样本。</p>
+<pre><code class="language-c++">colorAttachment.loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR;
+colorAttachment.storeOp = VK_ATTACHMENT_STORE_OP_STORE;
+</code></pre>
+<p><code>loadOp</code>和<code>storeOp</code>分别指定在渲染之前和之后如何处理附件中的数据。对于<code>loadOp</code>而言，有如下选项：</p>
+<ul>
+<li><code>VK_ATTACHMENT_LOAD_OP_LOAD</code>：保留附件中已有的内容</li>
+<li><code>VK_ATTACHMENT_LOAD_OP_CLEAR</code>：在开始渲染时用一个常量将附件中的值清空</li>
+<li><code>VK_ATTACHMENT_LOAD_OP_DONT_CARE</code>：附件中现有的内容未定义；我们不需要关心它们</li>
+</ul>
+<p>在我们的程序中我们会使用清除操作来在绘制新一帧之前把帧缓冲中的颜色清空为黑色。对于<code>storeOp</code>二眼只有两种选项：</p>
+<ul>
+<li><code>VK_ATTACHMENT_STORE_OP_STORE</code>：绘制过的内容会被储存在内存中以便稍后读取</li>
+<li><code>VK_ATTACHMENT_STORE_OP_DONT_CARE</code>：帧缓冲中的内容在绘制操作结束后将变为未定义的</li>
+</ul>
+<p>我们想在屏幕上看到绘制出的三角形，因此我们在此选择存储操作。</p>
+<pre><code class="language-c++">colorAttachment.stencilLoadOp = VK_ATTACHMENT_LOAD_OP_DONT_CARE;
+colorAttachment.stencilStoreOp = VK_ATTACHMENT_STORE_OP_DONT_CARE;
+</code></pre>
+<p><code>loadOp</code>和<code>storeOp</code>应用于颜色和深度数据，而<code>stencilLoadOp</code>和<code>stencilStoreOp</code>则应用于模板数据。我们的程序中不会对模板缓冲执行任何操作，因此加载和存储的结果与我们的程序无关。</p>
+<pre><code class="language-c++">colorAttachment.initialLayout = VK_IMAGE_LAYOUT_UNDEFINED;
+colorAttachment.finalLayout = VK_IMAGE_LAYOUT_PRESENT_SRC_KHR;
+</code></pre>
+<p>Vulkan中的纹理和帧缓冲由使用特定像素格式的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkImage.html"><code>VkImage</code></a>对象来表示，但是内存中的像素布局可以根据你想对图像执行的操作而进行改变。</p>
+<p>一些最常用的布局是：</p>
+<ul>
+<li><code>VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL</code>：将图像用作颜色附件</li>
+<li><code>VK_IMAGE_LAYOUT_PRESENT_SRC_KHR</code>：图像将会在交换链中用作显示</li>
+<li><code>VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL</code>：图像将作为一个内存复制操作的目标</li>
+</ul>
+<p>我们会在纹理一节深入探讨这个话题，不过现在需要知道的是，图像需要被转换，以适应它们要参与的下一步操作的特定布局。</p>
+<p><code>initialLayout</code>指定了在渲染过程开始之前图像的布局。<code>finalLayout</code>指定了渲染过程结束后图像将会自动转换成什么布局。给<code>initialLayout</code>指定<code>VK_IMAGE_LAYOUT_UNDEFINED</code>意味着我们不关心图像之前是什么布局。使用这个特殊值会导致图像中的内容不一定会被保留，不过对我们来说无所谓，反正我们都会清空图像内容。我们希望图像在渲染之后可以用在交换链里来显示，因此我们给<code>finalLayout</code>指定了<code>VK_IMAGE_LAYOUT_PRESENT_SRC_KHR</code>。</p>
+<h2 id="子过程与附件的引用"><a class="header" href="#子过程与附件的引用">子过程与附件的引用</a></h2>
+<p>一个渲染过程可以包含若干子过程。子过程是一些在渲染后期进行的操作，这些操作依赖于之前的过程在帧缓冲中已经绘制的内容，比如一个接一个地应用一系列后期处理效果。如果你把这些渲染操作全都集中到一个渲染过程中去的话，Vulkan就可以对这些操作重新排序，并且节省内存带宽以得到最佳性能。对于我们最初的这个三角形来说，我们只需要一个子过程。</p>
+<p>每个子过程都引用了一个或多个附件，就是我们在上一节用结构体描述的那些。这些引用就是<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkAttachmentReference.html"><code>VkAttachmentReference</code></a>结构体，它看起来像是这样：</p>
+<pre><code class="language-c++">VkAttachmentReference colorAttachmentRef = {};
+colorAttachmentRef.attachment = 0;
+colorAttachmentRef.layout = VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL;
+</code></pre>
+<p><code>attachment</code>参数使用索引指定了在附件描述数组中要引用哪个附件。我们的数组中只有一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkAttachmentDescription.html"><code>VkAttachmentDescription</code></a>，因此它的索引是<code>0</code>。<code>layout</code>指定了在子过程使用这个附件的时候，我们希望附件拥有什么布局。当子过程开始的时候，Vulkan会自动把附件转换成这个布局。我们想把附件当作一个颜色缓冲来使用，而<code>VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL</code>如其名字所示，可以发挥出最佳的性能。</p>
+<p>子过程使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkSubpassDescription.html"><code>VkSubpassDescription</code></a>结构体来描述：</p>
+<pre><code class="language-c++">VkSubpassDescription subpass = {};
+subpass.pipelineBindPoint = VK_PIPELINE_BIND_POINT_GRAPHICS;
+</code></pre>
+<p>在未来，Vulkan有可能支持计算子过程，索移我们必须显式声明这是一个图形子过程。接下来，我们要指定颜色附件的引用：</p>
+<pre><code class="language-c++">subpass.colorAttachmentCount = 1;
+subpass.pColorAttachments = &amp;colorAttachmentRef;
+</code></pre>
+<p>在这个数组中，附件的索引直接引用片段着色器的<code>layout(location = 0) out vec4 outColor</code>指令。</p>
+<p>下面几种类型的附件也可以被子过程引用：</p>
+<ul>
+<li><code>pInputAttachments</code>：从着色器中读取出来的附件</li>
+<li><code>pResolveAttachments</code>：用作“多重采样的颜色附件”的附件</li>
+<li><code>pDepthStencilAttachment</code>：用于深度数据或模板数据的附件</li>
+<li><code>pPreserveAttachments</code>：这个子过程不会用到，但是其数据必须被保留的附件</li>
+</ul>
+<h2 id="渲染过程-1"><a class="header" href="#渲染过程-1">渲染过程</a></h2>
+<p>现在 ，附件和一个引用了它的基本的子过程就描述好了，我们可以来创建渲染过程本身了。新建一个成员变量来保存<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkRenderPass.html"><code>VkRenderPass</code></a>对象并放在<code>pipelineLayout</code>变量之前：</p>
+<pre><code class="language-c++">VkRenderPass renderPass;
+VkPipelineLayout pipelineLayout;
+</code></pre>
+<p>渲染过程对象可以通过使用附件和子过程的数组来填充<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkRenderPassCreateInfo.html"><code>VkRenderPassCreateInfo</code></a>结构体的方式创建。<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkAttachmentReference.html"><code>VkAttachmentReference</code></a>对象通过这个数组中的索引来引用附件。</p>
+<pre><code class="language-c++">VkRenderPassCreateInfo renderPassInfo = {};
+renderPassInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_CREATE_INFO;
+renderPassInfo.attachmentCount = 1;
+renderPassInfo.pAttachments = &amp;colorAttachment;
+renderPassInfo.subpassCount = 1;
+renderPassInfo.pSubpasses = &amp;subpass;
+
+if (vkCreateRenderPass(device, &amp;renderPassInfo, nullptr, &amp;renderPass) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to create render pass!&quot;);
+}
+</code></pre>
+<p>与管线布局类似，渲染过程也会在整个程序中被引用，因此只能在程序末尾销毁它：</p>
+<pre><code class="language-c++">void cleanup() {
+    vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
+    vkDestroyRenderPass(device, renderPass, nullptr);
+    ...
+}
+</code></pre>
+<p>到目前为止我们已经做了很多工作，不过下一章我们会把它们组合到一起来最终创建图形渲染管线对象！</p>
+<p><a href="https://vulkan-tutorial.com/code/11_render_passes.cpp">C++代码</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.vert">顶点着色器</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.frag">片段着色器</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="小结-2"><a class="header" href="#小结-2">小结</a></h1>
+<p>我们现在可以把前几章中的那些结构体与对象全部都组合起来以创建图形渲染管线了！简要概括一下，我们现在所有的对象有这么几种：</p>
+<ul>
+<li>着色器阶段：定义了图形渲染管线中可编程阶段的功能的着色器模块</li>
+<li>固定功能部分：所有定义了管线的固定功能阶段的结构体，比如顶点装配器、光栅化和颜色绑定等</li>
+<li>管线布局：所有被着色器引用的uniform变量和推送（push）常量，它们可以在绘制时被更新</li>
+<li>渲染过程：被管线中的过程引用的附件及其使用方法</li>
+</ul>
+<p>把这些全都组合在一起，就定义了整个图形渲染管线的功能，因此我们现在可以开始在<code>createGraphicsPipeline</code>函数的末尾填充<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkGraphicsPipelineCreateInfo.html"><code>VkGraphicsPipelineCreateInfo</code></a>结构体了。但是要在调用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkDestroyShaderModule.html"><code>vkDestroyShaderModule</code></a>函数之前，因为这些东西会在整个创建阶段被调用。</p>
+<pre><code class="language-c++">VkGraphicsPipelineCreateInfo pipelineInfo = {};
+pipelineInfo.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
+pipelineInfo.stageCount = 2;
+pipelineInfo.pStages = shaderStages;
+</code></pre>
+<p>我们从引用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineShaderStageCreateInfo.html"><code>VkPipelineShaderStageCreateInfo</code></a>结构体的数组开始。</p>
+<pre><code class="language-c++">pipelineInfo.pVertexInputState = &amp;vertexInputInfo;
+pipelineInfo.pInputAssemblyState = &amp;inputAssembly;
+pipelineInfo.pViewportState = &amp;viewportState;
+pipelineInfo.pRasterizationState = &amp;rasterizer;
+pipelineInfo.pMultisampleState = &amp;multisampling;
+pipelineInfo.pDepthStencilState = nullptr; // Optional
+pipelineInfo.pColorBlendState = &amp;colorBlending;
+pipelineInfo.pDynamicState = nullptr; // Optional
+</code></pre>
+<p>然后我们会引用描述了固定功能过程的所有结构体：</p>
+<pre><code class="language-c++">pipelineInfo.layout = pipelineLayout;
+</code></pre>
+<p>之后引入的是管线布局，这是一个Vulkan句柄，而不是一个结构体指针。</p>
+<pre><code class="language-c++">pipelineInfo.renderPass = renderPass;
+pipelineInfo.subpass = 0;
+</code></pre>
+<p>最后，我们引入渲染过程，以及要使用的子过程的索引。你也可以在这个管线中使用其它的渲染过程，而不是给定的这个，不过它们需要与<code>renderPass</code>相兼容。对于兼容性的要求在<a href="https://www.khronos.org/registry/vulkan/specs/1.0/html/vkspec.html#renderpass-compatibility">这里</a>，不过在此教程中我们不会用到这个特性。</p>
+<pre><code class="language-c++">pipelineInfo.basePipelineHandle = VK_NULL_HANDLE; // Optional
+pipelineInfo.basePipelineIndex = -1; // Optional
+</code></pre>
+<p>其实还有两个参数：<code>basePipelineHandle</code>和<code>basePipelineIndex</code>。Vulkan允许你基于现有的图形渲染管线来创建一个新管线。派生管线的想法来源于，当新管线的大多数功能都与一个现有管线相同时，派生管线的开销更小，而且在由同一父管线派生出来的两个子管线之间切换时也会更快。你可以通过<code>basePipelineHandle</code>指定一个现有管线的句柄，或者是将要通过<code>basePipelineIndex</code>指定的索引创建的另一个管线的引用。现在我们只有一个引用，因此我们简单地指定一个空句柄和一个非法索引。它们的值只会在<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkGraphicsPipelineCreateInfo.html"><code>VkGraphicsPipelineCreateInfo</code></a>结构体中的<code>flags</code>成员被设为<code>VK_PIPELINE_CREATE_DERIVATIVE_BIT</code>标志时才会被使用。</p>
+<p>现在来为最后一步做准备，新建一个成员变量来保存<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipeline.html"><code>VkPipeline</code></a>对象：</p>
+<pre><code class="language-c++">VkPipeline graphicsPipeline;
+</code></pre>
+<p>最后，创建图形渲染管线：</p>
+<pre><code class="language-c++">if (vkCreateGraphicsPipelines(device, VK_NULL_HANDLE, 1, &amp;pipelineInfo, nullptr, &amp;graphicsPipeline) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to create graphics pipeline!&quot;);
+}
+</code></pre>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateGraphicsPipelines.html"><code>vkCreateGraphicsPipelines</code></a>函数的参数比Vulkan中其它对象创建函数的参数要多。它被设计为一次调用可以接受多个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkGraphicsPipelineCreateInfo.html"><code>VkGraphicsPipelineCreateInfo</code></a>对象来创建多个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipeline.html"><code>VkPipeline</code></a>对象的。</p>
+<p>第二个参数，我们传递了<code>VK_NULL_HANDLE</code>的那个，引用的是一个可选的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkPipelineCache.html"><code>VkPipelineCache</code></a>对象，管线缓存（pipeline cache）可以用于存储以及重用那些与<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateGraphicsPipelines.html"><code>vkCreateGraphicsPipelines</code></a>的多次调用有关的数据，如果缓存被保存为一个文件，甚至可以跨程序调用。这可以显著提高后续的管道创建速度。我们会在管道缓存一章详细讲解它。</p>
+<p>图形渲染管线被所有的渲染操作所需要，因此它必须在程序的末尾被销毁：</p>
+<pre><code class="language-c++">void cleanup() {
+    vkDestroyPipeline(device, graphicsPipeline, nullptr);
+    vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
+    ...
+}
+</code></pre>
+<p>现在运行你的程序来确认这些辛苦的工作终于得到了回报——一次成功的图形渲染管线创建！我们越来越接近那个屏幕上的三角形了。在接下来的几章里，我们会通过交换链图片建立真正的帧缓冲并且准备渲染命令。</p>
+<p><a href="https://vulkan-tutorial.com/code/12_graphics_pipeline_complete.cpp">C++代码</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.vert">顶点着色器</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.frag">片段着色器</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="帧缓冲"><a class="header" href="#帧缓冲">帧缓冲</a></h1>
+<p>在前几章我们已经提到了帧缓冲好几次，并且我们已经创建了一个接受一个与交换链图片相同格式的帧缓冲的渲染过程（render pass），不过实际上我们还没有创建帧缓冲。</p>
+<p>在渲染过程创建时指定的附件（attachment）会被包裹到<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkFramebuffer.html"><code>VkFramebuffer</code></a>对象中进行绑定。一个帧缓冲对象会引用所有代表附件的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkImageView.html"><code>VkImageView</code></a>对象。我们这里只有一个附件：颜色附件。然而，我们要用做附件的图像取决于当我们取回一个图像用于显示时交换链会返回哪个。这意味着我们需要为交换链中的每一个图像创建一个帧缓冲，并且在绘制的时候使用对应着取回的图像的那个。</p>
+<p>为此，创建另一个<code>std::vector</code>成员来保存帧缓冲：</p>
+<pre><code class="language-c++">std::vector&lt;VkFramebuffer&gt; swapChainFramebuffers;
+</code></pre>
+<p>我们会在一个新函数，<code>createFramebuffers</code>里为这个数组创建对象，并且在<code>initVulkan</code>里、创建了图形渲染管线之后调用它：</p>
+<pre><code class="language-c++">void initVulkan() {
+    createInstance();
+    setupDebugCallback();
+    createSurface();
+    pickPhysicalDevice();
+    createLogicalDevice();
+    createSwapChain();
+    createImageViews();
+    createRenderPass();
+    createGraphicsPipeline();
+    createFramebuffers();
+}
+
+...
+
+void createFramebuffers() {
+
+}
+</code></pre>
+<p>首先，resize容器的大小以保存所有帧缓冲：</p>
+<pre><code class="language-c++">void createFramebuffers() {
+    swapChainFramebuffers.resize(swapChainImageViews.size());
+}
+</code></pre>
+<p>然后，遍历所有图像视图来为它们创建帧缓冲：</p>
+<pre><code class="language-c++">for (size_t i = 0; i &lt; swapChainImageViews.size(); i++) {
+    VkImageView attachments[] = {
+        swapChainImageViews[i]
+    };
+
+    VkFramebufferCreateInfo framebufferInfo = {};
+    framebufferInfo.sType = VK_STRUCTURE_TYPE_FRAMEBUFFER_CREATE_INFO;
+    framebufferInfo.renderPass = renderPass;
+    framebufferInfo.attachmentCount = 1;
+    framebufferInfo.pAttachments = attachments;
+    framebufferInfo.width = swapChainExtent.width;
+    framebufferInfo.height = swapChainExtent.height;
+    framebufferInfo.layers = 1;
+
+    if (vkCreateFramebuffer(device, &amp;framebufferInfo, nullptr, &amp;swapChainFramebuffers[i]) != VK_SUCCESS) {
+        throw std::runtime_error(&quot;failed to create framebuffer!&quot;);
+    }
+}
+</code></pre>
+<p>如你所见，帧缓冲的创建非常简单明了。我们首先需要指定哪个<code>renderPass</code>是帧缓冲需要兼容的。你只能使用与渲染过程兼容的帧缓冲，“兼容”大致上意味着它们拥有相同数量和类型的附件。</p>
+<p><code>attachmentCount</code>和<code>pAttachments</code>参数指定了需要被绑定到各自的附件描述的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkImageView.html"><code>VkImageView</code></a>对象，这些附件描述就是渲染过程中<code>pAttachment</code>数组中的那些。</p>
+<p><em>（译者注：参考《渲染过程》一章中“渲染过程”一节，<code>pAttachment</code>数组指的应该是<code>VkRenderPassCreateInfo</code>的<code>pAttachments</code>成员）</em></p>
+<p><code>width</code>和<code>height</code>参数是自注释的，<code>layers</code>是指图像数组中图层的个数。我们的交换链图像都是单个图像，因此图层的数量是<code>1</code>。</p>
+<p>我们需要在删除图像视图及其依赖的渲染过程之前删除帧缓冲，不过只能在我们完成渲染之后：</p>
+<pre><code class="language-c++">void cleanup() {
+    for (auto framebuffer : swapChainFramebuffers) {
+        vkDestroyFramebuffer(device, framebuffer, nullptr);
+    }
+
+    ...
+}
+</code></pre>
+<p>我们现在已经抵达了一个里程碑——我们拥有了渲染所需的所有对象。在下一章里，我们会开始写实际的绘制命令。</p>
+<p><a href="https://vulkan-tutorial.com/code/13_framebuffers.cpp">C++代码</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.vert">顶点着色器</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.frag">片段着色器</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="命令缓冲"><a class="header" href="#命令缓冲">命令缓冲</a></h1>
+<p>Vulkan中的命令，比如绘制操作和内存传递，不是由函数调用直接执行的。你需要在命令缓冲对象中记录下你想要进行的所有操作。这么做的优点是，可以提前完成设置图形命令中的所有困难的工作，并且可以使用多线程。在这之后，你只需要告知Vulkan在主循环中处理这些命令就可以了。</p>
+<h2 id="命令池"><a class="header" href="#命令池">命令池</a></h2>
+<p>在创建命令缓冲之前，我们需要创建一个命令池。命令池管理那些用于存储缓冲的内存，命令缓冲就从这些内存中分配。添加一个新的成员变量来保存<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkCommandPool.html"><code>VkCommandPool</code></a>：</p>
+<pre><code class="language-c++">VkCommandPool commandPool;
+</code></pre>
+<p>然后创建一个新的函数：<code>createCommandPool</code>，并且在<code>initVulkan</code>中、创建了帧缓冲之后调用它。</p>
+<pre><code class="language-c++">    createInstance();
+    setupDebugCallback();
+    createSurface();
+    pickPhysicalDevice();
+    createLogicalDevice();
+    createSwapChain();
+    createImageViews();
+    createRenderPass();
+    createGraphicsPipeline();
+    createFramebuffers();
+    createCommandPool();
+}
+
+...
+
+void createCommandPool() {
+
+}
+</code></pre>
+<p>创建命令池只需要两个参数：</p>
+<pre><code class="language-c++">QueueFamilyIndices queueFamilyIndices = findQueueFamilies(physicalDevice);
+
+VkCommandPoolCreateInfo poolInfo = {};
+poolInfo.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO;
+poolInfo.queueFamilyIndex = queueFamilyIndices.graphicsFamily.value();
+poolInfo.flags = 0; // Optional
+</code></pre>
+<p>命令缓冲通过被提交到一个设备队列的方式执行，比如我们取回的图形和显示队列。每个命令池只能分配被提交到特定的一种队列的命令缓冲。我们接下来要记录绘制命令，这就是我们选择了图形队列家族的原因。</p>
+<p>对于命令池有两种可用的标志（flag）：</p>
+<ul>
+<li><code>VK_COMMAND_POOL_CREATE_TRANSIENT_BIT</code>：表示命令缓冲会经常重新记录新命令（有可能改变内存分配的行为）</li>
+<li><code>VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT</code>：允许命令缓冲单独地被重新记录，没有这个标志的话所有命令缓冲需要被一起重置</li>
+</ul>
+<p>我们只会在程序的开头记录命令缓冲，然后在主循环中多次执行它们，所以我们用不到上面的那些标志。</p>
+<pre><code class="language-c++">if (vkCreateCommandPool(device, &amp;poolInfo, nullptr, &amp;commandPool) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to create command pool!&quot;);
+}
+</code></pre>
+<p>最后使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateCommandPool.html"><code>vkCreateCommandPool</code></a>函数创建命令池。这个函数没有任何特殊的参数。命令会在整个程序中被使用，以把东西绘制到屏幕上，所以命令池只应该在程序末尾被销毁：</p>
+<pre><code class="language-c++">void cleanup() {
+    vkDestroyCommandPool(device, commandPool, nullptr);
+
+    ...
+}
+</code></pre>
+<h2 id="分配命令缓冲"><a class="header" href="#分配命令缓冲">分配命令缓冲</a></h2>
+<p>我们现在可以开始分配命令缓冲并且在其中记录绘制命令了。因为每个绘制命令都需要绑定到正确的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkFramebuffer.html"><code>VkFramebuffer</code></a>上，我们实际上需要为每个交换链中的每个图像都记录一次命令缓冲。为此，新建一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkCommandBuffer.html"><code>VkCommandBuffer</code></a>的列表作为成员变量。命令缓冲会在其所属的命令池销毁后自动被释放，因此不需要显式清除它。</p>
+<pre><code class="language-c++">std::vector&lt;VkCommandBuffer&gt; commandBuffers;
+</code></pre>
+<p>我们现在开始在<code>createCommandBuffers</code>函数里写代码，来为每个交换链图像分配并记录命令。</p>
+<pre><code class="language-c++">void initVulkan() {
+    createInstance();
+    setupDebugCallback();
+    createSurface();
+    pickPhysicalDevice();
+    createLogicalDevice();
+    createSwapChain();
+    createImageViews();
+    createRenderPass();
+    createGraphicsPipeline();
+    createFramebuffers();
+    createCommandPool();
+    createCommandBuffers();
+}
+
+...
+
+void createCommandBuffers() {
+    commandBuffers.resize(swapChainFramebuffers.size());
+}
+</code></pre>
+<p>命令缓冲由<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkAllocateCommandBuffers.html"><code>vkAllocateCommandBuffers</code></a>函数分配，这个函数需要一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkCommandBufferAllocateInfo.html"><code>VkCommandBufferAllocateInfo</code></a>结构体作为参数，这个结构体指定了命令池以及需要分配的缓冲数量：</p>
+<pre><code class="language-c++">VkCommandBufferAllocateInfo allocInfo = {};
+allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
+allocInfo.commandPool = commandPool;
+allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
+allocInfo.commandBufferCount = (uint32_t) commandBuffers.size();
+
+if (vkAllocateCommandBuffers(device, &amp;allocInfo, commandBuffers.data()) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to allocate command buffers!&quot;);
+}
+</code></pre>
+<p><code>level</code>参数指定了分配的命令缓冲是主要的（primary）还是次要的（secondary）命令缓冲。</p>
+<ul>
+<li><code>VK_COMMAND_BUFFER_LEVEL_PRIMARY</code>（主要）：可以被提交到一个队列去执行，但是不能被其他命令缓冲调用。</li>
+<li><code>VK_COMMAND_BUFFER_LEVEL_SECONDARY</code>（次要）：不能直接被执行，但是可以被主要的命令缓冲调用。</li>
+</ul>
+<p>在这里我们不会用到次要的命令缓冲，但是你可以想象它对复用公共操作的帮助有多大。</p>
+<h2 id="开始记录命令缓冲"><a class="header" href="#开始记录命令缓冲">开始记录命令缓冲</a></h2>
+<p>我们通过调用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkBeginCommandBuffer.html"><code>vkBeginCommandBuffer</code></a>函数并使用一个小<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkCommandBufferBeginInfo.html"><code>VkCommandBufferBeginInfo</code></a> 结构体——用来指定有关于这个命令缓冲的使用方法的一些细节——作为参数来开始记录命令缓冲。</p>
+<pre><code class="language-c++">for (size_t i = 0; i &lt; commandBuffers.size(); i++) {
+    VkCommandBufferBeginInfo beginInfo = {};
+    beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
+    beginInfo.flags = VK_COMMAND_BUFFER_USAGE_SIMULTANEOUS_USE_BIT;
+    beginInfo.pInheritanceInfo = nullptr; // Optional
+
+    if (vkBeginCommandBuffer(commandBuffers[i], &amp;beginInfo) != VK_SUCCESS) {
+        throw std::runtime_error(&quot;failed to begin recording command buffer!&quot;);
+    }
+}
+</code></pre>
+<p><code>flags</code>参数指定了我们将要如何使用这个命令缓冲。有以下值可用：</p>
+<ul>
+<li><code>VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT</code>：这个命令缓冲在执行一次之后会被重新记录。</li>
+<li><code>VK_COMMAND_BUFFER_USAGE_RENDER_PASS_CONTINUE_BIT</code>：这是一个次要的命令缓冲，它会完全处于一个单独的渲染过程中。</li>
+<li><code>VK_COMMAND_BUFFER_USAGE_SIMULTANEOUS_USE_BIT</code>：命令缓冲可以被重新提交，尽管其已经在等待执行。</li>
+</ul>
+<p>我们使用了最后一种标志（flag），因为有可能提交了下一帧的绘制命令时当前帧还没有绘制完毕。<code>pInheritanceInfo</code>参数只与次要的命令缓冲有关。它指定了要从调用它的主要的命令缓冲继承的状态（state）。</p>
+<p>如果一个命令缓冲已经记录过一次了，那么调用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkBeginCommandBuffer.html"><code>vkBeginCommandBuffer</code></a>会隐式地将其重置。对一个命令缓冲追加命令是不可能的。</p>
+<h2 id="启动渲染过程"><a class="header" href="#启动渲染过程">启动渲染过程</a></h2>
+<p>绘制开始于使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCmdBeginRenderPass.html"><code>vkCmdBeginRenderPass</code></a>启动渲染过程。渲染过程由<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkRenderPassBeginInfo.html"><code>VkRenderPassBeginInfo</code></a>结构体的一些参数配置。</p>
+<pre><code class="language-c++">VkRenderPassBeginInfo renderPassInfo = {};
+renderPassInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO;
+renderPassInfo.renderPass = renderPass;
+renderPassInfo.framebuffer = swapChainFramebuffers[i];
+</code></pre>
+<p>头两个参数是渲染过程本身以及绑定的附件。我们为每个交换链图像创建了一个帧缓冲并且将其指定为颜色附件。</p>
+<pre><code class="language-c++">renderPassInfo.renderArea.offset = {0, 0};
+renderPassInfo.renderArea.extent = swapChainExtent;
+</code></pre>
+<p>接下来的两个参数定义了要渲染的区域的大小。渲染区域定义了着色器加载和存储的位置。位于这个区域之外的像素会被设为未定义（undefined）的值。它应该与附件的大小相匹配以获得最佳性能。</p>
+<pre><code class="language-c++">VkClearValue clearColor = {0.0f, 0.0f, 0.0f, 1.0f};
+renderPassInfo.clearValueCount = 1;
+renderPassInfo.pClearValues = &amp;clearColor;
+</code></pre>
+<p>最后两个参数定义了用于<code>VK_ATTACHMENT_LOAD_OP_CLEAR</code>的清除值，我们将其用作颜色附件的加载操作。我把清除颜色（clear color）简单地定义为了100%不透明度的黑色。</p>
+<pre><code class="language-c++">vkCmdBeginRenderPass(commandBuffers[i], &amp;renderPassInfo, VK_SUBPASS_CONTENTS_INLINE);
+</code></pre>
+<p>现在，渲染过程可以启动了。所有记录命令的函数都可以通过它们的前缀<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCmd.html"><code>vkCmd</code></a>认出来。它们的返回类型都是<code>void</code>，因此直到完成记录之前都无法进行错误处理。</p>
+<p>每个命令的第一个参数都是要记录该命令的命令缓冲。第二个参数指定了我们刚才提供的渲染过程中的一些细节。最后一个参数用于控制渲染过程中的命令缓冲将如何被提供。它可以被设为如下两个值之一：</p>
+<ul>
+<li><code>VK_SUBPASS_CONTENTS_INLINE</code>：渲染过程中的命令会被嵌入到主要的命令缓冲中，次要的命令缓冲将不会被执行。</li>
+<li><code>VK_SUBPASS_CONTENTS_SECONDARY_COMMAND_BUFFERS</code>：渲染过程中的命令将从次要的命令缓冲中执行。</li>
+</ul>
+<p>我们不使用次要的命令缓冲，因此选择第一个选项。</p>
+<h2 id="基础绘图命令"><a class="header" href="#基础绘图命令">基础绘图命令</a></h2>
+<p>我们现在可以绑定图形渲染管线了：</p>
+<pre><code class="language-c++">vkCmdBindPipeline(commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, graphicsPipeline);
+</code></pre>
+<p>第二个参数指定了这个管线是图形管线还是计算管线。我们现在已经告诉过Vulkan哪些操作是要在图形渲染管线中处理的，以及哪些附件将在片段着色器中被使用，所以现在只剩下告诉Vulkan画一个三角形了：</p>
+<pre><code class="language-c++">vkCmdDraw(commandBuffers[i], 3, 1, 0, 0);
+</code></pre>
+<p>实际的<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCmdDraw.html"><code>vkCmdDraw</code></a>函数看上去有点虎头蛇尾，但是因为我们之前已经指定了所有的信息，所以这个函数看起来才如此简单。除了命令缓冲之外，它还具有以下参数：</p>
+<ul>
+<li><code>vertexCount</code>：尽管我们没有顶点缓冲，技术上来讲我们仍然有3个顶点要绘制。</li>
+<li><code>instanceCount</code>：用于实例化渲染（instanced rendering），如果不需要的话就设为<code>1</code>。</li>
+<li><code>firstVertex</code>：用作顶点缓冲的偏移量（offset），定义<code>gl_VertexIndex</code>的最小值。</li>
+<li><code>firstInstance</code>：用作实例化渲染的偏移量，定义<code>gl_InstanceIndex</code>的最大值。</li>
+</ul>
+<h2 id="完成"><a class="header" href="#完成">完成</a></h2>
+<p>渲染过程现在可以结束了：</p>
+<pre><code class="language-c++">vkCmdEndRenderPass(commandBuffers[i]);
+</code></pre>
+<p>并且我们也完成了命令缓冲的记录：</p>
+<pre><code class="language-c++">if (vkEndCommandBuffer(commandBuffers[i]) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to record command buffer!&quot;);
+}
+</code></pre>
+<p>在下一章里我们会写主循环里的代码：从交换链中获取一个图像，处理正确的命令缓冲然后把完成的图像返回给交换链。</p>
+<p><a href="https://vulkan-tutorial.com/code/14_command_buffers.cpp">C++代码</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.vert">顶点着色器</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.frag">片段着色器</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="渲染与显示"><a class="header" href="#渲染与显示">渲染与显示</a></h1>
+<h2 id="建立-1"><a class="header" href="#建立-1">建立</a></h2>
+<p>这是要把所有东西都组合到一起的一章。我们要编写<code>drawFrame</code>函数，并且在主循环中调用它来把三角形显示到屏幕上。创建这个函数并且在<code>mainLoop</code>中调用它：</p>
+<pre><code class="language-c++">oid mainLoop() {
+    while (!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+        drawFrame();
+    }
+}
+
+...
+
+void drawFrame() {
+
+}
+</code></pre>
+<h2 id="同步"><a class="header" href="#同步">同步</a></h2>
+<p><code>drawFrame</code>函数将执行以下操作：</p>
+<ul>
+<li>从交换链中请求一个图像</li>
+<li>执行命令缓冲，并将请求到的图像作为帧缓冲的附件</li>
+<li>把图片返回到交换链中</li>
+</ul>
+<p>这些事件中的每一个都由单个的函数调用来启动，但是它们是异步执行的。函数调用会在操作执行真正完成之前就返回，执行的顺序也是不确定的。很不幸。每一项操作都依赖于前一项操作的完成。</p>
+<p>有两种方法来同步交换链事件：屏障（fence）和信号量。这两种对象都可以用作条件操作：一种操作是改变信号，另一种操作是等待一个屏障或一个信号量来从无信号状态跳转到有信号状态。</p>
+<p><em>（译者注：原文有点别扭，不过搞过多线程编程的人应该都能看懂这一段是什么意思）</em></p>
+<p>这二者之间的不同在于，屏障可以通过在你的程序中调用类似<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkWaitForFences.html"><code>vkWaitForFences</code></a>的函数来访问，而信号量不能。屏障主要设计为用来在渲染操作中同步你自己的应用程序，而信号量则用来同步命令队列内或者跨命令队列的操作。我们想要同步绘制命令与显示的队列操作，这里非常适合使用信号量。</p>
+<h2 id="信号量"><a class="header" href="#信号量">信号量</a></h2>
+<p>我们需要一个信号量来表示一个图像已被取回并准备好渲染，还需要另外一个信号量来表示渲染已经完成、可以绘制。新建两个成员变量来保存这两个信号量对象：</p>
+<pre><code class="language-c++">VkSemaphore imageAvailableSemaphore;
+VkSemaphore renderFinishedSemaphore;
+</code></pre>
+<p>为创建信号量，我们来为这部分教程添加最后一个<code>create</code>（创建）函数：<code>createSemaphores</code>：</p>
+<pre><code class="language-c++">void initVulkan() {
+    createInstance();
+    setupDebugCallback();
+    createSurface();
+    pickPhysicalDevice();
+    createLogicalDevice();
+    createSwapChain();
+    createImageViews();
+    createRenderPass();
+    createGraphicsPipeline();
+    createFramebuffers();
+    createCommandPool();
+    createCommandBuffers();
+    createSemaphores();
+}
+
+...
+
+void createSemaphores() {
+
+}
+</code></pre>
+<p>创建信号量需要填充<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkSemaphoreCreateInfo.html"><code>VkSemaphoreCreateInfo</code></a>，不过在现版本的API中它没有任何需要填充的成员，除了<code>sType</code>：</p>
+<pre><code class="language-c++">void createSemaphores() {
+    VkSemaphoreCreateInfo semaphoreInfo = {};
+    semaphoreInfo.sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO;
+}
+</code></pre>
+<p>在Vulkan API的后续版本或者扩展中有可能为<code>flags</code>和<code>pNext</code>参数添加功能，就像其它的结构体那样。信号量以这种很熟悉的形式调用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkCreateSemaphore.html"><code>vkCreateSemaphore</code></a>函数来创建：</p>
+<pre><code class="language-c++">if (vkCreateSemaphore(device, &amp;semaphoreInfo, nullptr, &amp;imageAvailableSemaphore) != VK_SUCCESS ||
+    vkCreateSemaphore(device, &amp;semaphoreInfo, nullptr, &amp;renderFinishedSemaphore) != VK_SUCCESS) {
+
+    throw std::runtime_error(&quot;failed to create semaphores!&quot;);
+}
+</code></pre>
+<p>信号量需要在程序的最后，当所有命令全部完成、没有需要同步的操作时被清除掉：</p>
+<pre><code class="language-c++">void cleanup() {
+    vkDestroySemaphore(device, renderFinishedSemaphore, nullptr);
+    vkDestroySemaphore(device, imageAvailableSemaphore, nullptr);
+</code></pre>
+<h2 id="从交换链中获取图像"><a class="header" href="#从交换链中获取图像">从交换链中获取图像</a></h2>
+<p>就像之前提过的一样，我们需要在<code>drawFrame</code>函数中做的第一件事是从交换链中获取一个图像。重申一次，交换链是一个扩展功能，因此我们必须使用以<code>vk*KHR</code>格式命名的函数：</p>
+<pre><code class="language-c++">void drawFrame() {
+    uint32_t imageIndex;
+    vkAcquireNextImageKHR(device, swapChain, std::numeric_limits&lt;uint64_t&gt;::max(), imageAvailableSemaphore, VK_NULL_HANDLE, &amp;imageIndex);
+}
+</code></pre>
+<p><code>vkAcquireNextImageKHR</code>的头两个参数是逻辑设备和我们希望从中获取图像的交换链。第三个参数指定了请求图像的超时时间，以纳秒（nanosecond）为单位。使用64位无符号整数的最大值来禁用超时。</p>
+<p>接下来的两个参数指定了当显示引擎使用图像结束后要改变哪个同步对象的信号。信号改变的时间点就是我们可以开始对其进行绘制的时间点。可以给它指定一个信号量、屏障、或者二者都指定。在这里我们用我们的<code>imageAvailableSemaphore</code>来应对这种情况。</p>
+<p><em>（译者注：<code>VK_NULL_HANDLE</code>的位置就是可以指定屏障的位置）</em></p>
+<p>最后一个参数指定了一个变量，用来输出可用的交换链图像的索引（index）。这个索引代表了我们的<code>swapChainImages</code>数组中的一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkImage.html"><code>VkImage</code></a>。我们会用这个索引来选择正确的命令缓冲。</p>
+<h2 id="提交命令缓冲"><a class="header" href="#提交命令缓冲">提交命令缓冲</a></h2>
+<p>队列的提交和同步通过<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkSubmitInfo.html"><code>VkSubmitInfo</code></a>结构体进行配置。</p>
+<pre><code class="language-c++">VkSubmitInfo submitInfo = {};
+submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
+
+VkSemaphore waitSemaphores[] = {imageAvailableSemaphore};
+VkPipelineStageFlags waitStages[] = {VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT};
+submitInfo.waitSemaphoreCount = 1;
+submitInfo.pWaitSemaphores = waitSemaphores;
+submitInfo.pWaitDstStageMask = waitStages;
+</code></pre>
+<p>前三个参数指定了在处理开始之前哪些信号量要保持等待，以及要等待图形渲染管线的哪个或哪些阶段。我们想要等待到图像可用为止以便向其写入颜色，因此我们指定了图形渲染管线中向颜色附件进行写入的阶段。这意味着从理论上讲，这个实现能够在我们的图像尚未可用的时候就开始处理顶点着色器。<code>waitStages</code>数组中的每个入口点都对应着<code>pWaitSemaphores</code>中与其相同索引的信号量。</p>
+<pre><code class="language-c++">submitInfo.commandBufferCount = 1;
+submitInfo.pCommandBuffers = &amp;commandBuffers[imageIndex];
+</code></pre>
+<p>接下来的两个参数指定了哪些命令缓冲将会被实际地提交并执行。就像之前提过的那样，我们应该提交那个绑定了刚刚取回的交换链图像作为颜色附件的命令缓冲。</p>
+<pre><code class="language-c++">VkSemaphore signalSemaphores[] = {renderFinishedSemaphore};
+submitInfo.signalSemaphoreCount = 1;
+submitInfo.pSignalSemaphores = signalSemaphores;
+</code></pre>
+<p><code>signalSemaphoreCount</code>和<code>pSignalSemaphores</code>参数指定了当命令缓冲执行结束之后要改变哪些信号量的信号。在我们这里使用了<code>renderFinishedSemaphore</code>来应对这种情况。</p>
+<pre><code class="language-c++">if (vkQueueSubmit(graphicsQueue, 1, &amp;submitInfo, VK_NULL_HANDLE) != VK_SUCCESS) {
+    throw std::runtime_error(&quot;failed to submit draw command buffer!&quot;);
+}
+</code></pre>
+<p>现在我们可以使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkQueueSubmit.html"><code>vkQueueSubmit</code></a>向图形队列提交命令缓冲了。这个函数接受一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkSubmitInfo.html"><code>VkSubmitInfo</code></a>结构体作为参数，以在工作量很大的时候保持效率。最后一个参数引用了一个可选的屏障，当命令缓冲执行完成后，这个屏障的信号会被改变。我们使用信号量进行同步，因此这里只传递一个<code>VK_NULL_HANDLE</code>。</p>
+<h2 id="子过程依赖"><a class="header" href="#子过程依赖">子过程依赖</a></h2>
+<p>记住，一个渲染过程中的子过程会自动处理图像布局过渡。这些过渡由“子过程依赖”控制，它指定了子通道之间内存和执行的依赖关系。现在我们只有一个子过程，但是在这个子过程之前和之后的操作也会被算作隐式的“子过程”。</p>
+<p>有两个内建的依赖处理渲染过程开始和结束时的过渡，但是前者不会发生在正确的时间。它假设过渡发生在图形渲染管线的开始，但是这个时候我们还没获得图像！有两种方法来解决这个问题。我们可以把<code>imageAvailableSemaphore</code>的<code>waitStages</code>改成<code>VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT</code>来确保图像可用之后才启动渲染过程，或者我们可以让渲染过程在<code>VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT</code>阶段等待。我决定采用第二种方法，因为这样可以很好地观察子过程依赖及其工作方式。</p>
+<p>子过程依赖定义在<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkSubpassDependency.html"><code>VkSubpassDependency</code></a>结构体中。跳转到<code>createRenderPass</code>函数并且添加一个结构体：</p>
+<pre><code class="language-c++">VkSubpassDependency dependency = {};
+dependency.srcSubpass = VK_SUBPASS_EXTERNAL;
+dependency.dstSubpass = 0;
+</code></pre>
+<p>头两个字段指定了依赖和被依赖的子过程的索引。特殊值<code>VK_SUBPASS_EXTERNAL</code>指的是渲染过程开始之前或者结束之后的那个隐式的子过程，到底指哪个取决于它定义在了<code>srcSubpass</code>还是<code>dstSubpass</code>。索引值<code>0</code>代表了我们的子过程，它是第一个，也是唯一一个子过程。<code>dstSubpass</code>必须永远比<code>srcSubpass</code>高，以避免循环依赖。</p>
+<pre><code class="language-c++">dependency.srcStageMask = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT;
+dependency.srcAccessMask = 0;
+</code></pre>
+<p>接下来的两个字段指定了要等待的操作以及这些操作发生的阶段。在我们能够访问图像之前，我们需要等待到交换链完成对图像的读取为止。这可以通过等待颜色附件输出阶段本身来完成。</p>
+<pre><code class="language-c++">dependency.dstStageMask = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT;
+dependency.dstAccessMask = VK_ACCESS_COLOR_ATTACHMENT_READ_BIT | VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT;
+</code></pre>
+<p>应该等待的操作是颜色附件阶段的读取和写入操作。这些设置可以避免过渡在不需要（且不应该）它的时候发生：当我们正在向颜色附件写入颜色的时候。</p>
+<pre><code class="language-c++">renderPassInfo.dependencyCount = 1;
+renderPassInfo.pDependencies = &amp;dependency;
+</code></pre>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkRenderPassCreateInfo.html"><code>VkRenderPassCreateInfo</code></a>结构体有两个数组来指定一个存放依赖的数组。</p>
+<h2 id="显示"><a class="header" href="#显示">显示</a></h2>
+<p>绘制一帧的最后一步就是把结果返回到交换链中，使其最终可以被显示到屏幕上。显示由<code>VkPresentInfoKHR</code>结构体在<code>drawFrame</code>函数的末尾进行配置。</p>
+<pre><code class="language-c++">VkPresentInfoKHR presentInfo = {};
+presentInfo.sType = VK_STRUCTURE_TYPE_PRESENT_INFO_KHR;
+
+presentInfo.waitSemaphoreCount = 1;
+presentInfo.pWaitSemaphores = signalSemaphores;
+</code></pre>
+<p>头两个参数指定了在可以显示之前需要等待哪个（些）信号量，就像<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkSubmitInfo.html"><code>VkSubmitInfo</code></a>一样。</p>
+<pre><code class="language-c++">VkSwapchainKHR swapChains[] = {swapChain};
+presentInfo.swapchainCount = 1;
+presentInfo.pSwapchains = swapChains;
+presentInfo.pImageIndices = &amp;imageIndex;
+</code></pre>
+<p>接下来的两个参数指定了要显示图像的交换链，以及每个交换链中图像的索引。这里应该始终只有一个交换链。</p>
+<pre><code class="language-c++">presentInfo.pResults = nullptr; // Optional
+</code></pre>
+<p>这是一个叫做<code>pResults</code>的可选参数。它允许你指定一个<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkResult.html"><code>VkResult</code></a>的数组来检查每个交换链的显示是否成功。当你只使用一个交换链的时候没有必要用这个，因为你可以简单地使用显示函数的返回值。</p>
+<pre><code class="language-c++">vkQueuePresentKHR(presentQueue, &amp;presentInfo);
+</code></pre>
+<p><code>vkQueuePresentKHR</code>函数将提交一个把一个图像显示到交换链的请求，我们将在下一章对<code>vkAcquireNextImageKHR</code>和<code>vkQueuePresentKHR</code>函数添加错误处理，因为与我们迄今为止看到的那些函数不同，它们的失败不代表整个程序应该退出。</p>
+<p>如果目前为止你做对了所有事情，那么当运行程序时，你应该看到类似下面的东西：</p>
+<p><img src="https://vulkan-tutorial.com/images/triangle.png" alt="" /></p>
+<p>耶！不幸的是，你会看到当验证层开启的时候，程序会在你关闭它的时候崩溃。<code>debugCallback</code>打印到终端上的信息告诉了我们原因：</p>
+<p><img src="https://vulkan-tutorial.com/images/semaphore_in_use.png" alt="" /></p>
+<p>记住，所有<code>drawFrame</code>中的操作都是异步的。这意味着当我们退出<code>mainLoop</code>中的循环时，渲染和显示操作依然有可能会继续。在这些操作正在进行的时候清除所有资源不是什么好主意。</p>
+<p>为了解决这个问题，我们应该在退出<code>mainLoop</code>和销毁窗口之前等待逻辑设备执行完所有操作：</p>
+<pre><code class="language-c++">void mainLoop() {
+    while (!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+        drawFrame();
+    }
+
+    vkDeviceWaitIdle(device);
+}
+</code></pre>
+<p>你也可以使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkQueueWaitIdle.html"><code>vkQueueWaitIdle</code></a>来等待某一特定的命令队列执行完成。这些函数是执行同步操作的基本方法。现在在关闭窗口的时候你会看到程序会退出而不产生错误了。</p>
+<h2 id="处理中的帧"><a class="header" href="#处理中的帧">处理中的帧</a></h2>
+<p>如果你在启用了验证层的情况下运行你的程序，并且观察程序的内存占用量，你或许会发现它在缓慢增长。原因是程序在<code>drawFrame</code>函数中飞快地进行提交操作，但是没有检查这些操作是否完成了。如果CPU的提交操作太快导致GPU跟不上的话，队列就会缓慢地被这些操作占用。更糟的是，我们在重复使用<code>imageAvailableSemaphore</code>和<code>renderFinishedSemaphore</code>同时处理多个帧。</p>
+<p>解决这个问题的简单方法是在提交之后等待提交操作完成，比如使用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkQueueWaitIdle.html"><code>vkQueueWaitIdle</code></a>：</p>
+<pre><code class="language-c++">void drawFrame() {
+    ...
+
+    vkQueuePresentKHR(presentQueue, &amp;presentInfo);
+
+    vkQueueWaitIdle(presentQueue);
+}
+</code></pre>
+<p>然而，这种方式可能使我们无法最佳化利用GPU，因为现在整个图形渲染管线在同一时间只处理一个帧。这些阶段只能在当前帧处理结束、处于空闲状态时才能处理下一个帧。我们现在会扩展我们的程序来允许多个帧进入“正在处理”（in-flight）模式，同时仍然限制累积起来的操作总量。</p>
+<p>首先，在程序的最顶端添加一个常量来定义有多少帧需要被同时处理：</p>
+<pre><code class="language-c++">const int MAX_FRAMES_IN_FLIGHT = 2;
+</code></pre>
+<p>每个帧都应该有自己的一组信号量：</p>
+<pre><code class="language-c++">std::vector&lt;VkSemaphore&gt; imageAvailableSemaphores;
+std::vector&lt;VkSemaphore&gt; renderFinishedSemaphores;
+</code></pre>
+<p><code>createSemaphores</code>函数应该被修改，以创建所有的这些信号量：</p>
+<pre><code class="language-c++">void createSemaphores() {
+    imageAvailableSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
+    renderFinishedSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
+
+    VkSemaphoreCreateInfo semaphoreInfo = {};
+    semaphoreInfo.sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO;
+
+    for (size_t i = 0; i &lt; MAX_FRAMES_IN_FLIGHT; i++) {
+        if (vkCreateSemaphore(device, &amp;semaphoreInfo, nullptr, &amp;imageAvailableSemaphores[i]) != VK_SUCCESS ||
+            vkCreateSemaphore(device, &amp;semaphoreInfo, nullptr, &amp;renderFinishedSemaphores[i]) != VK_SUCCESS) {
+
+            throw std::runtime_error(&quot;failed to create semaphores for a frame!&quot;);
+        }
+}
+</code></pre>
+<p>类似地，它们也应该全部被清除：</p>
+<pre><code class="language-c++">void cleanup() {
+    for (size_t i = 0; i &lt; MAX_FRAMES_IN_FLIGHT; i++) {
+        vkDestroySemaphore(device, renderFinishedSemaphores[i], nullptr);
+        vkDestroySemaphore(device, imageAvailableSemaphores[i], nullptr);
+    }
+
+    ...
+}
+</code></pre>
+<p>为了使用正确的信号量对，我们需要追踪当前帧。我们会使用一个帧索引来应对这种情况：</p>
+<pre><code class="language-c++">size_t currentFrame = 0;
+</code></pre>
+<p><code>drawFrame</code>函数现在也需要被修改来使用正确的对象：</p>
+<pre><code class="language-c++">void drawFrame() {
+    vkAcquireNextImageKHR(device, swapChain, std::numeric_limits&lt;uint64_t&gt;::max(), imageAvailableSemaphores[currentFrame], VK_NULL_HANDLE, &amp;imageIndex);
+
+    ...
+
+    VkSemaphore waitSemaphores[] = {imageAvailableSemaphores[currentFrame]};
+
+    ...
+
+    VkSemaphore signalSemaphores[] = {renderFinishedSemaphores[currentFrame]};
+
+    ...
+}
+</code></pre>
+<p>当然，不要忘了每次都要进入下一帧：</p>
+<pre><code class="language-c++">void drawFrame() {
+    ...
+
+    currentFrame = (currentFrame + 1) % MAX_FRAMES_IN_FLIGHT;
+}
+</code></pre>
+<p>通过使用取余（%）运算符，我们可以确保帧索引的循环处于每<code>MAX_FRAMES_IN_FLIGHT</code>个已排队帧的后面。</p>
+<p>尽管我们已经设置好了同时处理多个帧所必需的对象，现在还是无法避免比<code>MAX_FRAMES_IN_FLIGHT</code>更多的帧被提交。现在这里只有GPU-GPU的同步，而没有CPU-CPU的同步来继续跟踪提交操作的后续情况。有可能出现需要使用#0（第0个）帧，但#0帧仍处于正在处理模式的情况。</p>
+<p>为实现CPU-CPU的同步，Vulkan提供了第二种同步原语（synchronization primitive），称为屏障（fence）。在某种意义上，屏障类似于信号量：它们都可以被改变信号和等待。但是这次我们实际上是在我们自己的代码上面等待屏障。首先先来为每个帧创建一个屏障：</p>
+<pre><code class="language-c++">std::vector&lt;VkSemaphore&gt; imageAvailableSemaphores;
+std::vector&lt;VkSemaphore&gt; renderFinishedSemaphores;
+std::vector&lt;VkFence&gt; inFlightFences;
+size_t currentFrame = 0;
+</code></pre>
+<p>我决定把创建屏障和创建信号量放在一起，然后把<code>createSemaphores</code>重命名为<code>createSyncObjects</code>：</p>
+<pre><code class="language-c++">void createSyncObjects() {
+    imageAvailableSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
+    renderFinishedSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
+    inFlightFences.resize(MAX_FRAMES_IN_FLIGHT);
+
+    VkSemaphoreCreateInfo semaphoreInfo = {};
+    semaphoreInfo.sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO;
+
+    VkFenceCreateInfo fenceInfo = {};
+    fenceInfo.sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO;
+
+    for (size_t i = 0; i &lt; MAX_FRAMES_IN_FLIGHT; i++) {
+        if (vkCreateSemaphore(device, &amp;semaphoreInfo, nullptr, &amp;imageAvailableSemaphores[i]) != VK_SUCCESS ||
+            vkCreateSemaphore(device, &amp;semaphoreInfo, nullptr, &amp;renderFinishedSemaphores[i]) != VK_SUCCESS ||
+            vkCreateFence(device, &amp;fenceInfo, nullptr, &amp;inFlightFences[i]) != VK_SUCCESS) {
+
+            throw std::runtime_error(&quot;failed to create synchronization objects for a frame!&quot;);
+        }
+    }
+}
+</code></pre>
+<p>创建屏障（<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkFence.html"><code>VkFence</code></a>）与创建信号量非常相似。还要确保清除了屏障：</p>
+<pre><code class="language-c++">void cleanup() {
+    for (size_t i = 0; i &lt; MAX_FRAMES_IN_FLIGHT; i++) {
+        vkDestroySemaphore(device, renderFinishedSemaphores[i], nullptr);
+        vkDestroySemaphore(device, imageAvailableSemaphores[i], nullptr);
+        vkDestroyFence(device, inFlightFences[i], nullptr);
+    }
+
+    ...
+}
+</code></pre>
+<p>现在我们来更改<code>drawFrame</code>以使用屏障进行同步。<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkQueueSubmit.html"><code>vkQueueSubmit</code></a>函数调用包含了一个可选的参数来传递一个在命令缓冲完成执行之后应该被改变信号的屏障。我们可以用这个来表示一个帧已经使用完成。</p>
+<pre><code class="language-c++">void drawFrame() {
+    ...
+
+    if (vkQueueSubmit(graphicsQueue, 1, &amp;submitInfo, inFlightFences[currentFrame]) != VK_SUCCESS) {
+        throw std::runtime_error(&quot;failed to submit draw command buffer!&quot;);
+    }
+    ...
+}
+</code></pre>
+<p>现在只剩下更改<code>drawFrame</code>的开头部分来等待帧使用完成了：</p>
+<pre><code class="language-c++">void drawFrame() {
+    vkWaitForFences(device, 1, &amp;inFlightFences[currentFrame], VK_TRUE, std::numeric_limits&lt;uint64_t&gt;::max());
+    vkResetFences(device, 1, &amp;inFlightFences[currentFrame]);
+
+    ...
+}
+</code></pre>
+<p><a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkWaitForFences.html"><code>vkWaitForFences</code></a>函数接受一个屏障数组并且在返回前等待其中的一个或所有屏障改变了信号。我们在这里传递的<code>VK_TRUE</code>代表了我们想要等待所有的屏障，但是在只有一个屏障的情况下这个选项造不成什么影响。就像<code>vkAcquireNextImageKHR</code>一样，这个函数也需要一个超时时间。与信号量不同的是，我们需要通过调用<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkResetFences.html"><code>vkResetFences</code></a>函数来手动把屏障复位到无信号（unsignaled）状态。</p>
+<p>如果你现在运行程序，你会发现有些奇怪。这个程序看起来没有绘制任何东西。开启了验证层的话，你会看到如下消息：</p>
+<p><img src="https://vulkan-tutorial.com/images/unsubmitted_fence.png" alt="" /></p>
+<p>这意味着我们正在等待一个没有被提交的屏障。出现这个问题是因为，在默认情况下，新建的屏障是处于无信号状态的。这意味着如果我们之前没有使用过这个屏障的话，<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkWaitForFences.html"><code>vkWaitForFences</code></a>会一直等待下去。为解决这个问题，我们可以更改屏障的创建过程，来把新建的屏障初始化为有信号状态的，就好像我们已经渲染了一个初始帧：</p>
+<pre><code class="language-c++">void createSyncObjects() {
+    ...
+
+    VkFenceCreateInfo fenceInfo = {};
+    fenceInfo.sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO;
+    fenceInfo.flags = VK_FENCE_CREATE_SIGNALED_BIT;
+
+    ...
+}
+</code></pre>
+<p>现在这个程序应该正确运行，而内存泄漏也应该消失了。我们现在已经实现了所有必需的同步操作来保证同一时间内不会有超过2个帧在队列里。注意，对于代码的其他部分，比如最后的清除操作，使用更加粗略的同步操作，比如<a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/vkDeviceWaitIdle.html"><code>vkDeviceWaitIdle</code></a>，是完全可以的。你应该基于性能要求来决定采用哪种同步方法。</p>
+<p>要通过例子来了解更多同步操作的话，请参阅Khronos的<a href="https://github.com/KhronosGroup/Vulkan-Docs/wiki/Synchronization-Examples#swapchain-image-acquire-and-present">这份广泛的概述</a>。</p>
+<h2 id="小结-3"><a class="header" href="#小结-3">小结</a></h2>
+<p>在写了900行多一点的程序之后，我们终于看到了有东西显示在了屏幕上！固然，创建一个Vulkan程序需要大量工作，但是这种清晰的创建过程也能带来强大的控制能力。我推荐你花些时间重新阅读这些代码，然后在脑海里构建一个包含程序中所有Vulkan对象的模型，以及这些对象之间是如何关联起来的。从现在开始我们将基于这些知识来扩展程序的功能。</p>
+<p>在下一章我们会处理一个表现良好的Vulkan程序所必需的一点小问题。</p>
+<p><a href="https://vulkan-tutorial.com/code/15_hello_triangle.cpp">C++代码</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.vert">顶点着色器</a>/<a href="https://vulkan-tutorial.com/code/09_shader_base.frag">片段着色器</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="顶点输入描述"><a class="header" href="#顶点输入描述">顶点输入描述</a></h1>
+<h2 id="简介-4"><a class="header" href="#简介-4">简介</a></h2>
+<p>在接下来的几章里，我们将要用一个放在内存中的顶点缓冲替换掉硬编码在顶点着色器里的顶点数据。我们会从一个最简单的方法，即创建一个CPU可见的缓冲区然后使用<code>memcpy</code>来把顶点数据直接复制过去，然后我们会介绍如何使用一个暂存缓冲（staging buffer）来把顶点数据复制到高性能内存上。</p>
+<h2 id="顶点着色器-1"><a class="header" href="#顶点着色器-1">顶点着色器</a></h2>
+<p>首先从顶点着色器里面删掉代码里的顶点数据。顶点着色器通过<code>in</code>关键字来接受从顶点缓冲输入的数据。</p>
+<pre><code class="language-glsl">#version 450
+#extension GL_ARB_separate_shader_objects : enable
+
+layout(location = 0) in vec2 inPosition;
+layout(location = 1) in vec3 inColor;
+
+layout(location = 0) out vec3 fragColor;
+
+void main() {
+    gl_Position = vec4(inPosition, 0.0, 1.0);
+    fragColor = inColor;
+}
+</code></pre>
+<p><code>inPosition</code>和<code>inColor</code>变量都是“顶点属性”（vertex attributes）。这些属性是在顶点缓冲中为每个顶点都指定了的属性，就像我们使用两个数组为每个顶点指定了一个坐标和颜色。记住要重新编译顶点着色器！</p>
+<p>就像<code>fragColor</code>一样，<code>layout(location = x)</code>注释为输出分配了索引，这样我们就可以在后面通过索引来引用它们了。了解一些类型是很有必要的，比如<code>dvec3</code>64位向量，使用多个“槽”（slot）。这意味着在此之后的索引至少要为2或者更高：</p>
+<pre><code class="language-glsl">layout(location = 0) in dvec3 inPosition;
+layout(location = 2) in vec3 inColor;
+</code></pre>
+<p>你可以在<a href="https://www.khronos.org/opengl/wiki/Layout_Qualifier_(GLSL)">OpenGL wiki</a>里找到更多关于布局限定符的信息。</p>
+<h2 id="顶点数据"><a class="header" href="#顶点数据">顶点数据</a></h2>
+<p>我们会把顶点数据从着色器代码里移到我们的程序的代码里。我们从引入GLM库开始，这个库给我们提供了关于线性代数的类型，如向量和矩阵。我们将要使用这些类型来指定位置和颜色向量。</p>
+<pre><code class="language-c++">#include &lt;glm/glm.hpp&gt;
+</code></pre>
+<p>创建一个名为<code>Vertex</code>的、带有两个属性的新结构体，我们会在顶点着色器中使用它：</p>
+<pre><code class="language-c++">struct Vertex {
+    glm::vec2 pos;
+    glm::vec3 color;
+};
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
