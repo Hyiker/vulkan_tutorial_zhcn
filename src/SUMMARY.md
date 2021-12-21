@@ -1,10 +1,10 @@
+# 00 简介与概述
+
 - [01 简介](./01%20简介%20Introduction.md)
 - [02 概述](./02%20概述%20Overview.md)
 - [03 开发环境](./03%20开发环境%20Development%20environment.md)
 
 # 04 画一个三角形 Drawing a triangle
-
-- [04-05 重新创建交换链](./04%20画一个三角形%20Drawing%20a%20triangle/04-05%20重新创建交换链%20Swap%20chain%20recreation.md)
 
 ## 04-01 建立 Setup
 
@@ -14,13 +14,11 @@
 - [04-01-04 物理设备与队列家族](./04%20画一个三角形%20Drawing%20a%20triangle/04-01%20建立%20Setup/04-01-04%20物理设备与队列家族%20Physical%20devices%20and%20queue%20families.md)
 - [04-01-05 逻辑设备与队列](./04%20画一个三角形%20Drawing%20a%20triangle/04-01%20建立%20Setup/04-01-05%20逻辑设备与队列%20Logical%20device%20and%20queues.md)
 
-
 ## 04-02 显示 Presentation
 
 - [04-02-01 表面](./04%20画一个三角形%20Drawing%20a%20triangle/04-02%20显示%20Presentation/04-02-01%20表面%20Window%20surface.md)
 - [04-02-02 交换链](./04%20画一个三角形%20Drawing%20a%20triangle/04-02%20显示%20Presentation/04-02-02%20交换链%20Swap%20chain.md)
 - [04-02-03 图像视图](./04%20画一个三角形%20Drawing%20a%20triangle/04-02%20显示%20Presentation/04-02-03%20图像视图%20Image%20views.md)
-
 
 ## 04-03 图形管线基础 Graphics pipeline basics
 
@@ -30,14 +28,13 @@
 - [04-03-04 渲染过程](./04%20画一个三角形%20Drawing%20a%20triangle/04-03%20图形管线基础%20Graphics%20pipeline%20basics/04-03-04%20渲染过程%20Render%20passes.md)
 - [04-03-05 小结](./04%20画一个三角形%20Drawing%20a%20triangle/04-03%20图形管线基础%20Graphics%20pipeline%20basics/04-03-05%20小结%20Conclusion.md)
 
-
 ## 04-04 绘制 Drawing
 
 - [04-04-01 帧缓冲](./04%20画一个三角形%20Drawing%20a%20triangle/04-04%20绘制%20Drawing/04-04-01%20帧缓冲%20Framebuffers.md)
 - [04-04-02 命令缓冲](./04%20画一个三角形%20Drawing%20a%20triangle/04-04%20绘制%20Drawing/04-04-02%20命令缓冲%20Command%20buffers.md)
 - [04-04-03 渲染与显示](./04%20画一个三角形%20Drawing%20a%20triangle/04-04%20绘制%20Drawing/04-04-03%20渲染与显示%20Rendering%20and%20presentation.md)
 
-
+- [04-05 重新创建交换链](./04%20画一个三角形%20Drawing%20a%20triangle/04-05%20重新创建交换链%20Swap%20chain%20recreation.md)
 
 # 05 顶点缓冲 Vertex buffers
 
